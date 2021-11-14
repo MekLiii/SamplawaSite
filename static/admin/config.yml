@@ -21,7 +21,7 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      
+
   - name: 'zawodnicy'
     label: 'zawodnicy'
     folder: 'content/zawodnicy'
@@ -29,12 +29,12 @@ collections:
     slug: 'index'
     media_folder: ''
     public_folder: ''
-    path: '{{title}}/zawodnicy'
+    path: '{{name}}/zawodnicy'
     editor:
       preview: false
     fields:
       - { label: 'Imię i nazwisko', name: 'Imię i nazwisko', widget: 'string' }
-      - { label: 'Pozycja', name: 'pozycja', widget: 'string',options: ["bramkarz", "pomocnik", "napastnik"] }
+      - { label: 'Pozycja', name: 'pozycja', widget: 'string' }
       - { label: 'bramki', name: 'bramki', widget: 'number' }
       - { label: 'Asysty', name: 'Asysty', widget: 'number' }
       - { label: 'Żółte kartki', name: 'Żółte kartki', widget: 'number' }
