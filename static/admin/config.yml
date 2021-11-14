@@ -19,7 +19,7 @@ collections:
             fields:
               - {label: name, name: name, widget: string}
               - {label: numer Zawodnika, name: numer, widget: number}
-              - {label: pozycja, name: pozycja, widget: string, options: ["napastnik", "bramkarz", "obrońca"]}
+              - {label: pozycja, name: pozycja, widget: string, options: ["napastnik", "bramkarz", "obrońca","pomocnik"]}
               - {label: bramki, name: bramki, widget: number}
               - {label: asysty, name: asysty, widget: number}
               - {label: żółte kartki, name: zKartki, widget: number}
