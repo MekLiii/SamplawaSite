@@ -13,16 +13,16 @@ function NavBar() {
           <Link to="/">Strona głowna</Link>
         </li>
         <li>
-          <Link to="/Aktualnosci">Aktualności</Link>
+          <Link to="/Druzyna">Drużyna</Link>
         </li>
         <li>
-          <Link to="/zawodnicy">Galeria</Link>
+          <Link to="/Galeria">Galeria</Link>
         </li>
         <li>
-          <Link to="/zawodnicy">Sponsorzy</Link>
+          <Link to="/Sponsorzy">Sponsorzy</Link>
         </li>
         <li>
-          <Link to="/zawodnicy">Kontakt</Link>
+          <Link to="/Kontakt">Kontakt</Link>
         </li>
       </ul>
     </nav>
