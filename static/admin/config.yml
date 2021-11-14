@@ -6,18 +6,19 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
+  - name: 'Zawodnicy'
+    label: 'Zawodnicy'
     folder: 'content/blog'
     create: true
     slug: 'index'
     media_folder: ''
     public_folder: ''
-    path: '{{Zawodnik}}/posts'
+    path: '{{zawodnik}}/posts'
     editor:
       preview: false
     fields:
-      - { label: 'Zawodnik', name: 'Zawodnik', widget: 'string' }
+      - { label: 'Zawodnik', name: 'title', widget: 'string' }
+      - { label: 'Zawodnik', name: 'zawodnik', widget: 'string' }
       - { label: 'Pozycja', name: 'pozycja', widget: 'string' }
       - { label: 'bramki', name: 'bramki', widget: 'number' }
       - { label: 'Asysty', name: 'Asysty', widget: 'number' }
