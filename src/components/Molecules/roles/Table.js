@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../../../../content/druzyna.json";
-import TableElement from "../../Atoms/tableElement";
+import TableElement from "../../Atoms/TableElement";
 import './table.module.css'
 
 function Table({ role }) {
