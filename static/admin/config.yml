@@ -17,7 +17,6 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Zawodnik', name: 'title', widget: 'string' }
       - { label: 'Zawodnik', name: 'zawodnik', widget: 'string' }
       - { label: 'Pozycja', name: 'pozycja', widget: 'string' }
       - { label: 'bramki', name: 'bramki', widget: 'number' }
