@@ -1,0 +1,7 @@
+tr, table, td{
+    border: 1px solid gray;
+    padding: 5px;
+}
+body{
+    background-color: hotpink;
+}

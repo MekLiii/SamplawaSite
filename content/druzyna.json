@@ -8,7 +8,8 @@
       "bramki": 1,
       "asysty": 1,
       "zKartki": 2,
-      "cKartki": 0
+      "cKartki": 0,
+      "mecze":2
     },
     {
       "name": "Chuj wasiewski",
@@ -16,9 +17,10 @@
       "numer": 2,
       "pozycja": "Napastnik",
       "bramki": 1,
-      "asysty": -2,
+      "asysty": 2,
       "zKartki": 1,
-      "cKartki": 1
+      "cKartki": 1,
+      "mecze":2
     }
   ]
 }
