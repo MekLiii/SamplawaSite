@@ -6,24 +6,53 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'Zawodnicy'
-    label: 'Zawodnicy'
-    folder: 'content/blog'
-    create: true
-    slug: 'index'
-    media_folder: ''
-    public_folder: ''
-    path: '{{zawodnik}}/posts'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Zawodnik', name: 'zawodnik', widget: 'string' }
-      - { label: 'Pozycja', name: 'pozycja', widget: 'string' }
-      - { label: 'bramki', name: 'bramki', widget: 'number' }
-      - { label: 'Asysty', name: 'Asysty', widget: 'number' }
-      - { label: 'Żółte kartki', name: 'Żółte kartki', widget: 'number' }
-      - { label: 'Czerwone kartki', name: 'Czerwone kartki', widget: 'number' }
-      - { label: 'Mecze', name: 'Mecze', widget: 'string' }
+  # - name: 'Zawodnicy'
+  #   label: 'Zawodnicy'
+  #   folder: 'content/blog'
+  #   create: true
+  #   slug: 'index'
+  #   media_folder: ''
+  #   public_folder: ''
+  #   path: '{{zawodnik}}/posts'
+  #   editor:
+  #     preview: false
+  #   fields:
+  #     - { label: 'Zawodnik', name: 'zawodnik', widget: 'string' }
+  #     - { label: 'Pozycja', name: 'pozycja', widget: 'string' }
+  #     - { label: 'bramki', name: 'bramki', widget: 'number' }
+  #     - { label: 'Asysty', name: 'Asysty', widget: 'number' }
+  #     - { label: 'Żółte kartki', name: 'Żółte kartki', widget: 'number' }
+  #     - { label: 'Czerwone kartki', name: 'Czerwone kartki', widget: 'number' }
+  #     - { label: 'Mecze', name: 'Mecze', widget: 'string' }
+
+  - label: "Zawodnicy"
+    name: "zawodnicy"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "site/content/druzyna.json"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
+      - label: "Locations Page"
+        name: "locations"
+        file: "site/content/locations.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Locations
+            name: locations
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Address, name: address, widget: string}
   
   
       
