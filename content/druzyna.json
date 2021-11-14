@@ -2,11 +2,23 @@
   "team": [
     {
       "name": "Kacper Wietecha",
-      "position": "Bramkarz"
+      "position": "Bramkarz",
+      "numer": 1,
+      "pozycja": "Bramkarz",
+      "bramki": 1,
+      "asysty": 1,
+      "zKartki": 2,
+      "cKartki": 0
     },
     {
       "name": "Chuj wasiewski",
-      "position": "Ogrzewacz ławki"
+      "position": "Ogrzewacz ławki",
+      "numer": 2,
+      "pozycja": "Napastnik",
+      "bramki": 1,
+      "asysty": -2,
+      "zKartki": 1,
+      "cKartki": 1
     }
   ]
 }
