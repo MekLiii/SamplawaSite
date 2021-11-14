@@ -24,9 +24,9 @@ collections:
 
   - name: 'zawodnicy'
     label: 'zawodnicy'
-    folder: 'content/zawodnicy'
+    folder: 'content/blog'
     create: true
-    slug: 'index'
+    slug: 'zawodnicy'
     media_folder: ''
     public_folder: ''
     path: '{{zawodnik}}/zawodnicy'
