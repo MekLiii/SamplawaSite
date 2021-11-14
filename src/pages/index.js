@@ -10,7 +10,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <div style={cointainer}>
-        <section style={mainSectionLeft}></section>
+        <section style={mainSectionLeft}>chujchuj</section>
         <section>
           <Results />
         </section>
