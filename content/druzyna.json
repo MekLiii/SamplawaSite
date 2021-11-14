@@ -1,26 +1,36 @@
 {
   "team": [
     {
-      "name": "Kacper Wietecha",
       "position": "Bramkarz",
-      "numer": 1,
-      "pozycja": "Bramkarz",
-      "bramki": 1,
-      "asysty": 1,
+      "name": "Kacper Wietecha",
       "zKartki": 2,
+      "asysty": 1,
+      "numer": 1,
+      "mecze": 2,
       "cKartki": 0,
-      "mecze":2
+      "bramki": 1,
+      "pozycja": "Bramkarz"
     },
     {
-      "name": "Chuj wasiewski",
       "position": "Ogrzewacz ławki",
+      "name": "Chuj wasiewski",
+      "zKartki": 1,
+      "asysty": 2,
       "numer": 2,
-      "pozycja": "Napastnik",
+      "mecze": 2,
+      "cKartki": 1,
+      "bramki": 1,
+      "pozycja": "Napastnik"
+    },
+    {
+      "name": "Krystian Kozłowski",
+      "numer": 69,
+      "pozycja": "pomocnik",
       "bramki": 1,
       "asysty": 2,
-      "zKartki": 1,
-      "cKartki": 1,
-      "mecze":2
+      "zKartki": 0,
+      "cKartki": 0,
+      "mecze": 5
     }
   ]
 }
