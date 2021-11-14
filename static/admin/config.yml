@@ -29,11 +29,11 @@ collections:
     slug: 'index'
     media_folder: ''
     public_folder: ''
-    path: '{{name}}/zawodnicy'
+    path: '{{Zawodnik}}/zawodnicy'
     editor:
       preview: false
     fields:
-      - { label: 'Imię i nazwisko', name: 'Imię i nazwisko', widget: 'string' }
+      - { label: 'Zawodnik', name: 'Zawodnik', widget: 'string' }
       - { label: 'Pozycja', name: 'pozycja', widget: 'string' }
       - { label: 'bramki', name: 'bramki', widget: 'number' }
       - { label: 'Asysty', name: 'Asysty', widget: 'number' }
