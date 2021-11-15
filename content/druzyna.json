@@ -1,0 +1,61 @@
+<<<<<<< HEAD
+=======
+{
+  "team": [
+    {
+      "position": "Bramkarz",
+      "name": "Kacper Wietecha",
+      "zKartki": 2,
+      "asysty": 1,
+      "numer": 1,
+      "mecze": 2,
+      "cKartki": 0,
+      "bramki": 1,
+      "pozycja": "Bramkarz"
+    },
+    {
+      "position": "Ogrzewacz ławki",
+      "name": "Chuj wasiewski",
+      "zKartki": 1,
+      "asysty": 2,
+      "numer": 2,
+      "mecze": 2,
+      "cKartki": 1,
+      "bramki": 1,
+      "pozycja": "Napastnik"
+    },
+    {
+      "name": "Krystian Kozłowski",
+      "numer": 69,
+      "pozycja": "pomocnik",
+      "bramki": 1,
+      "asysty": 2,
+      "zKartki": 0,
+      "cKartki": 0,
+      "mecze": 5
+    },
+    {
+      "name": "Leo Messi",
+      "numer": 11,
+      "pozycja": "napastnik",
+      "bramki": 1,
+      "asysty": 1,
+      "zKartki": 1,
+      "cKartki": 1,
+      "mecze": 1
+    }
+  ],
+  "zawodnicy": [
+    {
+      "name": "das",
+      "numer": 1,
+      "pozycja": "da",
+      "bramki": 1,
+      "asysty": 1,
+      "zKartki": 1,
+      "cKartki": 1,
+      "mecze": 1
+    }
+  ]
+}
+>>>>>>> ed987121c2304579b47ba0ddc89ac77b566b312a
