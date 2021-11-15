@@ -32,5 +32,17 @@
       "cKartki": 0,
       "mecze": 5
     }
+  ],
+  "zawodnicy": [
+    {
+      "name": "das",
+      "numer": 1,
+      "pozycja": "da",
+      "bramki": 1,
+      "asysty": 1,
+      "zKartki": 1,
+      "cKartki": 1,
+      "mecze": 1
+    }
   ]
 }
