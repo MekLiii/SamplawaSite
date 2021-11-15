@@ -6,7 +6,7 @@ import NavBar from "../Molecules/navbar/NavBar";
 
 function Layout({ children }) {
   return (
-    <div>
+    <div style={cointainer}>
       <NavBar />
       <main>{children}</main>
       <Footer />
@@ -18,5 +18,9 @@ const header = {
   width: '100%',
   height: '70vh',
   backgroundColor: "#f5b301"
+}
+const cointainer = {
+  height: '100%',
+  // backgroundColor: '#fed053'
 }
 export default Layout;

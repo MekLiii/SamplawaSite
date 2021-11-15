@@ -1,14 +1,22 @@
-import React from 'react'
-import Table from '../components/Molecules/roles/Table'
-import Layout from '../components/Organism/Layout'
+import React from "react";
+import Table from "../components/Molecules/roles/Table";
+import Layout from "../components/Organism/Layout";
 
 function Druzyna() {
-    return (
-        <Layout>
-            <p>zawodnicy</p>
-            <Table />
-        </Layout>
-    )
+  return (
+    <Layout>
+      <div style={cointainer}>
+        <Table />
+      </div>
+    </Layout>
+  );
 }
 
-export default Druzyna
+const cointainer = {
+    height: '82vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+}
+export default Druzyna;

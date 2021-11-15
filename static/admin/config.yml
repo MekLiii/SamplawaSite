@@ -13,21 +13,28 @@ collections:
         name: "zawodnicy"
         file: "content/druzyna.json"
         fields:
-          - label: Team
+          - label: team
             name: team
             widget: list
             fields:
               - {label: name, name: name, widget: string}
               - {label: numer Zawodnika, name: numer, widget: number}
-              - {label: pozycja, name: pozycja, widget: string, options: ["napastnik", "bramkarz", "obrońca","pomocnik"]}
+              - {label: pozycja, name: pozycja, widget: select, options: ["napastnik", "bramkarz", "obrońca","pomocnik"]}
               - {label: bramki, name: bramki, widget: number}
               - {label: asysty, name: asysty, widget: number}
               - {label: żółte kartki, name: zKartki, widget: number}
               - {label: czerwone kartki, name: cKartki, widget: number}
               - {label: mecze, name: mecze, widget: number}
               - {label: Photo, name: photo, widget: image, required: false}
-  
-  
+  - label: "Blog en Español"
+    name: "spanish_posts"
+    folder: "_posts"
+    create: true
+    filter: {field: "language", value: "es"}
+    fields:
+      - {label: "Lenguaje", name: "language", widget: "select", options: ["en", "es"]}
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
       
   
   
