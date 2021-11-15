@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 {
   "team": [
     {
@@ -44,18 +42,6 @@
       "cKartki": 1,
       "mecze": 1
     }
-  ],
-  "zawodnicy": [
-    {
-      "name": "das",
-      "numer": 1,
-      "pozycja": "da",
-      "bramki": 1,
-      "asysty": 1,
-      "zKartki": 1,
-      "cKartki": 1,
-      "mecze": 1
-    }
   ]
 }
->>>>>>> ed987121c2304579b47ba0ddc89ac77b566b312a
+
