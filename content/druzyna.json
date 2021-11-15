@@ -41,6 +41,16 @@
       "zKartki": 1,
       "cKartki": 1,
       "mecze": 1
+    },
+    {
+      "name": "Kamil Czacharowski",
+      "numer": 10,
+      "pozycja": "napastnik",
+      "bramki": 10,
+      "asysty": 2,
+      "zKartki": 0,
+      "cKartki": 0,
+      "mecze": 5
     }
   ],
   "zawodnicy": [
