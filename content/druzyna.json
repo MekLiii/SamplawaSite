@@ -31,6 +31,16 @@
       "zKartki": 0,
       "cKartki": 0,
       "mecze": 5
+    },
+    {
+      "name": "Leo Messi",
+      "numer": 11,
+      "pozycja": "napastnik",
+      "bramki": 1,
+      "asysty": 1,
+      "zKartki": 1,
+      "cKartki": 1,
+      "mecze": 1
     }
   ],
   "zawodnicy": [
