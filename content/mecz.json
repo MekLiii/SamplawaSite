@@ -6,6 +6,13 @@
       "goscie": "Motor Lubawa",
       "bramkiGospodarza": 1,
       "bramkiGoscia": 1
+    },
+    {
+      "data": "15.11.2021",
+      "gospodarze": "Legia Warszawa",
+      "goscie": "Lech Poznan",
+      "bramkiGospodarza": 1,
+      "bramkiGoscia": 5
     }
   ]
 }
