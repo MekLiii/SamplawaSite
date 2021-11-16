@@ -1,15 +1,16 @@
 import React from 'react'
 import AktuEl from './AktuEl'
+import { graphql } from 'gatsby'
 import img from '../../../images/article.jpg'
 
 function Aktu() {
     return (
         <div style={container}>
-            <AktuEl img={img} 
+            {/* <AktuEl img={img} 
             data="11.02.2020" 
             heading="Zwycięstwo sampławy"
             text="Chujów sto Chujów sto Chujów sto Chujów sto Chujów sto"
-            />
+            /> */}
         </div>
     )
 }

@@ -19,7 +19,6 @@ function AktuEl({ img, heading, text, data }) {
 const box = {
     width: '100%',
     backgroundColor: "#fed053",
-    display: 'flex',
 }
 
 const leftSide = {
