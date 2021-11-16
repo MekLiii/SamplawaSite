@@ -1,16 +1,28 @@
-import React from 'react'
+import React from "react";
 
-function TableElement({numer, name, pozycja, bramki,asysty, zKartki,cKartki,mecze,style }) {
-    return (
-        <tr style={style}>
-          <td>{numer}</td> <td>{name}</td> <td>{pozycja}</td> <td>{bramki}</td> <td>{asysty}</td> <td>{zKartki}</td> <td>{cKartki}</td> <td>{mecze}</td> 
-        </tr>
-    )
+function TableElement({
+  numer,
+  name,
+  pozycja,
+  bramki,
+  asysty,
+  zKartki,
+  cKartki,
+  mecze,
+  style,
+}) {
+  return (
+    <tr style={styles}>
+      <td style={styles}>{numer}</td> <td style={styles}>{name}</td>{" "}
+      <td style={styles}>{pozycja}</td> <td style={styles}>{bramki}</td> <td style={styles}>{asysty}</td>{" "}
+      <td style={styles}>{zKartki}</td> <td style={styles}>{cKartki}</td> <td style={styles}>{mecze}</td>
+    </tr>
+  );
 }
 
-export default TableElement
-
+export default TableElement;
 
 const styles = {
-    border: '3px solid black',
-}
+  border: "1px solid grey",
+  textAlign: 'center',
+};

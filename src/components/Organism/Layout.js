@@ -16,11 +16,10 @@ function Layout({ children }) {
 
 const header = {
   width: '100%',
-  height: '70vh',
   backgroundColor: "#f5b301"
 }
 const cointainer = {
-  height: '100%',
+  height: 'auto',
   // backgroundColor: '#fed053'
 }
 export default Layout;

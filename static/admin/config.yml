@@ -19,22 +19,42 @@ collections:
             fields:
               - {label: name, name: name, widget: string}
               - {label: numer Zawodnika, name: numer, widget: number}
-              - {label: pozycja, name: pozycja, widget: select, options: ["napastnik", "bramkarz", "obrońca","pomocnik"]}
+              - {label: pozycja, name: pozycja, widget: select, options: ["bramkarz", "obrońca", "pomocnik","napastnik"]}
               - {label: bramki, name: bramki, widget: number}
               - {label: asysty, name: asysty, widget: number}
               - {label: żółte kartki, name: zKartki, widget: number}
               - {label: czerwone kartki, name: cKartki, widget: number}
               - {label: mecze, name: mecze, widget: number}
               - {label: Photo, name: photo, widget: image, required: false}
-  - label: "Blog en Español"
-    name: "spanish_posts"
-    folder: "_posts"
+  - label: "mecze"
+    name: "mecze"
+    files:
+      - label: "mecz"
+        name: "mecz"
+        file: "content/mecz.json"
+        fields:
+          - label: mecz
+            name: mecz
+            widget: list
+            fields:
+              - {label: gospodarze, name: gospodarze, widget: string}
+              - {label: goscie, name: goscie, widget: string}
+              - {label: bramki gospodarza, name: bramkiGospodarza , widget: number}
+              - {label: bramki goscia, name: bramkiGoscia , widget: number}
+              - {label: Data, name: data , widget: date, format: 'D.MM.YYYY'}
+  - name: 'Aktualnosci'
+    label: 'Aktualnosci'
+    folder: 'content/aktualnosci'
     create: true
-    filter: {field: "language", value: "es"}
+    path: '{{naglowek}}/index'
+    editor:
+      preview: false
     fields:
-      - {label: "Lenguaje", name: "language", widget: "select", options: ["en", "es"]}
-      - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Contenido", name: "body", widget: "markdown"}
+      - { label: 'naglowek', name: 'naglowek', widget: 'string' }
+      - { label: 'Data publikacji', name: 'date', widget: 'datetime' }
+      - { label: 'Treść', name: 'tresc', widget: 'markdown' }
+      - { label: 'Zdjęcia', name: 'zdjęcia', widget: 'image', default: "/src/images/slider/slider1.jpg" }
+
       
   
   

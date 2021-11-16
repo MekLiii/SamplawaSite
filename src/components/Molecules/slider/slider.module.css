@@ -1,0 +1,10 @@
+.pic{
+    max-height: 200px;
+    background-color: pink;
+}
+
+.carousel {
+    width:900px;
+    height:500px;
+    margin: auto;
+  }
