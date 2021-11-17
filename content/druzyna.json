@@ -51,7 +51,16 @@
       "zKartki": 0,
       "cKartki": 0,
       "mecze": 5
+    },
+    {
+      "name": "Mateusz Kroplewski",
+      "numer": 69,
+      "pozycja": "napastnik",
+      "bramki": 20,
+      "asysty": 0,
+      "zKartki": 0,
+      "cKartki": 0,
+      "mecze": 5
     }
   ]
 }
-
