@@ -46,7 +46,7 @@ collections:
     label: 'Aktualnosci'
     folder: 'content/blog'
     create: true
-    path: '/{{naglowek}}'
+    path: '{{id}}'
     editor:
       preview: false
     fields:
