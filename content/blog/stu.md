@@ -8,5 +8,5 @@ tresc: "Po pięknym meczu w wykonaniu zawodników z Lubawy 3 punkty zostały
   Hat-trick pojawił się na koncie Cezarego Sobolewskiego, kolejne trafienie
   odnotował również Radosław Gajewski."
 zdjęcia: article.jpg
-id: 70
+id: 3
 ---
