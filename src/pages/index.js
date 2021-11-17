@@ -4,7 +4,9 @@ import Slider from "../components/Molecules/slider/Slider";
 import Layout from "../components/Organism/Layout";
 import "./globalStyles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Aktu from "../components/Molecules/aktualnosci/Aktu";
+import { Link, graphql } from "gatsby";
+import Test from "../components/Test";
+
 
 // markup
 const IndexPage = () => {
@@ -15,7 +17,7 @@ const IndexPage = () => {
           <Slider />
           <div style={mainCoinainer}>
             <h1>Aktualności</h1>
-            <Aktu />
+            
           </div>
         </section>
         <section>
@@ -41,7 +43,7 @@ const mainSectionLeft = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  flexDirection: 'column',
+  flexDirection: "column",
   border: "2px solid grey",
   // backgroundColor: 'grey',
 };
