@@ -1,18 +1,46 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import Layout from "../../Organism/Layout";
+import AktuEl from "./AktuEl";
+import img from '../../../images/article.jpg'
 
-function Aktu({ data }) {
-  const { allMarkdownRemark } = data;
-  const {frontmatter, html} = allMarkdownRemark;
-  console.log(frontmatter)
+function Aktu() {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              date
+              id
+              naglowek
+              tresc
+              zdj_cia
+              title
+            }
+          }
+        }
+      }
+    }
+  `);
+  const dataEl = data.allMarkdownRemark.edges;
+  console.log(dataEl.map((element) => element.node.frontmatter.naglowek));
+
   return (
-    <Layout>
-      <div></div>
-      <div></div>
-      {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
-      <div dangerouslySetInnerHTML={{__html:html}}/>
-    </Layout>
+    <div>
+      <div>
+        {dataEl.map((element) => (
+          <Link to={`/${element.node.frontmatter.id}`}>
+            <AktuEl
+              heading={element.node.frontmatter.naglowek}
+              data={element.node.frontmatter.date}
+              text={element.node.frontmatter.tresc}
+              img={img}
+            />
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -21,26 +49,4 @@ const container = {
   minHeight: "5vh",
   backgroundColor: "#fed053",
 };
-
-export const pageQuery = graphql`
-query MyQuery {
-  allMarkdownRemark {
-    edges {
-      node {
-        html
-        frontmatter {
-          date
-          id
-          naglowek
-          path
-          tresc
-          zdj_cia
-          title
-        }
-      }
-    }
-  }
-}
-`;
-
 export default Aktu;

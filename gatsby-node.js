@@ -22,7 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  const templatePath = path.resolve(`src/components/Molecules/aktualnosci/Aktu.js`)
+  const templatePath = path.resolve(`{MarkdownRemark.frontmatter__id}.js`)
   
   result.allMarkdownRemark.edges.forEach((node) => {
     createPage({

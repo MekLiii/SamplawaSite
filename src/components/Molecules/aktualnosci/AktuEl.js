@@ -1,4 +1,5 @@
 import React from "react";
+import './aktu.module.css'
 
 function AktuEl({ img, heading, text, data }) {
   return (
@@ -19,6 +20,8 @@ function AktuEl({ img, heading, text, data }) {
 const box = {
     width: '100%',
     backgroundColor: "#fed053",
+    display: 'flex',
+    margin: '10px'
 }
 
 const leftSide = {

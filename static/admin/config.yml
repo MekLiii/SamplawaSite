@@ -48,11 +48,11 @@ collections:
     create: true
     path: '{{id}}'
     editor:
-      preview: false
+      preview: true
     fields:
-      - { label: 'id', name: 'id', widget: 'number', required: true}
+      - { label: 'id (nie może się powtarzać)', name: 'id', widget: 'number', required: true}
       - { label: 'naglowek', name: 'naglowek', widget: 'string' }
-      - { label: 'Data publikacji', name: 'date', widget: 'datetime' }
+      - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
       - { label: 'Zdjęcia', name: 'zdjęcia', widget: 'image', default: "/src/images/slider/slider1.jpg" }
       - { label: 'tresc', name: 'tresc', widget: 'markdown' }
 

@@ -3,7 +3,7 @@ import data from "../../../../content/druzyna.json";
 import TableElement from "../../Atoms/TableElement";
 import "./table.module.css";
 
-function Table({ role }) {
+function Table() {
   console.log(data.team);
   const team = data.team;
   return (
@@ -11,7 +11,7 @@ function Table({ role }) {
       <div style={heading}>
        <h1>Zawodnicy</h1>
       </div>
-      <table style={{ border: "3px solid black", padding: "5px" }}>
+      <table style={{ border: "3px solid #fed053", padding: "5px" }}>
         <tr>
           <td>#numer</td> <td>Zawodnik</td> <td>Pozycja</td> <td>Bramki</td>{" "}
           <td>Asysty</td> <td>Żółte kartki</td> <td>Czerwone Kartki</td>{" "}

@@ -6,6 +6,7 @@ import "./globalStyles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, graphql } from "gatsby";
 import Test from "../components/Test";
+import Aktu from "../components/Molecules/aktualnosci/Aktu";
 
 
 // markup
@@ -16,11 +17,11 @@ const IndexPage = () => {
         <section style={mainSectionLeft}>
           <Slider />
           <div style={mainCoinainer}>
-            <h1>Aktualności</h1>
-            
+            <h1 style={{color: '#ebebeb'}}>Aktualności</h1>
+            <Aktu />
           </div>
         </section>
-        <section>
+        <section style={resultCointainer}>
           <Results />
         </section>
       </div>
@@ -44,11 +45,16 @@ const mainSectionLeft = {
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  border: "2px solid grey",
+  // border: "2px solid grey",
   // backgroundColor: 'grey',
 };
+const resultCointainer = {
+  height: '50%',
+}
 
 const mainCoinainer = {
   padding: "10px",
+  display: 'flex',
+  flexDirection: 'column-reverse',
 };
 export default IndexPage;

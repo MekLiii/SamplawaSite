@@ -25,4 +25,5 @@ export default TableElement;
 const styles = {
   border: "1px solid grey",
   textAlign: 'center',
+  color: "#ebebeb"
 };
