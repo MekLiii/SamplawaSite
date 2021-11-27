@@ -5,7 +5,7 @@ function Footer() {
   const year = date.getFullYear();
   return (
     <footer style={footer}>
-      <p style={{ fontSize: "1rem" }}>© {year} PFT Drewneks Sampława </p>
+      <p style={{ fontSize: "1rem",margin: 0, }}>© {year} PFT Drewneks Sampława </p>
     </footer>
   );
 }

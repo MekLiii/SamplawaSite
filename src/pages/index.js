@@ -24,6 +24,7 @@ const IndexPage = () => {
           icon={faArrowDown}
           style={{ color: "#fed053", fontSize: "50px" }}
           onClick={() => scrollTo("#aktu")}
+          
         />
       </StyledDiv>
       <div className="indexCointainer">
@@ -55,13 +56,12 @@ const mainSectionLeft = {
 const resultCointainer = {
   display: "flex",
   flexDirection: "column",
-  minHeight: "500px",
+  minHeight: "800px",
   justifyContent: "flex-start",
   alignItems: "center",
 };
 
 const mainCoinainer = {
-  padding: "10px",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

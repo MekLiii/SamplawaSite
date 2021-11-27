@@ -9,16 +9,17 @@ function MatchTableEl({
   przegrane,
   remisy,
   bramki,
+  pozycja
 }) {
   return (
     <tr>
-      <td>1</td>
+      <td>{pozycja}</td>
       <td>{druzyna}</td>
-      <td>{mecze}</td>
       <td>{pkt}</td>
+      <td>{mecze}</td>
       <td>{zwyciestwa}</td>
-      <td>{przegrane}</td>
       <td>{remisy}</td>
+      <td>{przegrane}</td>
       <td>{bramki}</td>
     </tr>
   );

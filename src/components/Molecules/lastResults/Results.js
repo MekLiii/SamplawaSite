@@ -36,12 +36,12 @@ const resultBox = {
   width: "90%",
   height: "auto",
   backgroundColor: "#fed053",
-  border: "4px solid #2a2e34",
+  // border: "4px solid #2a2e34",
   display: "flex",
   justifyContent: "space-around",
   alignItems: "center",
   flexDirection: "column",
-  borderRadius: "10px",
+  // borderRadius: "10px",  
 };
 
 export default Results;

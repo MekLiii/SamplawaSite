@@ -2,63 +2,56 @@ import React from "react";
 import MatchTableEl from "./MatchTableEl";
 import "./matchTable.module.css";
 import styled from "styled-components";
+import dataJson from "../../../../content/tabelaSenior.json";
 
 function MatchTable() {
-  const data = [
-    {
-      druzyna: "Wadowice",
-      mecze: 1,
-      zwyciestwa: 1,
-      przegrane: 1,
-      remisy: 1,
-      bramki: 15,
-    },
-    {
-      druzyna: "Lubawa",
-      mecze: 1,
-      zwyciestwa: 3,
-      przegrane: 2,
-      remisy: 1,
-      bramki: 15,
-    },
-    {
-      druzyna: "Sampława",
-      mecze: 1,
-      zwyciestwa: 5,
-      przegrane: 1,
-      remisy: 0,
-      bramki: 15,
-    },
-  ];
-  console.log(data.map((el) => el));
+  //  console.log(data.Tabela.sort((a,b) =>{
+  //    return(
+  //      a.zwyciestwa - b.zwyciestwa
+  //    )
+  //  }))
+
+  console.log(data);
+  const dataAtom = dataJson.Tabela.sort((a, b) => {
+    return (
+      (a.zwyciestwa - b.zwyciestwa) * 3 + (a.remisy - b.remisy)
+    );
+  });
+  const data = dataAtom.reverse();
+
+  //  chuj.forEach((e) => {
+  //    console.log(e)
+  //  })
+
   return (
     <div style={cointainer}>
       <div style={heading}>
         <h1>Tabela</h1>
         <StyledTable>
           <tbody>
-          <tr>
-            <td>pozycja</td>
-            <td>druzyna</td>
-            <td>M</td>
-            <td>Pkt</td>
-            <td>Z</td>
-            <td>R</td>
-            <td>P</td>
-            <td>Bramki</td>
-          </tr>
-          {data.map((el) => (
-            <MatchTableEl
-              druzyna={el.druzyna}
-              mecze={el.mecze}
-              pkt={el.zwyciestwa * 3 + el.remisy}
-              zwyciestwa={el.zwyciestwa}
-              przegrane={el.przegrane}
-              remisy={el.remisy}
-              bramki={el.bramki}
-              key={el.druzyna}
-            />
-          ))}
+            <tr>
+              <td>pozycja</td>
+              <td>druzyna</td>
+              <td>Pkt</td>
+              <td>M</td>
+              <td>Z</td>
+              <td>R</td>
+              <td>P</td>
+              <td>Bramki</td>
+            </tr>
+            {data.map((el) => (
+              <MatchTableEl
+                pozycja={data.indexOf(el) + 1}
+                druzyna={el.druzyna}
+                mecze={el.mecze}
+                pkt={el.zwyciestwa * 3 + el.remisy}
+                zwyciestwa={el.zwyciestwa}
+                przegrane={el.porazki}
+                remisy={el.remisy}
+                bramki={el.bramki}
+                key={el.druzyna}
+              />
+            ))}
           </tbody>
         </StyledTable>
       </div>
@@ -69,17 +62,17 @@ function MatchTable() {
 const StyledTable = styled.table`
   border: 3px solid black;
   width: 90%;
-  margin: 50px;
-`
+  
+`;
 
 const cointainer = {
   width: "90%",
-  minHeight: "300px",
+  height: "auto",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  margin: "10px",
+  
 };
 const heading = {
   width: "100%",
@@ -89,6 +82,8 @@ const heading = {
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
+  paddingBottom: '50px',
+  margin: '10px'
 };
 
 export default MatchTable;

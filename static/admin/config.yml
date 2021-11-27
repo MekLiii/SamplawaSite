@@ -57,6 +57,39 @@ collections:
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
       - { label: 'Zdjęcia', name: 'zdjęcia', widget: 'image', default: "/src/images/slider/slider1.jpg" }
       - { label: 'tresc', name: 'tresc', widget: 'markdown' }
-  
-  
-  
+
+  - label: "Tabela"
+    name: "tabela"
+    files:
+      - label: "tabela senior"
+        name: "tabela"
+        file: "content/tabelaSenior.json"
+        fields:
+          - label: Tabela Senior
+            name: Tabela
+            widget: list
+            fields:
+              - {label: druzyna, name: druzyna, widget: string}
+              - {label: logo, name: logo, widget: image, required: false}
+              - {label: Mecze, name: mecze, widget: number}
+              - {label: zwyciestwa, name: zwyciestwa, widget: number}
+              - {label: porazki, name: porazki , widget: number}
+              - {label: remisy, name: remisy , widget: number}
+              - {label: bramki, name: bramki , widget: number}
+              
+          - label: Tabela Junior
+            name: TabelaJunior
+            widget: list
+            fields:
+              - {label: druzyna, name: druzyna, widget: string}
+              - {label: logo, name: logo, widget: image, required: false}
+              - {label: Mecze, name: mecze, widget: number}
+              - {label: zwyciestwa, name: zwyciestwa, widget: number}
+              - {label: porazki, name: porazki , widget: number}
+              - {label: remisy, name: remisy , widget: number}
+              - {label: bramki, name: bramki , widget: number}
+      
+          
+ 
+    
+    
