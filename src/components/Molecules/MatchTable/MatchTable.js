@@ -5,23 +5,13 @@ import styled from "styled-components";
 import dataJson from "../../../../content/tabelaSenior.json";
 
 function MatchTable() {
-  //  console.log(data.Tabela.sort((a,b) =>{
-  //    return(
-  //      a.zwyciestwa - b.zwyciestwa
-  //    )
-  //  }))
 
-  console.log(data);
   const dataAtom = dataJson.Tabela.sort((a, b) => {
     return (
       (a.zwyciestwa - b.zwyciestwa) * 3 + (a.remisy - b.remisy)
     );
   });
   const data = dataAtom.reverse();
-
-  //  chuj.forEach((e) => {
-  //    console.log(e)
-  //  })
 
   return (
     <div style={cointainer}>
