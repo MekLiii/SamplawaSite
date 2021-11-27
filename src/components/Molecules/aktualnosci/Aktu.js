@@ -35,7 +35,7 @@ function Aktu() {
             <AktuEl
               heading={element.node.frontmatter.naglowek}
               data={element.node.frontmatter.date}
-              text={`${element.node.frontmatter.tresc.slice(0, 150)}...`}
+              text={`${element.node.frontmatter.tresc.slice(0, 150)}...Czytaj dalej`}
               img={img}
               
             />
