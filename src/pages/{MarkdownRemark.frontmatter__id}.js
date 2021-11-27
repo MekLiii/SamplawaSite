@@ -21,7 +21,7 @@ export default function Template({
           </div>
           <div className="contentBox">
             <div className="contentBoxImage">
-              <img src={img} className="imgArticle" />
+              <img src={img} className="imgArticle" alt={img} />
             </div>
             <div className="contentBoxText">
               <p style={{ margin: "30px" }}>{frontmatter.tresc}</p>
@@ -41,20 +41,7 @@ export default function Template({
   );
 }
 
-const MainCointainer = {
-  minHeight: "80vh",
-  width: "100%",
-  backgroundColor: "white",
-  // display: "flex",
-  display: "grid",
-  gridTemplateColumns: "2fr 1fr",
-  gridTemplateRows: "1fr",
-  gap: "0px 0px",
-  gridTemplateAreas: ". .",
-  backgroundColor: "#00",
-  // height: "60vh",
-  width: "100%",
-};
+
 const heading = {
   width: "100%",
   display: "flex",

@@ -5,7 +5,7 @@ function AktuEl({ img, heading, text, data }) {
   return (
     <div style={box} className="box">
       <div style={leftSide}>
-        <img src={img} style={imagine} />
+        <img src={img} style={imagine} alt={img}/>
       </div>
       <div style={rightSide}>
         <p>{data}</p>

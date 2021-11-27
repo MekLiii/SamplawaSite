@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+
 import React from "react";
 import Footer from "../Molecules/footer/Footer";
 
@@ -14,15 +14,11 @@ function Layout({ children }) {
   );
 }
 
-const header = {
-  width: '100%',
-  backgroundColor: "#f5b301"
-}
 const cointainer = {
   height: 'auto',
   backgroundColor: '#1e232b'
   
-  
+
   // backgroundColor: '#fed053'
 }
 export default Layout;

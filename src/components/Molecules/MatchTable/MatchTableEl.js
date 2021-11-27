@@ -1,4 +1,5 @@
 import React from "react";
+import "./matchTable.module.css";
 
 function MatchTableEl({
   druzyna,

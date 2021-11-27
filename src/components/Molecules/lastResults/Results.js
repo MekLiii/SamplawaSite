@@ -11,7 +11,7 @@ function Results() {
       <div style={resultBox}>
         <p style={{ fontSize: "2rem" }}>Ostatni mecz</p>
         <p style={{ fontSize: "clamp(1rem, 7vmin, 1.5rem)" }}>
-          <img />{data.gospodarze} - {data.goscie}
+          {data.gospodarze} - {data.goscie}
         </p>
         <p style={{ fontSize: "1.5rem" }}>
           {data.bramkiGospodarza}:{data.bramkiGoscia}

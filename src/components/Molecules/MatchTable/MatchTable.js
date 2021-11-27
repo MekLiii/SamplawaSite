@@ -1,6 +1,7 @@
 import React from "react";
 import MatchTableEl from "./MatchTableEl";
 import "./matchTable.module.css";
+import styled from "styled-components";
 
 function MatchTable() {
   const data = [
@@ -34,9 +35,9 @@ function MatchTable() {
     <div style={cointainer}>
       <div style={heading}>
         <h1>Tabela</h1>
-        <table className="matchTable">
+        <StyledTable>
           <tbody>
-          <tr style={{ border: "3px solid black" }}>
+          <tr>
             <td>pozycja</td>
             <td>druzyna</td>
             <td>M</td>
@@ -59,11 +60,17 @@ function MatchTable() {
             />
           ))}
           </tbody>
-        </table>
+        </StyledTable>
       </div>
     </div>
   );
 }
+
+const StyledTable = styled.table`
+  border: 3px solid black;
+  width: 90%;
+  margin: 50px;
+`
 
 const cointainer = {
   width: "90%",

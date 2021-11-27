@@ -18,7 +18,7 @@ const IndexPage = () => {
       <StyledDiv>
         <StyledUnderDiv>
           <h1 style={{ color: "#fed053" }}>PFT Drewneks Sampława</h1>
-          <img src={img} style={{ width: "200px", height: "200px" }} />
+          <img src={img} style={{ width: "200px", height: "200px" }} alt={img}/>
         </StyledUnderDiv>
         <FontAwesomeIcon
           icon={faArrowDown}
