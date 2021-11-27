@@ -1,12 +1,12 @@
 {
   "Tabela": [
     {
-      "druzyna": "GKS LZS Szymbark",
+      "druzyna": "Olimpia Kisielice",
       "mecze": 9,
-      "zwyciestwa": 6,
-      "porazki": 2,
+      "zwyciestwa": 5,
+      "porazki": 3,
       "remisy": 1,
-      "bramki": 35
+      "bramki": 32
     },
     {
       "druzyna": "Mały Jeziorak Iława",
@@ -25,27 +25,11 @@
       "bramki": 9
     },
     {
-      "druzyna": "Olimpia Kisielice",
-      "mecze": 9,
-      "zwyciestwa": 5,
-      "porazki": 3,
-      "remisy": 1,
-      "bramki": 32
-    },
-    {
       "druzyna": "Torpeda Rożental",
       "mecze": 9,
       "zwyciestwa": 4,
       "porazki": 5,
       "remisy": 0,
-      "bramki": 20
-    },
-    {
-      "druzyna": "PFT Sampława",
-      "mecze": 9,
-      "zwyciestwa": 4,
-      "porazki": 2,
-      "remisy": 3,
       "bramki": 20
     },
     {
@@ -57,12 +41,28 @@
       "bramki": 7
     },
     {
+      "druzyna": "GKS LZS Szymbark",
+      "mecze": 9,
+      "zwyciestwa": 6,
+      "porazki": 2,
+      "remisy": 1,
+      "bramki": 35
+    },
+    {
       "druzyna": "Żak Jamielnik",
       "mecze": 9,
       "zwyciestwa": 7,
       "porazki": 1,
       "remisy": 1,
       "bramki": 26
+    },
+    {
+      "druzyna": "LZS Fijewo",
+      "mecze": 9,
+      "zwyciestwa": 2,
+      "porazki": 7,
+      "remisy": 0,
+      "bramki": 7
     },
     {
       "druzyna": "Wel Bratian",
@@ -73,12 +73,12 @@
       "bramki": 27
     },
     {
-      "druzyna": "LZS Fijewo",
+      "druzyna": "PFT Sampława",
       "mecze": 9,
-      "zwyciestwa": 2,
-      "porazki": 7,
-      "remisy": 0,
-      "bramki": 7
+      "zwyciestwa": 4,
+      "porazki": 2,
+      "remisy": 3,
+      "bramki": 20
     }
   ]
 }
