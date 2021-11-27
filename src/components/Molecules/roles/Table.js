@@ -27,6 +27,7 @@ function Table() {
             zKartki={element.zKartki}
             cKartki={element.cKartki}
             mecze={element.mecze}
+            key={element.numer}
             style={{
               border: "3px solid black",
             }}

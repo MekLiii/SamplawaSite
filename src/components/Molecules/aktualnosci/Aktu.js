@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import Layout from "../../Organism/Layout";
 import AktuEl from "./AktuEl";
 import img from '../../../images/article.jpg'
 
@@ -23,19 +22,22 @@ function Aktu() {
       }
     }
   `);
-  const dataEl = data.allMarkdownRemark.edges;
-  console.log(dataEl.map((element) => element.node.frontmatter.naglowek));
+  const dataElement = data.allMarkdownRemark.edges;
+  const dataAtom = dataElement.slice().reverse();
 
+  const text = dataAtom.map((element) => element.node.frontmatter.tresc);
+  console.log(text.slice(0,150))
   return (
     <div>
       <div>
-        {dataEl.map((element) => (
-          <Link to={`/${element.node.frontmatter.id}`}>
+        {dataAtom.map((element) => (
+          <Link to={`/${element.node.frontmatter.id}`} key={element.node.frontmatter.id}>
             <AktuEl
               heading={element.node.frontmatter.naglowek}
               data={element.node.frontmatter.date}
-              text={element.node.frontmatter.tresc}
+              text={`${element.node.frontmatter.tresc.slice(0, 150)}...`}
               img={img}
+              
             />
           </Link>
         ))}
@@ -44,9 +46,4 @@ function Aktu() {
   );
 }
 
-const container = {
-  width: "100%",
-  minHeight: "5vh",
-  backgroundColor: "#fed053",
-};
 export default Aktu;

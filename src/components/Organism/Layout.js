@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import Footer from "../Molecules/footer/Footer";
-import Header from "../Molecules/header/Header";
+
 import NavBar from "../Molecules/navbar/NavBar";
 
 function Layout({ children }) {

@@ -38,7 +38,9 @@ collections:
             widget: list
             fields:
               - {label: gospodarze, name: gospodarze, widget: string}
+              - {label: logo gospodarzy, name: gospodarzeLogo, widget: image}
               - {label: goscie, name: goscie, widget: string}
+              - {label: logo gosci, name: goscieLogo, widget: image}
               - {label: bramki gospodarza, name: bramkiGospodarza , widget: number}
               - {label: bramki goscia, name: bramkiGoscia , widget: number}
               - {label: Data, name: data , widget: date, format: 'D.MM.YYYY'}
@@ -50,12 +52,11 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'id (nie może się powtarzać)', name: 'id', widget: 'number', required: true}
+      - { label: 'id', name: 'id', widget: 'number', required: true}
       - { label: 'naglowek', name: 'naglowek', widget: 'string' }
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
       - { label: 'Zdjęcia', name: 'zdjęcia', widget: 'image', default: "/src/images/slider/slider1.jpg" }
       - { label: 'tresc', name: 'tresc', widget: 'markdown' }
-
-      
+  
   
   

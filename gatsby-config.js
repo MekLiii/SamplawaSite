@@ -10,8 +10,9 @@ module.exports = {
         path: `${__dirname}/content/blog`,
       },
     },
-    `gatsby-transformer-remark`, "gatsby-plugin-netlify-cms"
+    `gatsby-transformer-remark`,
+    "gatsby-plugin-netlify-cms",
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-smoothscroll`,
   ],
-}
-
-
+};

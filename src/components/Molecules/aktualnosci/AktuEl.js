@@ -21,7 +21,7 @@ const box = {
     width: '100%',
     backgroundColor: "#fed053",
     display: 'flex',
-    margin: '10px'
+    marginBottom: '10px'
 }
 
 const leftSide = {
