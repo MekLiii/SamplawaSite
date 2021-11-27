@@ -1,14 +1,6 @@
 {
   "Tabela": [
     {
-      "druzyna": "Żak Jamielnik",
-      "mecze": 1,
-      "zwyciestwa": 7,
-      "porazki": 1,
-      "remisy": 1,
-      "bramki": 26
-    },
-    {
       "druzyna": "Mały Jeziorak Iława",
       "mecze": 9,
       "zwyciestwa": 7,
@@ -25,6 +17,14 @@
       "bramki": 35
     },
     {
+      "druzyna": "PFT Sampława",
+      "mecze": 9,
+      "zwyciestwa": 4,
+      "porazki": 2,
+      "remisy": 3,
+      "bramki": 20
+    },
+    {
       "druzyna": "Olimpia Kisielice",
       "mecze": 9,
       "zwyciestwa": 5,
@@ -33,12 +33,20 @@
       "bramki": 32
     },
     {
-      "druzyna": "PFT Sampława",
+      "druzyna": "Żak Jamielnik",
+      "mecze": 1,
+      "zwyciestwa": 7,
+      "porazki": 1,
+      "remisy": 1,
+      "bramki": 26
+    },
+    {
+      "druzyna": "Wicher Gwiździny",
       "mecze": 9,
-      "zwyciestwa": 4,
-      "porazki": 2,
-      "remisy": 3,
-      "bramki": 20
+      "zwyciestwa": 1,
+      "porazki": 8,
+      "remisy": 0,
+      "bramki": 7
     },
     {
       "druzyna": "Torpeda Rożental",
@@ -49,14 +57,6 @@
       "bramki": 20
     },
     {
-      "druzyna": "Wel Bratian",
-      "mecze": 9,
-      "zwyciestwa": 3,
-      "porazki": 6,
-      "remisy": 0,
-      "bramki": 27
-    },
-    {
       "druzyna": "Huragan Byszwałd",
       "mecze": 9,
       "zwyciestwa": 2,
@@ -65,12 +65,12 @@
       "bramki": 9
     },
     {
-      "druzyna": "Wicher Gwiździny",
+      "druzyna": "Wel Bratian",
       "mecze": 9,
-      "zwyciestwa": 1,
-      "porazki": 8,
+      "zwyciestwa": 3,
+      "porazki": 6,
       "remisy": 0,
-      "bramki": 7
+      "bramki": 27
     }
   ]
 }
