@@ -1,6 +1,5 @@
 import * as React from "react";
 import Results from "../components/Molecules/lastResults/Results";
-import Slider from "../components/Molecules/slider/Slider";
 import Layout from "../components/Organism/Layout";
 import "./globalStyles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,13 +7,12 @@ import Aktu from "../components/Molecules/aktualnosci/Aktu";
 import MatchTable from "../components/Molecules/MatchTable/MatchTable";
 import styled from "styled-components";
 import img from "../images/logo.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import scrollTo from 'gatsby-plugin-smoothscroll';
+import scrollTo from "gatsby-plugin-smoothscroll";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 // markup
 const IndexPage = () => {
-
   return (
     <Layout>
       <StyledDiv>
@@ -22,16 +20,18 @@ const IndexPage = () => {
           <h1 style={{ color: "#fed053" }}>PFT Drewneks Sampława</h1>
           <img src={img} style={{ width: "200px", height: "200px" }} />
         </StyledUnderDiv>
-        <FontAwesomeIcon
+        {/* <FontAwesomeIcon
           icon={faArrowDown}
           style={{ color: "#fed053", fontSize: "50px" }}
-          onClick={() => scrollTo('#aktu')}
-        />
+          onClick={() => scrollTo("#aktu")}
+        /> */}
       </StyledDiv>
       <div className="indexCointainer">
         <section style={mainSectionLeft}>
           <div style={mainCoinainer}>
-            <h1 id="aktu" style={{ color: "#ebebeb" }}>Aktualności</h1>
+            <h1 id="aktu" style={{ color: "#ebebeb" }}>
+              Aktualności
+            </h1>
             <Aktu />
           </div>
         </section>

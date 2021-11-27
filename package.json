@@ -21,6 +21,7 @@
     "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-netlify-cms": "^6.1.0",
     "gatsby-plugin-sass": "^5.1.1",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-styled-components": "^5.2.0",
     "gatsby-source-filesystem": "^4.2.0",
     "gatsby-transformer-remark": "^5.2.0",
