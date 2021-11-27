@@ -20,6 +20,7 @@ const header = {
 }
 const cointainer = {
   height: 'auto',
+  backgroundColor: '#1e232b'
   // backgroundColor: '#fed053'
 }
 export default Layout;

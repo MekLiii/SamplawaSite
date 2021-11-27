@@ -20,11 +20,11 @@ const IndexPage = () => {
           <h1 style={{ color: "#fed053" }}>PFT Drewneks Sampława</h1>
           <img src={img} style={{ width: "200px", height: "200px" }} />
         </StyledUnderDiv>
-        {/* <FontAwesomeIcon
+        <FontAwesomeIcon
           icon={faArrowDown}
           style={{ color: "#fed053", fontSize: "50px" }}
           onClick={() => scrollTo("#aktu")}
-        /> */}
+        />
       </StyledDiv>
       <div className="indexCointainer">
         <section style={mainSectionLeft}>
