@@ -21,7 +21,7 @@ export default function Template({
           </div>
           <div className="contentBox">
             <div className="contentBoxImage">
-              <img src={img} className="imgArticle" alt={img} />
+              <img src={frontmatter.zdjecia} className="imgArticle" alt={img} />
             </div>
             <div className="contentBoxText">
               <p style={{ margin: "30px" }}>{frontmatter.tresc}</p>
@@ -62,7 +62,7 @@ export const pageQuery = graphql`
         naglowek
         title
         tresc
-        zdj_cia
+        zdjecia
       }
     }
   }

@@ -15,7 +15,7 @@ function Aktu() {
               id
               naglowek
               tresc
-              zdj_cia
+              zdjecia
               title
             }
           }
@@ -23,6 +23,7 @@ function Aktu() {
       }
     }
   `);
+  console.log(data);
   const dataElement = data.allMarkdownRemark.edges;
   const dataAtom = dataElement.slice().reverse();
 
@@ -38,11 +39,12 @@ function Aktu() {
           <AktuEl
             heading={element.node.frontmatter.naglowek}
             data={element.node.frontmatter.date}
+            // img={element.node.frontmatter.zdjecia}
             text={`${element.node.frontmatter.tresc.slice(
               0,
               150
             )}...Czytaj dalej`}
-            img={img}
+            img={element.node.frontmatter.zdjecia}
           />
         </Link>
       ))}

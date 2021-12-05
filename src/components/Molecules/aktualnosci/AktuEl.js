@@ -9,12 +9,14 @@ function AktuEl({ img, heading, text, data }) {
         <AbsoluteDiv>
           <p>{data}</p>
         </AbsoluteDiv>
-        <img src={img} style={imagine} alt={img} />
+        <div style={imagine}>
+          <img src={img} style={imagine} alt={img} />
+        </div>
       </div>
       <div style={rightSide}>
         <p>{data}</p>
-        <h1 style={{ fontSize: "30px" }}>{heading}</h1>
-        <p style={{ fontSize: "20px" }}>{text}</p>
+        <h1 style={{ fontSize: "1.1rem", fontWeight: "bold" }}>{heading}</h1>
+        <p style={{ fontSize: "17px", fontWeight: "100" }}>{text}</p>
       </div>
     </StyledBox>
   );
@@ -28,7 +30,7 @@ const box = {
 };
 const StyledBox = styled.div`
   width: 350px;
-  min-height: 550px;
+  min-height: 655px;
   background-color: white;
   display: flex;
   margin-bottom: 10px;
@@ -36,21 +38,19 @@ const StyledBox = styled.div`
 `;
 const AbsoluteDiv = styled.div`
   position: absolute;
-  
+
   width: 110px;
   height: 25px;
   background-color: white;
   z-index: 100;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 84% 100%, 0 100%, 0% 50%);
-  padding-left:10px;
-
-
+  padding-left: 10px;
 `;
 
 const leftSide = {
   display: "flex",
   width: "100%",
-  height: "50%",
+  flex:'1'
 };
 const rightSide = {
   display: "flex",
@@ -58,11 +58,12 @@ const rightSide = {
   alignItems: "center",
   flexDirection: "column",
   margin: "20px",
+  flex: "1",
 };
 const imagine = {
   width: "100%",
   height: "100%",
-  zIndex: "1",
+  backgroundColor:'black'
 };
 
 export default AktuEl;
