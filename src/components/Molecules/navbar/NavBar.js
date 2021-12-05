@@ -2,40 +2,40 @@ import React from "react";
 import { Link } from "gatsby";
 import logo from "../../../images/logo.png";
 import styled from "styled-components";
+import './navbar.module.css'
 
 function NavBar() {
   return (
     <StyledNav>
+      <StyledRotate>
       <StyledImg src={logo} alt="logo" />
+      
       <StyledUl>
         <li>
-          <Link to="/">Strona głowna</Link>
+          <Link to="/" style={text}>Strona głowna</Link>
         </li>
         <li>
-          <Link to="/Druzyna">Drużyna</Link>
+          <Link to="/Druzyna" style={text}>Drużyna</Link>
         </li>
         <li>
-          <Link to="/Galeria">Galeria</Link>
+          <Link to="/Galeria" style={text}>Galeria</Link>
         </li>
         <li>
-          <Link to="/Sponsorzy">Sponsorzy</Link>
+          <Link to="/Sponsorzy" style={text}>Sponsorzy</Link>
         </li>
         <li>
-          <Link to="/Kontakt">Kontakt</Link>
+          <Link to="/Kontakt" style={text}>Kontakt</Link>
         </li>
       </StyledUl>
+      </StyledRotate>
     </StyledNav>
   );
 }
 
 const StyledNav = styled.nav`
-  width: 100%;
-  height: 10vh;
-  background-color: #fed053;
+  height: 20vh;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-
   @media (max-width:500px){
     justify-content: center;
   }
@@ -46,13 +46,24 @@ const StyledUl = styled.ul`
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  height: 100%;
   width: 50%;
+  transform: rotate(-4deg);
   @media (max-width:500px){
     width: 100%;
   }
 
 `;
+const StyledRotate = styled.div`
+  height: 100%;
+  ${'' /* transform: rotate(-4.5deg); */}
+  clip-path: polygon(0 0, 100% 1%, 100% 31%, 0 100%);
+  background-color: #ffe600;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+`
+
+
 
 const StyledImg = styled.img`
   width: auto;
@@ -61,5 +72,11 @@ const StyledImg = styled.img`
     display: none;
   }
 `
+
+const text = {
+  color: 'black',
+  fontWeight: 'bold',
+  fontSize:'30px'
+}
 
 export default NavBar;

@@ -56,7 +56,7 @@ const StyledTable = styled.table`
 `;
 
 const cointainer = {
-  width: "90%",
+  width: "100%",
   height: "auto",
   display: "flex",
   justifyContent: "center",
@@ -67,7 +67,6 @@ const cointainer = {
 const heading = {
   width: "100%",
   minHeight: "100px",
-  backgroundColor: "#fed053",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",

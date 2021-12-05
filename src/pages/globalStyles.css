@@ -8,16 +8,16 @@
 }
 body{
     height: auto;
-    background-color: #1e232b;
 }
 .indexCointainer{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows:  1fr;
-    grid-gap:0px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-@media only screen and (max-width:500px) {
+
+/* @media only screen and (max-width:500px) {
     .indexCointainer{
         display: grid;
         grid-template-columns: 1fr;
@@ -25,7 +25,7 @@ body{
         gap: 0px 0px;
         
     }
-}
+} */
 svg:hover{
     cursor: pointer;
 }

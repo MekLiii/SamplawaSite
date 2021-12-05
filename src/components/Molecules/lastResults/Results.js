@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import mecz from "../../../../content/mecz.json";
 import "./result.module.css";
 
@@ -8,15 +9,16 @@ function Results() {
   // console.log(arrayLenght)
   return (
     <div style={cointainer}>
-      <div style={resultBox}>
-        <p style={{ fontSize: "2rem" }}>Ostatni mecz</p>
-        <p style={{ fontSize: "clamp(1rem, 7vmin, 1.5rem)" }}>
+      <div style={resultBox} className="result">
+        <StyledP style={{ fontSize: "2rem",color:'white' }}>Ostatni mecz</StyledP>
+        <StyledP style={{ fontSize: "clamp(1rem, 7vmin, 1.5rem)" }}>
           {data.gospodarze} - {data.goscie}
-        </p>
-        <p style={{ fontSize: "1.5rem" }}>
+        </StyledP>
+        <StyledP style={{ fontSize: "1.5rem" }}>
           {data.bramkiGospodarza}:{data.bramkiGoscia}
-        </p>
-        <p>{data.data}</p>
+        </StyledP>
+        <StyledP style={{ color: "#b1b1b1" }}>B klasa</StyledP>
+        <StyledP style={{ color: "#b1b1b1" }}>{data.data}</StyledP>
       </div>
     </div>
   );
@@ -25,7 +27,6 @@ function Results() {
 const cointainer = {
   width: "100%",
   height: "auto",
-  // minHeight: "400px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -35,8 +36,6 @@ const cointainer = {
 const resultBox = {
   width: "90%",
   height: "auto",
-  backgroundColor: "#fed053",
-  // border: "4px solid #2a2e34",
   display: "flex",
   justifyContent: "space-around",
   alignItems: "center",
@@ -44,4 +43,7 @@ const resultBox = {
   // borderRadius: "10px",  
 };
 
+const StyledP= styled.p`
+  color:white;
+`
 export default Results;

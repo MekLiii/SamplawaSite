@@ -15,9 +15,8 @@ function Layout({ children }) {
 }
 
 const cointainer = {
-  height: 'auto',
-  backgroundColor: '#1e232b'
-  
+  height: 'auto',  
+  backgroundColor: 'black',
 
   // backgroundColor: '#fed053'
 }

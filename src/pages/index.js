@@ -8,38 +8,35 @@ import MatchTable from "../components/Molecules/MatchTable/MatchTable";
 import styled from "styled-components";
 import img from "../images/logo.png";
 import scrollTo from "gatsby-plugin-smoothscroll";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import NextMatch from "../components/Molecules/lastResults/NextMatch";
 
 // markup
 const IndexPage = () => {
   return (
     <Layout>
+      <StyledSlider>
+        <h1 style={{ color: "#ffe600", transform: "rotate(-5.0deg)" }}>
+          PFT Drewneks Sampława
+        </h1>
+      </StyledSlider>
       <StyledDiv>
-        <StyledUnderDiv>
-          <h1 style={{ color: "#fed053" }}>PFT Drewneks Sampława</h1>
-          <img src={img} style={{ width: "200px", height: "200px" }} alt={img}/>
-        </StyledUnderDiv>
-        <FontAwesomeIcon
-          icon={faArrowDown}
-          style={{ color: "#fed053", fontSize: "50px" }}
-          onClick={() => scrollTo("#aktu")}
-          
-        />
+        <SyldedEl style={{ backgroundColor: "#222" }}>
+          <Results />
+        </SyldedEl>
+        <SyldedEl style={{ backgroundColor: "#ddd" }}>
+          <NextMatch />
+        </SyldedEl>
+        <SyldedEl style={{ backgroundColor: "#eee" }}>
+          <MatchTable />
+        </SyldedEl>
       </StyledDiv>
       <div className="indexCointainer">
-        <section style={mainSectionLeft}>
-          <div style={mainCoinainer}>
-            <h1 id="aktu" style={{ color: "#ebebeb" }}>
-              Aktualności
-            </h1>
-            <Aktu />
-          </div>
-        </section>
-        <section style={resultCointainer}>
-          <Results />
-          <MatchTable />
-        </section>
+        <h1 id="aktu" style={{ color: "#ebebeb" }}>
+          Aktualności
+        </h1>
+        <Aktu />
       </div>
     </Layout>
   );
@@ -73,13 +70,28 @@ const StyledDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  background-color: grey;
+  clip-path: polygon(0 33%, 100% 10%, 100% 72%, 0 95%);
 `;
 const StyledUnderDiv = styled.div`
   height: 80vh;
-  width: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+`;
+const StyledSlider = styled.div`
+  height: 20vh;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const SyldedEl = styled.div`
+  flex: 1;
+  height: 100%;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
   align-items: center;
 `;
 export default IndexPage;
