@@ -11,6 +11,7 @@ export default function Template({
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
+  console.log(frontmatter.zdjecia);
   return (
     <LayOut>
       <div className="blog-post-container">
@@ -62,11 +63,7 @@ export const pageQuery = graphql`
         naglowek
         title
         tresc
-        zdjecia{ 
-          id
-          source
-          
-       }
+        zdjecia
       }
     }
   }
