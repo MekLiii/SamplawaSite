@@ -15,7 +15,10 @@ function Aktu() {
               id
               naglowek
               tresc
-              zdjecia
+              zdjecia { 
+                id
+                source
+             }
               title
             }
           }
