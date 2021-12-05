@@ -44,7 +44,7 @@ function Aktu() {
               0,
               150
             )}...Czytaj dalej`}
-            img={element.node.frontmatter.zdjecia}
+            // img={element.node.frontmatter.zdjecia}
           />
         </Link>
       ))}
