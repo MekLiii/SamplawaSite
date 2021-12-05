@@ -10,7 +10,7 @@ function AktuEl({ img, heading, text, data }) {
           <p>{data}</p>
         </AbsoluteDiv>
         <div style={imagine}>
-          <img src={img} style={imagine} alt={'Nie działa'} />
+          {/* <img src={img} style={imagine} alt={'Nie działa'} /> */}
         </div>
       </div>
       <div style={rightSide}>

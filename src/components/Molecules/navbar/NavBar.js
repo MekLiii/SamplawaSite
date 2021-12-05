@@ -3,8 +3,10 @@ import { Link } from "gatsby";
 import logo from "../../../images/logo.png";
 import styled from "styled-components";
 import './navbar.module.css'
+import scrollTo from "gatsby-plugin-smoothscroll";
 
-function NavBar() {
+
+function NavBar({pathSpons}) {
   return (
     <StyledNav>
       <StyledRotate>
@@ -21,7 +23,7 @@ function NavBar() {
           <Link to="/Galeria" style={text}>Galeria</Link>
         </li>
         <li>
-          <Link to="/Sponsorzy" style={text}>Sponsorzy</Link>
+          <p onClick={()=> scrollTo({pathSpons})}>Sponsorzy</p>
         </li>
         <li>
           <Link to="/Kontakt" style={text}>Kontakt</Link>

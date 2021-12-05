@@ -11046,6 +11046,11 @@
     "react-lifecycles-compat" "^3.0.0"
     "warning" "^4.0.3"
 
+"react-multi-carousel@^2.6.5":
+  "integrity" "sha512-i5iuAm5XRT/h7uBL9/pGWeRsQXzqvjBrPVP1sobKgDKEvfZuKFpYp/alaQhTRM56Jtkb8jZpSqLn52Ku6jJbDg=="
+  "resolved" "https://registry.npmjs.org/react-multi-carousel/-/react-multi-carousel-2.6.5.tgz"
+  "version" "2.6.5"
+
 "react-polyglot@^0.7.0":
   "integrity" "sha512-d/075aofJ4of9wOSBewl+ViFkkM0L1DgE3RVDOXrHZ92w4o2643sTQJ6lSPw8wsJWFmlB/3Pvwm0UbGNvLfPBw=="
   "resolved" "https://registry.npmjs.org/react-polyglot/-/react-polyglot-0.7.2.tgz"

@@ -4,10 +4,10 @@ import Footer from "../Molecules/footer/Footer";
 
 import NavBar from "../Molecules/navbar/NavBar";
 
-function Layout({ children }) {
+function Layout({ children,pathSpons }) {
   return (
     <div style={cointainer}>
-      <NavBar />
+      <NavBar pathSpons={pathSpons}/>
       <main>{children}</main>
       <Footer />
     </div>

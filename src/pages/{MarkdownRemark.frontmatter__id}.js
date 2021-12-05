@@ -6,9 +6,7 @@ import Results from "../components/Molecules/lastResults/Results";
 import './markdownAricle.css'
 import MatchTable from "../components/Molecules/MatchTable/MatchTable";
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
+export default function Template({data}) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   console.log(frontmatter.zdjecia);
@@ -22,7 +20,7 @@ export default function Template({
           </div>
           <div className="contentBox">
             <div className="contentBoxImage">
-              <img src={frontmatter.zdjecia} className="imgArticle" alt={img} />
+              {/* <img src={frontmatter.zdjecia} className="imgArticle" alt={img} /> */}
             </div>
             <div className="contentBoxText">
               <p style={{ margin: "30px" }}>{frontmatter.tresc}</p>
@@ -63,7 +61,6 @@ export const pageQuery = graphql`
         naglowek
         title
         tresc
-        zdjecia
       }
     }
   }
