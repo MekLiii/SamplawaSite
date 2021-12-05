@@ -14,7 +14,7 @@ function MatchTableEl({
   return (
     <tr>
       <td>{pozycja}</td>
-      <td>{druzyna}</td>
+      <td style={{textAlign: "left"}}>{druzyna}</td>
       <td>{pkt}</td>
       <td>{mecze}</td>
       <td>{zwyciestwa}</td>

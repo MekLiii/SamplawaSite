@@ -13,7 +13,8 @@ function Druzyna() {
 }
 
 const cointainer = {
-    height: '82vh',
+    minHeight: '82vh',
+    height:'auto',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
