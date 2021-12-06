@@ -14,6 +14,7 @@ module.exports = {
     "gatsby-plugin-netlify-cms",
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
+    `gastby-plugin-sharp`
     // `gatsby-plugin-fontawesome-css`
   ],
 };

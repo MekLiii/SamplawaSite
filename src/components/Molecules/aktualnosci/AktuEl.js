@@ -14,7 +14,7 @@ function AktuEl({ img, heading, text, data }) {
         </div>
       </div>
       <div style={rightSide}>
-        <p>{data}</p>
+        {/* <p>{data}</p> */}
         <h1 style={{ fontSize: "1.1rem", fontWeight: "bold" }}>{heading}</h1>
         <p style={{ fontSize: "17px", fontWeight: "100" }}>{text}</p>
       </div>

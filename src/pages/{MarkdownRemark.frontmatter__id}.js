@@ -5,6 +5,7 @@ import img from "../images/slider/slider2.jpg";
 import Results from "../components/Molecules/lastResults/Results";
 import './markdownAricle.css'
 import MatchTable from "../components/Molecules/MatchTable/MatchTable";
+// import img from '../../content/blog/images/article.jpg'
 
 export default function Template({data}) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
@@ -20,7 +21,7 @@ export default function Template({data}) {
           </div>
           <div className="contentBox">
             <div className="contentBoxImage">
-              {/* <img src={frontmatter.zdjecia} className="imgArticle" alt={img} /> */}
+              <img src={frontmatter.zdjecia} className="imgArticle" alt={frontmatter.zdjecia} />
             </div>
             <div className="contentBoxText">
               <p style={{ margin: "30px" }}>{frontmatter.tresc}</p>
@@ -61,6 +62,7 @@ export const pageQuery = graphql`
         naglowek
         title
         tresc
+        zdjecia
       }
     }
   }

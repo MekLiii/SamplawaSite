@@ -13,7 +13,7 @@ function Footer() {
 const footer = {
   width: "100%",
   height: "8vh",
-  backgroundColor: "#fed053",
+  backgroundColor: "#ffe600",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",

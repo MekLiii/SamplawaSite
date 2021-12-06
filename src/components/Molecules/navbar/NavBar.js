@@ -1,47 +1,79 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import logo from "../../../images/logo.png";
 import styled from "styled-components";
-import './navbar.module.css'
+import "./navbar.module.css";
 import scrollTo from "gatsby-plugin-smoothscroll";
+import { Menu } from "react-ionicons";
+import Burger from "../../Atoms/Burger";
 
+function NavBar() {
+  const [menu, setMenu] = useState(false);
 
-function NavBar({pathSpons}) {
+  useEffect(() => {
+    console.log(menu);
+  }, [menu]);
+
+  const StyledNav = styled.nav`
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 500px) {
+      justify-content: center;
+      height: 10vh;
+    }
+  `;
   return (
     <StyledNav>
-      <StyledRotate>
-      <StyledImg src={logo} alt="logo" />
-      
-      <StyledUl>
-        <li>
-          <Link to="/" style={text}>Strona głowna</Link>
-        </li>
-        <li>
-          <Link to="/Druzyna" style={text}>Drużyna</Link>
-        </li>
-        <li>
-          <Link to="/Galeria" style={text}>Galeria</Link>
-        </li>
-        <li>
-          <p onClick={()=> scrollTo({pathSpons})}>Sponsorzy</p>
-        </li>
-        <li>
-          <Link to="/Kontakt" style={text}>Kontakt</Link>
-        </li>
-      </StyledUl>
-      </StyledRotate>
+      <Burger />
+      <StyledSide>
+        <div style={navText}>
+          <Link to="/" style={text}>
+            Głowna
+          </Link>
+          <Link to="/Druzyna" style={text}>
+            Drużyna
+          </Link>
+        </div>
+      </StyledSide>
+      <StyledLogo>
+        <StyledImg src={logo} alt="logo" />
+      </StyledLogo>
+      <StyledSide>
+        <div style={navText}>
+          <Link to="/Galeria" style={text}>
+            Galeria
+          </Link>
+          <Link to="/Kontakt" style={text}>
+            Kontakt
+          </Link>
+        </div>
+      </StyledSide>
     </StyledNav>
   );
 }
+const StyledSide = styled.div`
+  width: 45%;
 
-const StyledNav = styled.nav`
-  height: 20vh;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  @media (max-width:500px){
-    justify-content: center;
-  }
+  align-items: flex-end;
 `;
+const StyledLogo = styled.div`
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const navText = {
+  height: "50%",
+  width: "100%",
+  borderTop: "3px solid #ffe600",
+  display: "flex",
+  justifyContent: 'space-around',
+  alignItems: 'center'
+};
 
 const StyledUl = styled.ul`
   display: flex;
@@ -49,36 +81,70 @@ const StyledUl = styled.ul`
   align-items: center;
   list-style: none;
   width: 50%;
-  transform: rotate(-4deg);
-  @media (max-width:500px){
+  @media (max-width: 500px) {
     width: 100%;
-  }
 
+    display: none;
+  }
 `;
 const StyledRotate = styled.div`
   height: 100%;
-  ${'' /* transform: rotate(-4.5deg); */}
-  clip-path: polygon(0 0, 100% 1%, 100% 31%, 0 100%);
   background-color: #ffe600;
   width: 100%;
   display: flex;
   justify-content: space-around;
-`
-
-
+  @media (max-width: 500px) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+`;
 
 const StyledImg = styled.img`
-  width: auto;
+  width: 100px;
 
-  @media (max-width:500px){
+  @media (max-width: 500px) {
     display: none;
   }
-`
+`;
 
 const text = {
-  color: 'black',
-  fontWeight: 'bold',
-  fontSize:'30px'
-}
+  color: "white",
+  fontWeight: "500",
+  fontSize: "30px",
+};
 
 export default NavBar;
+
+// <StyledRotate>
+//         <Link to="/" style={text}>
+//           <StyledImg src={logo} alt="logo" />
+//         </Link>
+//         <StyledUl>
+//         <li>
+//             <Link to="/" style={text}>
+//               Głowna
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/Druzyna" style={text}>
+//               Drużyna
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/Galeria" style={text}>
+//               Galeria
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/Sponsorzy" style={text}>
+//               Sponsorzy
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/Kontakt" style={text}>
+//               Kontakt
+//             </Link>
+//           </li>
+//         </StyledUl>
+//       </StyledRotate>

@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import AktuEl from "./AktuEl";
-import img from "../../../images/article.jpg";
+// import img from "../../../images/article.jpg";
 import styled from "styled-components";
 
 function Aktu() {
@@ -15,7 +15,7 @@ function Aktu() {
               id
               naglowek
               tresc
-              
+            
               title
             }
           }
@@ -39,7 +39,7 @@ function Aktu() {
           <AktuEl
             heading={element.node.frontmatter.naglowek}
             data={element.node.frontmatter.date}
-            // img={element.node.frontmatter.zdjecia}
+            // img={`${element.node.frontmatter.zdjecia}`}
             text={`${element.node.frontmatter.tresc.slice(
               0,
               150
@@ -55,7 +55,13 @@ const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  gap:10px
+  gap: 10px;
+  @media only screen and (max-width: 500px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+  }
 `;
 
 export default Aktu;

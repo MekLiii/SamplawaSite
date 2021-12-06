@@ -7,7 +7,7 @@ function SponsorEl({ img, name }) {
       <StyledImg>
         <img src={img} alt="Logo sponsora" style={imgStyle}/>
       </StyledImg>
-      <p style={{ color: "white" }}>{name}</p>
+      <p style={{ color: "black" }}>{name}</p>
     </div>
   );
 }

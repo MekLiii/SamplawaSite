@@ -39,23 +39,4 @@
     align-items: center;
     background-color: khaki;
 }
-/* @media only screen and (max-width:500px) {
-    .blog-post-container{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr .5fr;
-        gap: 0px 0px;
-        
-    }
-    .contentBoxImage{
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-    .imgArticle{
-        min-height: 60%;
-        min-width: 60%;
-        max-height:90% ;
-        max-width: 90%;    
-    }
-} */
+

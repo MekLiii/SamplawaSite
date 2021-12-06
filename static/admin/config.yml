@@ -55,7 +55,7 @@ collections:
       - { label: 'id', name: 'id', widget: 'number', required: true}
       - { label: 'naglowek', name: 'naglowek', widget: 'string' }
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
-      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/static/images/slider3.jpg", media_folder: '/static/images'}
+      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "images/article.jpg", media_folder: 'images/'}
       - { label: 'tresc', name: 'tresc', widget: 'markdown' }
 
   - label: "Tabela"
@@ -72,9 +72,6 @@ collections:
               - {label: druzyna, name: druzyna, widget: string}
               - {label: logo, name: logo, widget: image, required: false}
               - {label: Mecze, name: mecze, widget: number}
-              - {label: zwyciestwa, name: zwyciestwa, widget: number}
-              - {label: porazki, name: porazki , widget: number}
-              - {label: remisy, name: remisy , widget: number}
               - {label: bramki, name: bramki , widget: number}
               
           - label: Tabela Junior

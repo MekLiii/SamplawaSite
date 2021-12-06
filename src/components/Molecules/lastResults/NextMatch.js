@@ -7,12 +7,12 @@ function NextMatch() {
   return (
     <StyledDiv>
       <div style={displayFlex}>
-        <h1>Następny mecz</h1>
+        <h1 style={{ color:'white'}}>Następny mecz</h1>
       </div>
       <div style={versusDiv}>
-        <p>Motor</p>
-        <p>-:-</p>
-        <p>Sampława</p>
+        <P>Motor</P>
+        <P>-:-</P>
+        <P>Sampława</P>
       </div>
       <div
         style={{
@@ -21,23 +21,22 @@ function NextMatch() {
           flexDirection: "row",
         }}
       >
-        <p>
-          <StyledImg src={img} />
+        <P>
+          {/* <StyledImg src={img} color="white" /> */}
           Byszwald
-        </p>
-        <p>
+        </P>
+        <P>
         <Time
-            color={"#00000"}
-            rotate
+            color={"white"}
             height="40px"
             width="40px"
           />
           07.12.2021
-        </p>
-        <p>
+        </P>
+        <P>
          
           B klasa
-        </p>
+        </P>
       </div>
     </StyledDiv>
   );
@@ -64,5 +63,8 @@ const displayFlex = {
 const StyledImg = styled.img`
   width: 40px;
 `;
+const P = styled.p`
+  color:white
+`
 
 export default NextMatch;
