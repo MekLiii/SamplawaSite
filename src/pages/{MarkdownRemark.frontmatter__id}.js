@@ -11,6 +11,7 @@ export default function Template({data}) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   console.log(frontmatter.zdjecia);
+  
   return (
     <LayOut>
       <div className="blog-post-container">

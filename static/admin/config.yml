@@ -55,8 +55,8 @@ collections:
       - { label: 'id', name: 'id', widget: 'number', required: true}
       - { label: 'naglowek', name: 'naglowek', widget: 'string' }
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
-      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "images/article.jpg", media_folder: 'images/'}
-      - { label: 'tresc', name: 'tresc', widget: 'markdown' }
+      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "content/assets/logo.png", media_folder: 'content/assets/'}
+      - { label: 'tresc', name: 'tresc', widget: 'markdown', required: false }
 
   - label: "Tabela"
     name: "tabela"
