@@ -1,0 +1,41 @@
+{
+    "klubSto": "Klub 100” – PFT Drewneks Sampława skierowany jest do osób prywatnych oraz firm, które chcą wspierać finansowo nasz klub. Uczestnictwo jest dobrowolne i ma na celu rozwijanie naszego klubu oraz stworzenie odpowiednich warunków do rozwoju i upowszechnianie aktywności fizycznej w wśród dzieci i młodzieży. Pozyskane środki finansowe zostaną przeznaczone na bieżącą działalność klubu (cele statutowe).",
+    "zasadyOgolne": {
+        "ttitle": "§1 Zasady ogólne",
+        "1": "1.Członkiem „Klubu 100” może być osoba fizyczna, która ukończyła 18 lat, a także firmy.",
+        "2": "2.Uczestnictwo w „Klubie 100” jest dobrowolne.",
+        "3": "3.Członek przystępuje do „Klubu 100” na minimum 12 miesięcy",
+        "4": "4.Członek po upływie 12 miesięcy może zrezygnować z dalszego członkostwa w klubie.",
+        "5": "5.Aby przystąpić do „Klubu 100” należy wypełnić deklarację członkowską i wpłacić darowiznę na podany numer konta bankowego."
+    },
+    "Obowiazki": {
+        "title": "§2 Obowiązki członka „Klubu 100",
+        "1": "1.Członek „Klubu 100” wypełnia deklarację członkowską, w której deklaruje kwotę darowizny na rzecz klubu (darowizna może być wpłacana w cyklu comiesięcznym, półrocznym, rocznym)",
+        "2": "2.Wpłata dokonywana jest na konto stowarzyszenia, które podane jest na deklaracji członkowskiej.",
+        "3": "3.Zaleganie z wpłatą przez trzy kolejne miesiące oznaczać będzie skreślenie z listy członka „Klubu 100”. Przed skreśleniem z listy podjęta będzie próba kontaktu z osobą w celu wyjaśnienia sytuacji."
+    },
+    "Korzyści": {
+        "title": "§3 Przywileje członka „Klubu 100”",
+        "OsobaPrywatna": {
+            "title": "Korzyści z członkostwa dla osoby prywatnej:",
+            "1": "1.Wspierasz rozwój lokalnego klubu",
+            "2": "2.Otrzymasz certyfikat „Klubu 100”",
+            "3": "3.Informacja o Twoim członkostwie w „Klubie 100” pojawi się na stronie internetowej naszego klubu (jeśli wyrazisz na to zgodę)",
+            "4": "4.Otrzymasz gadżet klubowy"
+        },
+        "DlaFirmy":{
+            "title": "Korzyści z członkostwa dla Twojej Firmy:",
+            "1":"1.Wspierasz rozwój lokalnego klubu",
+            "2":"2.Nazwa Twojej Firmy znajdzie się wśród członków „Klubu 100” na stronie internetowej naszego klubu www.profootballteam.pl",
+            "3":"3.Będziesz miał możliwość umieszczenia banneru reklamowego o wymiarach 2,8m x 1m na naszym stadionie w Sampławie",
+            "4":"4.Otrzymasz certyfikat „Klubu 100”",
+            "5":"5.Otrzymasz gadżet klubowy.",
+            "6":"6.Będziesz mógł wykorzystać certyfikat naszego klubu we własnych materiałach promocyjnych."
+        }
+        
+    },
+    "Pozostale":{
+        "title":"JEŻELI CHCESZ DOŁĄCZYĆ DO KLUBU 100, NALEŻY POBRAĆ FOMULARZ KTÓRY ZNAJDUJE SIĘ W PODANYM LINKU NIŻEJ. UZUPEŁNIJ, ODEŚLIJ  NA NASZEGO EMAIL (profootballteam2019@gmail.com) LUB ZGŁOŚ SIĘ BEZPOŚREDNIO DO OSOBY KTÓRA JEST ODPOWIEDZIALNA ZA KLUB 100",
+        "Link":"www.profootballteam.futbolowo.pl/pliki-do-pobrania"
+    }
+}

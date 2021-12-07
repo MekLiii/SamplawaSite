@@ -4,13 +4,13 @@ import "./aktu.module.css";
 
 function AktuEl({ img, heading, text, data }) {
   return (
-    <StyledBox className="box" id="box">
+    <StyledBox>
       <div style={leftSide}>
         <AbsoluteDiv>
           <p>{data}</p>
         </AbsoluteDiv>
         <div style={imagine}>
-          {/* <img src={img} style={imagine} alt={'Nie działa'} /> */}
+          <img src={img} style={imagine} alt={'Nie działa'} />
         </div>
       </div>
       <div style={rightSide}>
@@ -22,25 +22,21 @@ function AktuEl({ img, heading, text, data }) {
   );
 }
 
-const box = {
-  width: "100%",
-  backgroundColor: "#fed053",
-  display: "flex",
-  marginBottom: "10px",
-};
+
 const StyledBox = styled.div`
-  width: 350px;
-  min-height: 655px;
+  ${'' /* width: 350px; */}
+  ${'' /* min-height:0; */}
+  min-width:0;
   background-color: white;
   display: flex;
-  margin-bottom: 10px;
+
   flex-direction: column;
 `;
 const AbsoluteDiv = styled.div`
   position: absolute;
 
   width: 110px;
-  height: 25px;
+  ${'' /* height: auto; */}
   background-color: white;
   z-index: 100;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 84% 100%, 0 100%, 0% 50%);

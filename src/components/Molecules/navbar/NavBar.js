@@ -8,12 +8,7 @@ import { Menu } from "react-ionicons";
 import Burger from "../../Atoms/Burger";
 
 function NavBar() {
-  const [menu, setMenu] = useState(false);
-
-  useEffect(() => {
-    console.log(menu);
-  }, [menu]);
-
+  
   const StyledNav = styled.nav`
     height: 10vh;
     display: flex;
@@ -35,6 +30,9 @@ function NavBar() {
           <Link to="/Druzyna" style={text}>
             Drużyna
           </Link>
+          <Link to="/Sklep" style={text}>
+            Sklep
+          </Link>
         </div>
       </StyledSide>
       <StyledLogo>
@@ -47,6 +45,9 @@ function NavBar() {
           </Link>
           <Link to="/Kontakt" style={text}>
             Kontakt
+          </Link>
+          <Link to="/Klub100" style={text}>
+            Klub100
           </Link>
         </div>
       </StyledSide>

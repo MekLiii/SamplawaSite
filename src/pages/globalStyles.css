@@ -16,18 +16,16 @@ body{
     flex-direction: column;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8');
     background-color: black;
+    min-height: 70vh;
 }
 
 
-/* @media only screen and (max-width:500px) {
+@media only screen and (max-width:500px) {
     .indexCointainer{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr .5fr;
-        gap: 0px 0px;
+        
         
     }
-} */
+}
 svg:hover{
     cursor: pointer;
 }

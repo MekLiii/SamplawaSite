@@ -4,10 +4,10 @@ import Footer from "../Molecules/footer/Footer";
 
 import NavBar from "../Molecules/navbar/NavBar";
 
-function Layout({ children, pathSpons }) {
+function Layout({ children}) {
   return (
     <StyledBox >
-      <NavBar pathSpons={pathSpons} />
+      <NavBar  />
       <main>{children}</main>
       <Footer />
     </StyledBox>

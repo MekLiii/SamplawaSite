@@ -53,17 +53,14 @@ const IndexPage = () => {
           <NextMatch className="indexMediaEl" />
         </SyldedEl>
       </StyledDiv>
-      <div className="indexCointainer">
+
+      <StyledAktu>
         <h1 id="aktu" style={{ color: "#ebebeb" }}>
           Aktualności
         </h1>
         <Aktu />
-      </div>
-      <div
-        style={{ display: "flex", justifyContent: "center", color: "white" }}
-      >
-        <h2 id="Sponsorzy">Sponsorzy</h2>
-      </div>
+      </StyledAktu>
+
       <StyledSposnor>
         <div style={{ width: "100%" }}>
           <Carousel responsive={responsive}>
@@ -76,9 +73,18 @@ const IndexPage = () => {
     </Layout>
   );
 };
+const StyledAktu = styled.div`
+  height: auto;
+  min-height:70vh;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+`;
 const StyledSposnor = styled.div`
   width: 100%;
-  height: 40vh;
+  min-height: 40vh;
   background-color: #ffe600;
   display: flex;
   background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
