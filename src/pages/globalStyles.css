@@ -31,13 +31,12 @@ svg:hover{
 }
 
 
-@media only screen and (max-width:500px) {
-    
-    .indexAktu{
-    flex-direction: column;
-    min-height:150vh;
-    clip-path: none;
+@media only screen and (max-width:768px) {
+    #OpisTotpEl{
+        border-top:1px solid #ffe600;
+        border-bottom:1px solid #ffe600;
+        padding-top:10px;
     }
-    
+
     
 }

@@ -3,6 +3,7 @@ import Layout from "../components/Organism/Layout";
 import styled from "styled-components";
 import data from "../../content/klub100.json";
 import klub from "../../content/assets/klub100.jpg";
+import wzor from "../../content/assets/plakietka.jpg";
 
 function Klub100() {
   console.log(data);
@@ -73,7 +74,17 @@ function Klub100() {
               <P>{data.Pozostale.title}</P>
               <P>{data.Pozostale.Link}</P>
             </StyledSection>
-            <StyledSection></StyledSection>
+            <StyledSection
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <P>Wzór karty członkowskiej</P>
+              <img src={wzor} alt="wzor" style={{ width: "300px" }} />
+            </StyledSection>
             <StyledSection></StyledSection>
           </StyledCard>
         </StyledBox>

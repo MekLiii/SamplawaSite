@@ -37,6 +37,12 @@ const RightNav = ({ open }) => {
       <Link to="/" style={text}>
         <StyledImg src={logo} alt="logo" />
       </Link>
+      <Link to="/" style={text}>
+        Główna
+      </Link>
+      <Link to="/Sklep" style={text}>
+        Sklep
+      </Link>
       <Link to="/Druzyna" style={text}>
         Drużyna
       </Link>
@@ -46,8 +52,11 @@ const RightNav = ({ open }) => {
       <Link to="/Sponsorzy" style={text}>
         Sponsorzy
       </Link>
-      <Link to="/Kontakt" style={text}>
-        Kontakt
+      <Link to="/Oklubie" style={text}>
+        O klubie
+      </Link>
+      <Link to="/Klub100" style={text}>
+        Klub100
       </Link>
     </Ul>
   );

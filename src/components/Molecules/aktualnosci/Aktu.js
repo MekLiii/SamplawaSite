@@ -62,12 +62,12 @@ const StyledGrid = styled.div`
   ${'' /* column-gap:5%; */}
   align-items:center; 
   justify-content:center;
-  ${'' /* @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 500px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     
-  } */}
+  }
   ${'' /* overflow:auto ; */}
 `;
 

@@ -6,13 +6,11 @@ import TableHero from "./TableHero";
 import styled from "styled-components";
 import { PersonCircleOutline } from "react-ionicons";
 
-
 function Table() {
   console.log(data.team);
   const team = data.team;
   console.log(team.map((el) => console.log(el)));
 
-  
   return (
     <div style={mainCoinainer}>
       <div style={heading}>
@@ -20,18 +18,16 @@ function Table() {
       </div>
       <GridHolder>
         {team.map((el) => (
-          <TableHero 
-          numer={el.numer}
-          pozycja={el.pozycja} 
-          name={el.name} 
-          bramki={el.bramki}
-          asysty={el.asysty}
-          zKartki={el.zKartki}
-          cKartki={el.cKartki}
-          mecze={el.mecze}
-          
-
-           />
+          <TableHero
+            numer={el.numer}
+            pozycja={el.pozycja}
+            name={el.name}
+            bramki={el.bramki}
+            asysty={el.asysty}
+            zKartki={el.zKartki}
+            cKartki={el.cKartki}
+            mecze={el.mecze}
+          />
         ))}
       </GridHolder>
     </div>
@@ -53,17 +49,21 @@ const mainCoinainer = {
 };
 
 const GridHolder = styled.div`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr 1fr 1fr 1fr 1fr);
-  grid-template-rows: auto;
-  grid-auto-flow: row;
+      display: inline-grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   height: auto;
   gap: 10px;
   row-gap: 2.5em;
-  min-height: 100vh;
-  height: auto;
   width: 90%;
   margin-bottom: 50px;
+  justify-content: center;
+
+  @media (max-width: 500px) {
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export default Table;

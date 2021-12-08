@@ -8,7 +8,6 @@ import { Menu } from "react-ionicons";
 import Burger from "../../Atoms/Burger";
 
 function NavBar() {
-  
   const StyledNav = styled.nav`
     height: 10vh;
     display: flex;
@@ -43,8 +42,8 @@ function NavBar() {
           <Link to="/Galeria" style={text}>
             Galeria
           </Link>
-          <Link to="/Kontakt" style={text}>
-            Kontakt
+          <Link to="/Oklubie" style={text}>
+            O klubie
           </Link>
           <Link to="/Klub100" style={text}>
             Klub100
@@ -60,6 +59,9 @@ const StyledSide = styled.div`
   height: 100%;
   display: flex;
   align-items: flex-end;
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 const StyledLogo = styled.div`
   width: 10%;
@@ -72,8 +74,8 @@ const navText = {
   width: "100%",
   borderTop: "3px solid #ffe600",
   display: "flex",
-  justifyContent: 'space-around',
-  alignItems: 'center'
+  justifyContent: "space-around",
+  alignItems: "center",
 };
 
 const StyledUl = styled.ul`
@@ -104,7 +106,7 @@ const StyledRotate = styled.div`
 const StyledImg = styled.img`
   width: 100px;
 
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     display: none;
   }
 `;

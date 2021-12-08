@@ -85,7 +85,32 @@ collections:
               - {label: porazki, name: porazki , widget: number}
               - {label: remisy, name: remisy , widget: number}
               - {label: bramki, name: bramki , widget: number}
-      
+  - label: "O klubie"
+    name: "Oklubie"
+    files:
+      - label: "Oklubie"
+        name: "Oklubie"
+        file: "content/oKlubieData.json"
+        fields:
+          - label: zarzad
+            name: zarzad
+            widget: list
+            fields:
+              - {label: Imie i nazwisko, name: name, widget: string}
+              - {label: funkcja, name: funkcja, widget: string}
+          - {label: Dodatkowy tekst, name: tekst, widget: 'markdown'}
+          - label: Osiagniecia
+            name: Osiagniecia
+            widget: list
+            fields:
+                - {label: rok, name: year, widget: number}
+                - label: osiagniecie
+                  name: osiagniecie
+                  widget: list
+                  fields:
+                    - {label: osiagniecie, name: osiagniecie, widget: string}
+              
+              
           
  
     
