@@ -1,0 +1,24 @@
+{
+  "zarzad": [
+    {
+      "name": "Mateusz Szczesiak",
+      "funkcja": "PREZES"
+    },
+    {
+      "funkcja": "WICEPREZES",
+      "name": "Mirosław Maciołek"
+    },
+    {
+      "funkcja": "CZŁONEK ZARZĄDU",
+      "name": "Adam Marciniak"
+    },
+    {
+      "name": "CZŁONEK ZARZĄDU",
+      "funkcja": "Łukasz Wietecha"
+    },
+    {
+      "name": "Mariusz Ruczyński",
+      "funkcja": "CZŁONEK ZARZĄDU"
+    }
+  ]
+}
