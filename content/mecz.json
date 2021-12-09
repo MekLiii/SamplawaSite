@@ -29,6 +29,12 @@
       "gospodarze": "test2",
       "goscie": "test2",
       "miejsce": "dsa"
+    },
+    {
+      "data": "12/10/2021",
+      "gospodarze": "test3",
+      "goscie": "test4",
+      "miejsce": "dsadsadsa"
     }
   ]
 }
