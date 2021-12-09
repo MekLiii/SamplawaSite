@@ -30,7 +30,7 @@ function NextMatch() {
   const currentDate = (today.getMonth()+1)+'/'+ currentDat+'/'+today.getFullYear();
   console.log(currentDate);
  
-  const result = match.find(({data}) => data >= currentDate);
+  const result = match.find(({data}) => data > currentDate);
   
   
 
@@ -43,9 +43,9 @@ function NextMatch() {
         <h1 style={{ color:'white'}}>Następny mecz</h1>
       </div>
       <div style={versusDiv}>
-        <P>{result.gospodarze}</P>
+        <P>{result?.gospodarze}</P>
         <P>-:-</P>
-        <P>{result.goscie}</P>
+        <P>{result?.goscie}</P>
       </div>
       <div
         style={{
@@ -55,7 +55,7 @@ function NextMatch() {
         }}
       >
         <P>
-          {result.miejsce}
+          {result?.miejsce}
         </P>
         <P>
         <Time
@@ -64,7 +64,7 @@ function NextMatch() {
             width="40px"
           />
           {/* zmienic format na europejski!!!!!!!!!!!! */}
-          {result.data}
+          {result?.data}
         </P>
         <P>
          
