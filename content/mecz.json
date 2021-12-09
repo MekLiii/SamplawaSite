@@ -35,6 +35,12 @@
       "gospodarze": "test3",
       "goscie": "test4",
       "miejsce": "dsadsadsa"
+    },
+    {
+      "data": "12/08/2021",
+      "gospodarze": "test4",
+      "goscie": "test4",
+      "miejsce": "dasdsadadsa"
     }
   ]
 }
