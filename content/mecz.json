@@ -23,6 +23,12 @@
       "bramkiGospodarza": 1,
       "bramkiGoscia": 1,
       "miejsce": "dadsa"
+    },
+    {
+      "data": "12/21/2021",
+      "gospodarze": "test2",
+      "goscie": "test2",
+      "miejsce": "dsa"
     }
   ]
 }
