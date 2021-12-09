@@ -1,3 +1,10 @@
 {
-  "mecz": []
+  "mecz": [
+    {
+      "data": "December 9, 2021 3:00 PM",
+      "gospodarze": "PFT Sampława",
+      "goscie": "Huragan Byszwałd",
+      "miejsce": "Sampława"
+    }
+  ]
 }
