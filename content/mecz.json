@@ -6,7 +6,8 @@
       "goscie": "Motor Lubawa",
       "bramkiGospodarza": 2,
       "bramkiGoscia": 1,
-      "miejsce": "Lubawa"
+      "miejsce": "Lubawa",
+      "godzina": "15:00"
     },
     {
       "data": "03/02/2022",
@@ -14,7 +15,8 @@
       "goscie": "Huragan",
       "bramkiGospodarza": 1,
       "bramkiGoscia": 1,
-      "miejsce": "ddsadsa"
+      "miejsce": "ddsadsa",
+      "godzina": "15:00"
     },
     {
       "data": "12/31/2021",
@@ -22,25 +24,15 @@
       "goscie": "test",
       "bramkiGospodarza": 1,
       "bramkiGoscia": 1,
-      "miejsce": "dadsa"
-    },
-    {
-      "data": "12/21/2021",
-      "gospodarze": "test2",
-      "goscie": "test2",
-      "miejsce": "dsa"
+      "miejsce": "dadsa",
+      "godzina": "15:00"
     },
     {
       "data": "12/10/2021",
-      "gospodarze": "test3",
-      "goscie": "test4",
-      "miejsce": "dsadsadsa"
-    },
-    {
-      "data": "12/08/2021",
-      "gospodarze": "test4",
-      "goscie": "test4",
-      "miejsce": "dasdsadadsa"
+      "gospodarze": "Sampława",
+      "goscie": "Jamielnik",
+      "godzina": "15:00",
+      "miejsce": "Sampława"
     }
   ]
 }
