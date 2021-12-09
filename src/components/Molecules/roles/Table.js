@@ -7,9 +7,7 @@ import styled from "styled-components";
 import { PersonCircleOutline } from "react-ionicons";
 
 function Table() {
-  console.log(data.team);
   const team = data.team;
-  console.log(team.map((el) => console.log(el)));
 
   return (
     <div style={mainCoinainer}>
@@ -27,6 +25,7 @@ function Table() {
             zKartki={el.zKartki}
             cKartki={el.cKartki}
             mecze={el.mecze}
+            key={el.name}
           />
         ))}
       </GridHolder>
@@ -49,7 +48,7 @@ const mainCoinainer = {
 };
 
 const GridHolder = styled.div`
-      display: inline-grid;
+  display: inline-grid;
 
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   height: auto;

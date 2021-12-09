@@ -42,6 +42,7 @@ collections:
               - {label: bramki gospodarza, name: bramkiGospodarza , widget: number, required: false}
               - {label: bramki goscia, name: bramkiGoscia , widget: number, required: false}
               - {label: Data, name: data , widget: datetime, date_format: 'DD-MM-YYYY', time_format: "HH:mm",format: "L",picker_utc: false}
+              - {label: godzina, name: godzina , widget: string}
               - {label: miejsce, name: miejsce, widget: string}
   - name: 'Aktualnosci'
     label: 'Aktualnosci'

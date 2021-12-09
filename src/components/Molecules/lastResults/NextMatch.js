@@ -4,43 +4,36 @@ import img from "../../../images/soccer.png";
 import { Time } from "react-ionicons";
 import mecz from "../../../../content/mecz.json";
 
-
 function NextMatch() {
-  const match = mecz.mecz
+  const match = mecz.mecz;
 
-  const matchArray =[]
+  const matchArray = [];
 
-  const matchs = match.map((el) =>(
-    matchArray.push(el.data)
-    
-  ))
-  
-  matchArray.sort(function(a,b) {
-    a = a.split('/').reverse().join('');
-    b = b.split('/').reverse().join('');
-    return a > b ? 1 : a < b ? -1 : 0;
-    
-    // return a.localeCompare(b);         // <-- alternative 
-    
-  });
   const today = new Date();
-  const currentDat = (today.getDate() > '9') ? today.getDate() : '0'+today.getDate();
-  
+  const currentDay =
+    today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
+  const currentDate =
+    today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
+  matchArray.push(currentDate);
 
-  const currentDate = (today.getMonth()+1)+'/'+ currentDat+'/'+today.getFullYear();
-  console.log(currentDate);
- 
-  const result = match.find(({data}) => data > currentDate);
-  
-  
+  match.map((el) => matchArray.push(el.data));
 
-  console.log(matchArray)
-  console.log(result)
-  
+  matchArray.sort(function (a, b) {
+    a = a.split("/").reverse().join("");
+    b = b.split("/").reverse().join("");
+    return a > b ? 1 : a < b ? -1 : 0;
+  });
+
+  const indexOfCurrentDay = matchArray.indexOf(currentDate);
+  const compareDate = matchArray[indexOfCurrentDay + 1];
+
+  const result = match.find(({ data }) => data == compareDate);
+  console.log(matchArray);
+
   return (
     <StyledDiv>
       <div style={displayFlex}>
-        <h1 style={{ color:'white'}}>Następny mecz</h1>
+        <h1 style={{ color: "white" }}>Następny mecz</h1>
       </div>
       <div style={versusDiv}>
         <P>{result?.gospodarze}</P>
@@ -54,22 +47,18 @@ function NextMatch() {
           flexDirection: "row",
         }}
       >
+        <P>{result?.miejsce}</P>
         <P>
-          {result?.miejsce}
+          <div style={{display: "flex", flexDirection: "column",alignItems: "center"}}>
+            <div>
+            <Time color={"white"} height="40px" width="40px" />
+            {/* zmienic format na europejski!!!!!!!!!!!! */}
+            {result?.data}
+            </div>
+            {result?.godzina}
+          </div>
         </P>
-        <P>
-        <Time
-            color={"white"}
-            height="40px"
-            width="40px"
-          />
-          {/* zmienic format na europejski!!!!!!!!!!!! */}
-          {result?.data}
-        </P>
-        <P>
-         
-          B klasa
-        </P>
+        <P>B klasa</P>
       </div>
     </StyledDiv>
   );
@@ -97,7 +86,7 @@ const StyledImg = styled.img`
   width: 40px;
 `;
 const P = styled.p`
-  color:white
-`
+  color: white;
+`;
 
 export default NextMatch;

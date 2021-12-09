@@ -22,7 +22,7 @@ function TableHero({
         <StyledText>{name}</StyledText>
         <PersonCircleOutline
           color={"#00000"}
-          title={numer}
+          title={`${numer}`}
           height="250px"
           width="250px"
         />
