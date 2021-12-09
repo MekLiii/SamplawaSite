@@ -23,9 +23,14 @@ function NextMatch() {
     // return a.localeCompare(b);         // <-- alternative 
     
   });
+  const today = new Date();
+  const currentDat = (today.getDate() > '9') ? today.getDate() : '0'+today.getDate();
   
+
+  const currentDate = (today.getMonth()+1)+'/'+ currentDat+'/'+today.getFullYear();
+  console.log(currentDate);
  
-  const result = match.find(({data}) => data === "01/12/2022")
+  const result = match.find(({data}) => data >= currentDate);
   
   
 
@@ -38,9 +43,9 @@ function NextMatch() {
         <h1 style={{ color:'white'}}>Następny mecz</h1>
       </div>
       <div style={versusDiv}>
-        <P>Motor</P>
+        <P>{result.gospodarze}</P>
         <P>-:-</P>
-        <P>Sampława</P>
+        <P>{result.goscie}</P>
       </div>
       <div
         style={{
@@ -50,8 +55,7 @@ function NextMatch() {
         }}
       >
         <P>
-          {/* <StyledImg src={img} color="white" /> */}
-          Byszwald
+          {result.miejsce}
         </P>
         <P>
         <Time
@@ -59,7 +63,8 @@ function NextMatch() {
             height="40px"
             width="40px"
           />
-          07.12.2021
+          {/* zmienic format na europejski!!!!!!!!!!!! */}
+          {result.data}
         </P>
         <P>
          
