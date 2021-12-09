@@ -1,6 +1,9 @@
 {
   "mecz": [
+<<<<<<< HEAD
     
+=======
+>>>>>>> 487fc804021d52aaf93d6ec8de95ae85619a8ecc
     {
       "data": "11/01/2021",
       "gospodarze": "PFT Sampława",
@@ -10,20 +13,20 @@
       "miejsce": "Lubawa"
     },
     {
-      "data": "01/12/2022",
-      "gospodarze": "PFT Sampława",
-      "goscie": "UKS MAŁY JEZIORAK IŁAWA",
-      "bramkiGospodarza": 2,
-      "bramkiGoscia": 0,
-      "miejsce": "Iława"
-    },
-    {
       "data": "03/02/2022",
       "gospodarze": "Motor",
       "goscie": "Huragan",
       "bramkiGospodarza": 1,
       "bramkiGoscia": 1,
       "miejsce": "ddsadsa"
+    },
+    {
+      "data": "12/10/2021",
+      "gospodarze": "test",
+      "goscie": "test",
+      "bramkiGospodarza": 1,
+      "bramkiGoscia": 1,
+      "miejsce": "dadsa"
     }
   ]
 }
