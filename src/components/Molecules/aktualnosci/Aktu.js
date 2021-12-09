@@ -23,19 +23,18 @@ function Aktu() {
       }
     }
   `);
-  console.log(data);
+
   const dataElement = data.allMarkdownRemark.edges;
   const dataAtom = dataElement.slice().reverse();
 
   const text = dataAtom.map((element) => element.node.frontmatter.tresc);
-  console.log(text.slice(0, 150));
+
   return (
     <StyledGrid>
       {dataAtom.map((element) => (
         <Link
           to={`/${element.node.frontmatter.id}`}
           key={element.node.frontmatter.id}
-          
         >
           <AktuEl
             key={element.node.frontmatter.naglowek}
@@ -57,18 +56,17 @@ const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 90%;
-  height:90%;
+  height: 90%;
   gap: 10px;
-  ${'' /* column-gap:5%; */}
-  align-items:center; 
-  justify-content:center;
+  ${"" /* column-gap:5%; */}
+  align-items:center;
+  justify-content: center;
   @media only screen and (max-width: 500px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    
   }
-  ${'' /* overflow:auto ; */}
+  ${"" /* overflow:auto ; */}
 `;
 
 export default Aktu;

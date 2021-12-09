@@ -10,7 +10,7 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     z-index: 120;
     flex-flow: column nowrap;
     background-color: #ffe600;
@@ -18,7 +18,7 @@ const Ul = styled.ul`
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 100%;
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
@@ -26,7 +26,7 @@ const Ul = styled.ul`
       color: #fff;
     }
   }
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     display: none;
   }
 `;
@@ -64,7 +64,7 @@ const RightNav = ({ open }) => {
 const StyledImg = styled.img`
   width: auto;
 
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
   }
 `;
 const text = {

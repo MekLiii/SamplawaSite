@@ -38,12 +38,11 @@ collections:
             widget: list
             fields:
               - {label: gospodarze, name: gospodarze, widget: string}
-              - {label: logo gospodarzy, name: gospodarzeLogo, widget: image}
               - {label: goscie, name: goscie, widget: string}
-              - {label: logo gosci, name: goscieLogo, widget: image}
-              - {label: bramki gospodarza, name: bramkiGospodarza , widget: number}
-              - {label: bramki goscia, name: bramkiGoscia , widget: number}
-              - {label: Data, name: data , widget: date, format: 'D.MM.YYYY'}
+              - {label: bramki gospodarza, name: bramkiGospodarza , widget: number, required: false}
+              - {label: bramki goscia, name: bramkiGoscia , widget: number, required: false}
+              - {label: Data, name: data , widget: datetime, date_format: 'DD MM YYYY', time_format: "HH:mm",format: "L",picker_utc: false}
+              - {label: miejsce, name: miejsce, widget: string}
   - name: 'Aktualnosci'
     label: 'Aktualnosci'
     folder: 'content/blog'

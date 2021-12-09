@@ -31,7 +31,7 @@ export default function DenseTable() {
       });
       const dataEl = dataAtom.reverse();
   return (
-    <TableContainer component={Paper} style={{ overflowX: "hidden",height: "100%" }}>
+    <TableContainer component={Paper} style={{ overflowX: "hidden",height: "100%",borderRadius: "0px",maxWidth: "100%"}}>
       <Table sx={{ minWidth: 150 }} size="small" aria-label="a dense table" style={{height: "100%"}}>
         <TableHead>
           <TableRow>

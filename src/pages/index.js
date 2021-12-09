@@ -92,11 +92,14 @@ const StyledSposnor = styled.div`
 `;
 
 const StyledDiv = styled.div`
-  height: 50vh;
+  min-height: 50vh;
   width: 100%;
-  display: flex;
+  ${'' /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */}
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
   background-color: grey;
   @media only screen and (max-width: 500px) {
     clip-path: none;

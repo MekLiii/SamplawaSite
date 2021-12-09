@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import img from "../../../images/soccer.png";
 import { Time } from "react-ionicons";
+import mecz from "../../../../content/mecz.json";
+
 
 function NextMatch() {
+  const match = mecz.mecz
+
+  const matchArray =[]
+
+  const matchs = match.map((el) =>(
+    matchArray.push(el.data)
+    
+  ))
+  
+  matchArray.sort(function(a,b) {
+    a = a.split('/').reverse().join('');
+    b = b.split('/').reverse().join('');
+    return a > b ? 1 : a < b ? -1 : 0;
+    
+    // return a.localeCompare(b);         // <-- alternative 
+    
+  });
+  
+ 
+  const result = match.find(({data}) => data === "01/12/2022")
+  
+  
+
+  console.log(matchArray)
+  console.log(result)
+  
   return (
     <StyledDiv>
       <div style={displayFlex}>
