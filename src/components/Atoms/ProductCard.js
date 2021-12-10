@@ -6,8 +6,8 @@ function ProductCard({name,price,img}) {
     <Card>
       <Box>
         <Img src={img}/>
-        <P>Szalik</P>
-        <P>30zł</P>
+        <P>{name}</P>
+        <P>{price}</P>
       </Box>
     </Card>
   );

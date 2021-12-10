@@ -15,6 +15,7 @@ function Aktu() {
               id
               naglowek
               tresc
+
               title
             }
           }
@@ -40,7 +41,7 @@ function Aktu() {
             heading={element.node.frontmatter.naglowek}
             data={element.node.frontmatter.date}
             // img={`${element.node.frontmatter.zdjecia}`}
-            text={`${element.node.frontmatter.tresc.slice(
+            text={`${element.node.frontmatter.tresc?.slice(
               0,
               150
             )}...Czytaj dalej`}

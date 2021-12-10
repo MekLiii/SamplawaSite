@@ -2,17 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import ProductCard from "../components/Atoms/ProductCard";
 import Layout from "../components/Organism/Layout";
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
 
-function Sklep({data}) {
-    
-    
+function Sklep({ data }) {
+   
   return (
     <Layout>
       <Cointainer>
         <GridHolder>
           <ProductCard />
-          <pre>{JSON.stringify(data, null, 4)}</pre>
+          
         </GridHolder>
       </Cointainer>
     </Layout>

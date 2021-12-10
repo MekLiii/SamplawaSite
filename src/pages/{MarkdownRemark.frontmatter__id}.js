@@ -63,7 +63,7 @@ export const pageQuery = graphql`
         naglowek
         title
         tresc
-        zdjecia
+        
       }
     }
   }
