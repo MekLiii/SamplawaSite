@@ -2,15 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import ProductCard from "../components/Atoms/ProductCard";
 import Layout from "../components/Organism/Layout";
+import { graphql } from "gatsby"
 
-function Sklep() {
+function Sklep({data}) {
+    
+    
   return (
     <Layout>
       <Cointainer>
         <GridHolder>
-            <ProductCard />
+          <ProductCard />
+          <pre>{JSON.stringify(data, null, 4)}</pre>
         </GridHolder>
-
       </Cointainer>
     </Layout>
   );
@@ -18,8 +21,7 @@ function Sklep() {
 const Cointainer = styled.div`
   height: 82vh;
 `;
-const GridHolder = styled.div`
+const GridHolder = styled.div``;
 
-`
 
 export default Sklep;

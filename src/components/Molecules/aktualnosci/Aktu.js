@@ -15,7 +15,6 @@ function Aktu() {
               id
               naglowek
               tresc
-
               title
             }
           }

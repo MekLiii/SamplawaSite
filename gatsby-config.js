@@ -6,14 +6,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
+        name: `aktualnosci`,
         path: `${__dirname}/content/blog`,
+
       },
     },
     `gatsby-transformer-remark`,
     "gatsby-plugin-netlify-cms",
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
+    "gatsby-plugin-mdx",
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
