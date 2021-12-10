@@ -7,7 +7,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `Aktualnosci`,
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content/blog/`,
       },
       
     },
@@ -15,7 +15,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `Produkty`,
-        path: `${__dirname}/content/Produkty`,
+        path: `${__dirname}/content/Produkty/`,
         
       },
     },

@@ -7,7 +7,7 @@ import styled from "styled-components";
 function Aktu() {
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: {frontmatter: {date: {glob: "*"}}}) {
         edges {
           node {
             frontmatter {
@@ -15,19 +15,16 @@ function Aktu() {
               id
               naglowek
               tresc
-
               title
             }
           }
         }
       }
     }
-  `);
+  `)
 
   const dataElement = data.allMarkdownRemark.edges;
   const dataAtom = dataElement.slice().reverse();
-
-  const text = dataAtom.map((element) => element.node.frontmatter.tresc);
 
   return (
     <StyledGrid>
