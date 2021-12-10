@@ -109,7 +109,19 @@ collections:
                   widget: list
                   fields:
                     - {label: osiagniecie, name: osiagniecie, widget: string}
-              
+  - name: 'Produkty'
+    label: 'Produkty'
+    folder: 'content/blog/Produkty'
+    create: true
+    path: '{{name}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'nazwa', name: 'name', widget: 'string', required: true}
+      - { label: 'cena', name: 'price', widget: 'string' }
+      - {label: "Featured Image", name: "thumbnail", widget: "image", choose_url: true, default: "content/blog/Produkty/szalik.png"}
+
+
               
           
  
