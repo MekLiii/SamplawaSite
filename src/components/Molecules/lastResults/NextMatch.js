@@ -5,34 +5,34 @@ import { Time } from "react-ionicons";
 import mecz from "../../../../content/mecz.json";
 
 function NextMatch() {
-  const match = mecz.mecz;
+  // const match = mecz.mecz;
 
-  const matchArray = [];
+  // const matchArray = [];
 
-  const today = new Date();
-  const currentDay =
-    today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
-  const currentDate =
-    today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
-  matchArray.push(currentDate);
+  // const today = new Date();
+  // const currentDay =
+  //   today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
+  // const currentDate =
+  //   today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
+  // matchArray.push(currentDate);
 
-  match.map((el) => matchArray.push(el.data));
+  // match.map((el) => matchArray.push(el.data));
 
-  matchArray.sort(function (a, b) {
-    a = a.split("/").reverse().join("");
-    b = b.split("/").reverse().join("");
-    return a > b ? 1 : a < b ? -1 : 0;
-  });
+  // matchArray.sort(function (a, b) {
+  //   a = a.split("/").reverse().join("");
+  //   b = b.split("/").reverse().join("");
+  //   return a > b ? 1 : a < b ? -1 : 0;
+  // });
 
-  const indexOfCurrentDay = matchArray.indexOf(currentDate);
-  const compareDate = matchArray[indexOfCurrentDay + 1];
+  // const indexOfCurrentDay = matchArray.indexOf(currentDate);
+  // const compareDate = matchArray[indexOfCurrentDay + 1];
 
-  const result = match.find(({ data }) => data == compareDate);
-  console.log(matchArray);
+  // const result = match.find(({ data }) => data == compareDate);
+  // console.log(matchArray);
 
   return (
     <StyledDiv>
-      <div style={displayFlex}>
+      {/* <div style={displayFlex}>
         <h1 style={{ color: "white" }}>Następny mecz</h1>
       </div>
       <div style={versusDiv}>
@@ -52,14 +52,14 @@ function NextMatch() {
           <div style={{display: "flex", flexDirection: "column",alignItems: "center"}}>
             <div>
             <Time color={"white"} height="40px" width="40px" />
-            {/* zmienic format na europejski!!!!!!!!!!!! */}
+           
             {result?.data}
             </div>
             {result?.godzina}
           </div>
         </P>
         <P>B klasa</P>
-      </div>
+      </div> */}
     </StyledDiv>
   );
 }

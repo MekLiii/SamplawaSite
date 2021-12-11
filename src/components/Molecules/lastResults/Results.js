@@ -4,8 +4,9 @@ import mecz from "../../../../content/mecz.json";
 import "./result.module.css";
 
 function Results() {
-  const match = mecz[0];
-  console.log(mecz['2021/2022']);
+  const match = mecz.sezon;
+  const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz
+  console.log(data)
   const matchArray = [];
 
   const today = new Date();
@@ -15,7 +16,7 @@ function Results() {
     today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
   matchArray.push(currentDate);
 
-  match.map((el) => matchArray.push(el.data));
+  data.map((el) => matchArray.push(el.data));
 
   matchArray.sort(function (a, b) {
     a = a.split("/").reverse().join("");
@@ -26,8 +27,10 @@ function Results() {
   const indexOfCurrentDay = matchArray.indexOf(currentDate);
   const compareDate = matchArray[indexOfCurrentDay - 1];
 
-  const result = match.find(({ data }) => data == compareDate);
+  const result = data.find(({ data }) => data == compareDate);
+  const stats = result.Statystyki;
   console.log(matchArray);
+  console.log(stats[0].BramkiPFT.length);
   return (
     <div style={cointainer}>
       <div style={resultBox} className="result">
@@ -35,10 +38,10 @@ function Results() {
           Ostatni mecz
         </StyledP>
         <StyledP style={{ fontSize: "clamp(1rem, 7vmin, 1.5rem)" }}>
-          {result?.gospodarze} - {result?.goscie}
+          Sampława - {result?.przeciwnik}
         </StyledP>
         <StyledP style={{ fontSize: "1.5rem" }}>
-          {result?.bramkiGospodarza}:{result?.bramkiGoscia}
+          {stats[0].BramkiPFT.length}:{stats[0].BramkiPrzeciwnika.length}
         </StyledP>
         <StyledP style={{ color: "#b1b1b1" }}>B klasa</StyledP>
         <StyledP style={{ color: "#b1b1b1" }}>{result?.data}</StyledP>

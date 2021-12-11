@@ -41,7 +41,7 @@ collections:
                 widget: list
                 fields:
                   - {label: gospodarze, name: gospodarze, widget: string}
-                  - {label: goscie, name: goscie, widget: string}
+                  - {label: przeciwnik, name: przeciwnik, widget: string}
                   - {label: Data, name: data , widget: datetime, date_format: 'DD-MM-YYYY', time_format: "HH:mm",format: "L",picker_utc: false}
                   - {label: godzina, name: godzina , widget: string}
                   - {label: miejsce, name: miejsce, widget: string}
