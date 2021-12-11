@@ -5,9 +5,9 @@ function ProductCard({name,price,img}) {
   return (
     <Card>
       <Box>
-        <Img src={img}/>
-        <P>{name}</P>
-        <P>{price}</P>
+        <Img src={img} alt={img}/>
+        <P style={{color: 'white'}}>{name}</P>
+        <P style={{color: 'rgb(151, 151, 151)'}}>{price}</P>
       </Box>
     </Card>
   );
@@ -19,7 +19,7 @@ const Card = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #1d1d1d;
-  border:15px solid #2b2b2b;
+  border:10px solid #2b2b2b;
 
 `;
 const Box = styled.div`
@@ -36,6 +36,6 @@ const Img = styled.img`
     height: 50%;
 `
 const P = styled.p`
-
+    font-size:1.5rem;
 `
 export default ProductCard;
