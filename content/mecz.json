@@ -43,7 +43,17 @@
           "gospodarze": "Test",
           "przeciwnik": "Test",
           "godzina": "15:00",
-          "miejsce": "Test"
+          "miejsce": "Test",
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Krystian Kozłowski",
+                  "minuta": 13
+                }
+              ]
+            }
+          ]
         }
       ]
     }
