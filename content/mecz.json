@@ -15,6 +15,13 @@
           "CKartki": 1,
           "Zawodnicy": "Krystian Kozłowski",
           "minuty": 1
+        },
+        {
+          "Bramki": 1,
+          "ZKartki": 0,
+          "CKartki": 0,
+          "Zawodnicy": "test",
+          "minuty": 90
         }
       ]
     }
