@@ -1,0 +1,106 @@
+{
+  "mecz": [
+    {
+      "data": "11/01/2021",
+      "bramkiGoscia": 1,
+      "bramkiGospodarza": 2,
+      "Statystyki": [
+        {
+          "Zmiany": [
+            {
+              "ZmianaZ": "Mateusz Kroplewski",
+              "minuta": 55,
+              "ZmianaNa": "Leo Messi"
+            },
+            {
+              "ZmianaZ": "Kamil Czacharowski",
+              "minuta": 2,
+              "ZmianaNa": "test"
+            }
+          ],
+          "Kartki": [
+            {
+              "Zawodnicy": "Mateusz Kroplewski",
+              "kartka": "żółta",
+              "minuta": 50
+            }
+          ],
+          "Bramki": [
+            {
+              "Zawodnicy": "Mateusz Kroplewski",
+              "minuta": 55
+            }
+          ]
+        }
+      ],
+      "goscie": "Motor Lubawa",
+      "miejsce": "Lubawa",
+      "Zawodnicy": [
+        {
+          "Bramki": 1,
+          "ZKartki": 1,
+          "CKartki": 1,
+          "Zawodnicy": "Krystian Kozłowski",
+          "minuty": 1
+        },
+        {
+          "Bramki": 1,
+          "ZKartki": 0,
+          "CKartki": 0,
+          "Zawodnicy": "test",
+          "minuty": 90
+        }
+      ],
+      "gospodarze": "PFT Sampława",
+      "godzina": "15:00"
+    }
+  ],
+  "2020/2021": [],
+  "2021/2022": [
+    {
+      "data": "12/11/2021",
+      "gospodarze": "PFT Sampława",
+      "goscie": "Huragan Byszwałd",
+      "godzina": "15:00",
+      "miejsce": "Sampława",
+      "Zawodnicy": [
+        {
+          "ZKartki": 1,
+          "CKartki": 0,
+          "Zawodnicy": "Kamil Czacharowski",
+          "minuty": 45
+        }
+      ],
+      "Statystyki": [
+        {
+          "BramkiPFT": [
+            {
+              "Zawodnicy": "Kamil Czacharowski",
+              "minuta": 45
+            }
+          ],
+          "BramkiPrzeciwnika": [
+            {
+              "name": "random",
+              "minuta": 21
+            }
+          ],
+          "Kartki": [
+            {
+              "Zawodnicy": "Krystian Kozłowski",
+              "kartka": "czerwona",
+              "minuta": 19
+            }
+          ],
+          "Zmiany": [
+            {
+              "ZmianaZ": "Kamil Czacharowski",
+              "minuta": 56,
+              "ZmianaNa": "Mateusz Kroplewski"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
