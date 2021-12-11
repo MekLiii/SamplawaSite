@@ -1,0 +1,38 @@
+{
+  "sezon": [
+    {
+      "sezon": "2020/2021",
+      "mecz": [
+        {
+          "data": "12/11/2021",
+          "gospodarze": "Lubawa",
+          "przeciwnik": "jamielnik",
+          "godzina": "15:00",
+          "miejsce": "Lubawa",
+          "Zawodnicy": [
+            {
+              "ZKartki": 0,
+              "CKartki": 0,
+              "Zawodnicy": "Leo Messi",
+              "minuty": 4
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Leo Messi",
+                  "minuta": 2
+                },
+                {
+                  "Zawodnicy": "Kamil Czacharowski",
+                  "minuta": 54
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
