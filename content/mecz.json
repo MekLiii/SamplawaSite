@@ -55,5 +55,52 @@
       "godzina": "15:00"
     }
   ],
-  "2020/2021": []
+  "2020/2021": [],
+  "2021/2022": [
+    {
+      "data": "12/11/2021",
+      "gospodarze": "PFT Sampława",
+      "goscie": "Huragan Byszwałd",
+      "godzina": "15:00",
+      "miejsce": "Sampława",
+      "Zawodnicy": [
+        {
+          "ZKartki": 1,
+          "CKartki": 0,
+          "Zawodnicy": "Kamil Czacharowski",
+          "minuty": 45
+        }
+      ],
+      "Statystyki": [
+        {
+          "BramkiPFT": [
+            {
+              "Zawodnicy": "Kamil Czacharowski",
+              "minuta": 45
+            }
+          ],
+          "BramkiPrzeciwnika": [
+            {
+              "name": "random",
+              "minuta": 21
+            }
+          ],
+          "Kartki": [
+            {
+              "Zawodnicy": "Krystian Kozłowski",
+              "kartka": "czerwona",
+              "minuta": 19
+            }
+          ],
+          "Zmiany": [
+            {
+              "ZmianaZ": "Kamil Czacharowski",
+              "minuta": 56,
+              "ZmianaNa": "Mateusz Kroplewski"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
