@@ -28,6 +28,12 @@
                   "Zawodnicy": "Kamil Czacharowski",
                   "minuta": 54
                 }
+              ],
+              "BramkiPrzeciwnika": [
+                {
+                  "name": "test",
+                  "minuta": 5
+                }
               ]
             }
           ]
