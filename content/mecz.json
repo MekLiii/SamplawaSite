@@ -57,7 +57,24 @@
       ]
     },
     {
-      "sezon": "2021/2022"
+      "sezon": "2021/2022",
+      "mecz": [
+        {
+          "data": "12/11/2021",
+          "gospodarze": "Lubawa",
+          "goscie": "Lubawa",
+          "godzina": "13:00",
+          "miejsce": "Lubawa",
+          "Zawodnicy": [
+            {
+              "ZKartki": 0,
+              "CKartki": 0,
+              "Zawodnicy": "Krystian wasiewski",
+              "minuty": 0
+            }
+          ]
+        }
+      ]
     }
   ],
   "AktualnySezon": "2020/2021"
