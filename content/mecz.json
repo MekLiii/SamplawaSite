@@ -1,7 +1,60 @@
 {
   "sezon": [
     {
-      "sezon": "2020/2021"
+      "sezon": "2020/2021",
+      "mecz": [
+        {
+          "data": "12/11/2021",
+          "gospodarze": "Sampława",
+          "goscie": "Byszwałd",
+          "godzina": "15:00",
+          "miejsce": "Sampława",
+          "Zawodnicy": [
+            {
+              "ZKartki": 0,
+              "CKartki": 0,
+              "Zawodnicy": "Krystian Kozłowski",
+              "minuty": 66
+            },
+            {
+              "ZKartki": 0,
+              "CKartki": 0,
+              "Zawodnicy": "Mateusz Kroplewski",
+              "minuty": 67
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Krystian Kozłowski",
+                  "minuta": 1
+                }
+              ],
+              "BramkiPrzeciwnika": [
+                {
+                  "name": "test",
+                  "minuta": 2
+                }
+              ],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Mateusz Kroplewski",
+                  "kartka": "żółta",
+                  "minuta": 55
+                }
+              ],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Leo Messi",
+                  "minuta": 65,
+                  "ZmianaNa": "Kamil Czacharowski"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "sezon": "2021/2022"
