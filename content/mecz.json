@@ -2,12 +2,39 @@
   "mecz": [
     {
       "data": "11/01/2021",
-      "gospodarze": "PFT Sampława",
-      "goscie": "Motor Lubawa",
-      "bramkiGospodarza": 2,
       "bramkiGoscia": 1,
+      "bramkiGospodarza": 2,
+      "Statystyki": [
+        {
+          "Zmiany": [
+            {
+              "ZmianaZ": "Mateusz Kroplewski",
+              "minuta": 55,
+              "ZmianaNa": "Leo Messi"
+            },
+            {
+              "ZmianaZ": "Kamil Czacharowski",
+              "minuta": 2,
+              "ZmianaNa": "test"
+            }
+          ],
+          "Kartki": [
+            {
+              "Zawodnicy": "Mateusz Kroplewski",
+              "kartka": "żółta",
+              "minuta": 50
+            }
+          ],
+          "Bramki": [
+            {
+              "Zawodnicy": "Mateusz Kroplewski",
+              "minuta": 55
+            }
+          ]
+        }
+      ],
+      "goscie": "Motor Lubawa",
       "miejsce": "Lubawa",
-      "godzina": "15:00",
       "Zawodnicy": [
         {
           "Bramki": 1,
@@ -23,7 +50,9 @@
           "Zawodnicy": "test",
           "minuty": 90
         }
-      ]
+      ],
+      "gospodarze": "PFT Sampława",
+      "godzina": "15:00"
     }
   ]
 }
