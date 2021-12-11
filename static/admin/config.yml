@@ -32,162 +32,92 @@ collections:
         name: "mecz"
         file: "content/mecz.json"
         fields:
-          - name: '2020/2021'
+          # - {label: Wybierz aktualny sezon, name: AktualnySezon, widget: relation, collection: mecze, search_fields: [sezon.*.sezon], display_fields: [sezon.*.sezon], value_field: sezon.*.sezon}
+          - name: sezon
             widget: list
             fields:
-              - {label: gospodarze, name: gospodarze, widget: string}
-              - {label: goscie, name: goscie, widget: string}
-              - {label: Data, name: data , widget: datetime, date_format: 'DD-MM-YYYY', time_format: "HH:mm",format: "L",picker_utc: false}
-              - {label: godzina, name: godzina , widget: string}
-              - {label: miejsce, name: miejsce, widget: string}
-              - label: Zawodnicy
-                name: Zawodnicy
+              - {label: sezon, name: sezon, widget: string}
+              - name: mecz
                 widget: list
                 fields:
-                - {label: "Zawodnicy",
-                      name: "Zawodnicy",
-                      widget: "relation",
-                      collection: zawodnicy,
-                      search_fields: [team.*.name],
-                      display_fields: [team.*.name],
-                      value_field: team.*.name}
-                - {label: Rozegrane minuty, name: minuty, widget: number}
-                - {label: Żółte Kartki, name: ZKartki, widget: number,default: 0}
-                - {label: Czerwone Kartki, name: CKartki, widget: number,default: 0}
-              - label: Statystyki
-                name: Statystyki
-                widget: list
-                max: 1
-                min: 0
-                fields:
-                  - label: Bramki PFT
-                    name: BramkiPFT
+                  - {label: gospodarze, name: gospodarze, widget: string}
+                  - {label: goscie, name: goscie, widget: string}
+                  - {label: Data, name: data , widget: datetime, date_format: 'DD-MM-YYYY', time_format: "HH:mm",format: "L",picker_utc: false}
+                  - {label: godzina, name: godzina , widget: string}
+                  - {label: miejsce, name: miejsce, widget: string}
+                  - label: Zawodnicy
+                    name: Zawodnicy
                     widget: list
                     fields:
-                      - {label: "Zawodnicy",
-                            name: "Zawodnicy",
-                            widget: "relation",
-                            collection: zawodnicy,
-                            search_fields: [team.*.name],
-                            display_fields: [team.*.name],
-                            value_field: team.*.name}
-                      - {label: minuta, name: minuta, widget: number}
-                  - label: Bramki Przeciwnika
-                    name: BramkiPrzeciwnika
+                    - {label: "Zawodnicy",
+                          name: "Zawodnicy",
+                          widget: "relation",
+                          collection: zawodnicy,
+                          search_fields: [team.*.name],
+                          display_fields: [team.*.name],
+                          value_field: team.*.name}
+                    - {label: Rozegrane minuty, name: minuty, widget: number}
+                    - {label: Żółte Kartki, name: ZKartki, widget: number,default: 0}
+                    - {label: Czerwone Kartki, name: CKartki, widget: number,default: 0}
+                  - label: Statystyki
+                    name: Statystyki
                     widget: list
+                    max: 1
+                    min: 0
                     fields:
-                      - {label: Imię i nazwisko, name: name, widget: string}
-                      - {label: minuta, name: minuta, widget: number}
-                  - label: Kartki
-                    name: Kartki
-                    widget: list
-                    fields:
-                      - {label: "Zawodnicy",
-                            name: "Zawodnicy",
-                            widget: "relation",
-                            collection: zawodnicy,
-                            search_fields: [team.*.name],
-                            display_fields: [team.*.name],
-                            value_field: team.*.name}
-                      - {label: kartka, name: kartka, widget: "select", options: ["żółta", "czerwona"]}                      
-                      - {label: minuta, name: minuta, widget: number}
-                  - label: Zmiany
-                    name: Zmiany
-                    widget: list
-                    fields:
-                      - {label: "Zmiana z",
-                            name: "ZmianaZ",
-                            widget: "relation",
-                            collection: zawodnicy,
-                            search_fields: [team.*.name],
-                            display_fields: [team.*.name],
-                            value_field: team.*.name}                      
-                      - {label: minuta, name: minuta, widget: number}
-                      - {label: "Zmiana na",
-                            name: "ZmianaNa",
-                            widget: "relation",
-                            collection: zawodnicy,
-                            search_fields: [team.*.name],
-                            display_fields: [team.*.name],
-                            value_field: team.*.name}        
-          - name: '2021/2022'
-            widget: list
-            fields:
-              - {label: gospodarze, name: gospodarze, widget: string}
-              - {label: goscie, name: goscie, widget: string}
-              - {label: Data, name: data , widget: datetime, date_format: 'DD-MM-YYYY', time_format: "HH:mm",format: "L",picker_utc: false}
-              - {label: godzina, name: godzina , widget: string}
-              - {label: miejsce, name: miejsce, widget: string}
-              - label: Zawodnicy
-                name: Zawodnicy
-                widget: list
-                fields:
-                - {label: "Zawodnicy",
-                      name: "Zawodnicy",
-                      widget: "relation",
-                      collection: zawodnicy,
-                      search_fields: [team.*.name],
-                      display_fields: [team.*.name],
-                      value_field: team.*.name}
-                - {label: Rozegrane minuty, name: minuty, widget: number}
-                - {label: Żółte Kartki, name: ZKartki, widget: number,default: 0}
-                - {label: Czerwone Kartki, name: CKartki, widget: number,default: 0}
-              - label: Statystyki
-                name: Statystyki
-                widget: list
-                max: 1
-                min: 0
-                fields:
-                  - label: Bramki PFT
-                    name: BramkiPFT
-                    widget: list
-                    fields:
-                      - {label: "Zawodnicy",
-                            name: "Zawodnicy",
-                            widget: "relation",
-                            collection: zawodnicy,
-                            search_fields: [team.*.name],
-                            display_fields: [team.*.name],
-                            value_field: team.*.name}
-                      - {label: minuta, name: minuta, widget: number}
-                  - label: Bramki Przeciwnika
-                    name: BramkiPrzeciwnika
-                    widget: list
-                    fields:
-                      - {label: Imię i nazwisko, name: name, widget: string}
-                      - {label: minuta, name: minuta, widget: number}
-                  - label: Kartki
-                    name: Kartki
-                    widget: list
-                    fields:
-                      - {label: "Zawodnicy",
-                            name: "Zawodnicy",
-                            widget: "relation",
-                            collection: zawodnicy,
-                            search_fields: [team.*.name],
-                            display_fields: [team.*.name],
-                            value_field: team.*.name}
-                      - {label: kartka, name: kartka, widget: "select", options: ["żółta", "czerwona"]}                      
-                      - {label: minuta, name: minuta, widget: number}
-                  - label: Zmiany
-                    name: Zmiany
-                    widget: list
-                    fields:
-                      - {label: "Zmiana z",
-                            name: "ZmianaZ",
-                            widget: "relation",
-                            collection: zawodnicy,
-                            search_fields: [team.*.name],
-                            display_fields: [team.*.name],
-                            value_field: team.*.name}                      
-                      - {label: minuta, name: minuta, widget: number}
-                      - {label: "Zmiana na",
-                            name: "ZmianaNa",
-                            widget: "relation",
-                            collection: zawodnicy,
-                            search_fields: [team.*.name],
-                            display_fields: [team.*.name],
-                            value_field: team.*.name}                              
+                      - label: Bramki PFT
+                        name: BramkiPFT
+                        widget: list
+                        fields:
+                          - {label: "Zawodnicy",
+                                name: "Zawodnicy",
+                                widget: "relation",
+                                collection: zawodnicy,
+                                search_fields: [team.*.name],
+                                display_fields: [team.*.name],
+                                value_field: team.*.name}
+                          - {label: minuta, name: minuta, widget: number}
+                      - label: Bramki Przeciwnika
+                        name: BramkiPrzeciwnika
+                        widget: list
+                        fields:
+                          - {label: Imię i nazwisko, name: name, widget: string}
+                          - {label: minuta, name: minuta, widget: number}
+                      - label: Kartki
+                        name: Kartki
+                        widget: list
+                        fields:
+                          - {label: "Zawodnicy",
+                                name: "Zawodnicy",
+                                widget: "relation",
+                                collection: zawodnicy,
+                                search_fields: [team.*.name],
+                                display_fields: [team.*.name],
+                                value_field: team.*.name}
+                          - {label: kartka, name: kartka, widget: "select", options: ["żółta", "czerwona"]}                      
+                          - {label: minuta, name: minuta, widget: number}
+                      - label: Zmiany
+                        name: Zmiany
+                        widget: list
+                        fields:
+                          - {label: "Zmiana z",
+                                name: "ZmianaZ",
+                                widget: "relation",
+                                collection: zawodnicy,
+                                search_fields: [team.*.name],
+                                display_fields: [team.*.name],
+                                value_field: team.*.name}                      
+                          - {label: minuta, name: minuta, widget: number}
+                          - {label: "Zmiana na",
+                                name: "ZmianaNa",
+                                widget: "relation",
+                                collection: zawodnicy,
+                                search_fields: [team.*.name],
+                                display_fields: [team.*.name],
+                                value_field: team.*.name}
+              
+          
+                                          
                       
                 
               

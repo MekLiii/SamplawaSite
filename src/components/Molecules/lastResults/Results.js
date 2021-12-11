@@ -4,8 +4,8 @@ import mecz from "../../../../content/mecz.json";
 import "./result.module.css";
 
 function Results() {
-  const match = mecz.mecz;
-
+  const match = mecz[0];
+  console.log(mecz['2021/2022']);
   const matchArray = [];
 
   const today = new Date();
