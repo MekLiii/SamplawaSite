@@ -61,6 +61,16 @@
       "zKartki": 0,
       "cKartki": 0,
       "mecze": 5
+    },
+    {
+      "name": "test",
+      "numer": 1,
+      "pozycja": "obrońca",
+      "bramki": 1,
+      "asysty": -1,
+      "zKartki": 23,
+      "cKartki": 23,
+      "mecze": 29
     }
   ]
 }
