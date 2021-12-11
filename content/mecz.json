@@ -52,6 +52,28 @@
                 }
               ]
             }
+          ],
+          "przeciwnik": "Byszwałd"
+        },
+        {
+          "data": "11/23/2021",
+          "gospodarze": "Sampława",
+          "przeciwnik": "Jamielnik",
+          "godzina": "15:00",
+          "miejsce": "Jamielnik",
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Krystian Kozłowski",
+                  "minuta": 1
+                },
+                {
+                  "Zawodnicy": "Krystian Kozłowski",
+                  "minuta": 2
+                }
+              ]
+            }
           ]
         }
       ]
@@ -72,7 +94,8 @@
               "Zawodnicy": "Krystian wasiewski",
               "minuty": 0
             }
-          ]
+          ],
+          "przeciwnik": "Lubawa"
         }
       ]
     }
