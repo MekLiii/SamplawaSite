@@ -32,7 +32,7 @@ collections:
         name: "mecz"
         file: "content/mecz.json"
         fields:
-          - {label: Wybierz aktualny sezon, name: AktualnySezon, widget: relation, collection: mecze, search_fields: [sezon.*.sezon], display_fields: [sezon.*.sezon], value_field: sezon.*.sezon}
+          # - {label: Wybierz aktualny sezon, name: AktualnySezon, widget: relation, collection: mecze, search_fields: [sezon.*.sezon], display_fields: [sezon.*.sezon], value_field: sezon.*.sezon}
           - name: sezon
             widget: list
             fields:
