@@ -37,6 +37,13 @@
               ]
             }
           ]
+        },
+        {
+          "data": "12/13/2021",
+          "gospodarze": "Test",
+          "przeciwnik": "Test",
+          "godzina": "15:00",
+          "miejsce": "Test"
         }
       ]
     }
