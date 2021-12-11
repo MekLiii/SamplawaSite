@@ -40,18 +40,13 @@
         },
         {
           "data": "12/13/2021",
-          "gospodarze": "Test",
-          "przeciwnik": "Test",
+          "gospodarze": "Sampława",
+          "przeciwnik": "Torpeda Rożental",
           "godzina": "15:00",
           "miejsce": "Test",
           "Statystyki": [
             {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Krystian Kozłowski",
-                  "minuta": 13
-                }
-              ]
+              "BramkiPFT": []
             }
           ]
         }
