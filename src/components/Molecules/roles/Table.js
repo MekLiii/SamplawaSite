@@ -16,17 +16,7 @@ function Table() {
       </div>
       <GridHolder>
         {team.map((el) => (
-          <TableHero
-            numer={el.numer}
-            pozycja={el.pozycja}
-            name={el.name}
-            bramki={el.bramki}
-            asysty={el.asysty}
-            zKartki={el.zKartki}
-            cKartki={el.cKartki}
-            mecze={el.mecze}
-            key={el.name}
-          />
+          <TableHero pozycja={el.pozycja} name={el.name} key={el.name} />
         ))}
       </GridHolder>
     </div>

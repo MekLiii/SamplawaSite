@@ -1,17 +1,6 @@
 {
   "team": [
     {
-      "position": "Bramkarz",
-      "name": "Kacper Wietecha",
-      "zKartki": 2,
-      "asysty": 1,
-      "numer": 1,
-      "mecze": 2,
-      "cKartki": 0,
-      "bramki": 1,
-      "pozycja": "Bramkarz"
-    },
-    {
       "position": "Ogrzewacz ławki",
       "name": "Krystian wasiewski",
       "zKartki": 1,

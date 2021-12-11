@@ -4,6 +4,7 @@ import ProductCard from "../components/Atoms/ProductCard";
 import Layout from "../components/Organism/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 import img from '../../content/blog/Produkty/szalik.png'
+import AdressEl from "../components/Atoms/AdressEl"
 
 function Sklep() {
   const data = useStaticQuery(graphql`
@@ -38,6 +39,16 @@ function Sklep() {
               />
             ))}
           </GridHolder>
+              <Info>
+                <div>
+                  <p style={{color: 'rgb(255, 230, 0)', fontSize:"15px"}}>Uwaga!</p>
+                </div>
+                <div style={{display: 'flex', flexDirection: 'column'}}>
+                  <p style={{color: '#979797'}}>Zamówienia można składać telefonicznie lub przez adres email</p>
+                  <AdressEl desc="Telefon:" prop="710 777 358" style={{display: 'flex'}}/>
+                  <AdressEl desc="E-mail:" prop="profootballteam2019@gmail.com" style={{display: 'flex'}}/>
+                </div>
+              </Info>
         </Box>
       </Cointainer>
     </Layout>
@@ -57,12 +68,26 @@ const GridHolder = styled.div`
 `;
 const Box = styled.div`
   height: auto;
-  min-height:70vh;
+  min-height:90vh;
   width: 100%;
   display: flex;
-  justify-content:center;
+  justify-content:space-around;
   align-items: center;
+  flex-direction: column;
   
 `;
+const Info = styled.div`
+  width: 80%;
+  height: 20vh;
+  background-color:#1d1d1d;
+  border:10px solid #2b2b2b;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  margin: 20px;
+  padding:5px;
+
+`
 
 export default Sklep;

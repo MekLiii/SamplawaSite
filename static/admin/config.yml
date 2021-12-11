@@ -10,11 +10,10 @@ collections:
     name: "zawodnicy"
     files:
       - label: "Zawodnicy"
-        name: "zawodnicy"
+        name: "team"
         file: "content/druzyna.json"
         fields:
-          - label: team
-            name: team
+          - name: team
             widget: list
             fields:
               - {label: name, name: name, widget: string}
@@ -33,8 +32,7 @@ collections:
         name: "mecz"
         file: "content/mecz.json"
         fields:
-          - label: mecz
-            name: mecz
+          - name: mecz
             widget: list
             fields:
               - {label: gospodarze, name: gospodarze, widget: string}
@@ -44,6 +42,23 @@ collections:
               - {label: Data, name: data , widget: datetime, date_format: 'DD-MM-YYYY', time_format: "HH:mm",format: "L",picker_utc: false}
               - {label: godzina, name: godzina , widget: string}
               - {label: miejsce, name: miejsce, widget: string}
+              - label: Zawodnicy
+                name: Zawodnicy
+                widget: list
+                fields:
+                - {label: Zawodnik, name: Zawodnik, widget: string}
+                - {label: Rozegrane minuty, name: minuty, widget: number}
+                - {label: Bramki, name: Bramki, widget: number,default: 0}
+                - {label: Żółte Kartki, name: ZKartki, widget: number,default: 0}
+                - {label: Czerwone Kartki, name: CKartki, widget: number,default: 0}
+                - {label: "Zawodnicy",
+                      name: "Zawodnicy",
+                      widget: "relation",
+                      collection: zawodnicy,
+                      search_fields: [team.*.name],
+                      display_fields: [team.*.name],
+                      value_field: name}
+              
   - name: 'Aktualnosci'
     label: 'Aktualnosci'
     folder: 'content/blog'
