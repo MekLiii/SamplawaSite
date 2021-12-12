@@ -38,12 +38,11 @@ function Aktu() {
             key={element.node.frontmatter.naglowek}
             heading={element.node.frontmatter.naglowek}
             data={element.node.frontmatter.date}
-            img={`${element.node.frontmatter.zdjecia}`}
+            img={`${element.node.frontmatter.zdjecia.slice(8)}`}
             text={`${element.node.frontmatter.tresc?.slice(
               0,
               150
             )}...Czytaj dalej`}
-            // img={element.node.frontmatter.zdjecia}
           />
         </Link>
       ))}

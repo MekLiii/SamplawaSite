@@ -60,7 +60,9 @@ const IndexPage = () => {
         </h1>
         <Aktu />
       </StyledAktu>
-
+      <div style={{display:"flex", justifyContent:"center"}}>
+        <h2 style={{color:"white"}}>Sponsorzy</h2>
+      </div>
       <StyledSposnor>
         <div style={{ width: "100%" }}>
           <Carousel responsive={responsive}>
@@ -81,6 +83,8 @@ const StyledAktu = styled.div`
   justify-content:center;
   align-items: center;
   flex-direction: column;
+  margin-bottom:50px;
+  margin-top:50px;
 `;
 const StyledSposnor = styled.div`
   width: 100%;
@@ -89,14 +93,12 @@ const StyledSposnor = styled.div`
   display: flex;
   background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
   align-items: center;
+  margin-bottom: 50px;
 `;
 
 const StyledDiv = styled.div`
   min-height: 50vh;
   width: 100%;
-  ${'' /* display: flex;
-  justify-content: center;
-  align-items: center; */}
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 

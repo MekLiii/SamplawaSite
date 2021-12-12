@@ -25,7 +25,7 @@ function AktuEl({ img, heading, text, data }) {
 
 const StyledBox = styled.div`
   ${'' /* width: 350px; */}
-  ${'' /* min-height:0; */}
+  min-height:450px;
   min-width:0;
   background-color: white;
   display: flex;
@@ -34,10 +34,10 @@ const StyledBox = styled.div`
 `;
 const AbsoluteDiv = styled.div`
   position: absolute;
-
+  height:25px;
   width: 110px;
   ${'' /* height: auto; */}
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   z-index: 100;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 84% 100%, 0 100%, 0% 50%);
   padding-left: 10px;

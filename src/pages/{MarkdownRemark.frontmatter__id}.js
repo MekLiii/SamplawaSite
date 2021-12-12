@@ -10,8 +10,7 @@ import MatchTable from "../components/Molecules/MatchTable/MatchTable";
 export default function Template({data}) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
-  console.log(frontmatter.zdjecia);
-  
+  const image = frontmatter.zdjecia.substr(8);
   return (
     <LayOut>
       <div className="blog-post-container">
@@ -22,7 +21,7 @@ export default function Template({data}) {
           </div>
           <div className="contentBox">
             <div className="contentBoxImage">
-              <img src={`${frontmatter.zdjecia}`} className="imgArticle" alt={frontmatter.zdjecia} />
+              <img src={image} className="imgArticle" alt={image} />
             </div>
             <div className="contentBoxText">
               <p style={{ margin: "30px" }}>{frontmatter.tresc}</p>
@@ -34,8 +33,6 @@ export default function Template({data}) {
           />
         </div>
         <div className="LeftSide">
-          <Results />
-          <MatchTable />
         </div>
       </div>
     </LayOut>
