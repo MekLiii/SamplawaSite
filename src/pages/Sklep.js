@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ProductCard from "../components/Atoms/ProductCard";
 import Layout from "../components/Organism/Layout";
 import { useStaticQuery, graphql } from "gatsby";
-import img from '../../content/blog/Produkty/szalik.png'
+// import img from '../../content/blog/Produkty/szalik.png'
 import AdressEl from "../components/Atoms/AdressEl"
 
 function Sklep() {
@@ -34,7 +34,7 @@ function Sklep() {
                 name={el.node.frontmatter.name}
                 price={el.node.frontmatter.price}
                 key={el.node.frontmatter.name}
-                img={el.node.frontmatter?.thumbnail}
+                img={el.node.frontmatter.thumbnail}
                 
               />
             ))}

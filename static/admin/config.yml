@@ -40,9 +40,9 @@ collections:
               - name: mecz
                 widget: list
                 fields:
+                  - {label: Data, name: data , widget: date, date_format: 'DD-MM-YYYY', time_format: "HH:mm",format: "L",picker_utc: false}
                   - {label: gospodarze, name: gospodarze, widget: string}
                   - {label: przeciwnik, name: przeciwnik, widget: string}
-                  - {label: Data, name: data , widget: datetime, date_format: 'DD-MM-YYYY', time_format: "HH:mm",format: "L",picker_utc: false}
                   - {label: godzina, name: godzina , widget: string}
                   - {label: miejsce, name: miejsce, widget: string}
                   - label: Zawodnicy
@@ -132,7 +132,7 @@ collections:
       - { label: 'id', name: 'id', widget: 'number', required: true}
       - { label: 'naglowek', name: 'naglowek', widget: 'string' }
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
-      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "content/assets/logo.png", media_folder: 'content/assets/'}
+      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/img/test.jpg", media_folder: static/img/}
       - { label: 'tresc', name: 'tresc', widget: 'markdown', required: false }
 
   - label: "Tabela"
@@ -196,7 +196,7 @@ collections:
     fields:
       - { label: 'nazwa', name: 'name', widget: 'string', required: true}
       - { label: 'cena', name: 'price', widget: 'string' }
-      - {label: "Featured Image", name: "thumbnail", widget: "image", choose_url: true, default: "content/blog/Produkty/szalik.png"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", choose_url: true, default: "/img/prod/test.png"}
 
 
               

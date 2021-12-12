@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import mecz from "../../../../content/mecz.json";
@@ -48,6 +49,7 @@ function Results() {
         </StyledP>
         <StyledP style={{ color: "#b1b1b1" }}>B klasa</StyledP>
         <StyledP style={{ color: "#b1b1b1" }}>{result?.data}</StyledP>
+        <StyledP style={{ color: "#b1b1b1" }}><Link to="/Statystyki">Zobacz statystyki</Link></StyledP>
       </div>
     </div>
   );

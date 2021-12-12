@@ -16,6 +16,7 @@ function Aktu() {
               naglowek
               tresc
               title
+              zdjecia
             }
           }
         }
@@ -37,7 +38,7 @@ function Aktu() {
             key={element.node.frontmatter.naglowek}
             heading={element.node.frontmatter.naglowek}
             data={element.node.frontmatter.date}
-            // img={`${element.node.frontmatter.zdjecia}`}
+            img={`${element.node.frontmatter.zdjecia}`}
             text={`${element.node.frontmatter.tresc?.slice(
               0,
               150

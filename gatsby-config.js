@@ -25,6 +25,7 @@ module.exports = {
     "gatsby-plugin-netlify-cms",
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -38,6 +39,14 @@ module.exports = {
         useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
         stripMetadata: true,
         defaultQuality: 50,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name:'mecz',
+        path: `${__dirname}/content/`
       },
     },
     // `gatsby-plugin-fontawesome-css`

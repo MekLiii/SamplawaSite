@@ -5,40 +5,43 @@ import { Time } from "react-ionicons";
 import mecz from "../../../../content/mecz.json";
 
 function NextMatch() {
-  // const match = mecz.mecz;
+  const match = mecz.sezon;
+  const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
+  console.log(data);
+  const matchArray = [];
 
-  // const matchArray = [];
+  const today = new Date();
+  const currentDay =
+    today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
+  const currentDate =
+    today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
+  matchArray.push(currentDate);
 
-  // const today = new Date();
-  // const currentDay =
-  //   today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
-  // const currentDate =
-  //   today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
-  // matchArray.push(currentDate);
+  data.map((el) => matchArray.push(el.data));
 
-  // match.map((el) => matchArray.push(el.data));
+  matchArray.sort(function (a, b) {
+    a = a.split("/").reverse().join("");
+    b = b.split("/").reverse().join("");
+    return a > b ? 1 : a < b ? -1 : 0;
+  });
+  console.log(matchArray)
+  const indexOfCurrentDay = matchArray.indexOf(currentDate);
+  const compareDate = matchArray[indexOfCurrentDay + 1];
 
-  // matchArray.sort(function (a, b) {
-  //   a = a.split("/").reverse().join("");
-  //   b = b.split("/").reverse().join("");
-  //   return a > b ? 1 : a < b ? -1 : 0;
-  // });
+  const result = data.find(({ data }) => data == compareDate);
+  
+  
 
-  // const indexOfCurrentDay = matchArray.indexOf(currentDate);
-  // const compareDate = matchArray[indexOfCurrentDay + 1];
-
-  // const result = match.find(({ data }) => data == compareDate);
-  // console.log(matchArray);
-
+    console.log(result);
   return (
     <StyledDiv>
-      {/* <div style={displayFlex}>
+      <div style={displayFlex}>
         <h1 style={{ color: "white" }}>Następny mecz</h1>
       </div>
       <div style={versusDiv}>
         <P>{result?.gospodarze}</P>
         <P>-:-</P>
-        <P>{result?.goscie}</P>
+        <P>{result?.przeciwnik}</P>
       </div>
       <div
         style={{
@@ -48,18 +51,16 @@ function NextMatch() {
         }}
       >
         <P>{result?.miejsce}</P>
-        <P>
+        <Color>
           <div style={{display: "flex", flexDirection: "column",alignItems: "center"}}>
             <div>
-            <Time color={"white"} height="40px" width="40px" />
-           
             {result?.data}
             </div>
             {result?.godzina}
           </div>
-        </P>
+        </Color>
         <P>B klasa</P>
-      </div> */}
+      </div>
     </StyledDiv>
   );
 }
@@ -88,5 +89,8 @@ const StyledImg = styled.img`
 const P = styled.p`
   color: white;
 `;
+const Color = styled.div`
+  color: white;
+`
 
 export default NextMatch;
