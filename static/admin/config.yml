@@ -132,7 +132,7 @@ collections:
       - { label: 'id', name: 'id', widget: 'number', required: true}
       - { label: 'naglowek', name: 'naglowek', widget: 'string' }
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
-      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/img/test.jpg", media_folder: ../../static/img/}
+      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/img/test.jpg", media_folder: /static/img/}
       - { label: 'tresc', name: 'tresc', widget: 'markdown', required: false }
 
   - label: "Tabela"
