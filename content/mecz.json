@@ -51,6 +51,42 @@
           ]
         }
       ]
+    },
+    {
+      "sezon": "2021/2022",
+      "mecz": [
+        {
+          "data": "12/12/2021",
+          "gospodarze": "Sampława",
+          "przeciwnik": "Jamielnilk",
+          "godzina": "15:00",
+          "miejsce": "Jamielnilk",
+          "Zawodnicy": [
+            {
+              "ZKartki": 0,
+              "CKartki": 0,
+              "Zawodnicy": "Mateusz Kroplewski",
+              "minuty": 60
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Kamil Czacharowski",
+                  "minuta": -1
+                }
+              ],
+              "BramkiPrzeciwnika": [
+                {
+                  "name": "test",
+                  "minuta": 55
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "AktualnySezon": "2020/2021"
