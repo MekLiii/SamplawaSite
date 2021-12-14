@@ -61,7 +61,8 @@
                 },
                 {
                   "Zawodnicy": "Random test2",
-                  "minuta": 55
+                  "minuta": 55,
+                  "name": "test6"
                 }
               ],
               "Kartki": [
@@ -128,7 +129,8 @@
               "BramkiPrzeciwnika": [
                 {
                   "Zawodnicy": "Random",
-                  "minuta": 43
+                  "minuta": 43,
+                  "name": "random23"
                 }
               ],
               "Kartki": [
@@ -151,6 +153,17 @@
             {
               "Zawodnicy": "Krystian Kozłowski",
               "minuty": 55
+            }
+          ],
+          "Statystyki": [
+            {
+              "Kartki": [
+                {
+                  "Zawodnicy": "Kamil Czacharowski",
+                  "kartka": "czerwona",
+                  "minuta": 13
+                }
+              ]
             }
           ]
         }
