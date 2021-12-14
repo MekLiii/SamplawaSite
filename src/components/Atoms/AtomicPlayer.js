@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function AtomicPlayer({name, minut}) {
+function AtomicPlayer({name, minut, style,other}) {
     return (
-        <StyledBox>
+        <StyledBox style={style}>
             <P>{name}</P>
             <P>{minut}'</P>
+            {other}
         </StyledBox>
     )
 }

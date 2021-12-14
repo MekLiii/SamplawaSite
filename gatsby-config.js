@@ -26,6 +26,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-fontawesome-css`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {

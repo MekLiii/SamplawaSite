@@ -4,8 +4,9 @@ import AtomicPlayer from "../Atoms/AtomicPlayer";
 import Layout from "./Layout";
 import data from "../../../content/mecz.json";
 import LastMatchEl from "../Atoms/LastMatchEl";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fasFaExchangeAlt } from '@fortawesome/free-solid-svg-icons'
+import { ArrowUp } from "react-ionicons";
+import { ArrowDown } from "react-ionicons";
+import { TabletPortrait } from "react-ionicons";
 
 function ElStat({ pageContext }) {
   const { slug } = pageContext;
@@ -17,9 +18,7 @@ function ElStat({ pageContext }) {
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   const players = meczData.Zawodnicy;
-  //   const Stats = matches.Statystyki.map((el) => el)
-  //   console.log(Stats);
-  console.log(meczData.Statystyki[0]?.Kartki);
+
   return (
     <Layout>
       <Cointainer>
@@ -64,6 +63,7 @@ function ElStat({ pageContext }) {
                 <StylyedPlayer>
                   {bramkiEnemy.map((el) => (
                     <AtomicPlayer
+                      style={{ flexDirection: "row-reverse" }}
                       name={el.Zawodnicy}
                       minut={el.minuta}
                       key={el.Zawodnicy + el.minuta}
@@ -90,22 +90,32 @@ function ElStat({ pageContext }) {
                     name={el.Zawodnicy}
                     key={el}
                     minut={el.minuta}
+                    other={
+                      <TabletPortrait
+                        color={el.Kartki === "czerwona" ? "red" : "yellow"}
+                      />
+                    }
                   />
                 ))}
               </LeftBotEl>
               <LeftBotEl>
                 <H1>Zmiany</H1>
                 {meczData.Statystyki[0]?.Zmiany?.map((el) => (
-                  <div>
-                    <div>
-                      <p>^</p>
-                      <p>{el.ZmianaZ}</p>
-                    </div>
-                    <FontAwesomeIcon icon={fasFaExchangeAlt} />
-                    <div>
-                      <p>/</p>
-                      <p>{el.ZmianaNa}</p>
-                    </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                      width: "100%",
+                      textAlign: "center",
+                    }}
+                  >
+                    <ArrowDown color={"red"} height="25px" width="25px" />
+                    <p style={{ color: "white" }}>{el.ZmianaZ}</p>
+
+                    <p style={{ color: "white" }}>{el.ZmianaNa}</p>
+                    <p style={{ color: "white" }}>{el.minuta}'</p>
+                    <ArrowUp color={"green"} height="25px" width="25px" />
                   </div>
                 ))}
               </LeftBotEl>

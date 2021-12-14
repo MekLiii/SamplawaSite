@@ -70,6 +70,7 @@ function Oklubie() {
                     prop={el.name}
                     desc={el.funkcja}
                     style={{ display: "flex", justifyContent: "space-between" }}
+                    
                   />
                 ))}
                 <AdresEL prop={data.tekst} />

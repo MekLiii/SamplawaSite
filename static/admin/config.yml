@@ -73,14 +73,13 @@ collections:
                                 collection: zawodnicy,
                                 search_fields: [team.*.name],
                                 display_fields: [team.*.name],
-                                value_field: team.*.name},
-                                required: false,
-                          - {label: minuta, name: minuta, widget: number, required: false}
+                                value_field: team.*.name}
+                          - {label: minuta, name: minuta, widget: number}
                       - label: Bramki Przeciwnika
                         name: BramkiPrzeciwnika
                         widget: list
                         fields:
-                          - {label: Imię i nazwisko, name: Zawodnicy, widget: string}
+                          - {label: Imię i nazwisko, name: name, widget: string}
                           - {label: minuta, name: minuta, widget: number}
                       - label: Kartki
                         name: Kartki
