@@ -2,7 +2,24 @@
 .table{
     border: 1px solid black;
 } */
-tbody > tr > td{
-    border: 1px solid black;
-    text-align: center;
+/* #tbody:nth-child(odd) {
+    border-left: 3px solid green;
+    
+    background-color:green;
+} */
+tbody > tr:nth-child(-n+2) > th:nth-child(1) {
+    border-left: 10px solid #089000;
+}
+tbody > tr:nth-child(3) > th:nth-child(1) {
+    border-left: 10px solid #1fc600;
+}
+
+/* tbody > tr{
+    border-left:10px solid white;
+} */
+tbody > tr:nth-last-child(-n+2) > th:nth-child(1) {
+    border-left: 10px solid #b60000;
+}
+tbody > tr:nth-last-child(3) > th:nth-child(1) {
+    border-left: 10px solid #ff5252;
 }

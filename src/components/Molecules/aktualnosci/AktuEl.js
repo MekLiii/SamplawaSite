@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "./aktu.module.css";
 
 function AktuEl({ img, heading, text, data }) {
-  console.log(data)
+  console.log(data);
   return (
     <StyledBox>
       <div style={leftSide}>
@@ -23,11 +23,11 @@ function AktuEl({ img, heading, text, data }) {
 }
 
 const StyledBox = styled.div`
-  min-height:450px;
+  min-height: 450px;
   min-width: 0;
   background-color: white;
   display: flex;
-  ${'' /* border-radius: 10px; */}
+  ${"" /* border-radius: 10px; */}
   flex-direction: column;
 `;
 const AbsoluteDiv = styled.div`
@@ -45,10 +45,9 @@ const Button = styled.button`
   background-color: black;
   color: white;
   border: none;
-  -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-  -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-  ${'' /* border-radius:10px; */}
+  -webkit-box-shadow: 0px 0px 100px -49px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 0px 100px -49px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 100px -49px rgba(66, 68, 90, 1);
 `;
 
 const leftSide = {

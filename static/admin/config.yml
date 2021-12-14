@@ -73,8 +73,9 @@ collections:
                                 collection: zawodnicy,
                                 search_fields: [team.*.name],
                                 display_fields: [team.*.name],
-                                value_field: team.*.name}
-                          - {label: minuta, name: minuta, widget: number}
+                                value_field: team.*.name},
+                                required: false,
+                          - {label: minuta, name: minuta, widget: number, required: false}
                       - label: Bramki Przeciwnika
                         name: BramkiPrzeciwnika
                         widget: list

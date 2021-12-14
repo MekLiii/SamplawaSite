@@ -4,13 +4,8 @@ import AtomicPlayer from "../Atoms/AtomicPlayer";
 import Layout from "./Layout";
 import data from "../../../content/mecz.json";
 import LastMatchEl from "../Atoms/LastMatchEl";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fasFaExchangeAlt } from '@fortawesome/free-solid-svg-icons'
 
 function ElStat({ pageContext }) {
   const { slug } = pageContext;
@@ -22,10 +17,9 @@ function ElStat({ pageContext }) {
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   const players = meczData.Zawodnicy;
-
-  const howManyPlayerShootedGoals = bramkiSamplawa.find((el) => el.Zawodnicy === el.Zawodnicy)
-  console.log(bramkiSamplawa.find((el) => el.Zawodnicy === el.Zawodnicy))
-    console.log(bramkiSamplawa)
+  //   const Stats = matches.Statystyki.map((el) => el)
+  //   console.log(Stats);
+  console.log(meczData.Statystyki[0]?.Kartki);
   return (
     <Layout>
       <Cointainer>
@@ -39,20 +33,30 @@ function ElStat({ pageContext }) {
                   width: "100%",
                 }}
               >
-                <StyledTitle>{meczData.gospodarze}</StyledTitle>
-                <StyledTitle>-:-</StyledTitle>
-                <StyledTitle>{meczData.przeciwnik}</StyledTitle>
+                <StyledTitle>
+                  <p style={{ color: "rgb(255, 230, 0)" }}>
+                    {meczData.gospodarze}
+                  </p>{" "}
+                  <p style={{ color: "white" }}>{bramkiSamplawa.length}</p>
+                </StyledTitle>
+                <StyledTitle>
+                  <p style={{ color: "white" }}>-:-</p>
+                </StyledTitle>
+                <StyledTitle>
+                  <p style={{ color: "rgb(255, 230, 0)" }}>
+                    {meczData.przeciwnik}
+                  </p>
+                  <p style={{ color: "white" }}>{bramkiEnemy.length}</p>
+                </StyledTitle>
               </div>
-              <p>
-                {bramkiSamplawa.length} - {bramkiEnemy.length}
-              </p>
+
               <Players>
                 <StylyedPlayer>
                   {bramkiSamplawa.map((el) => (
                     <AtomicPlayer
                       name={el.Zawodnicy}
                       minut={el.minuta}
-                      key={el.Zawodnicy}
+                      key={el.Zawodnicy + el.minuta}
                     />
                   ))}
                 </StylyedPlayer>
@@ -62,62 +66,53 @@ function ElStat({ pageContext }) {
                     <AtomicPlayer
                       name={el.Zawodnicy}
                       minut={el.minuta}
-                      key={el.Zawodnicy}
+                      key={el.Zawodnicy + el.minuta}
                     />
                   ))}
                 </StylyedPlayer>
               </Players>
             </LeftTop>
             <LeftBot>
-              <TableContainer
-                component={Paper}
-                style={{
-                  overflowX: "hidden",
-                  overflowY: "auto",
-                  height: "100%",
-                  borderRadius: "0px",
-                  maxWidth: "100%",
-                  backgroundColor:'none'
-                }}
-              >
-                <Table
-                  sx={{ minWidth: 150 }}
-                  size="small"
-                  aria-label="a dense table"
-                  style={{ height: "100%" }}
-                >
-                  <TableHead>
-                    <TableRow>
-                      <TableCell align="right" width="30px">
-                        Zawodnik
-                      </TableCell>
-                      <TableCell align="right">Bramki</TableCell>
-                      <TableCell align="right">Kartki</TableCell>
-                      <TableCell align="right">Minuty</TableCell>
-                      <TableCell align="right">Zmiany</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {players.map((el) => (
-                      <TableRow key={el.druzyna}>
-                        <TableCell component="th" scope="row">
-                          {el.Zawodnicy}
-                        </TableCell>
-                        <TableCell component="th" scope="row" align="right">
-                          {(el.Zawodnicy === bramkiSamplawa.map((el) => el.Zawodnicy).toString() ?"tak" : "nie")}
-                        </TableCell>
-                        <TableCell align="right">{el.minuty}</TableCell>
-                        <TableCell align="right">{el.punkty}</TableCell>
-                        <TableCell align="right">{el.bramki}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
+              <LeftBotEl>
+                <H1>Zawodnicy</H1>
+                {players.map((el) => (
+                  <AtomicPlayer
+                    name={el.Zawodnicy}
+                    key={el.Zawodnicy}
+                    minut={el.minuty}
+                  />
+                ))}
+              </LeftBotEl>
+              <LeftBotEl>
+                <H1>Kartki</H1>
+                {meczData.Statystyki[0]?.Kartki?.map((el) => (
+                  <AtomicPlayer
+                    name={el.Zawodnicy}
+                    key={el}
+                    minut={el.minuta}
+                  />
+                ))}
+              </LeftBotEl>
+              <LeftBotEl>
+                <H1>Zmiany</H1>
+                {meczData.Statystyki[0]?.Zmiany?.map((el) => (
+                  <div>
+                    <div>
+                      <p>^</p>
+                      <p>{el.ZmianaZ}</p>
+                    </div>
+                    <FontAwesomeIcon icon={fasFaExchangeAlt} />
+                    <div>
+                      <p>/</p>
+                      <p>{el.ZmianaNa}</p>
+                    </div>
+                  </div>
+                ))}
+              </LeftBotEl>
             </LeftBot>
           </SidebarLeft>
           <SidebarRight>
-            <h1>Poprzednie mecze</h1>
+            <H1>Poprzednie mecze</H1>
             {matches.map((el) => (
               <LastMatchEl
                 enemy={el.przeciwnik}
@@ -171,6 +166,7 @@ const LeftTop = styled.div`
 const LeftBot = styled.div`
   height: 50%;
   width: 100%;
+  display: flex;
 `;
 const Players = styled.div`
   width: 100%;
@@ -185,6 +181,20 @@ const StylyedPlayer = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const StyledTitle = styled.p`
-  font-size: 2rem;
+const StyledTitle = styled.div`
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+`;
+const LeftBotEl = styled.div`
+  flex: 1;
+  display: flex;
+  ${"" /* justify-content: center; */}
+  align-items: center;
+  flex-direction: column;
+`;
+const H1 = styled.h1`
+  color: #979797;
 `;

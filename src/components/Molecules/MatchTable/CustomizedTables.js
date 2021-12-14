@@ -1,4 +1,4 @@
-import * as React from "react";
+import React,{useState} from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -7,11 +7,13 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import data from "../../../../content/tabelaSenior.json";
+import './matchTable.module.css';
 
 export default function DenseTable() {
   const dataAtom = data.Tabela.sort((a, b) => {
     return a.punkty - b.punkty;
   });
+  const [color, setColor] = useState('white');
   const dataEl = dataAtom.reverse();
   return (
     <TableContainer
@@ -29,7 +31,7 @@ export default function DenseTable() {
         aria-label="a dense table"
         style={{ height: "100%" }}
       >
-        <TableHead>
+        <TableHead style={{backgroundColor:"#ffe600"}}>
           <TableRow>
             <TableCell align="right" width="30px">
               Pozycja
@@ -40,10 +42,10 @@ export default function DenseTable() {
             <TableCell align="right">Bramki</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody id="tbody">
           {dataEl.map((el) => (
-            <TableRow key={el.druzyna}>
-              <TableCell component="th" scope="row">
+            <TableRow key={el.druzyna} style={(el.druzyna === "PFT Sampława") ? {backgroundColor:"#d0d0d0"}: {backgroundColor:"white"}}>
+              <TableCell component="th" scope="row" align="center"> 
                 {dataEl.indexOf(el) + 1}
               </TableCell>
               <TableCell component="th" scope="row">

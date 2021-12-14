@@ -78,31 +78,6 @@ const navText = {
   alignItems: "center",
 };
 
-const StyledUl = styled.ul`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  width: 50%;
-  @media (max-width: 500px) {
-    width: 100%;
-
-    display: none;
-  }
-`;
-const StyledRotate = styled.div`
-  height: 100%;
-  background-color: #ffe600;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  @media (max-width: 500px) {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-  }
-`;
-
 const StyledImg = styled.img`
   width: 100px;
 
@@ -118,36 +93,3 @@ const text = {
 };
 
 export default NavBar;
-
-// <StyledRotate>
-//         <Link to="/" style={text}>
-//           <StyledImg src={logo} alt="logo" />
-//         </Link>
-//         <StyledUl>
-//         <li>
-//             <Link to="/" style={text}>
-//               Głowna
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/Druzyna" style={text}>
-//               Drużyna
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/Galeria" style={text}>
-//               Galeria
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/Sponsorzy" style={text}>
-//               Sponsorzy
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/Kontakt" style={text}>
-//               Kontakt
-//             </Link>
-//           </li>
-//         </StyledUl>
-//       </StyledRotate>

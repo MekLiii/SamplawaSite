@@ -20,6 +20,7 @@ const StyledBox = styled.div`
     background-color: black;
     margin-top:10px;
     cursor:pointer;
+    border:1px solid rgb(255, 230, 0);
 `
 const P = styled.p`
     color:white;
