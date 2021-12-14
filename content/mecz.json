@@ -140,6 +140,19 @@
               ]
             }
           ]
+        },
+        {
+          "data": "12/15/2021",
+          "gospodarze": "PFT drewneks Sampława",
+          "przeciwnik": "Huragan Byszwałd",
+          "godzina": "15:00",
+          "miejsce": "Stadion Sampława",
+          "Zawodnicy": [
+            {
+              "Zawodnicy": "Krystian Kozłowski",
+              "minuty": 55
+            }
+          ]
         }
       ]
     },
