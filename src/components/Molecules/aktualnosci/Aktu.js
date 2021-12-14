@@ -7,7 +7,7 @@ import styled from "styled-components";
 function Aktu() {
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark(filter: {frontmatter: {date: {glob: "*"}}}) {
+      allMarkdownRemark(filter: { frontmatter: { date: { glob: "*" } } }) {
         edges {
           node {
             frontmatter {
@@ -22,27 +22,23 @@ function Aktu() {
         }
       }
     }
-  `)
+  `);
 
   const dataElement = data.allMarkdownRemark.edges;
   const dataAtom = dataElement.slice().reverse();
-
   return (
     <StyledGrid>
       {dataAtom.map((element) => (
         <Link
-          to={`/${element.node.frontmatter.id}`}
-          key={element.node.frontmatter.id}
+          to={`/${element.node.frontmatter.date}`}
+          key={element.node.frontmatter.naglowek}
         >
           <AktuEl
             key={element.node.frontmatter.naglowek}
             heading={element.node.frontmatter.naglowek}
             data={element.node.frontmatter.date}
             img={`${element.node.frontmatter.zdjecia.slice(8)}`}
-            text={`${element.node.frontmatter.tresc?.slice(
-              0,
-              150
-            )}...Czytaj dalej`}
+           
           />
         </Link>
       ))}

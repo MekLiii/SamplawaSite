@@ -32,7 +32,7 @@ collections:
         name: "mecz"
         file: "content/mecz.json"
         fields:
-          - {label: Wybierz aktualny sezon, name: AktualnySezon, widget: relation, collection: mecze, search_fields: [sezon.*.sezon], display_fields: [sezon.*.sezon], value_field: sezon.*.sezon}
+          - {label: 'Wybierz aktualny sezon, wyświetlany na stronie', name: AktualnySezon, widget: relation, collection: mecze, search_fields: [sezon.*.sezon], display_fields: [sezon.*.sezon], value_field: sezon.*.sezon}
           - name: sezon
             widget: list
             fields:
@@ -57,8 +57,6 @@ collections:
                           display_fields: [team.*.name],
                           value_field: team.*.name}
                     - {label: Rozegrane minuty, name: minuty, widget: number}
-                    - {label: Żółte Kartki, name: ZKartki, widget: number,default: 0}
-                    - {label: Czerwone Kartki, name: CKartki, widget: number,default: 0}
                   - label: Statystyki
                     name: Statystyki
                     widget: list
@@ -81,7 +79,7 @@ collections:
                         name: BramkiPrzeciwnika
                         widget: list
                         fields:
-                          - {label: Imię i nazwisko, name: name, widget: string}
+                          - {label: Imię i nazwisko, name: Zawodnicy, widget: string}
                           - {label: minuta, name: minuta, widget: number}
                       - label: Kartki
                         name: Kartki
@@ -119,11 +117,11 @@ collections:
     label: 'Aktualnosci'
     folder: 'content/blog'
     create: true
-    path: '{{id}}'
+    slug: '{{naglowek}}'
+    path: '{{date}}'
     editor:
       preview: true
     fields:
-      - { label: 'id', name: 'id', widget: 'number', required: true}
       - { label: 'naglowek', name: 'naglowek', widget: 'string' }
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
       - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/img/test.jpg", media_folder: /static/img/}

@@ -102,10 +102,8 @@ const StyledDiv = styled.div`
   margin-bottom: 20px;
 `;
 const StyledBox = styled.div`
-  width: 60%;
-
+  width:60%;
   min-height: 150vh;
-  background-color: #2b2b2b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,6 +111,7 @@ const StyledBox = styled.div`
 const StyledCard = styled.div`
   margin: 10px;
   background-color: #1d1d1d;
+  border: 10px solid #2b2b2b;
   padding: 20px;
 `;
 const StyledSection = styled.div`

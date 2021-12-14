@@ -31,7 +31,6 @@
               ],
               "BramkiPrzeciwnika": [
                 {
-                  "name": "test",
                   "minuta": 5,
                   "Zawodnicy": "Test"
                 }
@@ -55,7 +54,7 @@
               ],
               "BramkiPrzeciwnika": [
                 {
-                  "name": "Random Test",
+                
                   "minuta": 65,
                   "Zawodnicy": "Random test"
                 },
@@ -118,7 +117,6 @@
               ],
               "BramkiPrzeciwnika": [
                 {
-                  "name": "test",
                   "minuta": 55,
                   "Zawodnicy": "test"
                 }

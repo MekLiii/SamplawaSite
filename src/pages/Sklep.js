@@ -63,8 +63,7 @@ const GridHolder = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap:50px;
-  justify-content:center;
-  align-items:center;
+  place-items:  center;
 `;
 const Box = styled.div`
   height: auto;

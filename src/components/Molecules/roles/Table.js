@@ -46,12 +46,10 @@ const GridHolder = styled.div`
   row-gap: 2.5em;
   width: 90%;
   margin-bottom: 50px;
-  justify-content: center;
+  place-items:  center;
 
   @media (max-width: 500px) {
-    display: inline-grid;
-    justify-content: center;
-    align-items: center;
+    
   }
 `;
 

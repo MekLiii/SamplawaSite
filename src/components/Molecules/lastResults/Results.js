@@ -49,7 +49,7 @@ function Results() {
         </StyledP>
         <StyledP style={{ color: "#b1b1b1" }}>B klasa</StyledP>
         <StyledP style={{ color: "#b1b1b1" }}>{result?.data}</StyledP>
-        <StyledP style={{ color: "#b1b1b1" }}><Link to="/Statystyki">Zobacz statystyki</Link></StyledP>
+        <StyledP style={{ color: "#b1b1b1" }}><Link to={`/mecze/${result.gospodarze}-${result.przeciwnik}`}>Zobacz statystyki</Link></StyledP>
       </div>
     </div>
   );

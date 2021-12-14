@@ -15,7 +15,6 @@ import SponsorEl from "../components/Atoms/SponsorEl";
 import sponData from "../../content/sponsors/sponsors.json";
 import CustomizedTables from "../components/Molecules/MatchTable/CustomizedTables";
 
-// markup
 const IndexPage = () => {
   console.log(sponData);
   const responsive = {
@@ -46,7 +45,6 @@ const IndexPage = () => {
           <Results className="indexMediaEl" />
         </SyldedEl>
         <SyldedEl>
-          {/* <MatchTable className="indexMediaEl" /> */}
           <CustomizedTables className="indexMediaEl" />
         </SyldedEl>
         <SyldedEl style={{ backgroundColor: "#222" }}>
