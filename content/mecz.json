@@ -87,6 +87,54 @@
               "minuty": 55
             }
           ]
+        },
+        {
+          "data": "12/13/2021",
+          "gospodarze": "PFT Sampława",
+          "przeciwnik": "Huragan Byszwałd",
+          "godzina": "15:00",
+          "miejsce": "boisko Sampława",
+          "Zawodnicy": [
+            {
+              "Zawodnicy": "Krystian wasiewski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Krystian Kozłowski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Leo Messi",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Mateusz Kroplewski",
+              "minuty": 2
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Mateusz Kroplewski",
+                  "minuta": 44
+                }
+              ],
+              "BramkiPrzeciwnika": [
+                {
+                  "Zawodnicy": "Random",
+                  "minuta": 43
+                }
+              ],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Krystian Kozłowski",
+                  "kartka": "żółta",
+                  "minuta": 12
+                }
+              ]
+            }
+          ]
         }
       ]
     },
