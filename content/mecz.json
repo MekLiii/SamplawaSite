@@ -46,7 +46,40 @@
           "miejsce": "Test",
           "Statystyki": [
             {
-              "BramkiPFT": []
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Krystian wasiewski",
+                  "minuta": 14
+                }
+              ],
+              "BramkiPrzeciwnika": [
+                {
+                  "name": "Random Test",
+                  "minuta": 65
+                }
+              ],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Kamil Czacharowski",
+                  "kartka": "czerwona",
+                  "minuta": 53
+                }
+              ],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Kamil Czacharowski",
+                  "minuta": 43,
+                  "ZmianaNa": "Leo Messi"
+                }
+              ]
+            }
+          ],
+          "Zawodnicy": [
+            {
+              "ZKartki": 0,
+              "CKartki": 0,
+              "Zawodnicy": "Krystian Kozłowski",
+              "minuty": 55
             }
           ]
         }
