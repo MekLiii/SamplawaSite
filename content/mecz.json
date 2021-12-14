@@ -31,6 +31,7 @@
               ],
               "BramkiPrzeciwnika": [
                 {
+                  "name": "test",
                   "minuta": 5,
                   "Zawodnicy": "Test"
                 }
@@ -39,7 +40,7 @@
           ]
         },
         {
-          "data": "12/12/2021",
+          "data": "12/13/2021",
           "gospodarze": "Sampława",
           "przeciwnik": "Torpeda Rożental",
           "godzina": "15:00",
@@ -54,7 +55,7 @@
               ],
               "BramkiPrzeciwnika": [
                 {
-                
+                  "name": "Random Test",
                   "minuta": 65,
                   "Zawodnicy": "Random test"
                 },
@@ -118,6 +119,10 @@
                 {
                   "Zawodnicy": "Mateusz Kroplewski",
                   "minuta": 44
+                },
+                {
+                  "Zawodnicy": "Mateusz Kroplewski",
+                  "minuta": 55
                 }
               ],
               "BramkiPrzeciwnika": [
@@ -165,6 +170,7 @@
               ],
               "BramkiPrzeciwnika": [
                 {
+                  "name": "test",
                   "minuta": 55,
                   "Zawodnicy": "test"
                 }
