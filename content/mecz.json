@@ -32,7 +32,8 @@
               "BramkiPrzeciwnika": [
                 {
                   "name": "test",
-                  "minuta": 5
+                  "minuta": 5,
+                  "Zawodnicy": "Test"
                 }
               ]
             }
@@ -55,7 +56,12 @@
               "BramkiPrzeciwnika": [
                 {
                   "name": "Random Test",
-                  "minuta": 65
+                  "minuta": 65,
+                  "Zawodnicy": "Random test"
+                },
+                {
+                  "Zawodnicy": "Random test",
+                  "minuta": 55
                 }
               ],
               "Kartki": [
@@ -113,7 +119,8 @@
               "BramkiPrzeciwnika": [
                 {
                   "name": "test",
-                  "minuta": 55
+                  "minuta": 55,
+                  "Zawodnicy": "test"
                 }
               ]
             }
