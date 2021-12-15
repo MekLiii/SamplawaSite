@@ -24,7 +24,7 @@ collections:
               - {label: żółte kartki, name: zKartki, widget: number}
               - {label: czerwone kartki, name: cKartki, widget: number}
               - {label: mecze, name: mecze, widget: number}
-              - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: /players/img/}
+              - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/players/img/"}
   - label: "mecze"
     name: "mecze"
     files:
