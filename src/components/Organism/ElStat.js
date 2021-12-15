@@ -19,6 +19,7 @@ function ElStat({ pageContext }) {
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   const players = meczData.Zawodnicy;
 
+  console.log(meczData)
   return (
     <Layout>
       <Cointainer>
@@ -92,7 +93,7 @@ function ElStat({ pageContext }) {
                     minut={el.minuta}
                     other={
                       <TabletPortrait
-                        color={el.Kartki === "czerwona" ? "red" : "yellow"}
+                        color={(el.kartka === "czerwona") ? "red" : "yellow"}
                       />
                     }
                   />

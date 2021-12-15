@@ -4,27 +4,30 @@ import { CgProfile } from "react-icons/fa";
 import { PersonCircleOutline } from "react-ionicons";
 import img from "../../../images/logo.png";
 
-function TableHero({
-  numer,
-  name,
-  pozycja,
-  bramki,
-  asysty,
-  zKartki,
-  cKartki,
-  mecze,
-}) {
-  return (
-    <StyledDiv>
-      <StyledImgBox>
+function TableHero({ name, pozycja, img }) {
+  const Image = () =>{
+    if(img === '/undefined'){
+      return(
         <PersonCircleOutline
           color={"#00000"}
-          title={`${numer}`}
           height="250px"
           width="75%"
           display= 'flex'
           justifyContent="center"
         />
+      )
+    }else{
+      return(
+        <BoxImg>
+          <Img src={img} alt={img} />
+        </BoxImg>
+      )
+    }
+  }
+  return (
+    <StyledDiv>
+      <StyledImgBox>
+       <Image />
       </StyledImgBox>
       <StyledContentBox>
         <StyledText>{name}</StyledText>
@@ -60,13 +63,6 @@ const StyledContentBox = styled.div`
   align-items: center;
   flex-direction: column;
 `;
-const StyledMolecula = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  width: 50%;
-  height: 100%;
-`;
 const StyledText = styled.p`
   font-size: 1.5rem;
   display: flex;
@@ -75,5 +71,20 @@ const StyledText = styled.p`
 `;
 const StyledP = styled.p`
   margin-bottom: 0;
+`;
+const BoxImg = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:50%;
+`;
+const Img = styled.img`
+  width: 70%;
+  height: 70%;
+  border-radius:50%;
+  border: 3px solid black;
+  padding:10px;
 `;
 export default TableHero;

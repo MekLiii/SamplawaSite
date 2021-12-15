@@ -5,9 +5,14 @@ import "./table.module.css";
 import TableHero from "./TableHero";
 import styled from "styled-components";
 import { PersonCircleOutline } from "react-ionicons";
+// import chuj from '../../../../static/players/'
 
 function Table() {
   const team = data.team;
+  const image = team?.zdjecia?.substr(8);
+  console.log(image);
+  console.log(team.map((el) => (el.zdjecia)))
+
 
   return (
     <div style={mainCoinainer}>
@@ -16,7 +21,7 @@ function Table() {
       </div>
       <GridHolder>
         {team.map((el) => (
-          <TableHero pozycja={el.pozycja} name={el.name} key={el.name} />
+          <TableHero pozycja={el.pozycja} name={el.name} key={el.name} img={`/${el.zdjecia?.slice(8)}`}/>
         ))}
       </GridHolder>
     </div>
@@ -54,29 +59,3 @@ const GridHolder = styled.div`
 `;
 
 export default Table;
-
-{
-  /* <table style={{ border: "3px solid #fed053", padding: "5px" }}>
-        <tr>
-          <td>#numer</td> <td>Zawodnik</td> <td>Pozycja</td> <td>Bramki</td>{" "}
-          <td>Asysty</td> <td>Żółte kartki</td> <td>Czerwone Kartki</td>{" "}
-          <td>Mecze</td>
-        </tr>
-        {team.map((element) => (
-          <TableElement
-            numer={element.numer}
-            name={element.name}
-            pozycja={element.pozycja}
-            bramki={element.bramki}
-            asysty={element.asysty}
-            zKartki={element.zKartki}
-            cKartki={element.cKartki}
-            mecze={element.mecze}
-            key={element.numer}
-            style={{
-              border: "3px solid black",
-            }}
-          />
-        ))}
-      </table> */
-}
