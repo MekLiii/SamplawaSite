@@ -19,12 +19,12 @@ collections:
               - {label: name, name: name, widget: string}
               - {label: numer Zawodnika, name: numer, widget: number}
               - {label: pozycja, name: pozycja, widget: select, options: ["bramkarz", "obrońca", "pomocnik","napastnik"]}
-              - {label: bramki, name: bramki, widget: number, default: 0}
-              - {label: asysty, name: asysty, widget: number, default: 0}
-              - {label: żółte kartki, name: zKartki, widget: number}, default: 0
-              - {label: czerwone kartki, name: cKartki, widget: number, default: 0}
-              - {label: mecze, name: mecze, widget: number, default: 0}
-              - {label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/img/test.jpg", media_folder: /static/players/, required: false}
+              - {label: bramki, name: bramki, widget: number}
+              - {label: asysty, name: asysty, widget: number}
+              - {label: żółte kartki, name: zKartki, widget: number}
+              - {label: czerwone kartki, name: cKartki, widget: number}
+              - {label: mecze, name: mecze, widget: number}
+              - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: /players/img/}
   - label: "mecze"
     name: "mecze"
     files:
