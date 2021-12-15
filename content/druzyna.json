@@ -1,3 +1,10 @@
 {
-  "team": []
+  "team": [
+    {
+      "zdjecia": "/players/img/0546c55b4ea432ab843603c178999f939faf7a.png",
+      "name": "Łukasz Ochlak",
+      "pozycja": "bramkarz",
+      "numer": 0
+    }
+  ]
 }
