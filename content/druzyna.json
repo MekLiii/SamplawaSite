@@ -36,6 +36,11 @@
       "zdjecia": "/static/players/img/a40d8b4ab95d1fc65fc9884c4d0348c9a0ad7d.jpg",
       "name": "Arkadiusz Wietecha",
       "pozycja": "obrońca"
+    },
+    {
+      "zdjecia": "/static/players/img/8cb81e5192a1b88df171a5ed2e1e05e3a004dd.jpg",
+      "name": "Wojciech Banacki",
+      "pozycja": "obrońca"
     }
   ]
 }
