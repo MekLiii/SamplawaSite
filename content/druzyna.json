@@ -1,0 +1,83 @@
+{
+  "team": [
+    {
+<<<<<<< Updated upstream
+      "position": "Ogrzewacz ławki",
+      "name": "Krystian wasiewski",
+=======
+      "name": "Kacper Wietecha",
+      "zKartki": 2,
+      "asysty": 1,
+      "numer": 1,
+      "mecze": 2,
+      "cKartki": 0,
+      "bramki": 1,
+      "pozycja": "Bramkarz"
+    },
+    {
+      "name": "Chuj wasiewski",
+>>>>>>> Stashed changes
+      "zKartki": 1,
+      "asysty": 2,
+      "numer": 2,
+      "mecze": 2,
+      "cKartki": 1,
+      "bramki": 1,
+      "pozycja": "Napastnik"
+    },
+    {
+      "name": "Krystian Kozłowski",
+      "numer": 69,
+      "pozycja": "pomocnik",
+      "bramki": 1,
+      "asysty": 2,
+      "zKartki": 0,
+      "cKartki": 0,
+      "mecze": 5
+<<<<<<< Updated upstream
+    },
+    {
+      "name": "Leo Messi",
+      "numer": 11,
+      "pozycja": "napastnik",
+      "bramki": 1,
+      "asysty": 1,
+      "zKartki": 1,
+      "cKartki": 1,
+      "mecze": 1
+    },
+    {
+      "name": "Kamil Czacharowski",
+      "numer": 10,
+      "pozycja": "napastnik",
+      "bramki": 10,
+      "asysty": 2,
+      "zKartki": 0,
+      "cKartki": 0,
+      "mecze": 5
+    },
+    {
+      "name": "Mateusz Kroplewski",
+      "numer": 69,
+      "pozycja": "napastnik",
+      "bramki": 20,
+      "asysty": 0,
+      "zKartki": 0,
+      "cKartki": 0,
+      "mecze": 5
+    },
+    {
+      "name": "test",
+      "zKartki": 23,
+      "asysty": 1,
+      "numer": 1,
+      "zdjecia": "/static/players/b3e25238c1035389c97c1f0add9c9176d4b6d8.png",
+      "mecze": 29,
+      "cKartki": 23,
+      "bramki": 1,
+      "pozycja": "obrońca"
+=======
+>>>>>>> Stashed changes
+    }
+  ]
+}
