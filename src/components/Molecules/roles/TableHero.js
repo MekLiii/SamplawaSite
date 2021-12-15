@@ -5,29 +5,31 @@ import { PersonCircleOutline } from "react-ionicons";
 import img from "../../../images/logo.png";
 
 function TableHero({ name, pozycja, img }) {
-  const Image = () =>{
-    if(img === '/undefined'){
-      return(
+  const Image = () => {
+    if (img.length < 14) {
+      return (
         <PersonCircleOutline
           color={"#00000"}
           height="250px"
           width="75%"
-          display= 'flex'
+          display="flex"
           justifyContent="center"
         />
-      )
-    }else{
-      return(
+      );
+    } else {
+      return (
         <BoxImg>
           <Img src={img} alt={img} />
         </BoxImg>
-      )
+      );
     }
-  }
+  };
+
+    
   return (
     <StyledDiv>
       <StyledImgBox>
-       <Image />
+        <Image />
       </StyledImgBox>
       <StyledContentBox>
         <StyledText>{name}</StyledText>
@@ -78,13 +80,13 @@ const BoxImg = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius:50%;
+  border-radius: 50%;
 `;
 const Img = styled.img`
   width: 70%;
   height: 70%;
-  border-radius:50%;
+  border-radius: 50%;
   border: 3px solid black;
-  padding:10px;
+  padding: 10px;
 `;
 export default TableHero;
