@@ -52,7 +52,7 @@ function ElStat({ pageContext }) {
 
               <Players>
                 <StylyedPlayer>
-                  {bramkiSamplawa.map((el) => (
+                  {bramkiSamplawa?.map((el) => (
                     <AtomicPlayer
                       name={el.Zawodnicy}
                       minut={el.minuta}
@@ -62,7 +62,7 @@ function ElStat({ pageContext }) {
                 </StylyedPlayer>
 
                 <StylyedPlayer>
-                  {bramkiEnemy.map((el) => (
+                  {bramkiEnemy?.map((el) => (
                     <AtomicPlayer
                       style={{ flexDirection: "row-reverse" }}
                       name={el.Zawodnicy}
@@ -76,7 +76,7 @@ function ElStat({ pageContext }) {
             <LeftBot>
               <LeftBotEl>
                 <H1>Zawodnicy</H1>
-                {players.map((el) => (
+                {players?.map((el) => (
                   <AtomicPlayer
                     name={el.Zawodnicy}
                     key={el.Zawodnicy}
@@ -86,7 +86,7 @@ function ElStat({ pageContext }) {
               </LeftBotEl>
               <LeftBotEl>
                 <H1>Kartki</H1>
-                {meczData.Statystyki[0]?.Kartki?.map((el) => (
+                {meczData?.Statystyki[0]?.Kartki?.map((el) => (
                   <AtomicPlayer
                     name={el.Zawodnicy}
                     key={el}
