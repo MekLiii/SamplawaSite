@@ -46,6 +46,11 @@
       "zdjecia": "/static/players/img/c3fbf2bca282506c4e895b0609bdb30a93a244.png",
       "name": "Andrzej Podlaszewski",
       "pozycja": "obrońca"
+    },
+    {
+      "zdjecia": "/static/players/img/08e35439adc629e44b68fdf1af7cc492b83084.jpg",
+      "name": "Sylwester Rynkowski",
+      "pozycja": "obrońca"
     }
   ]
 }
