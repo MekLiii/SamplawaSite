@@ -17,13 +17,13 @@ collections:
             widget: list
             fields:
               - {label: name, name: name, widget: string}
-              - {label: numer Zawodnika, name: numer, widget: number}
+              - {label: numer Zawodnika, name: numer, widget: number, required: false}
               - {label: pozycja, name: pozycja, widget: select, options: ["bramkarz", "obrońca", "pomocnik","napastnik"]}
-              - {label: bramki, name: bramki, widget: number}
-              - {label: asysty, name: asysty, widget: number}
-              - {label: żółte kartki, name: zKartki, widget: number}
-              - {label: czerwone kartki, name: cKartki, widget: number}
-              - {label: mecze, name: mecze, widget: number}
+              - {label: bramki, name: bramki, widget: number, required: false}
+              - {label: asysty, name: asysty, widget: number, required: false}
+              - {label: żółte kartki, name: zKartki, widget: number, required: false}
+              - {label: czerwone kartki, name: cKartki, widget: number, required: false}
+              - {label: mecze, name: mecze, widget: number, required: false}
               - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
   - label: "mecze"
     name: "mecze"

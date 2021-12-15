@@ -21,7 +21,7 @@ function Table() {
       </div>
       <GridHolder>
         {team.map((el) => (
-          <TableHero pozycja={el.pozycja} name={el.name} key={el.name} img={`${el.zdjecia}`}/>
+          <TableHero pozycja={el.pozycja} name={el.name} key={el.name} img={`/${el.zdjecia?.slice(8)}`}/>
         ))}
       </GridHolder>
     </div>
