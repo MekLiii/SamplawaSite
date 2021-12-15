@@ -19,7 +19,7 @@ function TableHero({ name, pozycja, img }) {
     } else {
       return (
         <BoxImg>
-          <Img src={img} alt={img} />
+          <Img src={img} alt={img}/>
         </BoxImg>
       );
     }
