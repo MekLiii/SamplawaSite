@@ -26,6 +26,11 @@
       "zdjecia": "/static/players/img/28befac77f1ad615277eaef8e74bb008eed170.jpg",
       "name": "Szymon Łątkowski",
       "pozycja": "obrońca"
+    },
+    {
+      "zdjecia": "/static/players/img/946e41f4e17da1a438f3e481d6cfe8bc6e8d12.png",
+      "name": "Tomasz Sławiński",
+      "pozycja": "obrońca"
     }
   ]
 }
