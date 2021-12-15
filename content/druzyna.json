@@ -41,6 +41,11 @@
       "zdjecia": "/static/players/img/8cb81e5192a1b88df171a5ed2e1e05e3a004dd.jpg",
       "name": "Wojciech Banacki",
       "pozycja": "obrońca"
+    },
+    {
+      "zdjecia": "/static/players/img/c3fbf2bca282506c4e895b0609bdb30a93a244.png",
+      "name": "Andrzej Podlaszewski",
+      "pozycja": "obrońca"
     }
   ]
 }
