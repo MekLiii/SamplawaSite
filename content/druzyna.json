@@ -31,6 +31,11 @@
       "zdjecia": "/static/players/img/946e41f4e17da1a438f3e481d6cfe8bc6e8d12.png",
       "name": "Tomasz Sławiński",
       "pozycja": "obrońca"
+    },
+    {
+      "zdjecia": "/static/players/img/a40d8b4ab95d1fc65fc9884c4d0348c9a0ad7d.jpg",
+      "name": "Arkadiusz Wietecha",
+      "pozycja": "obrońca"
     }
   ]
 }
