@@ -1,11 +1,8 @@
 {
   "team": [
     {
-<<<<<<< Updated upstream
       "position": "Ogrzewacz ławki",
       "name": "Krystian wasiewski",
-=======
-      "name": "Kacper Wietecha",
       "zKartki": 2,
       "asysty": 1,
       "numer": 1,
@@ -16,7 +13,6 @@
     },
     {
       "name": "Chuj wasiewski",
->>>>>>> Stashed changes
       "zKartki": 1,
       "asysty": 2,
       "numer": 2,
@@ -34,7 +30,6 @@
       "zKartki": 0,
       "cKartki": 0,
       "mecze": 5
-<<<<<<< Updated upstream
     },
     {
       "name": "Leo Messi",
@@ -76,8 +71,6 @@
       "cKartki": 23,
       "bramki": 1,
       "pozycja": "obrońca"
-=======
->>>>>>> Stashed changes
     }
   ]
 }
