@@ -12,14 +12,14 @@ import styled from "styled-components";
 export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
-  const image = frontmatter.zdjecia.substr(8);
+  const image = frontmatter?.zdjecia?.substr(8);
   return (
     <LayOut style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>
       <Box>
         <div className="blog-post">
           <div style={heading}>
-            <h1 style={{ color:'white' }}>{frontmatter.naglowek}</h1>
-            <p style={{ color:'white' }}>{frontmatter.date}</p>
+            <h1 style={{ color:'white' }}>{frontmatter?.naglowek}</h1>
+            <p style={{ color:'white' }}>{frontmatter?.date}</p>
           </div>
           <div className="contentBox">
             <div className="contentBoxImage">
