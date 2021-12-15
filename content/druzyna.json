@@ -16,6 +16,11 @@
       "name": "Krystian Zelmański",
       "pozycja": "bramkarz",
       "numer": 0
+    },
+    {
+      "zdjecia": "/players/test.jpg",
+      "name": "Lucjan Szwarc",
+      "pozycja": "obrońca"
     }
   ]
 }
