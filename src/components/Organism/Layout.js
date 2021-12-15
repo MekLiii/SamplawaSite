@@ -3,11 +3,11 @@ import styled from "styled-components";
 import Footer from "../Molecules/footer/Footer";
 import NavBar from "../Molecules/navbar/NavBar";
 
-function Layout({ children}) {
+function Layout({ children, style }) {
   return (
     <StyledBox >
       <NavBar  />
-      <main>{children}</main>
+      <main style={style}>{children}</main>
       <Footer />
     </StyledBox>
   );

@@ -3,28 +3,30 @@ import { graphql } from "gatsby";
 import LayOut from "../components/Organism/Layout";
 import img from "../images/slider/slider2.jpg";
 import Results from "../components/Molecules/lastResults/Results";
-import './markdownAricle.css'
+import "./markdownAricle.css";
 import MatchTable from "../components/Molecules/MatchTable/MatchTable";
+import styled from "styled-components";
+
 // import img from '../../content/blog/images/article.jpg'
 
-export default function Template({data}) {
+export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   const image = frontmatter.zdjecia.substr(8);
   return (
-    <LayOut>
-      <div className="blog-post-container">
+    <LayOut style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <Box>
         <div className="blog-post">
           <div style={heading}>
-            <h1>{frontmatter.naglowek}</h1>
-            <p>{frontmatter.date}</p>
+            <h1 style={{ color:'white' }}>{frontmatter.naglowek}</h1>
+            <p style={{ color:'white' }}>{frontmatter.date}</p>
           </div>
           <div className="contentBox">
             <div className="contentBoxImage">
               <img src={image} className="imgArticle" alt={image} />
             </div>
             <div className="contentBoxText">
-              <p style={{ margin: "30px" }}>{frontmatter.tresc}</p>
+              <p style={{ margin: "30px", color:'rgb(151, 151, 151)' }}>{frontmatter.tresc}</p>
             </div>
           </div>
           <div
@@ -32,13 +34,11 @@ export default function Template({data}) {
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
-        <div className="LeftSide">
-        </div>
-      </div>
+        <div className="LeftSide"></div>
+      </Box>
     </LayOut>
   );
 }
-
 
 const heading = {
   width: "100%",
@@ -47,8 +47,13 @@ const heading = {
   alignItems: "center",
   flexDirection: "column",
 };
-
-
+const Box = styled.div`
+  width: 90%;
+  height: 90%;
+  background-color: #1d1d1d;
+  min-height: 80vh;
+  
+`;
 
 export const pageQuery = graphql`
   query ($id: String) {

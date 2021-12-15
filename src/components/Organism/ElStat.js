@@ -46,7 +46,7 @@ function ElStat({ pageContext }) {
                   <p style={{ color: "rgb(255, 230, 0)" }}>
                     {meczData.przeciwnik}
                   </p>
-                  <p style={{ color: "white" }}>{bramkiEnemy.length}</p>
+                  <p style={{ color: "white" }}>{(bramkiEnemy.length != undefined) ? bramkiEnemy.length : "0"}</p>
                 </StyledTitle>
               </div>
 
