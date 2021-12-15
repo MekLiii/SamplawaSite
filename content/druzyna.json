@@ -10,6 +10,12 @@
       "cKartki": 0,
       "bramki": 0,
       "pozycja": "bramkarz"
+    },
+    {
+      "zdjecia": "/static/players/img/b037a5fa3022897ef04af3d93fe965e432ed26.png",
+      "name": "Krystian Zelmański",
+      "pozycja": "bramkarz",
+      "numer": 0
     }
   ]
 }
