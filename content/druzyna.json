@@ -53,13 +53,14 @@
     },
     {
       "name": "test",
-      "numer": 1,
-      "pozycja": "obrońca",
-      "bramki": 1,
-      "asysty": -1,
       "zKartki": 23,
+      "asysty": 1,
+      "numer": 1,
+      "zdjecia": "/static/players/b3e25238c1035389c97c1f0add9c9176d4b6d8.png",
+      "mecze": 29,
       "cKartki": 23,
-      "mecze": 29
+      "bramki": 1,
+      "pozycja": "obrońca"
     }
   ]
 }
