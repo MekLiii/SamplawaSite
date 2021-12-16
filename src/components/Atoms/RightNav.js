@@ -49,9 +49,6 @@ const RightNav = ({ open }) => {
       <Link to="/Galeria" style={text}>
         Galeria
       </Link>
-      <Link to="/Sponsorzy" style={text}>
-        Sponsorzy
-      </Link>
       <Link to="/Oklubie" style={text}>
         O klubie
       </Link>

@@ -9,11 +9,10 @@ function TableHero({ name, pozycja, img }) {
     if (img.length < 14) {
       return (
         <PersonCircleOutline
-          color={"#00000"}
+          color="#00000"
           height="250px"
           width="75%"
-          display="flex"
-          justifyContent="center"
+         style={{ textAlign:"center"}}
         />
       );
     } else {
@@ -56,6 +55,7 @@ const StyledImgBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 `;
 const StyledContentBox = styled.div`
   height: 38%;

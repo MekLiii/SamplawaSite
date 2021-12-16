@@ -12,14 +12,14 @@ function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [meczData, setMeczData] = useState(slug);
 
-  const bramkiSamplawa = meczData.Statystyki[0].BramkiPFT;
-  const bramkiEnemy = meczData.Statystyki[0].BramkiPrzeciwnika;
+  const bramkiSamplawa = meczData?.Statystyki[0].BramkiPFT;
+  const bramkiEnemy = meczData?.Statystyki[0].BramkiPrzeciwnika;
 
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   const players = meczData.Zawodnicy;
 
-  console.log(meczData)
+  console.log(meczData);
   return (
     <Layout>
       <Cointainer>
@@ -30,23 +30,31 @@ function ElStat({ pageContext }) {
                 style={{
                   display: "flex",
                   justifyContent: "space-around",
-                  width: "100%",
+                  width: "auto",
                 }}
               >
                 <StyledTitle>
-                  <p style={{ color: "rgb(255, 230, 0)" }}>
+                  <p style={{ color: "rgb(255, 230, 0)", fontSize: "1rem" }}>
                     {meczData.gospodarze}
-                  </p>{" "}
-                  <p style={{ color: "white" }}>{(bramkiSamplawa?.length != undefined) ? bramkiSamplawa?.length : "0"}</p>
+                  </p>
+                  <p style={{ color: "white",fontSize:"1rem" }}>
+                    {bramkiSamplawa?.length != undefined
+                      ? bramkiSamplawa?.length
+                      : "0"}
+                  </p>
                 </StyledTitle>
                 <StyledTitle>
-                  <p style={{ color: "white" }}>-:-</p>
+                  <p style={{ color: "white",fontSize: "1rem" }}>-:-</p>
                 </StyledTitle>
                 <StyledTitle>
-                  <p style={{ color: "rgb(255, 230, 0)" }}>
+                  <p style={{ color: "rgb(255, 230, 0)", fontSize: "1rem" }}>
                     {meczData.przeciwnik}
                   </p>
-                  <p style={{ color: "white" }}>{(bramkiEnemy?.length != undefined) ? bramkiEnemy?.length : "0"}</p>
+                  <p style={{ color: "white",fontSize: "1rem" }}>
+                    {bramkiEnemy?.length != undefined
+                      ? bramkiEnemy?.length
+                      : "0"}
+                  </p>
                 </StyledTitle>
               </div>
 
@@ -93,7 +101,7 @@ function ElStat({ pageContext }) {
                     minut={el.minuta}
                     other={
                       <TabletPortrait
-                        color={(el.kartka === "czerwona") ? "red" : "yellow"}
+                        color={el.kartka === "czerwona" ? "red" : "yellow"}
                       />
                     }
                   />
@@ -146,28 +154,35 @@ const Cointainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
 const Box = styled.div`
   width: 90%;
-  height: 82vh;
+  min-height: 82vh;
   background-color: rgba(43, 43, 43, 0.95);
   margin: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  ${"" /* grid-template-columns: 2fr 1fr; */}
 `;
 const SidebarLeft = styled.div`
-  display: flex;
+  display: grid;
   justify-content: center;
-  flex-direction: column;
+  ${"" /* flex-direction: column; */}
+  width: inherit;
+  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
+
+  grid-template-rows: 1fr 1fr;
 `;
 const SidebarRight = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
-  border-left: 1px solid yellow;
+  width: 80%;
 `;
 const LeftTop = styled.div`
-  height: 50%;
+  min-height: 50%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -176,8 +191,9 @@ const LeftTop = styled.div`
 `;
 const LeftBot = styled.div`
   height: 50%;
-  width: 100%;
-  display: flex;
+  ${"" /* width: 100%; */}
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 `;
 const Players = styled.div`
   width: 100%;

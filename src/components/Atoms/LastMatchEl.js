@@ -11,7 +11,8 @@ function LastMatchEl({enemy,date, onClick}) {
     )
 }
 const StyledBox = styled.div`
-    width:90%;
+    width:auto;
+    min-width:80%;
     height:75px;
     display:flex;
     justify-content:space-around;

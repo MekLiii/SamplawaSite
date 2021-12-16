@@ -12,10 +12,12 @@ function AtomicPlayer({name, minut, style,other}) {
 }
 const StyledBox = styled.div`
     display:flex;
-    width:100%;
+    ${'' /* min-width:100%; */}
+    width:auto;
     justify-content:space-between;
     padding-right:30px;
     padding-left:30px;
+    
 `
 const P = styled.p`
     color: white;
