@@ -12,8 +12,8 @@ function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [meczData, setMeczData] = useState(slug);
 
-  const bramkiSamplawa = meczData?.Statystyki[0].BramkiPFT;
-  const bramkiEnemy = meczData?.Statystyki[0].BramkiPrzeciwnika;
+  const bramkiSamplawa = meczData?.Statystyki[0]?.BramkiPFT;
+  const bramkiEnemy = meczData?.Statystyki[0]?.BramkiPrzeciwnika;
 
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
