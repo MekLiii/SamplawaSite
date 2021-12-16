@@ -168,11 +168,12 @@
           ]
         },
         {
-          "data": "12/16/2021",
+          "data": "02/16/2022",
           "gospodarze": "Sampława",
           "przeciwnik": "Iława",
           "godzina": "15:00",
-          "miejsce": "Sampława"
+          "miejsce": "Sampława",
+          "Zawodnicy": []
         }
       ]
     },
