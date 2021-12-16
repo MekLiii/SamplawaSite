@@ -51,6 +51,11 @@
       "zdjecia": "/static/players/img/08e35439adc629e44b68fdf1af7cc492b83084.jpg",
       "name": "Sylwester Rynkowski",
       "pozycja": "obrońca"
+    },
+    {
+      "zdjecia": "/players/test.jpg",
+      "name": "test",
+      "pozycja": "bramkarz"
     }
   ]
 }
