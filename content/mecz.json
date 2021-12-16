@@ -163,17 +163,15 @@
                   "kartka": "czerwona",
                   "minuta": 13
                 }
+              ],
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Szymon Łątkowski",
+                  "minuta": 53
+                }
               ]
             }
           ]
-        },
-        {
-          "data": "02/16/2022",
-          "gospodarze": "Sampława",
-          "przeciwnik": "Iława",
-          "godzina": "15:00",
-          "miejsce": "Sampława",
-          "Zawodnicy": []
         }
       ]
     },
