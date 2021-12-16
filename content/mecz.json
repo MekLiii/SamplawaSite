@@ -178,7 +178,23 @@
           "gospodarze": "Sampława",
           "przeciwnik": "Huragan Byszwałd",
           "godzina": "15:00",
-          "miejsce": "Sampława"
+          "miejsce": "Sampława",
+          "Statystyki": [
+            {
+              "BramkiPrzeciwnika": [
+                {
+                  "name": "teest",
+                  "minuta": 57
+                }
+              ],
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Krystian Zelmański",
+                  "minuta": 55
+                }
+              ]
+            }
+          ]
         }
       ]
     },
