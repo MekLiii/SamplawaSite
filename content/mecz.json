@@ -166,6 +166,13 @@
               ]
             }
           ]
+        },
+        {
+          "data": "12/16/2021",
+          "gospodarze": "Sampława",
+          "przeciwnik": "Iława",
+          "godzina": "15:00",
+          "miejsce": "Sampława"
         }
       ]
     },
