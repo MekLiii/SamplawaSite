@@ -13,8 +13,9 @@ function ProductCard({name,price,img}) {
   );
 }
 const Card = styled.div`
-  width: 400px;
-  height: 500px;
+  min-height: 300px;
+  height:auto;
+  width:auto;
   display: flex;
   justify-content: center;
   align-items: center;

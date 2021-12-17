@@ -43,8 +43,8 @@ const RightNav = ({ open }) => {
       <Link to="/Sklep" style={text}>
         Sklep
       </Link>
-      <Link to="/Druzyna" style={text}>
-        Drużyna
+      <Link to="/Kadra" style={text}>
+        Kadra
       </Link>
       <Link to="/Galeria" style={text}>
         Galeria

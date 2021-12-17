@@ -26,8 +26,8 @@ function NavBar() {
           <Link to="/" style={text}>
             Głowna
           </Link>
-          <Link to="/Druzyna" style={text}>
-            Drużyna
+          <Link to="/Kadra" style={text}>
+            Kadra
           </Link>
           <Link to="/Sklep" style={text}>
             Sklep
