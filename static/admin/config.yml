@@ -25,6 +25,18 @@ collections:
               - {label: czerwone kartki, name: cKartki, widget: number, required: false}
               - {label: mecze, name: mecze, widget: number, required: false}
               - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
+          - name: mlodzik
+            widget: list
+            fields:
+              - {label: name, name: name, widget: string}
+              - {label: numer Zawodnika, name: numer, widget: number, required: false}
+              - {label: pozycja, name: pozycja, widget: select, options: ["bramkarz", "obrońca", "pomocnik","napastnik"]}
+              - {label: bramki, name: bramki, widget: number, required: false}
+              - {label: asysty, name: asysty, widget: number, required: false}
+              - {label: żółte kartki, name: zKartki, widget: number, required: false}
+              - {label: czerwone kartki, name: cKartki, widget: number, required: false}
+              - {label: mecze, name: mecze, widget: number, required: false}
+              - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
   - label: "mecze"
     name: "mecze"
     files:
@@ -120,7 +132,7 @@ collections:
     slug: '{{naglowek}}'
     path: '{{date}}'
     editor:
-      preview: true
+      preview: false
     fields:
       - { label: 'naglowek', name: 'naglowek', widget: 'string' }
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
@@ -184,7 +196,7 @@ collections:
     create: true
     path: '{{name}}'
     editor:
-      preview: true
+      preview: false
     fields:
       - { label: 'nazwa', name: 'name', widget: 'string', required: true}
       - { label: 'cena', name: 'price', widget: 'string' }

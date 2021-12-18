@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import Table from "../components/Molecules/roles/Table";
 import Layout from "../components/Organism/Layout";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -41,6 +41,7 @@ const StyledTextField = styled(TextField)({
 });
 
 function Druzyna() {
+  const [kadra, setKadra] = useState();
   return (
     <Layout>
       <div style={cointainer}>
@@ -68,7 +69,7 @@ const cointainer = {
 export default Druzyna;
 
 const top100Films = [
-  { label: "The Shawshank Redemption", year: 1994 },
-  { label: "The Godfather", year: 1972 },
-  { label: "The Godfather: Part II", year: 1974 },
+  { label: "Seniorzy" },
+  { label: "Młodzik"},
+  
 ];
