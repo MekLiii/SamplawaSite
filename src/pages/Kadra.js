@@ -1,58 +1,80 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Table from "../components/Molecules/roles/Table";
 import Layout from "../components/Organism/Layout";
-import Autocomplete from "@mui/material/Autocomplete";
-import TextField from "@mui/material/TextField";
-import { outlinedInputClasses } from "@mui/material/OutlinedInput";
-import { inputLabelClasses } from "@mui/material/InputLabel";
-import { styled } from "@mui/material/styles";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import { createStyles, makeStyles, withStyles } from "@material-ui/core";
+import data from "../../content/druzyna.json";
 
-const StyledTextField = styled(TextField)({
-  [`& .${outlinedInputClasses.root} .${outlinedInputClasses.notchedOutline}`]: {
-    borderColor: "#fed053",
-  },
-  [`&:hover .${outlinedInputClasses.root} .${outlinedInputClasses.notchedOutline}`]:
-    {
-      borderColor: "#fed053",
+const useStyles = makeStyles({
+  root: {
+    width: 400,
+    "& .MuiOutlinedInput-input": {
+      color: "#ffe600",
     },
-  [`& .${outlinedInputClasses.root}.${outlinedInputClasses.focused} .${outlinedInputClasses.notchedOutline}`]:
-    {
-      borderColor: "#fed053",
+    "& .MuiInputLabel-root": {
+      color: "#ffe600",
     },
-  [`& .${outlinedInputClasses.input}`]: {
-    color: "#fed053",
-  },
-  [`&:hover .${outlinedInputClasses.input}`]: {
-    color: "#fed053",
-  },
-  [`& .${outlinedInputClasses.root}.${outlinedInputClasses.focused} .${outlinedInputClasses.input}`]:
-    {
-      color: "#fed053",
+    "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#ffe600",
     },
-  [`& .${inputLabelClasses.outlined}`]: {
-    color: "#fed053",
-  },
-  [`&:hover .${inputLabelClasses.outlined}`]: {
-    color: "#fed053",
-  },
-  [`& .${inputLabelClasses.outlined}.${inputLabelClasses.focused}`]: {
-    color: "##fed053",
+    "&:hover .MuiOutlinedInput-input": {
+      color: "#ffe600",
+    },
+    "&:hover .MuiInputLabel-root": {
+      color: "#ffe600",
+    },
+    "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#ffe600",
+    },
+    "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input": {
+      color: "#ffe600",
+    },
+    "& .MuiInputLabel-root.Mui-focused": {
+      color: "#ffe600",
+    },
+    "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#ffe600",
+    },
   },
 });
 
 function Druzyna() {
-  const [kadra, setKadra] = useState();
+  const [kadra, setKadra] = useState(data.team);
+  const [age, setAge] = useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
+
+  const classes = useStyles();
   return (
     <Layout>
       <div style={cointainer}>
-        <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={top100Films}
-          sx={{ width: 300 }}
-          renderInput={(params) => <StyledTextField {...params} label="Wybierz kadre" variant="outlined" defaultValue="My Default Value"/>}
-        />
-        <Table />
+        <FormControl sx={{ }} className={classes.root}>
+          <InputLabel id="demo-simple-select-label" sx={{ color: "#ffe600" }} >
+            Wybierz kadre
+          </InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={age}
+            label="Wybierz kadre"
+            sx={{  color: "#ffe600" }}
+            onChange={handleChange}
+            classes={{ root: classes.selectRoot }}
+          >
+            <MenuItem onClick={() => setKadra(data.team)} value={"Seniorzy"}>
+              Seniorzy
+            </MenuItem>
+            <MenuItem onClick={() => setKadra(data.mlodzik)} value={"Młodzik"}>
+              Młodzik
+            </MenuItem>
+          </Select>
+        </FormControl>
+        <Table data={kadra} />
       </div>
     </Layout>
   );
@@ -67,9 +89,3 @@ const cointainer = {
   alignItems: "center",
 };
 export default Druzyna;
-
-const top100Films = [
-  { label: "Seniorzy" },
-  { label: "Młodzik"},
-  
-];

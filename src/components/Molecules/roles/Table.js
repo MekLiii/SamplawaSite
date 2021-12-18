@@ -7,12 +7,9 @@ import styled from "styled-components";
 import { PersonCircleOutline } from "react-ionicons";
 // import chuj from '../../../../static/players/'
 
-function Table() {
-  const team = data.team;
-  const image = team?.zdjecia?.substr(8);
-  console.log(image);
-  console.log(team.map((el) => (el.zdjecia)))
-
+function Table({data}) {
+  const team = data?.team;
+  const image = data?.zdjecia?.substr(8);
 
   return (
     <div style={mainCoinainer}>
@@ -20,7 +17,7 @@ function Table() {
         <h1 style={{ color: "white" }}>Zawodnicy</h1>
       </div>
       <GridHolder>
-        {team.map((el) => (
+        {data?.map((el) => (
           <TableHero pozycja={el.pozycja} name={el.name} key={el.name} img={`/${el.zdjecia?.slice(8)}`}/>
         ))}
       </GridHolder>

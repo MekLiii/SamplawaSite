@@ -41,7 +41,7 @@ function TableHero({ name, pozycja, img }) {
 const StyledDiv = styled.div`
   width: 300px;
   min-height: 400px;
-  background-color: #fed053;
+  background-color: #ffe600;
   display: flex;
   justify-content: space-around;
   align-items: center;
