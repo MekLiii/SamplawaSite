@@ -7,7 +7,7 @@
       "porazki": 3,
       "remisy": 1,
       "bramki": 32,
-      "punkty":16
+      "punkty": 16
     },
     {
       "druzyna": "Mały Jeziorak Iława",
@@ -16,7 +16,7 @@
       "porazki": 1,
       "remisy": 1,
       "bramki": 38,
-      "punkty":22
+      "punkty": 22
     },
     {
       "druzyna": "Huragan Byszwałd",
@@ -25,7 +25,7 @@
       "porazki": 6,
       "remisy": 1,
       "bramki": 9,
-      "punkty":9
+      "punkty": 9
     },
     {
       "druzyna": "Torpeda Rożental",
@@ -34,7 +34,7 @@
       "porazki": 5,
       "remisy": 0,
       "bramki": 20,
-      "punkty":12
+      "punkty": 12
     },
     {
       "druzyna": "Wicher Gwiździny",
@@ -43,7 +43,7 @@
       "porazki": 8,
       "remisy": 0,
       "bramki": 7,
-      "punkty":3
+      "punkty": 3
     },
     {
       "druzyna": "GKS LZS Szymbark",
@@ -52,7 +52,7 @@
       "porazki": 2,
       "remisy": 1,
       "bramki": 35,
-      "punkty":19
+      "punkty": 19
     },
     {
       "druzyna": "Żak Jamielnik",
@@ -61,7 +61,7 @@
       "porazki": 1,
       "remisy": 1,
       "bramki": 26,
-      "punkty":22
+      "punkty": 22
     },
     {
       "druzyna": "LZS Fijewo",
@@ -70,7 +70,7 @@
       "porazki": 7,
       "remisy": 0,
       "bramki": 7,
-      "punkty":6
+      "punkty": 6
     },
     {
       "druzyna": "Wel Bratian",
@@ -79,7 +79,7 @@
       "porazki": 6,
       "remisy": 0,
       "bramki": 27,
-      "punkty":9
+      "punkty": 9
     },
     {
       "druzyna": "PFT Sampława",
@@ -88,7 +88,37 @@
       "porazki": 2,
       "remisy": 3,
       "bramki": 20,
-      "punkty":15
+      "punkty": 15
+    }
+  ],
+  "two": [
+    {
+      "druzyna": "test",
+      "mecze": 1,
+      "zwyciestwa": 1,
+      "porazki": 1,
+      "remisy": 1,
+      "bramki": 1
+    }
+  ],
+  "three": [
+    {
+      "druzyna": "test2",
+      "mecze": 1,
+      "zwyciestwa": 1,
+      "porazki": 1,
+      "remisy": 1,
+      "bramki": 1
+    }
+  ],
+  "four": [
+    {
+      "druzyna": "test1",
+      "mecze": 1,
+      "zwyciestwa": 1,
+      "porazki": 1,
+      "remisy": 1,
+      "bramki": 1
     }
   ]
 }
