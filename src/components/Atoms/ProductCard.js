@@ -5,7 +5,7 @@ function ProductCard({name,price,img}) {
   return (
     <Card>
       <Box>
-        <Img src={`/img/prod/${img}`} alt={img}/>
+        <Img src={`${img}`} alt={img}/>
         <P style={{color: 'white'}}>{name}</P>
         <P style={{color: 'rgb(151, 151, 151)'}}>{price}</P>
       </Box>

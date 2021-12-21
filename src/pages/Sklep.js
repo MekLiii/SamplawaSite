@@ -22,7 +22,7 @@ function Sklep() {
       }
     }
   `);
- 
+ data.allMarkdownRemark.edges.map((el) => (console.log(el.node.frontmatter.thumbnail)))
 
   return (
     <Layout>
@@ -34,7 +34,7 @@ function Sklep() {
                 name={el.node.frontmatter.name}
                 price={el.node.frontmatter.price}
                 key={el.node.frontmatter.name}
-                img={`/${(el.node.frontmatter.thumbnail)}`}
+                img={`/${el.node.frontmatter.thumbnail.slice(8)}`}
               />
             ))}
           </GridHolder>
