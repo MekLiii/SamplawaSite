@@ -3,8 +3,12 @@ import AktuEl from "../components/Molecules/aktualnosci/AktuEl";
 import Layout from "../components/Organism/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
+import ModalGalery from "../components/Molecules/galery/ModalGalery";
+import { Button } from "react-bootstrap";
 
 function Galeria() {
+  const [modalShow, setModalShow] = useState(false);
+
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(filter: { frontmatter: { opis: { glob: "*" } } }) {
@@ -15,22 +19,41 @@ function Galeria() {
               images {
                 thumbnail
               }
-              data
+              czas
             }
           }
         }
       }
     }
   `);
-
+  const [dataImage, setDataImage] = useState(data.allMarkdownRemark.edges.map((el) => el.node.frontmatter.images));
+  console.log(dataImage);
+  // data.allMarkdownRemark.edges.map((el) =>
+  //   console.log(el.node.frontmatter.images.map((el) => el))
+  // );
+  // console.log(data.allMarkdownRemark.edges.map((el) => el.node.frontmatter.images))
   return (
     <Layout>
       <StyledElement>
         <StyledGrid>
           {data.allMarkdownRemark.edges.map((el) => (
-            <AktuEl heading={el.node.frontmatter.opis} whatNext="Zobacz zdjecia" data={el.node.frontmatter.data}/>
+            <AktuEl
+              style={{ width: "100px" }}
+              heading={el.node.frontmatter.opis}
+              whatNext="Zobacz zdjecia"
+              data={el.node.frontmatter.czas}
+              img={`/${el.node.frontmatter.images.map((el) =>
+                el.thumbnail.slice(8)
+              )}`}
+              onClick={() => {setModalShow(true); setDataImage(el.node.frontmatter.images)}}
+            />
           ))}
         </StyledGrid>
+        {/* <Button variant="primary" onClick={() => setModalShow(true)}>
+          Launch vertically centered modal
+        </Button> */}
+
+        <ModalGalery show={modalShow} onHide={() => setModalShow(false)} data={dataImage}/>
       </StyledElement>
     </Layout>
   );
@@ -39,19 +62,7 @@ function Galeria() {
 function Carousel() {
   return (
     <div>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      
     </div>
   );
 }
@@ -72,11 +83,11 @@ const StyledElement = styled.div`
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  width: 90%;
+  width: auto;
   height: 90%;
   gap: 10px;
-  place-items:center;
-  align-items:center;
+  place-items: center;
+  align-items: center;
   justify-content: center;
   @media only screen and (max-width: 500px) {
     display: grid;

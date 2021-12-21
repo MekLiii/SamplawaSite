@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "./aktu.module.css";
 
-function AktuEl({ img, heading, whatNext, data }) {
+function AktuEl({ img, heading, whatNext, data,onClick }) {
   return (
     <StyledBox>
       <div style={leftSide}>
@@ -15,7 +15,7 @@ function AktuEl({ img, heading, whatNext, data }) {
       </div>
       <div style={rightSide}>
         <h1 style={{ fontSize: "1.1rem", fontWeight: "bold" }}>{heading}</h1>
-        <Button>{whatNext}</Button>
+        <Button onClick={onClick}>{whatNext}</Button>
       </div>
     </StyledBox>
   );
