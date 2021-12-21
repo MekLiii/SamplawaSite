@@ -70,5 +70,12 @@
       "bramki": 3,
       "pozycja": "obrońca"
     }
+  ],
+  "zespolSenior": [
+    {
+      "zdjecia": "/static/players/img/69c913c06960b2816d55eb7746db67647eb301.png",
+      "name": " Łukasz Wietecha",
+      "rola": "Trener"
+    }
   ]
 }
