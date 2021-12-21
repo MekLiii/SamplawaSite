@@ -24,7 +24,7 @@ function AktuEl({ img, heading, whatNext, data }) {
 const StyledBox = styled.div`
   min-height: 450px;
   min-width: 0;
-  max-width: 350px;
+  ${'' /* max-width: 350px; */}
   background-color: white;
   display: flex;
   flex-direction: column;
