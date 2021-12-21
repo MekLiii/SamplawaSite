@@ -52,17 +52,17 @@ const Box = styled.div`
 `;
 
 export const pageQuery = graphql`
-  query ($id: String) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        date
-        id
-        naglowek
-        title
-        tresc
-        zdjecia
-      }
+query ($id: String) {
+  markdownRemark(id: {eq: $id, ne: "*"}) {
+    html
+    frontmatter {
+      date
+      id
+      naglowek
+      title
+      tresc
+      zdjecia
     }
   }
+}
 `;

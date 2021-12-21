@@ -37,7 +37,7 @@ function Aktu() {
             key={element.node.frontmatter.naglowek}
             heading={element.node.frontmatter.naglowek}
             data={element.node.frontmatter.date}
-            img={`${element.node.frontmatter.zdjecia.slice(8)}`}
+            img={`${element.node.frontmatter.zdjecia?.slice(8)}`}
            
           />
         </Link>
