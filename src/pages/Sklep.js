@@ -3,7 +3,6 @@ import styled from "styled-components";
 import ProductCard from "../components/Atoms/ProductCard";
 import Layout from "../components/Organism/Layout";
 import { useStaticQuery, graphql } from "gatsby";
-// import img from '../../content/blog/Produkty/szalik.png'
 import AdressEl from "../components/Atoms/AdressEl";
 
 function Sklep() {

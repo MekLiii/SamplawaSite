@@ -34,9 +34,11 @@ const Box = styled.div`
 `;
 const Img = styled.img`
     width: 100%;
+    height:70%;
     
 `
 const P = styled.p`
     font-size:1.5rem;
+    
 `
 export default ProductCard;
