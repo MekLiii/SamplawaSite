@@ -265,7 +265,7 @@ collections:
     label: 'Galeria'
     folder: 'content/blog/Galeria'
     create: true
-    path: '{{data}}'
+    path: '{{date}}'
     editor:
       preview: false
     fields:
