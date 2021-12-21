@@ -36,7 +36,7 @@ function Sklep() {
                 name={el.node.frontmatter.name}
                 price={el.node.frontmatter.price}
                 key={el.node.frontmatter.name}
-                img={el.node.frontmatter.thumbnail}
+                img={`${el.node.frontmatter.thumbnail}`}
               />
             ))}
           </GridHolder>
