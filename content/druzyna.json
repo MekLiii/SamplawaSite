@@ -97,5 +97,12 @@
       "name": "Wojciech Jurkiewicz",
       "rola": "Opieka medyczna"
     }
+  ],
+  "zespolJunior": [
+    {
+      "zdjecia": "/static/players/img/a2d196a9f93936303fb887fc27d6622e26c4c0.jpg",
+      "name": "test",
+      "rola": "test"
+    }
   ]
 }
