@@ -1,5 +1,5 @@
 ---
 name: "Koszulka meczowa "
 price: "150zł "
-thumbnail: 141445472_499306144371803_5636919022587979890_n.jpg
+thumbnail: ff820ff40ac1b1a2959434a948a1ab591ebe18.jpg
 ---
