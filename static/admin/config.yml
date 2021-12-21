@@ -8,6 +8,8 @@ public_folder: /img
 collections:
   - label: "Zawodnicy"
     name: "zawodnicy"
+    editor:
+      preview: false
     files:
       - label: "Zawodnicy"
         name: "team"
@@ -24,7 +26,14 @@ collections:
               - {label: żółte kartki, name: zKartki, widget: number, required: false}
               - {label: czerwone kartki, name: cKartki, widget: number, required: false}
               - {label: mecze, name: mecze, widget: number, required: false}
-              - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
+              - {label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
+          - label: Zespół senior
+            name: zespolSenior
+            widget: list
+            fields:
+              - {label: name, name: name, widget: string}
+              - {label: rola, name: rola, widget: string}
+              - {label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
           - name: mlodzik
             widget: list
             fields:
