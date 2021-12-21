@@ -244,7 +244,7 @@ collections:
     fields:
       - { label: 'nazwa', name: 'name', widget: 'string', required: true}
       - { label: 'cena', name: 'price', widget: 'string' }
-      - { label: "Featured Image", name: "thumbnail", widget: "image", choose_url: true, default: "/prod/szalik.png"}
+      - { label: "Featured Image", name: "thumbnail", widget: "image", choose_url: true, default: "/static/prod/szalik.png"}
 
 
               
