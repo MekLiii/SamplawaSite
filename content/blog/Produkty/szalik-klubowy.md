@@ -1,5 +1,5 @@
 ---
 name: Szalik klubowy
 price: 35zł
-thumbnail: szalik.png
+thumbnail: /static/prod/szalik.png
 ---
