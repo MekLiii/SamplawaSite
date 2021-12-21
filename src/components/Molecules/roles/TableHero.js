@@ -4,7 +4,7 @@ import { CgProfile } from "react-icons/fa";
 import { PersonCircleOutline } from "react-ionicons";
 import img from "../../../images/logo.png";
 
-function TableHero({ name, pozycja, img }) {
+function TableHero({ name, pozycja, img,rola }) {
   const Image = () => {
     if (img.length < 14) {
       return (
@@ -33,6 +33,7 @@ function TableHero({ name, pozycja, img }) {
       <StyledContentBox>
         <StyledText>{name}</StyledText>
         <StyledP>{pozycja}</StyledP>
+        <StyledP>{rola}</StyledP>
       </StyledContentBox>
     </StyledDiv>
   );

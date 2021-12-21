@@ -47,6 +47,7 @@ const useStyles = makeStyles({
 
 function Druzyna() {
   const [kadra, setKadra] = useState(data.team);
+  const [zespol, setZespol] = useState(data.zespolSenior);
   const [age, setAge] = useState("");
 
   const handleChange = (event) => {
@@ -54,6 +55,7 @@ function Druzyna() {
   };
 
   const classes = useStyles();
+  console.log(data)
   return (
     <Layout>
       <div style={cointainer}>
@@ -78,7 +80,8 @@ function Druzyna() {
             </MenuItem>
           </Select>
         </FormControl>
-        <Table data={kadra} />
+        <Table data={kadra} title='Zawodnicy'/>
+        <Table data={zespol} title='Zespół' />
       </div>
     </Layout>
   );
