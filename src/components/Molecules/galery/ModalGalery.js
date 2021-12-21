@@ -19,7 +19,7 @@ function ModalGalery(props) {
           dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
           consectetur ac, vestibulum at eros.
         </p> */}
-        <Carousel>
+        <Carousel interval={null}>
           {props.data?.map((el) => (
             <Carousel.Item>
               <img

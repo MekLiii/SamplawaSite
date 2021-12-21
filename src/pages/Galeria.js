@@ -26,12 +26,9 @@ function Galeria() {
       }
     }
   `);
-  const [dataImage, setDataImage] = useState(data.allMarkdownRemark.edges.map((el) => el.node.frontmatter.images));
-  console.log(dataImage);
-  // data.allMarkdownRemark.edges.map((el) =>
-  //   console.log(el.node.frontmatter.images.map((el) => el))
-  // );
-  // console.log(data.allMarkdownRemark.edges.map((el) => el.node.frontmatter.images))
+  const [dataImage, setDataImage] = useState(
+    data.allMarkdownRemark.edges.map((el) => el.node.frontmatter.images)
+  );
   return (
     <Layout>
       <StyledElement>
@@ -42,10 +39,11 @@ function Galeria() {
               heading={el.node.frontmatter.opis}
               whatNext="Zobacz zdjecia"
               data={el.node.frontmatter.czas}
-              img={`/${el.node.frontmatter.images.map((el) =>
-                el.thumbnail.slice(8)
-              )}`}
-              onClick={() => {setModalShow(true); setDataImage(el.node.frontmatter.images)}}
+              img={`/${el.node.frontmatter.images[0].thumbnail.slice(8)}`}
+              onClick={() => {
+                setModalShow(true);
+                setDataImage(el.node.frontmatter.images);
+              }}
             />
           ))}
         </StyledGrid>
@@ -53,18 +51,18 @@ function Galeria() {
           Launch vertically centered modal
         </Button> */}
 
-        <ModalGalery show={modalShow} onHide={() => setModalShow(false)} data={dataImage}/>
+        <ModalGalery
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          data={dataImage}
+        />
       </StyledElement>
     </Layout>
   );
 }
 
 function Carousel() {
-  return (
-    <div>
-      
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Galeria;
