@@ -263,6 +263,7 @@ collections:
       - { label: "Featured Image", name: "thumbnail", widget: "image", choose_url: true, default: "/static/prod/szalik.png", media_folder: /static/prod/}
   - name: 'galery'
     label: 'Galeria'
+    file: "content/blog/Galeria/galery.json"
     folder: 'content/blog/Galeria'
     create: true
     path: '{{date}}'
