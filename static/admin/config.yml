@@ -269,7 +269,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'data', name: 'date', widget: 'date',format: 'MM DD YY', required: true}
+      - { label: 'data', name: 'date', widget: 'date',format: 'MM-DD-YY', required: true}
       - { label: 'Krótki opis', name: 'opis', widget: 'string' }
       -   label: Zdjecia
           name: images
