@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "./aktu.module.css";
 
-function AktuEl({ img, heading, text, data }) {
+function AktuEl({ img, heading, whatNext, data }) {
   return (
     <StyledBox>
       <div style={leftSide}>
@@ -15,7 +15,7 @@ function AktuEl({ img, heading, text, data }) {
       </div>
       <div style={rightSide}>
         <h1 style={{ fontSize: "1.1rem", fontWeight: "bold" }}>{heading}</h1>
-        <Button>Czytaj dalej</Button>
+        <Button>{whatNext}</Button>
       </div>
     </StyledBox>
   );
@@ -24,9 +24,9 @@ function AktuEl({ img, heading, text, data }) {
 const StyledBox = styled.div`
   min-height: 450px;
   min-width: 0;
+  max-width: 350px;
   background-color: white;
   display: flex;
-  ${"" /* border-radius: 10px; */}
   flex-direction: column;
 `;
 const AbsoluteDiv = styled.div`

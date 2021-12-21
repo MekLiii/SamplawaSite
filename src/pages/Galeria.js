@@ -22,20 +22,14 @@ function Galeria() {
       }
     }
   `);
-  console.log(data.allMarkdownRemark.edges.node);
-  const dataAtom = data.allMarkdownRemark.edges.map((el) =>
-    console.log(el.node.frontmatter.opis)
-  );
 
   return (
     <Layout>
       <StyledElement>
         <StyledGrid>
-          <div style={{ height: "82vh" }}>
-            {data.allMarkdownRemark.edges.map((el) => (
-              <AktuEl heading={el.node.frontmatter.opis} />
-            ))}
-          </div>
+          {data.allMarkdownRemark.edges.map((el) => (
+            <AktuEl heading={el.node.frontmatter.opis} whatNext="Zobacz zdjecia" data={el.node.frontmatter.data}/>
+          ))}
         </StyledGrid>
       </StyledElement>
     </Layout>
@@ -77,11 +71,11 @@ const StyledElement = styled.div`
 `;
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   width: 90%;
   height: 90%;
   gap: 10px;
-  ${"" /* column-gap:5%; */}
+  place-items:center;
   align-items:center;
   justify-content: center;
   @media only screen and (max-width: 500px) {
