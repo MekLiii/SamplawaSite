@@ -21,6 +21,7 @@ const Card = styled.div`
   align-items: center;
   background-color: #1d1d1d;
   border:10px solid #2b2b2b;
+  
 
 `;
 const Box = styled.div`
@@ -35,7 +36,7 @@ const Box = styled.div`
 const Img = styled.img`
     width: 100%;
     height:70%;
-    
+    margin-top:10px;
 `
 const P = styled.p`
     font-size:1.5rem;
