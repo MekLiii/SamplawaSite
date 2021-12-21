@@ -261,7 +261,23 @@ collections:
       - { label: 'nazwa', name: 'name', widget: 'string', required: true}
       - { label: 'cena', name: 'price', widget: 'string' }
       - { label: "Featured Image", name: "thumbnail", widget: "image", choose_url: true, default: "/static/prod/szalik.png", media_folder: /static/prod/}
-
+  - name: 'galery'
+    label: 'Galeria'
+    folder: 'content/blog/Galeria'
+    create: true
+    path: '{{name}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'data', name: 'date', widget: 'date', required: true}
+      - { label: 'Krótki opis', name: 'opis', widget: 'string' }
+      -   label: Zdjecia
+          name: images
+          widget: list
+          fields:
+            - { label: "Featured Image", name: "thumbnail", widget: "image",allow_multiple: true, choose_url: true, default: "/static/prod/szalik.png", media_folder: /static/Galery/ }
+  
+                
 
               
           

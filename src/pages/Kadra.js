@@ -72,10 +72,10 @@ function Druzyna() {
             onChange={handleChange}
             classes={{ root: classes.selectRoot }}
           >
-            <MenuItem onClick={() => setKadra(data.team)} value={"Seniorzy"}>
+            <MenuItem onClick={() => {setKadra(data.team);setZespol(data.zespolSenior)}} value={"Seniorzy"}>
               Seniorzy
             </MenuItem>
-            <MenuItem onClick={() => setKadra(data.mlodzik)} value={"Młodzik"}>
+            <MenuItem onClick={() => {setKadra(data.mlodzik);setZespol(data.zespolJunior)}} value={"Młodzik"}>
               Młodzik
             </MenuItem>
           </Select>
