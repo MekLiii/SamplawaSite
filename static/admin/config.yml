@@ -22,7 +22,6 @@ collections:
               - {label: bramki, name: bramki, widget: number, required: false}
               - {label: asysty, name: asysty, widget: number, required: false}
               - {label: żółte kartki, name: zKartki, widget: number, required: false}
-<<<<<<< Updated upstream
               - {label: czerwone kartki, name: cKartki, widget: number, required: false}
               - {label: mecze, name: mecze, widget: number, required: false}
               - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
@@ -38,11 +37,6 @@ collections:
               - {label: czerwone kartki, name: cKartki, widget: number, required: false}
               - {label: mecze, name: mecze, widget: number, required: false}
               - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
-=======
-              - {label: czerwone kartki, name: cKartki, widget: number,required: false}
-              - {label: mecze, name: mecze, widget: number,required: false}
-              - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: /players/img/, required: false}
->>>>>>> Stashed changes
   - label: "mecze"
     name: "mecze"
     files:

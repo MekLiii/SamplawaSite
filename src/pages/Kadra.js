@@ -5,12 +5,15 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { createStyles, makeStyles, withStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import data from "../../content/druzyna.json";
+import zdjecie from "../../content/assets/seniorzy.jpg";
+import styled from "styled-components";
 
 const useStyles = makeStyles({
   root: {
-    width: 400,
+    width: 380,
+   
     "& .MuiOutlinedInput-input": {
       color: "#ffe600",
     },
@@ -38,6 +41,7 @@ const useStyles = makeStyles({
     "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
       borderColor: "#ffe600",
     },
+    
   },
 });
 
@@ -53,8 +57,8 @@ function Druzyna() {
   return (
     <Layout>
       <div style={cointainer}>
-        <FormControl sx={{ }} className={classes.root}>
-          <InputLabel id="demo-simple-select-label" sx={{ color: "#ffe600" }} >
+        <FormControl sx={{margin:"30px"}} className={classes.root} >
+          <InputLabel id="demo-simple-select-label" sx={{ color: "#ffe600" }}>
             Wybierz kadre
           </InputLabel>
           <Select
@@ -62,7 +66,7 @@ function Druzyna() {
             id="demo-simple-select"
             value={age}
             label="Wybierz kadre"
-            sx={{  color: "#ffe600" }}
+            sx={{ color: "#ffe600" }}
             onChange={handleChange}
             classes={{ root: classes.selectRoot }}
           >
@@ -88,4 +92,8 @@ const cointainer = {
   justifyContent: "center",
   alignItems: "center",
 };
+const Img = styled.img`
+  width: 65%;
+  height: 65%;
+`;
 export default Druzyna;

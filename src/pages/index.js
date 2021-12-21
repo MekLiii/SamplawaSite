@@ -98,7 +98,7 @@ const StyledDiv = styled.div`
   min-height: 50vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   background-color: grey;
   @media only screen and (max-width: 500px) {
