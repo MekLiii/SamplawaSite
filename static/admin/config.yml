@@ -46,6 +46,13 @@ collections:
               - {label: czerwone kartki, name: cKartki, widget: number, required: false}
               - {label: mecze, name: mecze, widget: number, required: false}
               - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
+          - label: Zespół junior
+            name: zespolJunior
+            widget: list
+            fields:
+              - {label: name, name: name, widget: string}
+              - {label: rola, name: rola, widget: string}
+              - {label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
   - label: "mecze"
     name: "mecze"
     files:
