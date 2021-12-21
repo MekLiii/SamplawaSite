@@ -22,9 +22,7 @@ function Sklep() {
       }
     }
   `);
-  console.log(
-    data.allMarkdownRemark.edges.map((el) => el.node.frontmatter.thumbnail)
-  );
+ 
 
   return (
     <Layout>

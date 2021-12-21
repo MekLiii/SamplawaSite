@@ -1,13 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 import LayOut from "../components/Organism/Layout";
-import img from "../images/slider/slider2.jpg";
-import Results from "../components/Molecules/lastResults/Results";
-import "./markdownAricle.css";
-import MatchTable from "../components/Molecules/MatchTable/MatchTable";
-import styled from "styled-components";
 
-// import img from '../../content/blog/images/article.jpg'
+import "./markdownAricle.css";
+import styled from "styled-components";
 
 export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
