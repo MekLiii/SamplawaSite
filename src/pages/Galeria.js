@@ -1,23 +1,32 @@
 import React, { useState } from "react";
+import AktuEl from "../components/Molecules/aktualnosci/AktuEl";
 import Layout from "../components/Organism/Layout";
-import FigureImage from "react-bootstrap/FigureImage";
-import Figure from "react-bootstrap/Figure";
+import { useStaticQuery, graphql } from "gatsby"
 
-function Galeria({ slides }) {
+
+function Galeria() {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(filter: {frontmatter: {opis: {glob: "*"}}}) {
+        edges {
+          node {
+            frontmatter {
+              opis
+              images {
+                thumbnail
+              }
+              data
+            }
+          }
+        }
+      }
+    }
+  `)
+  console.log(data)
   return (
     <Layout>
       <div style={{ height: "82vh" }}>
-        <Figure>
-          <Figure.Image
-            width={171}
-            height={180}
-            alt="171x180"
-            src="https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/76197820_521478975074999_7537339340129566720_n%20(1).png?alt=media&token=ae3b0d58-3cd6-41b6-9415-a9b54a1fd2aa"
-          />
-          <Figure.Caption>
-            Nulla vitae elit libero, a pharetra augue mollis interdum.
-          </Figure.Caption>
-        </Figure>
+        <AktuEl />
       </div>
     </Layout>
   );
