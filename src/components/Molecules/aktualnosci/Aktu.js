@@ -59,7 +59,7 @@ const StyledGrid = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
-  ${"" /* overflow:auto ; */}
+  
 `;
 
 export default Aktu;

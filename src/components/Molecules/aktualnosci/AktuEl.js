@@ -3,7 +3,6 @@ import styled from "styled-components";
 import "./aktu.module.css";
 
 function AktuEl({ img, heading, text, data }) {
-  console.log(data);
   return (
     <StyledBox>
       <div style={leftSide}>
