@@ -271,22 +271,11 @@ collections:
     fields:
       - { label: 'data', name: 'czas', widget: 'date',format: 'DD-MM-YY', required: true}
       - { label: 'Krótki opis', name: 'opis', widget: 'string' }
-      -   name: uploadcare
-          label: Cover Image
-          widget: image
-          media_library:
-            name: uploadcare
-            config:
-              publicKey: 075151893a65319cd6da
-            settings:
-              autoFilename: true
-              defaultOperations: '/resize/800x600/'
-                        
-      # -   label: Zdjecia
-      #     name: images
-      #     widget: list
-      #     fields:
-      #       - { label: "Featured Image", name: "thumbnail", widget: "image", allow_multiple: true, multiple: true ,choose_url: true, default: "/static/prod/szalik.png", media_folder: /static/Galery/ }
+      -   label: Zdjecia
+          name: images
+          widget: list
+          fields:
+            - { label: "Featured Image", name: "thumbnail", widget: "image", allow_multiple: true, choose_url: true, default: "/static/Galery/24e84486d3ed4e3e61ef5cca01ce237fe205b4.jpg", media_folder: /static/Galery/ }
   
                 
 
