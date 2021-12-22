@@ -2,6 +2,7 @@ import React from "react";
 import { Modal, Button, Carousel } from "react-bootstrap";
 
 function ModalGalery(props) {
+  
   return (
     <Modal
       {...props}
@@ -21,13 +22,12 @@ function ModalGalery(props) {
         </p> */}
         <Carousel interval={null}>
           {props.data?.map((el) => (
-            <Carousel.Item>
+            <Carousel.Item key={`${el.thumbnail}/${props.data.indexOf(el?.thumbnail)}`}>
               <img
                 className="d-block w-100"
                 src={`/${el.thumbnail?.slice(8)}`}
-                //   img={`${element.node.frontmatter.zdjecia?.slice(8)}`}
                 alt={el.thumbnail?.slice(8)}
-                key={el.thumbnail}
+                // key={`${el.thumbnail}/${props.data.indexOf(el?.thumbnail)}`}
               />
             </Carousel.Item>
           ))}

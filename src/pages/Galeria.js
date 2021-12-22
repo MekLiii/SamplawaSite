@@ -7,7 +7,7 @@ import ModalGalery from "../components/Molecules/galery/ModalGalery";
 import { Button } from "react-bootstrap";
 
 function Galeria() {
-  const [modalShow, setModalShow] = useState(false);
+  
 
   const data = useStaticQuery(graphql`
     {
@@ -27,7 +27,9 @@ function Galeria() {
     }
   `);
   const [dataImage, setDataImage] = useState();
+  const [modalShow, setModalShow] = useState(false);
   const dataAtom = data.allMarkdownRemark.edges.reverse()
+  console.log(dataAtom);
   return (
     <Layout>
       <StyledElement>
@@ -43,7 +45,7 @@ function Galeria() {
               onClick={() => {
                 setModalShow(true);
                 setDataImage(el.node.frontmatter.images);
-                console.log(dataImage);
+                
               }}
             />
           ))}
