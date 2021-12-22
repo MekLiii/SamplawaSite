@@ -26,15 +26,15 @@ function Galeria() {
       }
     }
   `);
-  const [dataImage, setDataImage] = useState(
-    data.allMarkdownRemark.edges.map((el) => el.node.frontmatter.images)
-  );
+  const [dataImage, setDataImage] = useState();
+  const dataAtom = data.allMarkdownRemark.edges.reverse()
   return (
     <Layout>
       <StyledElement>
         <StyledGrid>
-          {data.allMarkdownRemark.edges.reverse().map((el) => (
+          {dataAtom.map((el) => (
             <AktuEl
+              key={el.node.frontmatter.opis}
               style={{ width: "100px" }}
               heading={el.node.frontmatter.opis}
               whatNext="Zobacz zdjecia"
@@ -43,14 +43,11 @@ function Galeria() {
               onClick={() => {
                 setModalShow(true);
                 setDataImage(el.node.frontmatter.images);
+                console.log(dataImage);
               }}
             />
           ))}
         </StyledGrid>
-        {/* <Button variant="primary" onClick={() => setModalShow(true)}>
-          Launch vertically centered modal
-        </Button> */}
-
         <ModalGalery
           show={modalShow}
           onHide={() => setModalShow(false)}
@@ -59,10 +56,6 @@ function Galeria() {
       </StyledElement>
     </Layout>
   );
-}
-
-function Carousel() {
-  return <div></div>;
 }
 
 export default Galeria;
@@ -80,7 +73,7 @@ const StyledElement = styled.div`
 `;
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: auto;
   height: 90%;
   gap: 10px;
