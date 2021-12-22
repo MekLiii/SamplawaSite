@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import img from "../../../images/soccer.png";
-import { Time } from "react-ionicons";
 import mecz from "../../../../content/mecz.json";
 
 function NextMatch() {

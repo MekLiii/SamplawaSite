@@ -12,6 +12,8 @@ import SponsorEl from "../components/Atoms/SponsorEl";
 import sponData from "../../content/sponsors/sponsors.json";
 import CustomizedTables from "../components/Molecules/MatchTable/CustomizedTables";
 import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.png";
+import MatchElIndex from "../components/Molecules/IndexMatch/MatchElIndex";
+import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
 
 const IndexPage = () => {
   console.log(sponData);
@@ -37,23 +39,21 @@ const IndexPage = () => {
     <Layout>
       <StyledSlider>
         <StyledSliderElement>
-          <h1 id="aktu" style={{ color: "#ebebeb",fontSize:"60px",  fontFamily: "Poppins"}}>
+          <h1
+            id="aktu"
+            style={{
+              color: "#ebebeb",
+              fontSize: "60px",
+              fontFamily: "Poppins",
+            }}
+          >
             PFT Drewneks Sampława
           </h1>
         </StyledSliderElement>
       </StyledSlider>
-      <StyledDiv className="indexAktu">
-        <SyldedEl style={{ backgroundColor: "#222" }}>
-          <Results className="indexMediaEl" />
-        </SyldedEl>
-        <SyldedEl>
-          <CustomizedTables className="indexMediaEl" />
-        </SyldedEl>
-        <SyldedEl style={{ backgroundColor: "#222" }}>
-          <NextMatch className="indexMediaEl" />
-        </SyldedEl>
+      <StyledDiv>
+        <MatchIndex />
       </StyledDiv>
-
       <StyledAktu>
         <Aktu />
       </StyledAktu>
@@ -94,12 +94,13 @@ const StyledSposnor = styled.div`
 `;
 
 const StyledDiv = styled.div`
+  position: relative;
+  top: -10vh;
   min-height: 50vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-  background-color: grey;
   @media only screen and (max-width: 500px) {
     clip-path: none;
   }
@@ -138,3 +139,17 @@ const SyldedEl = styled.div`
 `;
 
 export default IndexPage;
+
+{
+  /* <StyledDiv className="indexAktu">
+  <SyldedEl style={{ backgroundColor: "#222" }}>
+    <Results className="indexMediaEl" />
+  </SyldedEl>
+  <SyldedEl>
+    <CustomizedTables className="indexMediaEl" />
+  </SyldedEl>
+  <SyldedEl style={{ backgroundColor: "#222" }}>
+    <NextMatch className="indexMediaEl" />
+  </SyldedEl>
+</StyledDiv>; */
+}
