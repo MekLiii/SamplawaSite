@@ -4,11 +4,8 @@ import Layout from "../components/Organism/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import ModalGalery from "../components/Molecules/galery/ModalGalery";
-import { Button } from "react-bootstrap";
 
 function Galeria() {
-  
-
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(filter: { frontmatter: { opis: { glob: "*" } } }) {
@@ -26,10 +23,12 @@ function Galeria() {
       }
     }
   `);
+  data.allMarkdownRemark.edges.reverse();
   const [dataImage, setDataImage] = useState();
   const [modalShow, setModalShow] = useState(false);
-  const dataAtom = data.allMarkdownRemark.edges.reverse()
-  console.log(dataAtom);
+  const dataAtom = data.allMarkdownRemark.edges;
+
+  console.log(data);
   return (
     <Layout>
       <StyledElement>
@@ -45,7 +44,7 @@ function Galeria() {
               onClick={() => {
                 setModalShow(true);
                 setDataImage(el.node.frontmatter.images);
-                
+                console.log("chuj");
               }}
             />
           ))}
@@ -66,10 +65,8 @@ const StyledElement = styled.div`
   height: auto;
   min-height: 71.3vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  place-items: center;
   margin-bottom: 50px;
   margin-top: 50px;
 `;
@@ -77,11 +74,9 @@ const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: auto;
-  height: 90%;
+  height: 100%;
   gap: 10px;
   place-items: center;
-  align-items: center;
-  justify-content: center;
   @media only screen and (max-width: 500px) {
     display: grid;
     grid-template-columns: 1fr;
