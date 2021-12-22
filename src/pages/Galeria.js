@@ -26,9 +26,8 @@ function Galeria() {
   data.allMarkdownRemark.edges.reverse();
   const [dataImage, setDataImage] = useState();
   const [modalShow, setModalShow] = useState(false);
-  const dataAtom = data.allMarkdownRemark.edges;
+  const dataAtom = data.allMarkdownRemark.edges.reverse();
 
-  console.log(data);
   return (
     <Layout>
       <StyledElement>
@@ -64,6 +63,7 @@ export default Galeria;
 const StyledElement = styled.div`
   height: auto;
   min-height: 71.3vh;
+  height: auto;
   width: 100%;
   display: grid;
   place-items: center;

@@ -34,7 +34,7 @@ function ModalGalery(props) {
         </Carousel>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Zamknij</Button>
+        <Button style={{backgroundColor: "black" }} onClick={props.onHide}>Zamknij</Button>
       </Modal.Footer>
     </Modal>
   );

@@ -4,16 +4,14 @@ import Layout from "../components/Organism/Layout";
 import "./globalStyles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Aktu from "../components/Molecules/aktualnosci/Aktu";
-import MatchTable from "../components/Molecules/MatchTable/MatchTable";
 import styled from "styled-components";
-import scrollTo from "gatsby-plugin-smoothscroll";
 import NextMatch from "../components/Molecules/lastResults/NextMatch";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import SponsorEl from "../components/Atoms/SponsorEl";
 import sponData from "../../content/sponsors/sponsors.json";
 import CustomizedTables from "../components/Molecules/MatchTable/CustomizedTables";
+import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.png";
 
 const IndexPage = () => {
   console.log(sponData);
@@ -38,7 +36,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <StyledSlider>
-        <h1 style={{ color: "#ffe600" }}>PFT Drewneks Sampława</h1>
+        <StyledSliderElement>
+          <h1 id="aktu" style={{ color: "#ebebeb",fontSize:"60px",  fontFamily: "Poppins"}}>
+            PFT Drewneks Sampława
+          </h1>
+        </StyledSliderElement>
       </StyledSlider>
       <StyledDiv className="indexAktu">
         <SyldedEl style={{ backgroundColor: "#222" }}>
@@ -53,13 +55,10 @@ const IndexPage = () => {
       </StyledDiv>
 
       <StyledAktu>
-        <h1 id="aktu" style={{ color: "#ebebeb" }}>
-          Aktualności
-        </h1>
         <Aktu />
       </StyledAktu>
-      <div style={{display:"flex", justifyContent:"center"}}>
-        <h2 style={{color:"white"}}>Sponsorzy</h2>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <h2 style={{ color: "white" }}>Sponsorzy</h2>
       </div>
       <StyledSposnor>
         <div style={{ width: "100%" }}>
@@ -75,21 +74,21 @@ const IndexPage = () => {
 };
 const StyledAktu = styled.div`
   height: auto;
-  min-height:70vh;
+  min-height: 70vh;
   width: 100%;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom:50px;
-  margin-top:50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 `;
 const StyledSposnor = styled.div`
   width: 100%;
   min-height: 40vh;
   background-color: #ffe600;
   display: flex;
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
+  background-image: back;
   align-items: center;
   margin-bottom: 50px;
 `;
@@ -111,8 +110,20 @@ const StyledSlider = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
-  background-color: black;
+  background-image: url(${backGroundImage});
+  background-repeat: no-repeat;
+  ${"" /* background-color: black; */}
+  position: relative;
+  top: -10vh;
+  z-index: 1;
+  background-size: cover;
+`;
+const StyledSliderElement = styled.div`
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 `;
 const SyldedEl = styled.div`
   flex: 1;
