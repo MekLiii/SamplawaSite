@@ -33,7 +33,7 @@ function Galeria() {
     <Layout>
       <StyledElement>
         <StyledGrid>
-          {data.allMarkdownRemark.edges.map((el) => (
+          {data.allMarkdownRemark.edges.reverse().map((el) => (
             <AktuEl
               style={{ width: "100px" }}
               heading={el.node.frontmatter.opis}
@@ -69,7 +69,7 @@ export default Galeria;
 
 const StyledElement = styled.div`
   height: auto;
-  min-height: 70vh;
+  min-height: 71.3vh;
   width: 100%;
   display: flex;
   justify-content: center;
