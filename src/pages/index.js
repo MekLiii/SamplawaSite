@@ -16,7 +16,7 @@ import MatchElIndex from "../components/Molecules/IndexMatch/MatchElIndex";
 import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
 
 const IndexPage = () => {
-  console.log(sponData);
+  
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 2000, min: 2000 },
@@ -43,7 +43,7 @@ const IndexPage = () => {
             id="aktu"
             style={{
               color: "#ebebeb",
-              fontSize: "60px",
+              fontSize: "clamp(40px,5vw,60px)",
               fontFamily: "Poppins",
             }}
           >
@@ -54,13 +54,26 @@ const IndexPage = () => {
       <StyledDiv>
         <MatchIndex />
       </StyledDiv>
+      <StyledAktu style={{ minHeight: "30vh" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
+          <CustomizedTables />
+        </div>
+      </StyledAktu>
       <StyledAktu>
+        <h2 style={{ fontSize: "32px", fontFamily: "poppins", color: "white" }}>
+          Aktualności
+        </h2>
         <Aktu />
       </StyledAktu>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <h2 style={{ color: "white" }}>Sponsorzy</h2>
-      </div>
       <StyledSposnor>
+      <SponsorsTitle>Sponsorzy</SponsorsTitle>
         <div style={{ width: "100%" }}>
           <Carousel responsive={responsive}>
             {sponData.Sponsorzy.map((el) => (
@@ -82,6 +95,8 @@ const StyledAktu = styled.div`
   flex-direction: column;
   margin-bottom: 50px;
   margin-top: 50px;
+  @media only screen and (max-width: 490px) {
+  }
 `;
 const StyledSposnor = styled.div`
   width: 100%;
@@ -90,13 +105,13 @@ const StyledSposnor = styled.div`
   display: flex;
   background-image: back;
   align-items: center;
-  margin-bottom: 50px;
+  flex-direction: column;
 `;
 
 const StyledDiv = styled.div`
   position: relative;
   top: -10vh;
-  min-height: 50vh;
+  min-height: 70vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -137,6 +152,12 @@ const SyldedEl = styled.div`
     width: 100%;
   }
 `;
+const SponsorsTitle = styled.p`
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: black;
+  font-family: poppins;
+  font-size:32px
+`
 
 export default IndexPage;
 

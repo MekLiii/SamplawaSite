@@ -5,7 +5,6 @@ import styled from "styled-components";
 import "./navbar.module.css";
 import Burger from "../../Atoms/Burger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 function NavBar() {

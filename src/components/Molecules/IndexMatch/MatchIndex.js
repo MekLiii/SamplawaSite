@@ -29,7 +29,12 @@ function MatchIndex() {
 
     const result = data.find(({ data }) => data == compareDate);
 
-    const stats = result.Statystyki;
+    const stats = [result.Statystyki];
+
+    if (result.Statystyki == undefined) {
+      stats.unshift("0");
+    }
+    console.log(stats);
     const bramkiPFT =
       stats[0].BramkiPFT === undefined ? "0" : stats[0].BramkiPFT.length;
     const bramkiPrzeciwnika =
@@ -68,44 +73,53 @@ function MatchIndex() {
   }
   const { result, bramkiPrzeciwnika, bramkiPFT } = lasMatch();
   const resultNextMatch = nextMatch();
-  console.log(resultNextMatch);
 
   return (
-    <StyledDiv>
-      <MatchElIndex
-        title="Ostatni mecz"
-        data={result.data}
-        letters="Sam"
-        name={result.gospodarze}
-        score={bramkiPFT}
-        lettersEnemy="HUR"
-        nameEnemy={result.przeciwnik}
-        scoreEnemy={bramkiPrzeciwnika}
-        whatNext="Zobacz statystyki"
-        link={`/mecze/${result.gospodarze}-${result.przeciwnik}`}
-        sign="-"
-      />
+    <Cointainer>
+      <StyledDiv>
+        <MatchElIndex
+          title="Ostatni mecz"
+          data={result.data}
+          letters="Sam"
+          name={result.gospodarze}
+          score={bramkiPFT}
+          lettersEnemy="HUR"
+          nameEnemy={result.przeciwnik}
+          scoreEnemy={bramkiPrzeciwnika}
+          whatNext="Zobacz statystyki"
+          link={`/mecze/${result.gospodarze}-${result.przeciwnik}`}
+          sign="-"
+        />
 
-      <MatchElIndex
-        title="Następny mecz"
-        data={resultNextMatch.data}
-        letters="Sam"
-        name={resultNextMatch.gospodarze}
-        lettersEnemy="HUR"
-        nameEnemy={resultNextMatch.przeciwnik}
-        whatNext={`${resultNextMatch.godzina} Boisko ${resultNextMatch.miejsce}`}
-        sign="VS"
-      />
-    </StyledDiv>
+        <MatchElIndex
+          title="Następny mecz"
+          data={resultNextMatch.data}
+          letters="Sam"
+          name={resultNextMatch.gospodarze}
+          lettersEnemy="HUR"
+          nameEnemy={resultNextMatch.przeciwnik}
+          whatNext={`${resultNextMatch.godzina} ${resultNextMatch.miejsce}`}
+          sign="VS"
+        />
+      </StyledDiv>
+    </Cointainer>
   );
 }
-
-const StyledDiv = styled.div`
-  position: relative;
+const Cointainer = styled.div`
   min-height: 50vh;
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+const StyledDiv = styled.div`
+  min-height: 60vh;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
 
   @media only screen and (max-width: 500px) {
     clip-path: none;

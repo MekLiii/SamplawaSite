@@ -47,13 +47,15 @@ function Aktu() {
 }
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   width: 90%;
   height: 90%;
-  gap: 10px;
+  gap: 20px;
+  place-items: center;
   ${"" /* column-gap:5%; */}
   align-items:center;
   justify-content: center;
+  
   @media only screen and (max-width: 500px) {
     display: grid;
     grid-template-columns: 1fr;

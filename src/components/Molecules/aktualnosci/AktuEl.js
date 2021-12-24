@@ -1,53 +1,122 @@
 import React from "react";
 import styled from "styled-components";
 import "./aktu.module.css";
+import { ArrowForward } from "react-ionicons";
 
-function AktuEl({ img, heading, whatNext, data,onClick }) {
+function AktuEl({ img, heading, whatNext, data, onClick }) {
+  const months = [
+    "Styczeń",
+    "Luty",
+    "Marzec",
+    "Kwiecień",
+    "Maj",
+    "Czerwiec",
+    "Lipiec",
+    "Sierpień",
+    "Wrzesień",
+    "Październik",
+    "Listopad",
+    "Grudzień",
+  ];
+
+  let array = data.split("-");
+  const element = parseInt(array[1]);
+  const newElement = months[element - 1];
+  array[1] = newElement;
   return (
     <StyledBox>
       <div style={leftSide}>
-        <AbsoluteDiv>
-          <p>{data}</p>
-        </AbsoluteDiv>
         <div style={imagine}>
           <img src={img} style={imagine} alt={img} />
         </div>
       </div>
       <div style={rightSide}>
-        <h1 style={{ fontSize: "1.1rem", fontWeight: "bold" }}>{heading}</h1>
-        <Button onClick={onClick}>{whatNext}</Button>
+        <div
+          style={{
+            width: "20%",
+            height: "auto",
+            padding: "5px",
+            display: "flex",
+            flexDirection: "column",
+            borderRight:"2px solid black",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "poppins",
+              fontSize: "15px",
+              marginBottom: "0",
+            }}
+          >
+            {array[0]}
+          </p>
+          <p
+            style={{
+              fontFamily: "poppins",
+              fontSize: "15px",
+              marginBottom: "0",
+            }}
+          >
+            {array[1]}
+          </p>
+          <p
+            style={{
+              fontFamily: "poppins",
+              fontSize: "15px",
+              marginBottom: "0",
+            }}
+          >
+            {array[2]}
+          </p>
+        </div>
+        <div
+          style={{
+            width: "60%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <p
+            style={{
+              fontSize: "13px",
+              fontWeight: "bold",
+              fontFamily: "roboto",
+              fontWeight: 400,
+              textAlign: "center",
+              marginBottom:0,
+            }}
+          >
+            {heading}
+          </p>
+        </div>
+        {/* <Button onClick={onClick}>{whatNext}</Button> */}
+        <div style={{ width: "20%",display: "flex",justifyContent: "center", alignItems: "center"}}>
+          <ArrowForward color={"black"} height="30px" width="30px" />
+        </div>
       </div>
     </StyledBox>
   );
 }
 
 const StyledBox = styled.div`
-  min-height: 450px;
-  min-width: 0;
-  ${'' /* max-width: 350px; */}
-  background-color: white;
+  height: 321px;
+  width: 379px;
+  ${"" /* max-width: 350px; */}
   display: flex;
   flex-direction: column;
 `;
-const AbsoluteDiv = styled.div`
-  position: absolute;
-  height: 25px;
-  width: 110px;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 100;
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 84% 100%, 0 100%, 0% 50%);
-  padding-left: 10px;
-`;
-const Button = styled.button`
-  width: 150px;
-  height: 50px;
-  background-color: black;
-  color: white;
-  border: none;
-  -webkit-box-shadow: 0px 0px 100px -49px rgba(66, 68, 90, 1);
-  -moz-box-shadow: 0px 0px 100px -49px rgba(66, 68, 90, 1);
-  box-shadow: 0px 0px 100px -49px rgba(66, 68, 90, 1);
-`;
+// const Button = styled.button`
+//   width: 150px;
+//   height: 50px;
+//   background-color: black;
+//   color: white;
+//   border: none;
+//   -webkit-box-shadow: 0px 0px 100px -49px rgba(66, 68, 90, 1);
+//   -moz-box-shadow: 0px 0px 100px -49px rgba(66, 68, 90, 1);
+//   box-shadow: 0px 0px 100px -49px rgba(66, 68, 90, 1);
+// `;
 
 const leftSide = {
   display: "flex",
@@ -58,15 +127,19 @@ const rightSide = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  flexDirection: "column",
-  margin: "20px",
-  flex: "1",
   textAlign: "center",
+  backgroundColor: "#ffe600",
+  height: "82px",
+  width: "100%",
+  borderBottomLeftRadius: "5px",
+  borderBottomRightRadius: "5px",
 };
 const imagine = {
   width: "100%",
   height: "100%",
   backgroundColor: "black",
+  borderTopLeftRadius: "5px",
+  borderTopRightRadius: "5px",
 };
 
 export default AktuEl;
