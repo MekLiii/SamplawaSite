@@ -8,16 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 function NavBar() {
-  const StyledNav = styled.nav`
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    @media (max-width: 500px) {
-      justify-content: center;
-      height: 10vh;
-    }
-  `;
+  
   return (
     <StyledNav>
       <Burger />
@@ -85,7 +76,7 @@ function NavBar() {
                 alignItems: "center",
               }}
             >
-              <FontAwesomeIcon icon={faFacebookF} size="13px" color="black" />
+              <FontAwesomeIcon icon={faFacebookF} size="1x" color="black" />
             </div>
           </a>
         </NavElement>
@@ -93,6 +84,16 @@ function NavBar() {
     </StyledNav>
   );
 }
+const StyledNav = styled.nav`
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 500px) {
+      justify-content: center;
+      height: 10vh;
+    }
+  `;
 const StyledSide = styled.div`
   width: 100%;
   height: 100%;

@@ -22,7 +22,7 @@ function Footer() {
             alignItems: "center",
           }}
         >
-          <FontAwesomeIcon icon={faFacebookF} size="13px" color="black" />
+          <FontAwesomeIcon icon={faFacebookF} size="1x" color="black" />
         </div>
       </a>
       <p
