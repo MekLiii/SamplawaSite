@@ -93,7 +93,7 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
         </div>
         {/* <Button onClick={onClick}>{whatNext}</Button> */}
         <div style={{ width: "20%",display: "flex",justifyContent: "center", alignItems: "center"}}>
-          <ArrowForward color={"black"} height="30px" width="30px" />
+          <ArrowForward onClick={onClick} color={"black"} height="30px" width="30px" />
         </div>
       </div>
     </StyledBox>

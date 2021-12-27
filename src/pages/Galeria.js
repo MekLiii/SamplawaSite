@@ -43,7 +43,7 @@ function Galeria() {
               onClick={() => {
                 setModalShow(true);
                 setDataImage(el.node.frontmatter.images);
-                console.log("chuj");
+                
               }}
             />
           ))}
@@ -73,7 +73,7 @@ const StyledElement = styled.div`
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  width: auto;
+  width: 100%;
   height: 100%;
   gap: 10px;
   place-items: center;

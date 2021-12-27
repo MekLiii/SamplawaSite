@@ -158,7 +158,7 @@ collections:
         name: "galery",
         widget: "relation",
         collection: galery,
-        search_fields: [opis],
+        search_fields: [images.*.thumbnail  ],
         display_fields: [opis],
         value_field: opis} 
 
