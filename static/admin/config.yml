@@ -146,7 +146,7 @@ collections:
     folder: 'content/blog'
     create: true
     slug: '{{naglowek}}'
-    path: '{{date}}'
+    path: '{{naglowek}}'
     editor:
       preview: false
     fields:

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import LayOut from "../components/Organism/Layout";
 import backGroundImage from "../../content/assets/e8fb669ffbde1c40061ce3d70931341d301230.jpg";
@@ -8,13 +8,16 @@ import styled from "styled-components";
 
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import ModalGalery from "../components/Molecules/galery/ModalGalery";
 
 export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   const image = frontmatter?.zdjecia?.substr(8);
   const galery = frontmatter?.images;
-  console.log(galery);
+  const [dataImage, setDataImage] = useState();
+  const [modalShow, setModalShow] = useState(false);
+  console.log(frontmatter.AdditionalText);
   return (
     <LayOut
       style={{
@@ -32,7 +35,7 @@ export default function Template({ data }) {
                 color: "black",
                 fontSize: "clamp(15px,5vw,33px)",
                 fontFamily: "Poppins",
-                padding:"10px",
+                padding: "10px",
               }}
             >
               {frontmatter.naglowek}
@@ -44,26 +47,42 @@ export default function Template({ data }) {
             <SidePost>
               <Article>
                 <Text>{frontmatter.tresc}</Text>
+                {frontmatter.AdditionalText?.map((el) => (
+                  <Text>{el.addText}</Text>
+                ))}
               </Article>
             </SidePost>
-            <SidePost>
+            <SidePost style={{ flexDirection: "column" }}>
               {/* <img src={`/${image}`} className="imgArticle" alt={image} /> */}
               <ImageList
-                sx={{ width: 500, height: 450 }}
+                sx={{ width: 'auto', height: 450, overFlowY: 'hidden' }}
                 cols={3}
                 rowHeight={164}
               >
                 {galery?.map((item) => (
                   <ImageListItem key={item.img}>
                     <img
-                      src={`${item.thumbnail.slice(8)}`}
-                      srcSet={`${item.thumbnail.slice(8)}`}
-                      alt={item.thumbnail}
+                      src={`/${item.thumbnail.slice(8)}`}
+                      srcSet={`/${item.thumbnail.slice(8)}`}
+                      alt={item.thumbnail.slice(8)}
                       loading="lazy"
                     />
                   </ImageListItem>
                 ))}
+                <ModalGalery
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                  data={galery}
+                />
               </ImageList>
+              <Button
+                onClick={() => {
+                  setModalShow(true);
+                  // setDataImage(galery);
+                }}
+              >
+                Zobacz więcej
+              </Button>
             </SidePost>
           </PostGriDholder>
         </Post>
@@ -107,6 +126,10 @@ const StyledSliderElement = styled.div`
   align-items: center;
   background: rgba(255, 230, 0, 0.7);
   border-radius: 5px;
+  @media only screen and (max-width:765px){
+    width:80%;
+    height:75px;
+  }
 `;
 const Post = styled.div`
   width: 100%;
@@ -119,7 +142,7 @@ const PostGriDholder = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 `;
 const SidePost = styled.div`
-  min-height:40vh;
+  min-height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,14 +153,25 @@ const Article = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+  flex-direction: column;
+`;
 const Text = styled.p`
   font-family: poppins;
   font-weight: 300;
-  font-size:16px;
+  font-size: 16px;
   color: white;
-  line-height:30px;
-`
+  line-height: 30px;
+`;
+const Button = styled.div`
+  width: 140px;
+  height: 33px;
+  background-color: #ffe600;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
 
 export const pageQuery = graphql`
   query ($id: String) {
@@ -153,58 +187,10 @@ export const pageQuery = graphql`
         images {
           thumbnail
         }
+        AdditionalText {
+          addText
+        }
       }
     }
   }
 `;
-
-const itemData = [
-  {
-    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
-    title: "Bed",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
-    title: "Kitchen",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
-    title: "Sink",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
-    title: "Books",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1574180045827-681f8a1a9622",
-    title: "Chairs",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62",
-    title: "Candle",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1530731141654-5993c3016c77",
-    title: "Laptop",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
-    title: "Doors",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7",
-    title: "Coffee",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee",
-    title: "Storage",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
-    title: "Coffee table",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1588436706487-9d55d73a39e3",
-    title: "Blinds",
-  },
-];

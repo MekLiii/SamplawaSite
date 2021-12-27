@@ -33,7 +33,7 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
       <div style={rightSide}>
         <div
           style={{
-            width: "20%",
+            width: "25%",
             height: "auto",
             padding: "5px",
             display: "flex",
@@ -101,10 +101,12 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
 }
 
 const StyledBox = styled.div`
-  height: 321px;
-  width: 379px;
+  min-height: 301px;
+  min-width: 190px;
   ${"" /* max-width: 350px; */}
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 `;
 // const Button = styled.button`
@@ -122,6 +124,7 @@ const leftSide = {
   display: "flex",
   width: "100%",
   flex: "1",
+  alignItems: "flex-end",
 };
 const rightSide = {
   display: "flex",
