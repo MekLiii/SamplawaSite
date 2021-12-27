@@ -154,6 +154,11 @@ collections:
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
       - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/img/test.jpg", media_folder: /static/img/}
       - { label: 'tresc', name: 'tresc', widget: 'markdown', required: false }
+      -   label: Dodatkowy text
+          name: AdditionalText
+          widget: list
+          fields:
+            - { label: "Dodatkowy tekst", name: "addText", widget: "markdown"} 
       -   label: Zdjecia
           name: images
           widget: list

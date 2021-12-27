@@ -13,7 +13,8 @@ export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   const image = frontmatter?.zdjecia?.substr(8);
-  console.log(data)
+  const galery = frontmatter?.images;
+  console.log(galery);
   return (
     <LayOut
       style={{
@@ -31,6 +32,7 @@ export default function Template({ data }) {
                 color: "black",
                 fontSize: "clamp(15px,5vw,33px)",
                 fontFamily: "Poppins",
+                padding:"10px",
               }}
             >
               {frontmatter.naglowek}
@@ -39,21 +41,24 @@ export default function Template({ data }) {
         </StyledSlider>
         <Post>
           <PostGriDholder>
-            <SidePost>{frontmatter.tresc}</SidePost>
+            <SidePost>
+              <Article>
+                <Text>{frontmatter.tresc}</Text>
+              </Article>
+            </SidePost>
             <SidePost>
               {/* <img src={`/${image}`} className="imgArticle" alt={image} /> */}
               <ImageList
                 sx={{ width: 500, height: 450 }}
-                variant="woven"
                 cols={3}
-                gap={8}
+                rowHeight={164}
               >
-                {itemData.map((item) => (
+                {galery?.map((item) => (
                   <ImageListItem key={item.img}>
                     <img
-                      src={`${item.img}?w=161&fit=crop&auto=format`}
-                      srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                      alt={item.title}
+                      src={`${item.thumbnail.slice(8)}`}
+                      srcSet={`${item.thumbnail.slice(8)}`}
+                      alt={item.thumbnail}
                       loading="lazy"
                     />
                   </ImageListItem>
@@ -62,7 +67,6 @@ export default function Template({ data }) {
             </SidePost>
           </PostGriDholder>
         </Post>
-       
       </Box>
     </LayOut>
   );
@@ -106,86 +110,101 @@ const StyledSliderElement = styled.div`
 `;
 const Post = styled.div`
   width: 100%;
-  height: 60vh;
+  min-height: 60vh;
 `;
 const PostGriDholder = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 `;
 const SidePost = styled.div`
+  min-height:40vh;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
+const Article = styled.div`
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+const Text = styled.p`
+  font-family: poppins;
+  font-weight: 300;
+  font-size:16px;
+  color: white;
+  line-height:30px;
+`
 
 export const pageQuery = graphql`
-query ($id: String) {
-  markdownRemark(id: {eq: $id, ne: "*"}) {
-    html
-    frontmatter {
-      date
-      id
-      naglowek
-      title
-      tresc
-      zdjecia
-      images {
-        thumbnail
+  query ($id: String) {
+    markdownRemark(id: { eq: $id, ne: "*" }) {
+      html
+      frontmatter {
+        date
+        id
+        naglowek
+        title
+        tresc
+        zdjecia
+        images {
+          thumbnail
+        }
       }
     }
   }
-}
 `;
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
-    title: 'Bed',
+    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
+    title: "Bed",
   },
   {
-    img: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3',
-    title: 'Kitchen',
+    img: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
+    title: "Kitchen",
   },
   {
-    img: 'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6',
-    title: 'Sink',
+    img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+    title: "Sink",
   },
   {
-    img: 'https://images.unsplash.com/photo-1525097487452-6278ff080c31',
-    title: 'Books',
+    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
+    title: "Books",
   },
   {
-    img: 'https://images.unsplash.com/photo-1574180045827-681f8a1a9622',
-    title: 'Chairs',
+    img: "https://images.unsplash.com/photo-1574180045827-681f8a1a9622",
+    title: "Chairs",
   },
   {
-    img: 'https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62',
-    title: 'Candle',
+    img: "https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62",
+    title: "Candle",
   },
   {
-    img: 'https://images.unsplash.com/photo-1530731141654-5993c3016c77',
-    title: 'Laptop',
+    img: "https://images.unsplash.com/photo-1530731141654-5993c3016c77",
+    title: "Laptop",
   },
   {
-    img: 'https://images.unsplash.com/photo-1481277542470-605612bd2d61',
-    title: 'Doors',
+    img: "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
+    title: "Doors",
   },
   {
-    img: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7',
-    title: 'Coffee',
+    img: "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7",
+    title: "Coffee",
   },
   {
-    img: 'https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee',
-    title: 'Storage',
+    img: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee",
+    title: "Storage",
   },
   {
-    img: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4',
-    title: 'Coffee table',
+    img: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+    title: "Coffee table",
   },
   {
-    img: 'https://images.unsplash.com/photo-1588436706487-9d55d73a39e3',
-    title: 'Blinds',
+    img: "https://images.unsplash.com/photo-1588436706487-9d55d73a39e3",
+    title: "Blinds",
   },
 ];
