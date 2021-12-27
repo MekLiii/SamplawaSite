@@ -154,6 +154,13 @@ collections:
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
       - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/img/test.jpg", media_folder: /static/img/}
       - { label: 'tresc', name: 'tresc', widget: 'markdown', required: false }
+      - {label: "Wybierz galerie",
+        name: "galery",
+        widget: "relation",
+        collection: galery,
+        search_fields: [opis],
+        display_fields: [opis],
+        value_field: opis} 
 
   - label: "Tabela"
     name: "tabela"

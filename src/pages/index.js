@@ -15,6 +15,8 @@ import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground
 import MatchElIndex from "../components/Molecules/IndexMatch/MatchElIndex";
 import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
 
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+
 const IndexPage = () => {
   
   const responsive = {

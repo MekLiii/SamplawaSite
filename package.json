@@ -38,6 +38,7 @@
     "gatsby-source-filesystem": "^4.2.0",
     "gatsby-transformer-json": "^4.3.0",
     "gatsby-transformer-remark": "^5.2.0",
+    "mdb-react-ui-kit": "^2.2.0",
     "netlify-cms-app": "^2.15.59",
     "react": "^17.0.1",
     "react-bootstrap": "^2.0.2",
