@@ -83,7 +83,7 @@ collections:
                           collection: zawodnicy,
                           search_fields: [team.*.name],
                           display_fields: [team.*.name],
-                          value_field: team.*.zdjecia}
+                          value_field: team.*.name}
                     - {label: Rozegrane minuty, name: minuty, widget: number}
                   - label: Statystyki
                     name: Statystyki
