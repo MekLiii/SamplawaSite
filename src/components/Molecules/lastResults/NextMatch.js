@@ -5,7 +5,6 @@ import mecz from "../../../../content/mecz.json";
 function NextMatch() {
   const match = mecz.sezon;
   const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
-  console.log(data);
   const matchArray = [];
 
   const today = new Date();
@@ -26,7 +25,7 @@ function NextMatch() {
   const indexOfCurrentDay = matchArray.indexOf(currentDate);
   const compareDate = matchArray[indexOfCurrentDay + 1];
 
-  const result = data.find(({ data }) => data == compareDate);
+  const result = data.find(({ data }) => data == compareDate);  
   
   
 

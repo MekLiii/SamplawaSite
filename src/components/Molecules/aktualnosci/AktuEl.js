@@ -71,7 +71,7 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
         </div>
         <div
           style={{
-            width: "60%",
+            width: "55%",
             height: "100%",
             display: "flex",
             justifyContent: "center",

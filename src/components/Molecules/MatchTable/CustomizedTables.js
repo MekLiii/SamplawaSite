@@ -12,6 +12,7 @@ import styled from "styled-components";
 import { People, Flag,Football,Podium,Ellipse } from "react-ionicons";
 
 export default function DenseTable() {
+  console.log(data)
   const dataAtom = data.Tabela.sort((a, b) => {
     return a.punkty - b.punkty;
   });

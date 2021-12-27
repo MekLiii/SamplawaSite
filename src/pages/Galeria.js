@@ -65,15 +65,16 @@ const StyledElement = styled.div`
   min-height: 71.3vh;
   height: auto;
   width: 100%;
-  display: grid;
-  place-items: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
   margin-top: 50px;
 `;
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  width: 80%;
   height: 100%;
   gap: 10px;
   place-items: center;

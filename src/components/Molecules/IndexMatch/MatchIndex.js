@@ -34,7 +34,7 @@ function MatchIndex() {
     if (result.Statystyki == undefined) {
       stats.unshift("0");
     }
-    console.log(stats);
+    
     const bramkiPFT =
       stats[0].BramkiPFT === undefined ? "0" : stats[0].BramkiPFT.length;
     const bramkiPrzeciwnika =

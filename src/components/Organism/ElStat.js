@@ -12,14 +12,21 @@ function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [meczData, setMeczData] = useState(slug);
 
-  const bramkiSamplawa = meczData?.Statystyki[0]?.BramkiPFT;
-  const bramkiEnemy = meczData?.Statystyki[0]?.BramkiPrzeciwnika;
+  
+  const stats = [meczData.Statystyki];
+
+  if (meczData.Statystyki == undefined) {
+    stats.unshift("0");
+    stats.unshift("0");
+  }
+  console.log(stats)
+  // const bramkiSamplawa = meczData?.Statystyki[0]?.BramkiPFT;
+  // const bramkiEnemy = meczData?.Statystyki[0]?.BramkiPrzeciwnika;
 
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   const players = meczData.Zawodnicy;
 
-  console.log(meczData);
   return (
     <Layout>
       <Cointainer>
@@ -38,9 +45,9 @@ function ElStat({ pageContext }) {
                     {meczData.gospodarze}
                   </p>
                   <p style={{ color: "white",fontSize:"1rem" }}>
-                    {bramkiSamplawa?.length != undefined
+                    {/* {bramkiSamplawa?.length != undefined
                       ? bramkiSamplawa?.length
-                      : "0"}
+                      : "0"} */}
                   </p>
                 </StyledTitle>
                 <StyledTitle>
@@ -48,36 +55,36 @@ function ElStat({ pageContext }) {
                 </StyledTitle>
                 <StyledTitle>
                   <p style={{ color: "rgb(255, 230, 0)", fontSize: "1rem" }}>
-                    {meczData.przeciwnik}
+                    {/* {meczData.przeciwnik} */}
                   </p>
                   <p style={{ color: "white",fontSize: "1rem" }}>
-                    {bramkiEnemy?.length != undefined
+                    {/* {bramkiEnemy?.length != undefined
                       ? bramkiEnemy?.length
-                      : "0"}
+                      : "0"} */}
                   </p>
                 </StyledTitle>
               </div>
 
               <Players>
                 <StylyedPlayer>
-                  {bramkiSamplawa?.map((el) => (
+                  {/* {bramkiSamplawa?.map((el) => (
                     <AtomicPlayer
                       name={el.Zawodnicy}
                       minut={el.minuta}
                       key={el.Zawodnicy + el.minuta}
                     />
-                  ))}
+                  ))} */}
                 </StylyedPlayer>
 
                 <StylyedPlayer>
-                  {bramkiEnemy?.map((el) => (
+                  {/* {bramkiEnemy?.map((el) => (
                     <AtomicPlayer
                       style={{ flexDirection: "row-reverse" }}
                       name={el.Zawodnicy}
                       minut={el.minuta}
                       key={el.Zawodnicy + el.minuta}
                     />
-                  ))}
+                  ))} */}
                 </StylyedPlayer>
               </Players>
             </LeftTop>
@@ -94,7 +101,7 @@ function ElStat({ pageContext }) {
               </LeftBotEl>
               <LeftBotEl>
                 <H1>Kartki</H1>
-                {meczData?.Statystyki[0]?.Kartki?.map((el) => (
+                {/* {meczData?.Statystyki[0]?.Kartki?.map((el) => (
                   <AtomicPlayer
                     name={el.Zawodnicy}
                     key={el}
@@ -105,11 +112,11 @@ function ElStat({ pageContext }) {
                       />
                     }
                   />
-                ))}
+                ))} */}
               </LeftBotEl>
               <LeftBotEl>
                 <H1>Zmiany</H1>
-                {meczData.Statystyki[0]?.Zmiany?.map((el) => (
+                {/* {meczData.Statystyki[0]?.Zmiany?.map((el) => (
                   <div
                     style={{
                       display: "flex",
@@ -126,20 +133,20 @@ function ElStat({ pageContext }) {
                     <p style={{ color: "white" }}>{el.minuta}'</p>
                     <ArrowUp color={"green"} height="25px" width="25px" />
                   </div>
-                ))}
+                ))} */}
               </LeftBotEl>
             </LeftBot>
           </SidebarLeft>
           <SidebarRight>
             <H1>Poprzednie mecze</H1>
-            {matches.map((el) => (
+            {/* {matches.map((el) => (
               <LastMatchEl
                 enemy={el.przeciwnik}
                 date={el.data}
                 onClick={() => setMeczData(el)}
                 key={`${el.przeciwnik}`}
               />
-            ))}
+            ))} */}
           </SidebarRight>
         </Box>
       </Cointainer>

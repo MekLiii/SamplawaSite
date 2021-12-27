@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal, Button, Carousel } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ModalGalery(props) {
   
