@@ -13,6 +13,7 @@ export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   const image = frontmatter?.zdjecia?.substr(8);
+  console.log(data)
   return (
     <LayOut
       style={{
@@ -120,19 +121,22 @@ const SidePost = styled.div`
 `;
 
 export const pageQuery = graphql`
-  query ($id: String) {
-    markdownRemark(id: { eq: $id, ne: "*" }) {
-      html
-      frontmatter {
-        date
-        id
-        naglowek
-        title
-        tresc
-        zdjecia
+query ($id: String) {
+  markdownRemark(id: {eq: $id, ne: "*"}) {
+    html
+    frontmatter {
+      date
+      id
+      naglowek
+      title
+      tresc
+      zdjecia
+      images {
+        thumbnail
       }
     }
   }
+}
 `;
 
 const itemData = [
