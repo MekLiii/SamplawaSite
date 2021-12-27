@@ -15,6 +15,10 @@
               "CKartki": 0,
               "Zawodnicy": "Leo Messi",
               "minuty": 4
+            },
+            {
+              "Zawodnicy": "/static/players/img/a40d8b4ab95d1fc65fc9884c4d0348c9a0ad7d.jpg",
+              "minuty": 1
             }
           ],
           "Statystyki": [
