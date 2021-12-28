@@ -1,9 +1,9 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import Layout from "./Layout";
 import data from "../../../content/mecz.json";
-import team from '../../../content/druzyna.json'
+import team from "../../../content/druzyna.json";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -16,7 +16,6 @@ function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [age, setAge] = useState("");
   const [whichMecz, setWhichMecz] = useState(slug);
-
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -62,16 +61,12 @@ function ElStat({ pageContext }) {
 
   if (whichMecz.Statystyki == undefined) {
     stats.unshift("0");
-    
   }
-  
-  
-  
 
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   // const findMatch = matches.find((el) => el.data === whichMecz);
-  console.log(team.team)
+  console.log(team.team);
   //Porównanie daty, czy mecz się odbył
   // const today = new Date();
   // const actualtDate =
@@ -83,7 +78,7 @@ function ElStat({ pageContext }) {
   //   console.log("Większa")
 
   // }
-  console.log(whichMecz)
+  console.log(whichMecz);
 
   return (
     <Layout>
@@ -124,26 +119,58 @@ function ElStat({ pageContext }) {
           <SidebarBottom>
             <WhoPlayBox>
               <WhoPlayText>{whichMecz.gospodarze}</WhoPlayText>
-              <WhoPlayText>{(whichMecz.pftGoals == undefined) ? "0" : whichMecz.pftGoals}</WhoPlayText>
+              <WhoPlayText>
+                {whichMecz.pftGoals == undefined ? "0" : whichMecz.pftGoals}
+              </WhoPlayText>
               <WhoPlayText>-:-</WhoPlayText>
-              <WhoPlayText>{(whichMecz.enemyGoals == undefined) ? "0" : whichMecz.enemyGoals}</WhoPlayText>
+              <WhoPlayText>
+                {whichMecz.enemyGoals == undefined ? "0" : whichMecz.enemyGoals}
+              </WhoPlayText>
               <WhoPlayText>{whichMecz.przeciwnik}</WhoPlayText>
             </WhoPlayBox>
             <PlayersBox>
-                  <PlayersHolder>
-                    <h1>Skład wyjściowy</h1>
-                    {whichMecz.Zawodnicy?.map((el) => (
-                      <PlayerSec name={el.Zawodnicy} key={el.Zawodnicy} src={team.team.find((element) => (element.name == el.Zawodnicy).zdjecia?.slice(8))}/>
-                    ))}
-                  </PlayersHolder>
-                  <PlayersHolder>
-                    <h1>Zmiany</h1>
-                    <PlayerSec />
-                  </PlayersHolder>
-                  <PlayersHolder>
-                    <h1>Kary</h1>
-                    <PlayerSec />
-                  </PlayersHolder>
+              <PlayersHolder>
+                <h1>Skład wyjściowy</h1>
+                {whichMecz.Zawodnicy?.map((el) => (
+                  <PlayerSec
+                    name={el.Zawodnicy}
+                    key={el.Zawodnicy}
+                    src={team.team
+                      .find((element) => element.name === el.Zawodnicy)
+                      ?.zdjecia.slice(7)}
+                    minuts={el.minuty}
+                    StyleIcon={{display: 'none'}}
+                  />
+                ))}
+              </PlayersHolder>
+              <PlayersHolder>
+                <h1>Zmiany</h1>
+                {whichMecz.Statystyki?.map((el) => (el.Zmiany?.map((el) => (
+                  <PlayerSec
+                    name={el.ZmianaNa}
+                    key={el.ZmianaNa}
+                    src={team.team
+                      .find((element) => element.name === el.ZmianaNa)
+                      ?.zdjecia.slice(7)}
+                    minuts={el.minuta}
+                    StyleIcon={{display: 'none'}}
+                  />
+                ))))}
+              </PlayersHolder>
+              <PlayersHolder>
+                <h1>Kary</h1>
+                {whichMecz.Statystyki?.map((el) => (el.Kartki?.map((el) => (
+                  <PlayerSec
+                    name={el.Zawodnicy}
+                    key={el.ZmianaNa}
+                    src={team.team
+                      .find((element) => element.name === el.Zawodnicy)
+                      ?.zdjecia.slice(7)}
+                    minuts={el.minuta}
+                    color={el.kartka === "czerwona" ? "red" : "yellow"}
+                  />
+                ))))}
+              </PlayersHolder>
             </PlayersBox>
           </SidebarBottom>
         </Box>
@@ -182,7 +209,6 @@ const SidebarBottom = styled.div`
   flex-direction: column;
   width: 100%;
   min-height: 70vh;
- 
 `;
 const WhoPlayBox = styled.div`
   width: 100%;
@@ -193,20 +219,21 @@ const WhoPlayBox = styled.div`
   background-color: #ffe600;
 `;
 const WhoPlayText = styled.p`
-  ${'' /* font-size: 32px; */}
+  ${"" /* font-size: 32px; */}
   font-family: poppins;
-  font-size: clamp(15px,5vw,33px);
-  margin-bottom:0;
+  font-size: clamp(15px, 5vw, 33px);
+  margin-bottom: 0;
 `;
 const PlayersBox = styled.div`
   width: 100%;
   min-height: 65vh;
   display: grid;
-  
+
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-`
+`;
 const PlayersHolder = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
-`
+  align-items: center;
+`;
