@@ -107,7 +107,7 @@ function ElStat({ pageContext }) {
                 onChange={handleChange}
                 classes={{ root: classes.selectRoot }}
               >
-                {matches.map((el) => (
+                {matches?.map((el) => (
                   <MenuItem
                     value={el.data}
                     key={`${el.data}/${el.przeciwnik}`}
@@ -153,7 +153,7 @@ function ElStat({ pageContext }) {
               </div>
 
               <div style={{ flex: 1 }}>
-                {whoScored.map((el) =>
+                {whoScored?.map((el) =>
                   el.BramkiPrzeciwnika?.map((el) => (
                     <div
                       key={el.BramkiPrzeciwnika}
@@ -194,8 +194,7 @@ function ElStat({ pageContext }) {
                     <div style={{ width: "100%" }} key={el.ZmianaNa}>
                       <PlayerSec
                         name={el.ZmianaNa}
-                        src={team.team
-                          .find((element) => element.name === el.ZmianaNa)
+                        src={team.team?.find((element) => element.name === el.ZmianaNa)
                           ?.zdjecia.slice(7)}
                         minuts={el.minuta}
                         StyleIcon={{ display: "none" }}
@@ -203,8 +202,7 @@ function ElStat({ pageContext }) {
                       />
                       <PlayerSec
                         name={el.ZmianaZ}
-                        src={team.team
-                          .find((element) => element.name === el.ZmianaZ)
+                        src={team.team?.find((element) => element.name === el.ZmianaZ)
                           ?.zdjecia.slice(7)}
                         minuts={el.minuta}
                         StyleIcon={{ display: "none" }}
@@ -223,8 +221,7 @@ function ElStat({ pageContext }) {
                     <PlayerSec
                       name={el.Zawodnicy}
                       key={el.ZmianaNa}
-                      src={team.team
-                        .find((element) => element.name === el.Zawodnicy)
+                      src={team.team?.find((element) => element.name === el.Zawodnicy)
                         ?.zdjecia.slice(7)}
                       minuts={el.minuta}
                       color={el.kartka === "czerwona" ? "red" : "yellow"}
