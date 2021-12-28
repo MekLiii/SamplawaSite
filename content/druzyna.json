@@ -71,6 +71,31 @@
       "zdjecia": "/static/players/img/9ef405f747fc28afaa862fa12229646b32043d.jpg",
       "name": "Cezary Chorzelewski",
       "pozycja": "pomocnik"
+    },
+    {
+      "zdjecia": "/static/players/img/3e68d120c895e717bc2a755e3801a654af1b70.png",
+      "name": "Przemysław Cabaj",
+      "pozycja": "pomocnik"
+    },
+    {
+      "zdjecia": "/static/players/img/88066503aa140bd7cf767486d89273a8cfbe8c.jpg",
+      "name": "Michał Łukaszewski",
+      "pozycja": "pomocnik"
+    },
+    {
+      "zdjecia": "/static/players/img/d92bb8cc349a19efbe834fa81b92653823d3ff.png",
+      "name": "Patryk Mówiński",
+      "pozycja": "pomocnik"
+    },
+    {
+      "zdjecia": "/static/players/img/2ff254a2dc502404aa12c703b1a215709516ff.png",
+      "name": "Marek Nastachowski",
+      "pozycja": "pomocnik"
+    },
+    {
+      "zdjecia": "/static/players/img/c3922da091d840570f5d3dba240dd43f87fe10.jpg",
+      "name": "Paweł Kryżba",
+      "pozycja": "pomocnik"
     }
   ],
   "mlodzik": [
