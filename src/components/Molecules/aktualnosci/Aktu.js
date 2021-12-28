@@ -12,7 +12,7 @@ function Aktu() {
           node {
             frontmatter {
               date
-              id
+              
               naglowek
               tresc
               title

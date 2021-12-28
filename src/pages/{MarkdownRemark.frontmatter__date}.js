@@ -179,7 +179,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date
-        id
+        
         naglowek
         title
         tresc

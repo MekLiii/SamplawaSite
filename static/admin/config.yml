@@ -147,8 +147,8 @@ collections:
     label: 'Aktualnosci'
     folder: 'content/blog'
     create: true
-    slug: '{{naglowek}}'
-    path: '{{naglowek}}'
+    slug: '{{date}}'
+    path: '{{date}}'
     editor:
       preview: false
     fields:
