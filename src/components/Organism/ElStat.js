@@ -11,10 +11,12 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { makeStyles } from "@material-ui/core";
 import PlayerSec from "../Atoms/PlayerSec";
+import { faArrowUp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 function ElStat({ pageContext }) {
   const { slug } = pageContext;
-  console.log(slug)
   const [age, setAge] = useState("");
   const [whichMecz, setWhichMecz] = useState(slug);
 
@@ -133,7 +135,7 @@ function ElStat({ pageContext }) {
               <WhoPlayText>{whichMecz.przeciwnik}</WhoPlayText>
             </WhoPlayBox>
             <WhoScoredBox>
-              <div>
+              <div style={{ flex: 1 }}>
                 {whoScored.map((el) =>
                   el.BramkiPFT?.map((el) => (
                     <div
@@ -141,6 +143,7 @@ function ElStat({ pageContext }) {
                       style={{
                         display: "flex",
                         justifyContent: "space-around",
+                        flex: 1,
                       }}
                     >
                       <WhoScoredText>{el.Zawodnicy}</WhoScoredText>
@@ -150,7 +153,7 @@ function ElStat({ pageContext }) {
                 )}
               </div>
 
-              <div>
+              <div style={{ flex: 1 }}>
                 {whoScored.map((el) =>
                   el.BramkiPrzeciwnika?.map((el) => (
                     <div
@@ -158,6 +161,7 @@ function ElStat({ pageContext }) {
                       style={{
                         display: "flex",
                         justifyContent: "space-around",
+                        flex: 1,
                       }}
                     >
                       <WhoScoredText>{el.Zawodnicy}</WhoScoredText>
@@ -179,6 +183,7 @@ function ElStat({ pageContext }) {
                       ?.zdjecia.slice(7)}
                     minuts={el.minuty}
                     StyleIcon={{ display: "none" }}
+                    StyleArrow={{display: "none"}}
                   />
                 ))}
               </PlayersHolder>
@@ -186,6 +191,7 @@ function ElStat({ pageContext }) {
                 <Title>Zmiany</Title>
                 {whichMecz.Statystyki?.map((el) =>
                   el.Zmiany?.map((el) => (
+                    <div style={{width:"100%"}}>
                     <PlayerSec
                       name={el.ZmianaNa}
                       key={el.ZmianaNa}
@@ -194,9 +200,23 @@ function ElStat({ pageContext }) {
                         ?.zdjecia.slice(7)}
                       minuts={el.minuta}
                       StyleIcon={{ display: "none" }}
+                      colorArrow="green"
                     />
+                    <PlayerSec
+                      name={el.ZmianaZ}
+                      key={el.ZmianaZ}
+                      src={team.team
+                        .find((element) => element.name === el.ZmianaNa)
+                        ?.zdjecia.slice(7)}
+                      minuts={el.minuta}
+                      StyleIcon={{ display: "none" }}
+                      StyleArrow={{transform: "rotate(180deg)"}}
+                      colorArrow="red"
+                    />
+                    </div>
                   ))
                 )}
+                <FontAwesomeIcon icon={faArrowUp} size="1x" color="black" />
               </PlayersHolder>
               <PlayersHolder>
                 <Title>Kary</Title>
@@ -210,6 +230,7 @@ function ElStat({ pageContext }) {
                         ?.zdjecia.slice(7)}
                       minuts={el.minuta}
                       color={el.kartka === "czerwona" ? "red" : "yellow"}
+                      StyleArrow={{display: "none"}}
                     />
                   ))
                 )}
@@ -262,7 +283,7 @@ const WhoPlayBox = styled.div`
   justify-content: space-around;
   align-items: center;
   background-color: #ffe600;
-  border-bottom:1px solid black;
+  border-bottom: 1px solid black;
 `;
 const WhoScoredBox = styled.div`
   width: 100%;

@@ -4,37 +4,51 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const result = await graphql(`
-    {
-      allContentJson(filter: {sezon: {elemMatch: {sezon: {ne: null}}}}) {
-        nodes {
-          sezon {
-            mecz {
-              Statystyki {
-                BramkiPFT {
-                  Zawodnicy
-                  minuta
-                }
-                BramkiPrzeciwnika {
-                  minuta
-                  Zawodnicy
-                }
-              }
-              Zawodnicy {
-                CKartki
-                ZKartki
+  {
+    allContentJson(filter: {sezon: {elemMatch: {sezon: {ne: null}}}}) {
+      nodes {
+        sezon {
+          mecz {
+            Statystyki {
+              BramkiPFT {
                 Zawodnicy
-                minuty
+                minuta
               }
-              data
-              godzina
-              gospodarze
-              miejsce
-              przeciwnik
+              BramkiPrzeciwnika {
+                minuta
+                Zawodnicy
+                name
+              }
+              Zmiany {
+                ZmianaNa
+                ZmianaZ
+                minuta
+              }
+              Kartki {
+                Zawodnicy
+                kartka
+                minuta
+              }
             }
+            Zawodnicy {
+              CKartki
+              ZKartki
+              Zawodnicy
+              minuty
+            }
+            data
+            godzina
+            gospodarze
+            miejsce
+            przeciwnik
+            enemyGoals
+            pftGoals
           }
         }
       }
     }
+  }
+  
   `)
   const templatePath = path.resolve(`src/components/Organism/ElStat.js`);
 

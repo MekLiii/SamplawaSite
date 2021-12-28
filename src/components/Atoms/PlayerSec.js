@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { TabletPortrait } from "react-ionicons";
+import { TabletPortrait,CaretUpOutline } from "react-ionicons";
 
 
-function PlayerSec({ minuts, src, name,color,StyleIcon }) {
+
+function PlayerSec({ minuts, src, name,color,StyleIcon, colorArrow,StyleArrow}) {
   return (
     <PlayersHolder>
       <Bottom>
@@ -12,6 +13,8 @@ function PlayerSec({ minuts, src, name,color,StyleIcon }) {
         <span>
           {minuts}' 
           <TabletPortrait color={color} style={StyleIcon}/>
+          <CaretUpOutline color={colorArrow} style={StyleArrow}/>
+          
         </span>
       </Bottom>
     </PlayersHolder>
