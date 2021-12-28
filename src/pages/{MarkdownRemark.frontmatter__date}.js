@@ -47,6 +47,11 @@ export default function Template({ data }) {
             <SidePost>
               <Article>
                 <Text>{frontmatter.tresc}</Text>
+                <Cytat>
+                  <CytatText>
+                    {frontmatter?.cytat}
+                  </CytatText>
+                </Cytat>
                 {frontmatter.AdditionalText?.map((el) => (
                   <Text>{el.addText}</Text>
                 ))}
@@ -55,7 +60,7 @@ export default function Template({ data }) {
             <SidePost style={{ flexDirection: "column" }}>
               {/* <img src={`/${image}`} className="imgArticle" alt={image} /> */}
               <ImageList
-                sx={{ width: 'auto', height: 450, overFlowY: 'hidden' }}
+                sx={{ width: "auto", height: 450, overFlowY: "hidden" }}
                 cols={3}
                 rowHeight={164}
               >
@@ -126,9 +131,9 @@ const StyledSliderElement = styled.div`
   align-items: center;
   background: rgba(255, 230, 0, 0.7);
   border-radius: 5px;
-  @media only screen and (max-width:765px){
-    width:80%;
-    height:75px;
+  @media only screen and (max-width: 765px) {
+    width: 80%;
+    height: 75px;
   }
 `;
 const Post = styled.div`
@@ -172,6 +177,19 @@ const Button = styled.div`
   align-items: center;
   cursor: pointer;
 `;
+const Cytat = styled.div`
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left:3px solid grey;
+  padding-left:10px;
+`;
+const CytatText = styled.p`
+  color:grey;
+`
 
 export const pageQuery = graphql`
   query ($id: String) {
@@ -179,7 +197,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date
-        
         naglowek
         title
         tresc
@@ -190,6 +207,7 @@ export const pageQuery = graphql`
         AdditionalText {
           addText
         }
+        cytat
       }
     }
   }
