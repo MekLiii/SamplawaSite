@@ -53,9 +53,24 @@
       "pozycja": "obrońca"
     },
     {
-      "zdjecia": "/players/test.jpg",
-      "name": "test",
-      "pozycja": "bramkarz"
+      "zdjecia": "/static/players/img/e0f34e723f752d0f49d2cddada175bb42b7e87.jpg",
+      "name": "Henryk Świątkowski",
+      "pozycja": "obrońca"
+    },
+    {
+      "zdjecia": "/static/players/img/6a577e9958eecb116c7820fc7b0799373b87fe.png",
+      "name": "Adam Dybich",
+      "pozycja": "obrońca"
+    },
+    {
+      "zdjecia": "/static/players/img/251f896dcd939a89f64184e3c1beb7c3e55c08.png",
+      "name": "Radosław Buczkowski",
+      "pozycja": "pomocnik"
+    },
+    {
+      "zdjecia": "/static/players/img/9ef405f747fc28afaa862fa12229646b32043d.jpg",
+      "name": "Cezary Chorzelewski",
+      "pozycja": "pomocnik"
     }
   ],
   "mlodzik": [
