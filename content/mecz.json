@@ -94,6 +94,15 @@
           "gospodarze": "PFT DREWNEKS SAMPŁAWA",
           "enemyGoals": 3,
           "godzina": "16:00"
+        },
+        {
+          "pftGoals": -3,
+          "enemyGoals": 0,
+          "data": "12/28/2021",
+          "gospodarze": "PFT DREWNEKS SAMPŁAWA",
+          "przeciwnik": "Huragan Byszwałd",
+          "godzina": "15:00",
+          "miejsce": "Sampława"
         }
       ]
     },
@@ -137,5 +146,5 @@
       ]
     }
   ],
-  "AktualnySezon": "2021/2022"
+  "AktualnySezon": "2020/2021"
 }
