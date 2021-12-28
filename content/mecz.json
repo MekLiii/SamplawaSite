@@ -5,11 +5,11 @@
       "mecz": [
         {
           "pftGoals": 0,
-          "enemyGoals": 3,
           "data": "10/23/2021",
-          "gospodarze": "PFT DREWNEKS SAMPŁAWA",
           "przeciwnik": "LZS TORPEDA Rożental",
-          "godzina": "16:00",
+          "Statystyki": [
+            {}
+          ],
           "miejsce": "Sampława",
           "Zawodnicy": [
             {
@@ -43,8 +43,27 @@
             {
               "Zawodnicy": "Dawid Mederski",
               "minuty": 71
+            },
+            {
+              "Zawodnicy": "Michał Raciborski",
+              "minuty": 70
+            },
+            {
+              "Zawodnicy": "Marek Laskowski",
+              "minuty": 46
+            },
+            {
+              "Zawodnicy": "Dawid Mederski",
+              "minuty": 71
+            },
+            {
+              "Zawodnicy": "Sylwester Bukowski",
+              "minuty": 55
             }
-          ]
+          ],
+          "gospodarze": "PFT DREWNEKS SAMPŁAWA",
+          "enemyGoals": 3,
+          "godzina": "16:00"
         }
       ]
     },
