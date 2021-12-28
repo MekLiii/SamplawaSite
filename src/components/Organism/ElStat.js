@@ -78,7 +78,8 @@ function ElStat({ pageContext }) {
   //   console.log("Większa")
 
   // }
-  console.log(whichMecz);
+  const whoScored = whichMecz.Statystyki;
+  console.log(whoScored.map((el) => el.BramkiPFT.map((el) => el)));
 
   return (
     <Layout>
@@ -118,10 +119,23 @@ function ElStat({ pageContext }) {
           </SidebarTop>
           <SidebarBottom>
             <WhoPlayBox>
-              <WhoPlayText>{whichMecz.gospodarze}</WhoPlayText>
+              <div style={{display: 'flex', flexDirection: "column"}}>
+                <WhoPlayText>{whichMecz.gospodarze}</WhoPlayText>
+                <span>
+                  {whoScored.map((el) =>
+                    el.BramkiPFT.map((el) => (
+                      <div>
+                      {el.Zawodnicy}{el.minuta}
+                      </div>
+                    ))
+                  )}
+                </span>
+              </div>
+
               <WhoPlayText>
                 {whichMecz.pftGoals == undefined ? "0" : whichMecz.pftGoals}
               </WhoPlayText>
+
               <WhoPlayText>-:-</WhoPlayText>
               <WhoPlayText>
                 {whichMecz.enemyGoals == undefined ? "0" : whichMecz.enemyGoals}
@@ -139,37 +153,41 @@ function ElStat({ pageContext }) {
                       .find((element) => element.name === el.Zawodnicy)
                       ?.zdjecia.slice(7)}
                     minuts={el.minuty}
-                    StyleIcon={{display: 'none'}}
+                    StyleIcon={{ display: "none" }}
                   />
                 ))}
               </PlayersHolder>
               <PlayersHolder>
                 <h1>Zmiany</h1>
-                {whichMecz.Statystyki?.map((el) => (el.Zmiany?.map((el) => (
-                  <PlayerSec
-                    name={el.ZmianaNa}
-                    key={el.ZmianaNa}
-                    src={team.team
-                      .find((element) => element.name === el.ZmianaNa)
-                      ?.zdjecia.slice(7)}
-                    minuts={el.minuta}
-                    StyleIcon={{display: 'none'}}
-                  />
-                ))))}
+                {whichMecz.Statystyki?.map((el) =>
+                  el.Zmiany?.map((el) => (
+                    <PlayerSec
+                      name={el.ZmianaNa}
+                      key={el.ZmianaNa}
+                      src={team.team
+                        .find((element) => element.name === el.ZmianaNa)
+                        ?.zdjecia.slice(7)}
+                      minuts={el.minuta}
+                      StyleIcon={{ display: "none" }}
+                    />
+                  ))
+                )}
               </PlayersHolder>
               <PlayersHolder>
                 <h1>Kary</h1>
-                {whichMecz.Statystyki?.map((el) => (el.Kartki?.map((el) => (
-                  <PlayerSec
-                    name={el.Zawodnicy}
-                    key={el.ZmianaNa}
-                    src={team.team
-                      .find((element) => element.name === el.Zawodnicy)
-                      ?.zdjecia.slice(7)}
-                    minuts={el.minuta}
-                    color={el.kartka === "czerwona" ? "red" : "yellow"}
-                  />
-                ))))}
+                {whichMecz.Statystyki?.map((el) =>
+                  el.Kartki?.map((el) => (
+                    <PlayerSec
+                      name={el.Zawodnicy}
+                      key={el.ZmianaNa}
+                      src={team.team
+                        .find((element) => element.name === el.Zawodnicy)
+                        ?.zdjecia.slice(7)}
+                      minuts={el.minuta}
+                      color={el.kartka === "czerwona" ? "red" : "yellow"}
+                    />
+                  ))
+                )}
               </PlayersHolder>
             </PlayersBox>
           </SidebarBottom>
@@ -185,6 +203,7 @@ const Cointainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 const Box = styled.div`

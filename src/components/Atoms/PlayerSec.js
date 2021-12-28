@@ -23,8 +23,10 @@ const PlayersHolder = styled.div`
   height: 100px;
   width: 100%;
    margin-top:10px;
+   margin-bottom:10px;
   justify-content: center;
   align-items: center;
+  
 `;
 const Top = styled.div`
   height: 20%;
@@ -42,6 +44,7 @@ const Bottom = styled.div`
   background-color: black;
   border:1px solid #ffe600;
   color:white;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
 `;
 const Img = styled.img`
   width: 75px;
