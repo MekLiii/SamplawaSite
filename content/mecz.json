@@ -90,7 +90,7 @@
             {
               "ZKartki": 0,
               "CKartki": 0,
-              "Zawodnicy": "Szymon Łątkowski",
+              "Zawodnicy": "Krystian Kozłowski",
               "minuty": 55
             }
           ],
@@ -99,14 +99,14 @@
           "godzina": "15:00"
         },
         {
-          "pftGoals": 0,
+          "pftGoals": 2,
           "data": "12/13/2021",
           "przeciwnik": "Huragan Byszwałd",
           "Statystyki": [
             {
               "BramkiPFT": [
                 {
-                  "Zawodnicy": "Mateusz Kroplewski",
+                  "Zawodnicy": "Lucjan Szwarc",
                   "minuta": 44
                 },
                 {
@@ -133,20 +133,32 @@
           "miejsce": "boisko Sampława",
           "Zawodnicy": [
             {
-              "Zawodnicy": "Krystian wasiewski",
+              "Zawodnicy": "Wojciech Banacki",
               "minuty": 90
             },
             {
-              "Zawodnicy": "Krystian Kozłowski",
+              "Zawodnicy": "Sylwester Rynkowski",
               "minuty": 90
             },
             {
-              "Zawodnicy": "Leo Messi",
+              "Zawodnicy": "Lucjan Szwarc",
               "minuty": 90
             },
             {
-              "Zawodnicy": "Mateusz Kroplewski",
+              "Zawodnicy": "Tomasz Sławiński",
               "minuty": 2
+            },
+            {
+              "Zawodnicy": "Andrzej Podlaszewski",
+              "minuty": 60
+            },
+            {
+              "Zawodnicy": "Andrzej Podlaszewski",
+              "minuty": 55
+            },
+            {
+              "Zawodnicy": "Wojciech Banacki",
+              "minuty": 14
             }
           ],
           "gospodarze": "PFT Sampława",
@@ -177,7 +189,7 @@
           "miejsce": "Stadion Sampława",
           "Zawodnicy": [
             {
-              "Zawodnicy": "Szymon Łątkowski",
+              "Zawodnicy": "Krystian Kozłowski",
               "minuty": 55
             }
           ],
