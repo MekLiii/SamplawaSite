@@ -1,5 +1,5 @@
 ---
-naglowek: "PFT Drewneks Sampława - LZS Torpeda Rożental [ZAPOWIEDŹ] "
+naglowek: "PFT Drewneks Sampława - LZS Torpeda Rożental [ZAPOWIEDŹ]  "
 date: 21-10-2021
 zdjecia: /static/img/3cff1b9d93d489557bea7d6ff45d91948e9375.jpg
 tresc: >-
