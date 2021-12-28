@@ -45,6 +45,9 @@ const Bottom = styled.div`
   border:1px solid #ffe600;
   color:white;
   background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
+  @media (max-width: 768px) {
+      width:90%;
+  }
 `;
 const Img = styled.img`
   width: 75px;

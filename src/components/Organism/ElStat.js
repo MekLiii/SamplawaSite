@@ -14,6 +14,7 @@ import PlayerSec from "../Atoms/PlayerSec";
 
 function ElStat({ pageContext }) {
   const { slug } = pageContext;
+  console.log(slug)
   const [age, setAge] = useState("");
   const [whichMecz, setWhichMecz] = useState(slug);
 
@@ -79,7 +80,7 @@ function ElStat({ pageContext }) {
 
   // }
   const whoScored = whichMecz.Statystyki;
-  console.log(whoScored.map((el) => el.BramkiPFT.map((el) => el)));
+  console.log(whichMecz);
 
   return (
     <Layout>
@@ -119,18 +120,7 @@ function ElStat({ pageContext }) {
           </SidebarTop>
           <SidebarBottom>
             <WhoPlayBox>
-              <div style={{display: 'flex', flexDirection: "column"}}>
-                <WhoPlayText>{whichMecz.gospodarze}</WhoPlayText>
-                <span>
-                  {whoScored.map((el) =>
-                    el.BramkiPFT.map((el) => (
-                      <div>
-                      {el.Zawodnicy}{el.minuta}
-                      </div>
-                    ))
-                  )}
-                </span>
-              </div>
+              <WhoPlayText>{whichMecz.gospodarze}</WhoPlayText>
 
               <WhoPlayText>
                 {whichMecz.pftGoals == undefined ? "0" : whichMecz.pftGoals}
@@ -142,9 +132,44 @@ function ElStat({ pageContext }) {
               </WhoPlayText>
               <WhoPlayText>{whichMecz.przeciwnik}</WhoPlayText>
             </WhoPlayBox>
+            <WhoScoredBox>
+              <div>
+                {whoScored.map((el) =>
+                  el.BramkiPFT?.map((el) => (
+                    <div
+                      key={el.Zawodnicy}
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-around",
+                      }}
+                    >
+                      <WhoScoredText>{el.Zawodnicy}</WhoScoredText>
+                      <WhoScoredText>{`${el.minuta}'`}</WhoScoredText>
+                    </div>
+                  ))
+                )}
+              </div>
+
+              <div>
+                {whoScored.map((el) =>
+                  el.BramkiPrzeciwnika?.map((el) => (
+                    <div
+                      key={el.BramkiPrzeciwnika}
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-around",
+                      }}
+                    >
+                      <WhoScoredText>{el.Zawodnicy}</WhoScoredText>
+                      <WhoScoredText>{`${el.minuta}'`}</WhoScoredText>
+                    </div>
+                  ))
+                )}
+              </div>
+            </WhoScoredBox>
             <PlayersBox>
               <PlayersHolder>
-                <h1>Skład wyjściowy</h1>
+                <Title>Skład wyjściowy</Title>
                 {whichMecz.Zawodnicy?.map((el) => (
                   <PlayerSec
                     name={el.Zawodnicy}
@@ -158,7 +183,7 @@ function ElStat({ pageContext }) {
                 ))}
               </PlayersHolder>
               <PlayersHolder>
-                <h1>Zmiany</h1>
+                <Title>Zmiany</Title>
                 {whichMecz.Statystyki?.map((el) =>
                   el.Zmiany?.map((el) => (
                     <PlayerSec
@@ -174,7 +199,7 @@ function ElStat({ pageContext }) {
                 )}
               </PlayersHolder>
               <PlayersHolder>
-                <h1>Kary</h1>
+                <Title>Kary</Title>
                 {whichMecz.Statystyki?.map((el) =>
                   el.Kartki?.map((el) => (
                     <PlayerSec
@@ -209,7 +234,7 @@ const Cointainer = styled.div`
 const Box = styled.div`
   width: 90%;
   min-height: 82vh;
-  background-color: rgba(43, 43, 43, 0.95);
+  ${"" /* background-color: rgba(43, 43, 43, 0.95); */}
   margin: 50px;
   display: flex;
   flex-direction: column;
@@ -231,17 +256,35 @@ const SidebarBottom = styled.div`
 `;
 const WhoPlayBox = styled.div`
   width: 100%;
-  height: 20%;
+  height: 30%;
+  padding: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #ffe600;
+  border-bottom:1px solid black;
+`;
+const WhoScoredBox = styled.div`
+  width: 100%;
+  height: 30%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffe300;
+`;
+const WhoScoredText = styled.p`
+  font-family: poppins;
+  font-size: clamp(10px, 3vw, 20px);
+  margin-bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 const WhoPlayText = styled.p`
-  ${"" /* font-size: 32px; */}
   font-family: poppins;
   font-size: clamp(15px, 5vw, 33px);
   margin-bottom: 0;
+  text-align: center;
 `;
 const PlayersBox = styled.div`
   width: 100%;
@@ -255,4 +298,10 @@ const PlayersHolder = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+`;
+const Title = styled.p`
+  margin-bottom: 0;
+  font-family: poppins;
+  color: white;
+  font-size: clamp(15px, 5vw, 33px);
 `;
