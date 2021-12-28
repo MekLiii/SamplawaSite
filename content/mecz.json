@@ -127,6 +127,13 @@
                   "kartka": "żółta",
                   "minuta": 12
                 }
+              ],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Szymon Łątkowski",
+                  "minuta": 55,
+                  "ZmianaNa": "Krystian Zelmański"
+                }
               ]
             }
           ],
