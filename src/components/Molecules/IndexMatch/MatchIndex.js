@@ -100,6 +100,7 @@ function MatchIndex() {
           nameEnemy={resultNextMatch.przeciwnik}
           whatNext={`${resultNextMatch.godzina} ${resultNextMatch.miejsce}`}
           sign="VS"
+         
         />
       </StyledDiv>
     </Cointainer>

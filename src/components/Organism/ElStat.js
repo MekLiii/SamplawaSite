@@ -18,9 +18,7 @@ function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [age, setAge] = useState("");
   const [whichMecz, setWhichMecz] = useState(slug);
- 
- console.log(slug)
-  console.log(whichMecz)
+
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -66,25 +64,32 @@ function ElStat({ pageContext }) {
 
   if (whichMecz.Statystyki == undefined) {
     stats.unshift("0");
-    stats.unshift("0");
+    
   }
+  
+  const bramkiPFT =
+      stats[0].BramkiPFT === undefined ? "0" : stats[0].BramkiPFT.length;
+    const bramkiPrzeciwnika =
+      stats[0].BramkiPrzeciwnika === undefined
+        ? "0"
+        : stats[0].BramkiPrzeciwnika.length;
+  console.log(bramkiPrzeciwnika)
 
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   // const findMatch = matches.find((el) => el.data === whichMecz);
-  
-  
+
   const today = new Date();
-  const actualtDate = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear();
+  const actualtDate =
+    today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
   const ifDate = (date) => {
-    return new Date(date)
-  }
+    return new Date(date);
+  };
   // if(ifDate(findMatch?.data) > (ifDate(actualtDate))){
   //   console.log("Większa")
-    
+
   // }
-  
-  
+
   return (
     <Layout>
       <Cointainer>
@@ -122,7 +127,13 @@ function ElStat({ pageContext }) {
             </FormControl>
           </SidebarTop>
           <SidebarBottom>
-            
+            <WhoPlayBox>
+              <WhoPlayText>{whichMecz.gospodarze}</WhoPlayText>
+              <WhoPlayText>{bramkiPFT}</WhoPlayText>
+              <WhoPlayText>-:-</WhoPlayText>
+              <WhoPlayText>{bramkiPrzeciwnika}</WhoPlayText>
+              <WhoPlayText>{whichMecz.przeciwnik}</WhoPlayText>
+            </WhoPlayBox>
           </SidebarBottom>
         </Box>
       </Cointainer>
@@ -143,17 +154,36 @@ const Box = styled.div`
   min-height: 82vh;
   background-color: rgba(43, 43, 43, 0.95);
   margin: 50px;
+  display: flex;
+  flex-direction: column;
 `;
 const SidebarTop = styled.div`
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 20%;
 `;
 const SidebarBottom = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
+  height: 70vh;
+ 
+`;
+const WhoPlayBox = styled.div`
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffe600;
+`;
+const WhoPlayText = styled.p`
+  ${'' /* font-size: 32px; */}
+  font-family: poppins;
+  font-size: clamp(15px,5vw,33px);
+  margin-bottom:0;
 `;

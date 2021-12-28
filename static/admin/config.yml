@@ -73,6 +73,8 @@ collections:
                   - {label: przeciwnik, name: przeciwnik, widget: string}
                   - {label: godzina, name: godzina , widget: string}
                   - {label: miejsce, name: miejsce, widget: string}
+                  - {label: bramki PFT, name: pftGoals, widget: number, default: 0}
+                  - {label: bramki przeciwnika, name: enemyGoals, widget: number,default: 0}
                   - label: Zawodnicy
                     name: Zawodnicy
                     widget: list
