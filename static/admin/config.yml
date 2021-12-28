@@ -154,8 +154,9 @@ collections:
     fields:
       - { label: 'naglowek', name: 'naglowek', widget: 'string' }
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
-      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/img/test.jpg", media_folder: /static/img/}
+      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, media_folder: /static/img/}
       - { label: 'tresc', name: 'tresc', widget: 'markdown', required: false }
+      - { label: 'Cytat', name: 'cytat', widget: 'markdown', required: false }
       -   label: Dodatkowy text
           name: AdditionalText
           widget: list
@@ -165,7 +166,7 @@ collections:
           name: images
           widget: list
           fields:
-            - { label: "Featured Image", name: "thumbnail", widget: "image", allow_multiple: true, choose_url: true, default: "/static/Galery/24e84486d3ed4e3e61ef5cca01ce237fe205b4.jpg", media_folder: /static/Galery/ } 
+            - { label: "Featured Image", name: "thumbnail", widget: "image", allow_multiple: true, choose_url: true, media_folder: /static/Galery/ } 
 
   - label: "Tabela"
     name: "tabela"

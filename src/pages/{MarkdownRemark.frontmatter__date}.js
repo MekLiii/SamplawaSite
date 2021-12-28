@@ -17,7 +17,7 @@ export default function Template({ data }) {
   const galery = frontmatter?.images;
   const [dataImage, setDataImage] = useState();
   const [modalShow, setModalShow] = useState(false);
-  console.log(frontmatter.AdditionalText);
+  // pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n\n(.*?)\n^<\/details>$/ms
   return (
     <LayOut
       style={{
