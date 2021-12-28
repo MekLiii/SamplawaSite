@@ -105,7 +105,9 @@ collections:
                                 collection: zawodnicy,
                                 search_fields: [team.*.name],
                                 display_fields: [team.*.name],
-                                value_field: team.*.name}
+                                value_field: team.*.name,
+                                options_length: 50,        
+                            }
                           - {label: minuta, name: minuta, widget: number}
                       - label: Bramki Przeciwnika
                         name: BramkiPrzeciwnika
@@ -123,7 +125,9 @@ collections:
                                 collection: zawodnicy,
                                 search_fields: [team.*.name],
                                 display_fields: [team.*.name],
-                                value_field: team.*.name}
+                                value_field: team.*.name,
+                                options_length: 50,    
+                            }
                           - {label: kartka, name: kartka, widget: "select", options: ["żółta", "czerwona"]}                      
                           - {label: minuta, name: minuta, widget: number}
                       - label: Zmiany
@@ -136,7 +140,9 @@ collections:
                                 collection: zawodnicy,
                                 search_fields: [team.*.name],
                                 display_fields: [team.*.name],
-                                value_field: team.*.name}                      
+                                value_field: team.*.name,
+                                options_length: 50,        
+                            }                      
                           - {label: minuta, name: minuta, widget: number}
                           - {label: "Zmiana na",
                                 name: "ZmianaNa",
@@ -144,7 +150,9 @@ collections:
                                 collection: zawodnicy,
                                 search_fields: [team.*.name],
                                 display_fields: [team.*.name],
-                                value_field: team.*.name}         
+                                value_field: team.*.name,
+                                options_length: 50,    
+                            }         
   - name: 'Aktualnosci'
     label: 'Aktualnosci'
     folder: 'content/blog'
