@@ -135,7 +135,7 @@ function ElStat({ pageContext }) {
             </WhoPlayBox>
             <WhoScoredBox>
               <div style={{ flex: 1 }}>
-                {whoScored.map((el) =>
+                {whoScored?.map((el) =>
                   el.BramkiPFT?.map((el) => (
                     <div
                       key={el.Zawodnicy}
