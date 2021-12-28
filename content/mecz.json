@@ -5,225 +5,42 @@
       "mecz": [
         {
           "pftGoals": 0,
-          "data": "12/10/2021",
-          "przeciwnik": "jamielnik",
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Leo Messi",
-                  "minuta": 2
-                },
-                {
-                  "Zawodnicy": "Kamil Czacharowski",
-                  "minuta": 54
-                }
-              ],
-              "BramkiPrzeciwnika": [
-                {
-                  "name": "test",
-                  "minuta": 5,
-                  "Zawodnicy": "Test"
-                }
-              ]
-            }
-          ],
-          "miejsce": "Lubawa",
+          "enemyGoals": 3,
+          "data": "10/23/2021",
+          "gospodarze": "PFT DREWNEKS SAMPŁAWA",
+          "przeciwnik": "LZS TORPEDA Rożental",
+          "godzina": "16:00",
+          "miejsce": "Sampława",
           "Zawodnicy": [
-            {
-              "ZKartki": 0,
-              "CKartki": 0,
-              "Zawodnicy": "Leo Messi",
-              "minuty": 4
-            },
             {
               "Zawodnicy": "Łukasz Ochlak",
-              "minuty": 15
-            }
-          ],
-          "gospodarze": "Lubawa",
-          "enemyGoals": 0,
-          "godzina": "15:00"
-        },
-        {
-          "pftGoals": 0,
-          "data": "12/13/2021",
-          "przeciwnik": "Torpeda Rożental",
-          "Statystyki": [
+              "minuty": 90
+            },
             {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Krystian wasiewski",
-                  "minuta": 14
-                }
-              ],
-              "BramkiPrzeciwnika": [
-                {
-                  "name": "Random Test",
-                  "minuta": 65,
-                  "Zawodnicy": "Random test"
-                },
-                {
-                  "Zawodnicy": "Random test2",
-                  "minuta": 55,
-                  "name": "test6"
-                }
-              ],
-              "Kartki": [
-                {
-                  "Zawodnicy": "Kamil Czacharowski",
-                  "kartka": "czerwona",
-                  "minuta": 53
-                }
-              ],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Kamil Czacharowski",
-                  "minuta": 43,
-                  "ZmianaNa": "Leo Messi"
-                }
-              ]
-            }
-          ],
-          "miejsce": "Test",
-          "Zawodnicy": [
+              "Zawodnicy": "Adam Dybich",
+              "minuty": 90
+            },
             {
-              "ZKartki": 0,
-              "CKartki": 0,
-              "Zawodnicy": "Krystian Kozłowski",
-              "minuty": 55
-            }
-          ],
-          "gospodarze": "Sampława",
-          "enemyGoals": 0,
-          "godzina": "15:00"
-        },
-        {
-          "pftGoals": 2,
-          "data": "12/13/2021",
-          "przeciwnik": "Huragan Byszwałd",
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Lucjan Szwarc",
-                  "minuta": 44
-                },
-                {
-                  "Zawodnicy": "Mateusz Kroplewski",
-                  "minuta": 55
-                }
-              ],
-              "BramkiPrzeciwnika": [
-                {
-                  "Zawodnicy": "Random",
-                  "minuta": 43,
-                  "name": "random23"
-                }
-              ],
-              "Kartki": [
-                {
-                  "Zawodnicy": "Krystian Kozłowski",
-                  "kartka": "żółta",
-                  "minuta": 12
-                }
-              ],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Szymon Łątkowski",
-                  "minuta": 55,
-                  "ZmianaNa": "Krystian Zelmański"
-                }
-              ]
-            }
-          ],
-          "miejsce": "boisko Sampława",
-          "Zawodnicy": [
+              "Zawodnicy": "Andrzej Podlaszewski",
+              "minuty": 90
+            },
             {
               "Zawodnicy": "Sylwester Rynkowski",
               "minuty": 90
             },
             {
-              "Zawodnicy": "Lucjan Szwarc",
-              "minuty": 90
-            },
-            {
               "Zawodnicy": "Tomasz Sławiński",
-              "minuty": 2
-            },
-            {
-              "Zawodnicy": "Andrzej Podlaszewski",
               "minuty": 60
             },
             {
-              "Zawodnicy": "Wojciech Banacki",
-              "minuty": 14
+              "Zawodnicy": "Szymon Łątkowski",
+              "minuty": 50
             },
             {
-              "Zawodnicy": "Arkadiusz Wietecha",
-              "minuty": 2
+              "Zawodnicy": "Jakub Lendzionowski",
+              "minuty": 90
             }
-          ],
-          "gospodarze": "PFT Sampława",
-          "enemyGoals": 1,
-          "godzina": "15:00"
-        },
-        {
-          "pftGoals": 1,
-          "data": "12/15/2021",
-          "przeciwnik": "Huragan Byszwałd",
-          "Statystyki": [
-            {
-              "Kartki": [
-                {
-                  "Zawodnicy": "Kamil Czacharowski",
-                  "kartka": "czerwona",
-                  "minuta": 13
-                }
-              ],
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Szymon Łątkowski",
-                  "minuta": 53
-                }
-              ]
-            }
-          ],
-          "miejsce": "Stadion Sampława",
-          "Zawodnicy": [
-            {
-              "Zawodnicy": "Krystian Kozłowski",
-              "minuty": 55
-            }
-          ],
-          "gospodarze": "PFT drewneks Sampława",
-          "enemyGoals": 0,
-          "godzina": "15:00"
-        },
-        {
-          "data": "01/28/2022",
-          "gospodarze": "Sampława",
-          "przeciwnik": "Huragan Byszwałd",
-          "godzina": "15:00",
-          "miejsce": "Sampława",
-          "Statystyki": [
-            {
-              "BramkiPrzeciwnika": [
-                {
-                  "name": "teest",
-                  "minuta": 57
-                }
-              ],
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Krystian Zelmański",
-                  "minuta": 55
-                }
-              ]
-            }
-          ],
-          "pftGoals": 0,
-          "enemyGoals": 3
+          ]
         }
       ]
     },
