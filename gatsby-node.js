@@ -24,11 +24,6 @@ exports.createPages = async ({ graphql, actions }) => {
                 ZmianaZ
                 minuta
               }
-              Kartki {
-                Zawodnicy
-                kartka
-                minuta
-              }
             }
             Zawodnicy {
               CKartki
@@ -48,22 +43,20 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   }
-  
-  `)
+  `);
   const templatePath = path.resolve(`src/components/Organism/ElStat.js`);
 
   result.data.allContentJson.nodes.forEach((node) => {
     node.sezon.forEach((node) => {
-        node.mecz.forEach((node) => {
-            createPage({
-                path: `/mecze/${node.gospodarze}-${node.przeciwnik}`,
-                component: templatePath,
-                context: {
-                  slug: node,
-                },
-              });
-        })
-    })
+      node.mecz.forEach((node) => {
+        createPage({
+          path: `/mecze/${node.gospodarze}-${node.przeciwnik}`,
+          component: templatePath,
+          context: {
+            slug: node,
+          },
+        });
+      });
+    });
   });
 };
-
