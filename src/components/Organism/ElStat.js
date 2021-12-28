@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import styled from "styled-components";
-import AtomicPlayer from "../Atoms/AtomicPlayer";
+
 import Layout from "./Layout";
 import data from "../../../content/mecz.json";
-import LastMatchEl from "../Atoms/LastMatchEl";
-import { ArrowUp } from "react-ionicons";
-import { ArrowDown } from "react-ionicons";
-import { TabletPortrait } from "react-ionicons";
+import team from '../../../content/druzyna.json'
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { makeStyles } from "@material-ui/core";
+import PlayerSec from "../Atoms/PlayerSec";
 
 function ElStat({ pageContext }) {
   const { slug } = pageContext;
@@ -67,28 +65,25 @@ function ElStat({ pageContext }) {
     
   }
   
-  const bramkiPFT =
-      stats[0].BramkiPFT === undefined ? "0" : stats[0].BramkiPFT.length;
-    const bramkiPrzeciwnika =
-      stats[0].BramkiPrzeciwnika === undefined
-        ? "0"
-        : stats[0].BramkiPrzeciwnika.length;
+  
   
 
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   // const findMatch = matches.find((el) => el.data === whichMecz);
-  console.log(whichMecz?.pftGoals)
-  const today = new Date();
-  const actualtDate =
-    today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
-  const ifDate = (date) => {
-    return new Date(date);
-  };
+  console.log(team.team)
+  //Porównanie daty, czy mecz się odbył
+  // const today = new Date();
+  // const actualtDate =
+  //   today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
+  // const ifDate = (date) => {
+  //   return new Date(date);
+  // };
   // if(ifDate(findMatch?.data) > (ifDate(actualtDate))){
   //   console.log("Większa")
 
   // }
+  console.log(whichMecz)
 
   return (
     <Layout>
@@ -129,11 +124,27 @@ function ElStat({ pageContext }) {
           <SidebarBottom>
             <WhoPlayBox>
               <WhoPlayText>{whichMecz.gospodarze}</WhoPlayText>
-              <WhoPlayText>{whichMecz.pftGoals}</WhoPlayText>
+              <WhoPlayText>{(whichMecz.pftGoals == undefined) ? "0" : whichMecz.pftGoals}</WhoPlayText>
               <WhoPlayText>-:-</WhoPlayText>
-              <WhoPlayText>{whichMecz.enemyGoals}</WhoPlayText>
+              <WhoPlayText>{(whichMecz.enemyGoals == undefined) ? "0" : whichMecz.enemyGoals}</WhoPlayText>
               <WhoPlayText>{whichMecz.przeciwnik}</WhoPlayText>
             </WhoPlayBox>
+            <PlayersBox>
+                  <PlayersHolder>
+                    <h1>Skład wyjściowy</h1>
+                    {whichMecz.Zawodnicy?.map((el) => (
+                      <PlayerSec name={el.Zawodnicy} key={el.Zawodnicy} src={team.team.find((element) => (element.name == el.Zawodnicy).zdjecia?.slice(8))}/>
+                    ))}
+                  </PlayersHolder>
+                  <PlayersHolder>
+                    <h1>Zmiany</h1>
+                    <PlayerSec />
+                  </PlayersHolder>
+                  <PlayersHolder>
+                    <h1>Kary</h1>
+                    <PlayerSec />
+                  </PlayersHolder>
+            </PlayersBox>
           </SidebarBottom>
         </Box>
       </Cointainer>
@@ -170,7 +181,7 @@ const SidebarBottom = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  height: 70vh;
+  min-height: 70vh;
  
 `;
 const WhoPlayBox = styled.div`
@@ -187,3 +198,15 @@ const WhoPlayText = styled.p`
   font-size: clamp(15px,5vw,33px);
   margin-bottom:0;
 `;
+const PlayersBox = styled.div`
+  width: 100%;
+  min-height: 65vh;
+  display: grid;
+  
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+`
+const PlayersHolder = styled.div`
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`
