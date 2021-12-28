@@ -1,0 +1,11 @@
+---
+naglowek: "PFT Drewneks Sampława - LZS Torpeda Rożental [ZAPOWIEDŹ] "
+date: 21-10-2021
+zdjecia: /static/img/3cff1b9d93d489557bea7d6ff45d91948e9375.jpg
+tresc: >-
+  
+
+  W sobotę, 23 października piłkarze PFT Drewneks Sampława zagrają ostatni mecz w tej rundzie i to przed własną publicznością. Rywalem będzie drużyna LZS Torpeda Rożental. W poprzedniej kolejce zawodnicy PFT ponieśli pierwszą w tym sezonie porażkę, ulegając w Szymbarku tamtejszemu Zamkowi 1:0 po bramce w doliczonym czasie gry. Piłkarze z Rożentala natomiast przegrali u siebie z Żakiem Jamielnik 2:4. Drużyna z Rożentala jest naszym sąsiadem w tabeli gdyż zajmuje 6 miejsce z dorobkiem 9 punktów, natomiast PFT plasuje się na 5 lokacie z dorobkiem 15 punktów. Zapowiada się z pewnością ciekawe widowisko. Gospodarze będą chcieli za wszelką cenę zmazać plamę z poprzedniej kolejki, natomiast drużyna Torpedy ewidentnie w tym sezonie czuje wiatr w żaglach i będzie chciała napsuć trochę krwi w Sampławie. Początek meczu PFT Drewneks Sampława - LZS Torpeda Rożental w sobotę, 23 października o godzinie 15.30 na boisku sportowym w Sampławie. Wszystkich kibiców serdecznie zapraszamy!
+images:
+  - thumbnail: /static/Galery/3cff1b9d93d489557bea7d6ff45d91948e9375.jpg
+---
