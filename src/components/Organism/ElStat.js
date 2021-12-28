@@ -14,7 +14,6 @@ import PlayerSec from "../Atoms/PlayerSec";
 import { faArrowUp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [age, setAge] = useState("");
@@ -142,7 +141,7 @@ function ElStat({ pageContext }) {
                       key={el.Zawodnicy}
                       style={{
                         display: "flex",
-                        justifyContent: "space-around",
+                        justifyContent: "flex-start",
                         flex: 1,
                       }}
                     >
@@ -160,7 +159,8 @@ function ElStat({ pageContext }) {
                       key={el.BramkiPrzeciwnika}
                       style={{
                         display: "flex",
-                        justifyContent: "space-around",
+                        justifyContent: "flex-start",
+                        flexDirection: "row-reverse",
                         flex: 1,
                       }}
                     >
@@ -183,7 +183,7 @@ function ElStat({ pageContext }) {
                       ?.zdjecia.slice(7)}
                     minuts={el.minuty}
                     StyleIcon={{ display: "none" }}
-                    StyleArrow={{display: "none"}}
+                    StyleArrow={{ display: "none" }}
                   />
                 ))}
               </PlayersHolder>
@@ -191,28 +191,26 @@ function ElStat({ pageContext }) {
                 <Title>Zmiany</Title>
                 {whichMecz.Statystyki?.map((el) =>
                   el.Zmiany?.map((el) => (
-                    <div style={{width:"100%"}}>
-                    <PlayerSec
-                      name={el.ZmianaNa}
-                      key={el.ZmianaNa}
-                      src={team.team
-                        .find((element) => element.name === el.ZmianaNa)
-                        ?.zdjecia.slice(7)}
-                      minuts={el.minuta}
-                      StyleIcon={{ display: "none" }}
-                      colorArrow="green"
-                    />
-                    <PlayerSec
-                      name={el.ZmianaZ}
-                      key={el.ZmianaZ}
-                      src={team.team
-                        .find((element) => element.name === el.ZmianaNa)
-                        ?.zdjecia.slice(7)}
-                      minuts={el.minuta}
-                      StyleIcon={{ display: "none" }}
-                      StyleArrow={{transform: "rotate(180deg)"}}
-                      colorArrow="red"
-                    />
+                    <div style={{ width: "100%" }} key={el.ZmianaNa}>
+                      <PlayerSec
+                        name={el.ZmianaNa}
+                        src={team.team
+                          .find((element) => element.name === el.ZmianaNa)
+                          ?.zdjecia.slice(7)}
+                        minuts={el.minuta}
+                        StyleIcon={{ display: "none" }}
+                        colorArrow="green"
+                      />
+                      <PlayerSec
+                        name={el.ZmianaZ}
+                        src={team.team
+                          .find((element) => element.name === el.ZmianaZ)
+                          ?.zdjecia.slice(7)}
+                        minuts={el.minuta}
+                        StyleIcon={{ display: "none" }}
+                        StyleArrow={{ transform: "rotate(180deg)" }}
+                        colorArrow="red"
+                      />
                     </div>
                   ))
                 )}
@@ -230,7 +228,7 @@ function ElStat({ pageContext }) {
                         ?.zdjecia.slice(7)}
                       minuts={el.minuta}
                       color={el.kartka === "czerwona" ? "red" : "yellow"}
-                      StyleArrow={{display: "none"}}
+                      StyleArrow={{ display: "none" }}
                     />
                   ))
                 )}
@@ -312,7 +310,7 @@ const PlayersBox = styled.div`
   min-height: 65vh;
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 `;
 const PlayersHolder = styled.div`
   display: flex;

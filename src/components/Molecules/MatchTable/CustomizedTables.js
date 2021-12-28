@@ -33,7 +33,7 @@ export default function DenseTable() {
         className="TableContainer"
       >
         <Table
-          sx={{ minWidth: "90%" }}
+          sx={{ minWidth: "100%" }}
           size="small"
           aria-label="a dense table"
           style={{ height: "100%" }}
