@@ -71,16 +71,16 @@
               ],
               "Kartki": [
                 {
-                  "Zawodnicy": "Szymon Łątkowski",
+                  "Zawodnicy": "Kamil Czacharowski",
                   "kartka": "czerwona",
                   "minuta": 53
                 }
               ],
               "Zmiany": [
                 {
-                  "ZmianaZ": "Szymon Łątkowski",
+                  "ZmianaZ": "Kamil Czacharowski",
                   "minuta": 43,
-                  "ZmianaNa": "Szymon Łątkowski"
+                  "ZmianaNa": "Leo Messi"
                 }
               ]
             }
@@ -158,10 +158,6 @@
             {
               "Zawodnicy": "Andrzej Podlaszewski",
               "minuty": 60
-            },
-            {
-              "Zawodnicy": "Andrzej Podlaszewski",
-              "minuty": 55
             },
             {
               "Zawodnicy": "Wojciech Banacki",
