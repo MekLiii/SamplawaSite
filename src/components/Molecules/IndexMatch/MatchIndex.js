@@ -73,7 +73,7 @@ function MatchIndex() {
   }
   const { result, bramkiPrzeciwnika, bramkiPFT } = lasMatch();
   const resultNextMatch = nextMatch();
-
+  console.log(result)
   return (
     <Cointainer>
       <StyledDiv>
@@ -82,10 +82,10 @@ function MatchIndex() {
           data={result.data}
           letters="Sam"
           name={result.gospodarze}
-          score={bramkiPFT}
+          score={result.pftGoals}
           lettersEnemy="HUR"
           nameEnemy={result.przeciwnik}
-          scoreEnemy={bramkiPrzeciwnika}
+          scoreEnemy={result.enemyGoals}
           whatNext="Zobacz statystyki"
           link={`/mecze/${result.gospodarze}-${result.przeciwnik}`}
           sign="-"

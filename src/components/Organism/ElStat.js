@@ -73,12 +73,12 @@ function ElStat({ pageContext }) {
       stats[0].BramkiPrzeciwnika === undefined
         ? "0"
         : stats[0].BramkiPrzeciwnika.length;
-  console.log(bramkiPrzeciwnika)
+  
 
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   // const findMatch = matches.find((el) => el.data === whichMecz);
-
+  console.log(whichMecz?.pftGoals)
   const today = new Date();
   const actualtDate =
     today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
@@ -129,9 +129,9 @@ function ElStat({ pageContext }) {
           <SidebarBottom>
             <WhoPlayBox>
               <WhoPlayText>{whichMecz.gospodarze}</WhoPlayText>
-              <WhoPlayText>{bramkiPFT}</WhoPlayText>
+              <WhoPlayText>{whichMecz.pftGoals}</WhoPlayText>
               <WhoPlayText>-:-</WhoPlayText>
-              <WhoPlayText>{bramkiPrzeciwnika}</WhoPlayText>
+              <WhoPlayText>{whichMecz.enemyGoals}</WhoPlayText>
               <WhoPlayText>{whichMecz.przeciwnik}</WhoPlayText>
             </WhoPlayBox>
           </SidebarBottom>
