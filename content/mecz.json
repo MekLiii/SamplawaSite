@@ -8,7 +8,16 @@
           "data": "10/23/2021",
           "przeciwnik": "LZS TORPEDA Rożental",
           "Statystyki": [
-            {}
+            {
+              "BramkiPrzeciwnika": [],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Tomasz Sławiński",
+                  "minuta": 50,
+                  "ZmianaNa": "Łukasz Ochlak"
+                }
+              ]
+            }
           ],
           "miejsce": "Sampława",
           "Zawodnicy": [
