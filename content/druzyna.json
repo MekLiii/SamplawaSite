@@ -96,6 +96,36 @@
       "zdjecia": "/static/players/img/c3922da091d840570f5d3dba240dd43f87fe10.jpg",
       "name": "Paweł Kryżba",
       "pozycja": "pomocnik"
+    },
+    {
+      "zdjecia": "/static/players/img/1296a8c5956ab93a7cedb28893fcc07d8d2561.jpg",
+      "name": "Dawid Mederski",
+      "pozycja": "napastnik"
+    },
+    {
+      "zdjecia": "/static/players/img/b3e25238c1035389c97c1f0add9c9176d4b6d8.png",
+      "name": "Jakub Lendzionowski",
+      "pozycja": "napastnik"
+    },
+    {
+      "zdjecia": "/static/players/img/0b8e43bdabac02dbc91731bcde4648837a87ea.png",
+      "name": "Szymon Lasikowski",
+      "pozycja": "napastnik"
+    },
+    {
+      "zdjecia": "/static/players/img/46c1a00b4c50bf90b053e2ce678d58a718ca00.png",
+      "name": "Michał Raciborski",
+      "pozycja": "napastnik"
+    },
+    {
+      "zdjecia": "/static/players/img/2cab50fc8d1b92181cf0627cb6a60e2e8dcc4f.jpg",
+      "name": "Marek Laskowski",
+      "pozycja": "napastnik"
+    },
+    {
+      "zdjecia": "/players/test.jpg",
+      "name": "Sylwester Bukowski",
+      "pozycja": "napastnik"
     }
   ],
   "mlodzik": [
