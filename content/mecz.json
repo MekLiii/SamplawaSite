@@ -14,9 +14,30 @@
                 {
                   "ZmianaZ": "Tomasz Sławiński",
                   "minuta": 50,
-                  "ZmianaNa": "Łukasz Ochlak"
+                  "ZmianaNa": "Szymon Lasikowski"
+                },
+                {
+                  "ZmianaZ": "Szymon Łątkowski",
+                  "minuta": 50,
+                  "ZmianaNa": "Radosław Buczkowski"
+                },
+                {
+                  "ZmianaZ": "Michał Raciborski",
+                  "minuta": 70,
+                  "ZmianaNa": "Marek Nastachowski"
+                },
+                {
+                  "ZmianaZ": "Marek Laskowski",
+                  "minuta": 46,
+                  "ZmianaNa": "Patryk Mówiński"
+                },
+                {
+                  "ZmianaZ": "Dawid Mederski",
+                  "minuta": 71,
+                  "ZmianaNa": "Przemysław Cabaj"
                 }
-              ]
+              ],
+              "Kartki": []
             }
           ],
           "miejsce": "Sampława",
