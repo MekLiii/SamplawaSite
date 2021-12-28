@@ -80,10 +80,10 @@ function MatchIndex() {
         <MatchElIndex
           title="Ostatni mecz"
           data={result.data}
-          letters="Sam"
+          letters={result.gospodarze.slice(0,3)}
           name={result.gospodarze}
           score={result.pftGoals}
-          lettersEnemy="HUR"
+          lettersEnemy={result.przeciwnik.slice(0,3)}
           nameEnemy={result.przeciwnik}
           scoreEnemy={result.enemyGoals}
           whatNext="Zobacz statystyki"
