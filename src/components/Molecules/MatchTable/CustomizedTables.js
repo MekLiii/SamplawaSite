@@ -11,6 +11,7 @@ import "./matchTable.module.css";
 import styled from "styled-components";
 import { People, Flag,Football,Podium,Ellipse } from "react-ionicons";
 
+
 export default function DenseTable() {
   
   const dataAtom = data.Tabela.sort((a, b) => {
@@ -22,15 +23,16 @@ export default function DenseTable() {
       <TableContainer
         component={Paper}
         style={{
-          overflow: "hidden",
+          overflow: "auto",
           height: "100%",
           borderRadius: "0px",
           backgroundColor: "rgba(255,255,255,0)",
           width: "90%",
-          margin: "10px",
+          // margin: "10px",
           
         }}
-        className="TableContainer"
+        className={`TableContainer`}
+        id="TableContainer"
       >
         <Table
           sx={{ minWidth: "100%" }}
