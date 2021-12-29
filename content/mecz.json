@@ -103,6 +103,15 @@
           "przeciwnik": "Huragan Byszwałd",
           "godzina": "15:00",
           "miejsce": "Sampława"
+        },
+        {
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "12/29/2021",
+          "gospodarze": "PFT DREWNEKS Sampława",
+          "przeciwnik": "Mały Jeziorak",
+          "godzina": "15:00",
+          "miejsce": "Iława"
         }
       ]
     },
