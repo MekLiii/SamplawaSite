@@ -22,10 +22,10 @@ export default function DenseTable() {
       <TableContainer
         component={Paper}
         style={{
-          overflow: "hideen",
+          overflow: "hidden",
           height: "100%",
           borderRadius: "0px",
-          backgroundColor: "rgba(255,255,255,0",
+          backgroundColor: "rgba(255,255,255,0)",
           width: "90%",
           margin: "10px",
           
@@ -93,7 +93,7 @@ export default function DenseTable() {
                 style={
                   el.druzyna === "PFT Sampława"
                     ? { backgroundColor: "#292929" }
-                    : { backgroundColor: "rgba(0,0,0,0.1)" }
+                    : { backgroundColor: "rgba(0,0,0,.1)" }
                 }
               >
                 <TableCell
