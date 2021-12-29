@@ -93,7 +93,7 @@ export default function DenseTable() {
                 style={
                   el.druzyna === "PFT Sampława"
                     ? { backgroundColor: "#292929" }
-                    : { backgroundColor: "none" }
+                    : { backgroundColor: "rgba(0,0,0,0.1)" }
                 }
               >
                 <TableCell

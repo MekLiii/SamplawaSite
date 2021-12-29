@@ -104,6 +104,7 @@ const StyledSposnor = styled.div`
   width: 100%;
   min-height: 40vh;
   background-color: #ffe600;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
   display: flex;
   background-image: back;
   align-items: center;
