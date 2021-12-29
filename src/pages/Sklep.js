@@ -52,11 +52,11 @@ function Sklep() {
                 width: "100%",
               }}
             >
-              <p style={{ color: "#979797", }}>
+              <p style={{ color: "#979797",textAlign:"center" }}>
                 Zamówienia można składać telefonicznie lub przez adres email
               </p>
               <AdressEl
-                desc="Telefon:"
+                
                 prop="710 777 358"
                 style={{ display: "flex" }}
               />

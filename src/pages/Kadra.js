@@ -59,7 +59,7 @@ function Druzyna() {
   return (
     <Layout>
       <div style={cointainer}>
-        <FormControl sx={{margin:"30px"}} className={classes.root} >
+        <FormControl sx={{margin:"20px", width:"90%"}} className={classes.root} >
           <InputLabel id="demo-simple-select-label" sx={{ color: "#ffe600" }}>
             Wybierz kadre
           </InputLabel>

@@ -41,7 +41,7 @@ function Footer() {
 
 const footer = {
   width: "100%",
-  height: "10vh",
+  height: "13vh",
   // backgroundColor: "#ffe600",
   backgroundColor: "black",
   display: "flex",

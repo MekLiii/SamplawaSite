@@ -44,8 +44,9 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
           <p
             style={{
               fontFamily: "poppins",
-              fontSize: "15px",
+              
               marginBottom: "0",
+              fontSize: 'clamp(13px,3vw,15px)'
             }}
           >
             {array[0]}
@@ -53,8 +54,9 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
           <p
             style={{
               fontFamily: "poppins",
-              fontSize: "15px",
+              
               marginBottom: "0",
+              fontSize: 'clamp(11px,3vw,15px)'
             }}
           >
             {array[1]}
@@ -62,8 +64,9 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
           <p
             style={{
               fontFamily: "poppins",
-              fontSize: "15px",
+              
               marginBottom: "0",
+              fontSize: 'clamp(13px,3vw,15px)'
             }}
           >
             {array[2]}

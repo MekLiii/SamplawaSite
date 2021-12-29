@@ -27,7 +27,7 @@ export default function DenseTable() {
           height: "100%",
           borderRadius: "0px",
           backgroundColor: "rgba(255,255,255,0)",
-          width: "90%",
+          width: "100%",
           // margin: "10px",
           
         }}
@@ -35,7 +35,7 @@ export default function DenseTable() {
         id="TableContainer"
       >
         <Table
-          sx={{ minWidth: "100%" }}
+          sx={{ minWidth: "100%",overflow: "hidden" }}
           size="small"
           aria-label="a dense table"
           style={{ height: "100%" }}

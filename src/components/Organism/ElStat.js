@@ -254,6 +254,10 @@ const Box = styled.div`
   margin: 50px;
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width:765px){
+      margin:10px;
+      width:100%;
+    }
 `;
 const SidebarTop = styled.div`
   display: flex;
@@ -269,6 +273,7 @@ const SidebarBottom = styled.div`
   flex-direction: column;
   width: 100%;
   min-height: 70vh;
+  
 `;
 const WhoPlayBox = styled.div`
   width: 100%;
@@ -279,6 +284,7 @@ const WhoPlayBox = styled.div`
   align-items: center;
   background-color: #ffe600;
   border-bottom: 1px solid black;
+  
 `;
 const WhoScoredBox = styled.div`
   width: 100%;
