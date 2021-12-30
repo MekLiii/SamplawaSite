@@ -119,13 +119,25 @@
       "sezon": "2021/2022",
       "mecz": [
         {
-          "gospodarze": "PFT Drewneks Sampława",
           "pftGoals": 0,
-          "enemyGoals": 0,
           "data": "02/12/2022",
           "przeciwnik": "Kormoran Zwierzewo",
-          "godzina": "17:00",
-          "miejsce": "Sampława"
+          "Statystyki": [
+            {
+              "BramkiPFT": [],
+              "BramkiPrzeciwnika": []
+            }
+          ],
+          "miejsce": "Sampława",
+          "Zawodnicy": [
+            {
+              "Zawodnicy": "Krystian Zelmański",
+              "minuty": 90
+            }
+          ],
+          "gospodarze": "PFT Drewneks Sampława",
+          "enemyGoals": 0,
+          "godzina": "17:00"
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
