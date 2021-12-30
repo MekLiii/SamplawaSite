@@ -5,29 +5,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
   {
-    allContentJson(filter: {sezon: {elemMatch: {sezon: {ne: null}}}}) {
+    allContentJson(filter: {sezon: {elemMatch: {sezon: {ne: null}, mecz: {}}}}) {
       nodes {
         sezon {
           mecz {
-            Statystyki {
-              BramkiPFT {
-                Zawodnicy
-                minuta
-              }
-              BramkiPrzeciwnika {
-                minuta
-                Zawodnicy
-                name
-              }
-              Zmiany {
-                ZmianaNa
-                ZmianaZ
-                minuta
-              }
-            }
             Zawodnicy {
-              CKartki
-              ZKartki
               Zawodnicy
               minuty
             }
@@ -38,6 +20,13 @@ exports.createPages = async ({ graphql, actions }) => {
             przeciwnik
             enemyGoals
             pftGoals
+            Statystyki {
+              Zmiany {
+                ZmianaNa
+                ZmianaZ
+                minuta
+              }
+            }
           }
         }
       }
