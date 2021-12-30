@@ -2,8 +2,8 @@
 czas: 30-12-2021
 opis: PFT - TORPEDA ROŻENTAL 2021-22
 images:
-  - thumbnail: /static/Galery/09a69b9280e3023713fb5868bef5e4dca724da.jpg
   - thumbnail: /static/Galery/0bdd81c9606ae6496a7d1032c0b4bd32d78639.jpg
+  - thumbnail: /static/Galery/09a69b9280e3023713fb5868bef5e4dca724da.jpg
   - thumbnail: /static/Galery/8e5e47a257615583cea841ad9f3469c222abec.jpg
   - thumbnail: /static/Galery/34f70de6bd73ba5411d0c6f3c9da96d2cd382d.jpg
   - thumbnail: /static/Galery/bb21ae961ce1c16b569323da79368bcd092778.jpg
