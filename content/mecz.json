@@ -180,6 +180,33 @@
           "przeciwnik": "Olimpia Kisielice",
           "godzina": "16:00",
           "miejsce": " "
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "04/02/2022",
+          "przeciwnik": "Agricola Mierki",
+          "godzina": "16:00",
+          "miejsce": " "
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "04/09/2022",
+          "przeciwnik": "GKS Dąbrówno",
+          "godzina": "16:00",
+          "miejsce": " "
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "04/16/2022",
+          "przeciwnik": "LZS Huragan Byszwałd",
+          "godzina": "16:00",
+          "miejsce": " "
         }
       ]
     }
