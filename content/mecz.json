@@ -119,38 +119,67 @@
       "sezon": "2021/2022",
       "mecz": [
         {
+          "gospodarze": "PFT Drewneks Sampława",
           "pftGoals": 0,
-          "data": "12/12/2021",
-          "przeciwnik": "Jamielnilk",
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Kamil Czacharowski",
-                  "minuta": 55
-                }
-              ],
-              "BramkiPrzeciwnika": [
-                {
-                  "name": "test",
-                  "minuta": 55,
-                  "Zawodnicy": "test"
-                }
-              ]
-            }
-          ],
-          "miejsce": "Jamielnilk",
-          "Zawodnicy": [
-            {
-              "ZKartki": 0,
-              "CKartki": 0,
-              "Zawodnicy": "Mateusz Kroplewski",
-              "minuty": 60
-            }
-          ],
-          "gospodarze": "Sampława",
           "enemyGoals": 0,
-          "godzina": "15:00"
+          "data": "02/12/2022",
+          "przeciwnik": "Kormoran Zwierzewo",
+          "godzina": "17:00",
+          "miejsce": "Sampława"
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "02/19/2022",
+          "przeciwnik": "Orzeł Ulnowo",
+          "godzina": "17:45",
+          "miejsce": "Sampława"
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "02/26/2022",
+          "przeciwnik": "KS Constract Lubawa",
+          "godzina": "17:45",
+          "miejsce": " "
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "03/05/2022",
+          "przeciwnik": "Radomniak Radomno",
+          "godzina": "18:00",
+          "miejsce": " "
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "03/12/2022",
+          "przeciwnik": "LZS Frednowy",
+          "godzina": "18:00",
+          "miejsce": " "
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "03/19/2022",
+          "przeciwnik": "Jordan Kazanice",
+          "godzina": "16:00",
+          "miejsce": " "
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "03/26/2022",
+          "przeciwnik": "Olimpia Kisielice",
+          "godzina": "16:00",
+          "miejsce": " "
         }
       ]
     }
