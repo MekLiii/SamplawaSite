@@ -104,7 +104,7 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
 }
 
 const StyledBox = styled.div`
-  min-height: 301px;
+  min-height: 100%;
   min-width: 190px;
   ${"" /* max-width: 350px; */}
   display: flex;
