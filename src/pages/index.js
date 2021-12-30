@@ -15,10 +15,9 @@ import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground
 import MatchElIndex from "../components/Molecules/IndexMatch/MatchElIndex";
 import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
 
-import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
 
 const IndexPage = () => {
-  
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 2000, min: 2000 },
@@ -75,7 +74,7 @@ const IndexPage = () => {
         <Aktu />
       </StyledAktu>
       <StyledSposnor>
-      <SponsorsTitle>Sponsorzy</SponsorsTitle>
+        <SponsorsTitle>Sponsorzy</SponsorsTitle>
         <div style={{ width: "100%" }}>
           <Carousel responsive={responsive}>
             {sponData.Sponsorzy.map((el) => (
@@ -143,6 +142,10 @@ const StyledSliderElement = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media only screen and (max-width:765px){
+    justify-content: center;
+    text-align: center;
+  }
 `;
 const SyldedEl = styled.div`
   flex: 1;
@@ -159,8 +162,9 @@ const SponsorsTitle = styled.p`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: black;
   font-family: poppins;
-  font-size:32px
-`
+  font-size: 32px;
+`;
+
 
 export default IndexPage;
 

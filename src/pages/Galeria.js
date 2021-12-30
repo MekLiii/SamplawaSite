@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import ModalGalery from "../components/Molecules/galery/ModalGalery";
 
+
 function Galeria() {
   const data = useStaticQuery(graphql`
     {
@@ -34,7 +35,7 @@ function Galeria() {
         <StyledGrid>
           {dataAtom.map((el) => (
             <AktuEl
-              key={el.node.frontmatter.opis}
+              key={`${el.node.frontmatter.opis}+${el.node.frontmatter.czas}`}
               style={{ width: "100px" }}
               heading={el.node.frontmatter.opis}
               whatNext="Zobacz zdjecia"

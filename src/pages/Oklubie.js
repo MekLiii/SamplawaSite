@@ -13,7 +13,7 @@ function Oklubie() {
         <StyledBox>
           <StyledOklubie>
             <div style={OpisTop}>
-              <h2 style={{ color: "rgb(255, 230, 0)" }}>
+              <h2 style={{ color: "rgb(255, 230, 0)",textAlign: "center" }}>
                 PFT DREWNEKS SAMPŁAWA
               </h2>
               <img src={logo} alt={logo} />

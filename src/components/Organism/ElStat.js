@@ -68,7 +68,7 @@ function ElStat({ pageContext }) {
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   // const findMatch = matches.find((el) => el.data === whichMecz);
-  console.log(team.team);
+
   //Porównanie daty, czy mecz się odbył
   // const today = new Date();
   // const actualtDate =
@@ -81,7 +81,6 @@ function ElStat({ pageContext }) {
 
   // }
   const whoScored = whichMecz.Statystyki;
-  console.log(whichMecz);
 
   return (
     <Layout>
@@ -121,17 +120,23 @@ function ElStat({ pageContext }) {
           </SidebarTop>
           <SidebarBottom>
             <WhoPlayBox>
-              <WhoPlayText>{whichMecz.gospodarze}</WhoPlayText>
-
-              <WhoPlayText>
-                {whichMecz.pftGoals == undefined ? "0" : whichMecz.pftGoals}
+              <WhoPlayText style={{ flex: 1 }}>
+                {whichMecz.gospodarze}
               </WhoPlayText>
 
-              <WhoPlayText>-:-</WhoPlayText>
-              <WhoPlayText>
-                {whichMecz.enemyGoals == undefined ? "0" : whichMecz.enemyGoals}
-              </WhoPlayText>
-              <WhoPlayText>{whichMecz.przeciwnik}</WhoPlayText>
+              <div style={{ flex: 1,display:"flex" ,justifyContent:'center' }}>
+                <WhoPlayText>
+                  {whichMecz.pftGoals == undefined ? "0" : whichMecz.pftGoals}
+                </WhoPlayText>
+
+                <WhoPlayText>-:-</WhoPlayText>
+                <WhoPlayText>
+                  {whichMecz.enemyGoals == undefined
+                    ? "0"
+                    : whichMecz.enemyGoals}
+                </WhoPlayText>
+              </div>
+              <WhoPlayText style={{ flex: 1 }}>{whichMecz.przeciwnik}</WhoPlayText>
             </WhoPlayBox>
             <WhoScoredBox>
               <div style={{ flex: 1 }}>
@@ -151,7 +156,7 @@ function ElStat({ pageContext }) {
                   ))
                 )}
               </div>
-
+              <span>{whichMecz.data}</span>
               <div style={{ flex: 1 }}>
                 {whoScored?.map((el) =>
                   el.BramkiPrzeciwnika?.map((el) => (
@@ -194,7 +199,8 @@ function ElStat({ pageContext }) {
                     <div style={{ width: "100%" }} key={el.ZmianaNa}>
                       <PlayerSec
                         name={el.ZmianaNa}
-                        src={team.team?.find((element) => element.name === el.ZmianaNa)
+                        src={team.team
+                          ?.find((element) => element.name === el.ZmianaNa)
                           ?.zdjecia.slice(7)}
                         minuts={el.minuta}
                         StyleIcon={{ display: "none" }}
@@ -202,7 +208,8 @@ function ElStat({ pageContext }) {
                       />
                       <PlayerSec
                         name={el.ZmianaZ}
-                        src={team.team?.find((element) => element.name === el.ZmianaZ)
+                        src={team.team
+                          ?.find((element) => element.name === el.ZmianaZ)
                           ?.zdjecia.slice(7)}
                         minuts={el.minuta}
                         StyleIcon={{ display: "none" }}
@@ -212,7 +219,6 @@ function ElStat({ pageContext }) {
                     </div>
                   ))
                 )}
-                <FontAwesomeIcon icon={faArrowUp} size="1x" color="black" />
               </PlayersHolder>
               <PlayersHolder>
                 <Title>Kary</Title>
@@ -221,7 +227,8 @@ function ElStat({ pageContext }) {
                     <PlayerSec
                       name={el.Zawodnicy}
                       key={el.ZmianaNa}
-                      src={team.team?.find((element) => element.name === el.Zawodnicy)
+                      src={team.team
+                        ?.find((element) => element.name === el.Zawodnicy)
                         ?.zdjecia.slice(7)}
                       minuts={el.minuta}
                       color={el.kartka === "czerwona" ? "red" : "yellow"}
@@ -254,10 +261,10 @@ const Box = styled.div`
   margin: 50px;
   display: flex;
   flex-direction: column;
-  @media only screen and (max-width:765px){
-      margin:10px;
-      width:100%;
-    }
+  @media only screen and (max-width: 765px) {
+    margin: 10px;
+    width: 100%;
+  }
 `;
 const SidebarTop = styled.div`
   display: flex;
@@ -273,7 +280,6 @@ const SidebarBottom = styled.div`
   flex-direction: column;
   width: 100%;
   min-height: 70vh;
-  
 `;
 const WhoPlayBox = styled.div`
   width: 100%;
@@ -284,7 +290,6 @@ const WhoPlayBox = styled.div`
   align-items: center;
   background-color: #ffe600;
   border-bottom: 1px solid black;
-  
 `;
 const WhoScoredBox = styled.div`
   width: 100%;

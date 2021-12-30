@@ -18,6 +18,26 @@ export default function Template({ data }) {
   const [dataImage, setDataImage] = useState();
   const [modalShow, setModalShow] = useState(false);
   // pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n\n(.*?)\n^<\/details>$/ms
+  const random = Math.random();
+  console.log(galery);
+
+  const Galery = () => {
+    if (galery === null) {
+      return <p style={{color:"grey",textAlign:"center"}}>Brak zdjęć</p>;
+    } else {
+      return galery?.map((item) => (
+        <ImageListItem key={item.img}>
+          <img
+            key={`${item.img}+${item.thumbnail}+${random}`}
+            src={`/${item.thumbnail.slice(8)}`}
+            srcSet={`/${item.thumbnail.slice(8)}`}
+            alt={item.thumbnail.slice(8)}
+            loading="lazy"
+          />
+        </ImageListItem>
+      ));
+    }
+  };
   return (
     <LayOut
       style={{
@@ -33,7 +53,7 @@ export default function Template({ data }) {
               id="aktu"
               style={{
                 color: "black",
-                fontSize: "clamp(15px,5vw,33px)",
+                fontSize: "clamp(15px,3vw,33px)",
                 fontFamily: "Poppins",
                 padding: "10px",
               }}
@@ -48,12 +68,10 @@ export default function Template({ data }) {
               <Article>
                 <Text>{frontmatter.tresc}</Text>
                 <Cytat>
-                  <CytatText>
-                    {frontmatter?.cytat}
-                  </CytatText>
+                  <CytatText>{frontmatter?.cytat}</CytatText>
                 </Cytat>
                 {frontmatter.AdditionalText?.map((el) => (
-                  <Text>{el.addText}</Text>
+                  <Text key={el.addText}>{el.addText}</Text>
                 ))}
               </Article>
             </SidePost>
@@ -64,16 +82,7 @@ export default function Template({ data }) {
                 cols={3}
                 rowHeight={164}
               >
-                {galery?.map((item) => (
-                  <ImageListItem key={item.img}>
-                    <img
-                      src={`/${item.thumbnail.slice(8)}`}
-                      srcSet={`/${item.thumbnail.slice(8)}`}
-                      alt={item.thumbnail.slice(8)}
-                      loading="lazy"
-                    />
-                  </ImageListItem>
-                ))}
+                <Galery />
                 <ModalGalery
                   show={modalShow}
                   onHide={() => setModalShow(false)}
@@ -184,12 +193,12 @@ const Cytat = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-left:3px solid grey;
-  padding-left:10px;
+  border-left: 3px solid grey;
+  padding-left: 10px;
 `;
 const CytatText = styled.p`
-  color:grey;
-`
+  color: grey;
+`;
 
 export const pageQuery = graphql`
   query ($id: String) {

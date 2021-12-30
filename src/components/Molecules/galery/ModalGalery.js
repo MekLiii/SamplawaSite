@@ -1,9 +1,14 @@
 import React from "react";
-import { Modal, Button, Carousel } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Modal, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./ModalGalery.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
 
+import SwiperCore, { Pagination, Navigation } from "swiper";
+SwiperCore.use([Pagination, Navigation]);
 function ModalGalery(props) {
-  
   return (
     <Modal
       {...props}
@@ -15,27 +20,38 @@ function ModalGalery(props) {
         <Modal.Title id="contained-modal-title-vcenter">Galeria</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        {/* <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p> */}
-        <Carousel interval={null}>
-          {props.data?.map((el) => (
-            <Carousel.Item key={`${el.thumbnail}/${props.data.indexOf(el?.thumbnail)}`}>
-              <img
-                className="d-block w-100"
-                src={`/${el.thumbnail?.slice(8)}`}
-                alt={el.thumbnail?.slice(8)}
-                // key={`${el.thumbnail}/${props.data.indexOf(el?.thumbnail)}`}
-              />
-            </Carousel.Item>
-          ))}
-        </Carousel>
+        <>
+          <Swiper
+            autoHeight={true}
+            spaceBetween={20}
+            navigation={true}
+            pagination={{
+              clickable: true,
+            }}
+            className="mySwiper"
+          >
+            {/* <SwiperSlide>Slide 1</SwiperSlide> */}
+            {props.data?.map((el) => (
+              <SwiperSlide
+                key={`${el.thumbnail}/${props.data.indexOf(el?.thumbnail)}`}
+              >
+                <img
+                  className="d-block w-100"
+                  id={`img`}
+                  style={{ objectFit: "contain" }}
+                  src={`/${el.thumbnail?.slice(8)}`}
+                  alt={el.thumbnail?.slice(8)}
+                  // key={`${el.thumbnail}/${props.data.indexOf(el?.thumbnail)}`}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </>
       </Modal.Body>
       <Modal.Footer>
-        <Button style={{backgroundColor: "black" }} onClick={props.onHide}>Zamknij</Button>
+        <Button style={{ backgroundColor: "black" }} onClick={props.onHide}>
+          Zamknij
+        </Button>
       </Modal.Footer>
     </Modal>
   );
