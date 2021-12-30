@@ -112,6 +112,15 @@
           "przeciwnik": "Mały Jeziorak",
           "godzina": "15:00",
           "miejsce": "Iława"
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "02/12/2022",
+          "przeciwnik": "Kormoran Zwierzewo",
+          "godzina": "17:00",
+          "miejsce": " "
         }
       ]
     },
