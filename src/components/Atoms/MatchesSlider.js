@@ -25,10 +25,10 @@ export default function MatchesSlider() {
       <Swiper
         slidesPerView={1}
         spaceBetween={5}
-        // autoplay={{
-        //   delay: 1500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         loop={true}
         pagination={{
           clickable: true,

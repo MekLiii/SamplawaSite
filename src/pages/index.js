@@ -51,7 +51,7 @@ const IndexPage = () => {
           </h1>
         </StyledSliderElement>
       </StyledSlider>
-      <StyledDiv style={{minHeight:"300px"}}>
+      <StyledDiv style={{minHeight:"200px"}}>
         <MatchesSlider />
       </StyledDiv>
       <StyledDiv>
