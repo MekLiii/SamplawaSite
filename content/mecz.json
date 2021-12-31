@@ -93,6 +93,7 @@
           ],
           "gospodarze": "PFT DREWNEKS SAMPŁAWA",
           "enemyGoals": 3,
+          "logoEnemy": "/static/logo/torpeda_rozental.png",
           "godzina": "16:00"
         },
         {
@@ -102,7 +103,8 @@
           "data": "02/12/2022",
           "przeciwnik": "Kormoran Zwierzewo",
           "godzina": "17:00",
-          "miejsce": " "
+          "miejsce": " ",
+          "logoEnemy": "/static/logo/8205a702cc020a329d65aa0e5e57cdf3da4ae2.png"
         }
       ]
     },
@@ -199,6 +201,7 @@
           ],
           "gospodarze": "PFT DREWNEKS SAMPŁAWA",
           "enemyGoals": 3,
+          "logoEnemy": "/static/logo/torpeda_rozental.png",
           "godzina": "16:00"
         },
         {
@@ -220,6 +223,7 @@
           ],
           "gospodarze": "PFT Drewneks Sampława",
           "enemyGoals": 0,
+          "logoEnemy": "/static/logo/8205a702cc020a329d65aa0e5e57cdf3da4ae2.png",
           "godzina": "17:00"
         },
         {
@@ -229,7 +233,8 @@
           "data": "02/19/2022",
           "przeciwnik": "Orzeł Ulnowo",
           "godzina": "17:45",
-          "miejsce": "Sampława"
+          "miejsce": "Sampława",
+          "logoEnemy": "/static/logo/orzeł_ulnowo.png"
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
@@ -238,7 +243,8 @@
           "data": "02/26/2022",
           "przeciwnik": "KS Constract Lubawa",
           "godzina": "17:45",
-          "miejsce": " "
+          "miejsce": " ",
+          "logoEnemy": "/static/logo/ksconstract_lubawa.png"
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
@@ -247,7 +253,8 @@
           "data": "03/05/2022",
           "przeciwnik": "Radomniak Radomno",
           "godzina": "18:00",
-          "miejsce": " "
+          "miejsce": " ",
+          "logoEnemy": "/static/logo/radomsk_radomno.png"
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
@@ -256,7 +263,8 @@
           "data": "03/12/2022",
           "przeciwnik": "LZS Frednowy",
           "godzina": "18:00",
-          "miejsce": " "
+          "miejsce": " ",
+          "logoEnemy": "/static/logo/fredynowy.png"
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
@@ -265,7 +273,8 @@
           "data": "03/19/2022",
           "przeciwnik": "Jordan Kazanice",
           "godzina": "16:00",
-          "miejsce": " "
+          "miejsce": " ",
+          "logoEnemy": "/static/logo/jordan_kazanice.png"
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
@@ -274,7 +283,8 @@
           "data": "03/26/2022",
           "przeciwnik": "Olimpia Kisielice",
           "godzina": "16:00",
-          "miejsce": " "
+          "miejsce": " ",
+          "logoEnemy": "/static/logo/olimpia_kisielice.png"
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
@@ -283,7 +293,8 @@
           "data": "04/02/2022",
           "przeciwnik": "Agricola Mierki",
           "godzina": "16:00",
-          "miejsce": " "
+          "miejsce": " ",
+          "logoEnemy": "/static/logo/fredynowy.png"
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
@@ -292,7 +303,8 @@
           "data": "04/09/2022",
           "przeciwnik": "GKS Dąbrówno",
           "godzina": "16:00",
-          "miejsce": " "
+          "miejsce": " ",
+          "logoEnemy": "/static/logo/gks_dąbrówno.png"
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
@@ -301,7 +313,8 @@
           "data": "04/16/2022",
           "przeciwnik": "LZS Huragan Byszwałd",
           "godzina": "16:00",
-          "miejsce": " "
+          "miejsce": " ",
+          "logoEnemy": "/static/logo/lzs_huragan_byszwald.png"
         }
       ]
     }
