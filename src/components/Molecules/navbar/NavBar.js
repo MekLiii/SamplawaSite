@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 function NavBar() {
-  
   return (
     <StyledNav>
       <Burger />
@@ -27,7 +26,6 @@ function NavBar() {
                   padding: "8px",
                   borderRadius: "11px",
                   color: "black",
-                  
                 }}
               >
                 Główna
@@ -85,16 +83,18 @@ function NavBar() {
   );
 }
 const StyledNav = styled.nav`
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 500px) {
+    justify-content: center;
     height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    @media (max-width: 500px) {
-      justify-content: center;
-      height: 10vh;
-    }
-  `;
+  }
+`;
 const StyledSide = styled.div`
+  background-color: rgba(0, 0, 0, .3);
   width: 100%;
   height: 100%;
   display: flex;
@@ -121,7 +121,6 @@ const PnavLinks = styled.p`
   font-size: 17px;
   color: white;
   font-family: "Poppins", sans-serif;
-  
 `;
 const PnavLinksMain = styled.p`
   box-shadow: -1px -1px 3px 0px #c2af00e5 inset;
@@ -133,7 +132,7 @@ const PnavLinksMain = styled.p`
   font-size: 17px;
   color: white;
   font-family: "Poppins", sans-serif;
-`
+`;
 const navText = {
   height: "50%",
   width: "100%",

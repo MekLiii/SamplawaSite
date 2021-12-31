@@ -75,6 +75,8 @@ collections:
                   - {label: miejsce, name: miejsce, widget: string}
                   - {label: bramki PFT, name: pftGoals, widget: number, default: 0}
                   - {label: bramki przeciwnika, name: enemyGoals, widget: number,default: 0}
+                  - {label: Logo przeciwnika, name: logoEnemy, widget: image, required: true}
+
                   - label: Zawodnicy
                     name: Zawodnicy
                     widget: list
@@ -193,39 +195,7 @@ collections:
               - {label: logo, name: logo, widget: image, required: false}
               - {label: Mecze, name: mecze, widget: number}
               - {label: bramki, name: bramki , widget: number}
-          - label: Grupa warmńska II
-            name: two
-            widget: list
-            fields:
-              - {label: druzyna, name: druzyna, widget: string}
-              - {label: logo, name: logo, widget: image, required: false}
-              - {label: Mecze, name: mecze, widget: number}
-              - {label: zwyciestwa, name: zwyciestwa, widget: number}
-              - {label: porazki, name: porazki , widget: number}
-              - {label: remisy, name: remisy , widget: number}
-              - {label: bramki, name: bramki , widget: number}
-          - label: Grupa warmńska III
-            name: three
-            widget: list
-            fields:
-              - {label: druzyna, name: druzyna, widget: string}
-              - {label: logo, name: logo, widget: image, required: false}
-              - {label: Mecze, name: mecze, widget: number}
-              - {label: zwyciestwa, name: zwyciestwa, widget: number}
-              - {label: porazki, name: porazki , widget: number}
-              - {label: remisy, name: remisy , widget: number}
-              - {label: bramki, name: bramki , widget: number}
-          - label: Grupa warmńska IV
-            name: four
-            widget: list
-            fields:
-              - {label: druzyna, name: druzyna, widget: string}
-              - {label: logo, name: logo, widget: image, required: false}
-              - {label: Mecze, name: mecze, widget: number}
-              - {label: zwyciestwa, name: zwyciestwa, widget: number}
-              - {label: porazki, name: porazki , widget: number}
-              - {label: remisy, name: remisy , widget: number}
-              - {label: bramki, name: bramki , widget: number}
+              - {label: Link do strony, name: link , widget: string}
       - label: "tabela Junior"
         name: "tabelaJunior"
         file: "content/tabelaJunior.json"

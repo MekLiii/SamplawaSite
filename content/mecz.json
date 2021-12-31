@@ -111,6 +111,98 @@
       "mecz": [
         {
           "pftGoals": 0,
+          "data": "10/23/2021",
+          "przeciwnik": "LZS TORPEDA Rożental",
+          "Statystyki": [
+            {
+              "BramkiPrzeciwnika": [],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Tomasz Sławiński",
+                  "minuta": 50,
+                  "ZmianaNa": "Szymon Lasikowski"
+                },
+                {
+                  "ZmianaZ": "Szymon Łątkowski",
+                  "minuta": 50,
+                  "ZmianaNa": "Radosław Buczkowski"
+                },
+                {
+                  "ZmianaZ": "Michał Raciborski",
+                  "minuta": 70,
+                  "ZmianaNa": "Marek Nastachowski"
+                },
+                {
+                  "ZmianaZ": "Marek Laskowski",
+                  "minuta": 46,
+                  "ZmianaNa": "Patryk Mówiński"
+                },
+                {
+                  "ZmianaZ": "Dawid Mederski",
+                  "minuta": 71,
+                  "ZmianaNa": "Przemysław Cabaj"
+                }
+              ],
+              "Kartki": []
+            }
+          ],
+          "miejsce": "Sampława",
+          "Zawodnicy": [
+            {
+              "Zawodnicy": "Łukasz Ochlak",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Adam Dybich",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Andrzej Podlaszewski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Sylwester Rynkowski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Tomasz Sławiński",
+              "minuty": 60
+            },
+            {
+              "Zawodnicy": "Szymon Łątkowski",
+              "minuty": 50
+            },
+            {
+              "Zawodnicy": "Jakub Lendzionowski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Dawid Mederski",
+              "minuty": 71
+            },
+            {
+              "Zawodnicy": "Michał Raciborski",
+              "minuty": 70
+            },
+            {
+              "Zawodnicy": "Marek Laskowski",
+              "minuty": 46
+            },
+            {
+              "Zawodnicy": "Dawid Mederski",
+              "minuty": 71
+            },
+            {
+              "Zawodnicy": "Sylwester Bukowski",
+              "minuty": 55
+            }
+          ],
+          "gospodarze": "PFT DREWNEKS SAMPŁAWA",
+          "enemyGoals": 3,
+          "godzina": "16:00"
+        },
+        {
+          "pftGoals": 0,
           "data": "02/12/2022",
           "przeciwnik": "Kormoran Zwierzewo",
           "Statystyki": [

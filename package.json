@@ -43,6 +43,7 @@
     "mdb-react-ui-kit": "^2.2.0",
     "mdbreact": "^5.2.0",
     "netlify-cms-app": "^2.15.59",
+    "puppeteer": "^13.0.1",
     "react": "^17.0.1",
     "react-bootstrap": "^2.0.4",
     "react-dom": "^17.0.1",

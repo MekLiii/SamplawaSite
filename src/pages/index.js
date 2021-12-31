@@ -1,19 +1,18 @@
 import * as React from "react";
-import Results from "../components/Molecules/lastResults/Results";
 import Layout from "../components/Organism/Layout";
 import "./globalStyles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Aktu from "../components/Molecules/aktualnosci/Aktu";
 import styled from "styled-components";
-import NextMatch from "../components/Molecules/lastResults/NextMatch";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import SponsorEl from "../components/Atoms/SponsorEl";
 import sponData from "../../content/sponsors/sponsors.json";
 import CustomizedTables from "../components/Molecules/MatchTable/CustomizedTables";
 import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.png";
-import MatchElIndex from "../components/Molecules/IndexMatch/MatchElIndex";
 import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
+import ProductsMain from "../components/Atoms/ProductsMain"
+import MatchesSlider from "../components/Atoms/MatchesSlider"
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 
@@ -52,9 +51,21 @@ const IndexPage = () => {
           </h1>
         </StyledSliderElement>
       </StyledSlider>
+      <StyledDiv style={{minHeight:"300px"}}>
+        <MatchesSlider />
+      </StyledDiv>
       <StyledDiv>
         <MatchIndex />
       </StyledDiv>
+      <StyledAktu style={{marginTop:0}}>
+        <h2 style={{ fontSize: "32px", fontFamily: "poppins", color: "white" }}>
+          Aktualności
+        </h2>
+        <Aktu />
+      </StyledAktu>
+      <StyledAktu style={{height: "10vh"}}>
+        <ProductsMain />
+      </StyledAktu>
       <StyledAktu style={{ minHeight: "30vh" }}>
         <div
           style={{
@@ -67,12 +78,7 @@ const IndexPage = () => {
           <CustomizedTables />
         </div>
       </StyledAktu>
-      <StyledAktu>
-        <h2 style={{ fontSize: "32px", fontFamily: "poppins", color: "white" }}>
-          Aktualności
-        </h2>
-        <Aktu />
-      </StyledAktu>
+      
       <StyledSposnor>
         <SponsorsTitle>Sponsorzy</SponsorsTitle>
         <div style={{ width: "100%" }}>
