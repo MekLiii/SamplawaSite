@@ -45,6 +45,7 @@
     "netlify-cms-app": "^2.15.59",
     "puppeteer": "^13.0.1",
     "react": "^17.0.1",
+    "react-awesome-button": "^6.5.1",
     "react-bootstrap": "^2.0.4",
     "react-dom": "^17.0.1",
     "react-icons": "^4.3.1",

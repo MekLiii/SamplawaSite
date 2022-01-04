@@ -10,10 +10,13 @@ function MatchIndex() {
     const matchArray = [];
 
     const today = new Date();
+    
     const currentDay =
       today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
+    const currentMonth = today.getMonth() > "9" ? today.getMonth() : "0" + today.getMonth() + 1;
+    console.log(currentMonth)
     const currentDate =
-      today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
+    currentMonth + "/" + currentDay + "/" + today.getFullYear();
     matchArray.push(currentDate);
 
     data.map((el) => matchArray.push(el.data));
@@ -23,6 +26,7 @@ function MatchIndex() {
       b = b.split("/").reverse().join("");
       return a > b ? 1 : a < b ? -1 : 0;
     });
+    console.log(matchArray)
 
     const indexOfCurrentDay = matchArray.indexOf(currentDate);
     const compareDate = matchArray[indexOfCurrentDay - 1];
@@ -41,7 +45,9 @@ function MatchIndex() {
       stats[0].BramkiPrzeciwnika === undefined
         ? "0"
         : stats[0].BramkiPrzeciwnika.length;
+        console.log(result);
     return { result, bramkiPrzeciwnika, bramkiPFT };
+    
   }
   function nextMatch() {
     const match = mecz.sezon;
@@ -100,6 +106,7 @@ function MatchIndex() {
           nameEnemy={resultNextMatch?.przeciwnik}
           whatNext={`${resultNextMatch?.godzina} ${resultNextMatch?.miejsce}`}
           sign="VS"
+          link="#"
          
         />
       </StyledDiv>

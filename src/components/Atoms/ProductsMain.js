@@ -1,70 +1,66 @@
 import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import ProductCard from "./ProductCard";
 import styled from "styled-components";
+import AdressEl from "./AdressEl";
+import { useStaticQuery, graphql } from "gatsby";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-
-// import Swiper core and required modules
-import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
-
-// install Swiper modules
-SwiperCore.use([EffectCoverflow, Pagination]);
 
 export default function App() {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(filter: { frontmatter: { name: { glob: "*" } } }) {
+        edges {
+          node {
+            frontmatter {
+              price
+              name
+              thumbnail
+            }
+          }
+        }
+      }
+    }
+  `);
   return (
     <Box>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        loop={true}
-        pagination={true}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg"style={{width:"50%"}} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-      </Swiper>
+      <GridHolder>
+        {data.allMarkdownRemark.edges.map((el) => (
+          <ProductCard
+            name={el.node.frontmatter.name}
+            key={el.node.frontmatter.name}
+            img={`/${el.node.frontmatter.thumbnail.slice(8)}`}
+            onMouseOver={(e) => e.target.style.display = 'none'}
+          />
+        ))}
+      </GridHolder>
     </Box>
   );
 }
 const Box = styled.div`
-  width:100%;
-  height:50%;
-`
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+`;
+const GridHolder = styled.div`
+  height: 100%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+  place-items: center;
+`;
+const Info = styled.div`
+  width: 80%;
+  min-height: 5vh;
+  background-color: #1d1d1d;
+  border: 10px solid #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  padding: 5px;
+`;

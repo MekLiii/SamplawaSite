@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-function ProductCard({name,price,img}) {
+function ProductCard({name,price,img,onMouseOver,}) {
   return (
-    <Card>
+    <Card onMouseOver={onMouseOver}>
       <Box>
         <Img src={`${img}`} alt={img}/>
         <P style={{color: 'white'}}>{name}</P>

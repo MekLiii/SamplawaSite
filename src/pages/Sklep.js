@@ -21,7 +21,7 @@ function Sklep() {
       }
     }
   `);
- data.allMarkdownRemark.edges.map((el) => (console.log(el.node.frontmatter.thumbnail)))
+ 
 
   return (
     <Layout>

@@ -11,8 +11,9 @@ import sponData from "../../content/sponsors/sponsors.json";
 import CustomizedTables from "../components/Molecules/MatchTable/CustomizedTables";
 import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.png";
 import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
-import ProductsMain from "../components/Atoms/ProductsMain"
-import MatchesSlider from "../components/Atoms/MatchesSlider"
+import ProductsMain from "../components/Atoms/ProductsMain";
+import MatchesSlider from "../components/Atoms/MatchesSlider";
+import IndexFirstSec from '../components/Molecules/IndexMainSec/IndexFirstSec'
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 
@@ -39,7 +40,7 @@ const IndexPage = () => {
     <Layout>
       <StyledSlider>
         <StyledSliderElement>
-          <h1
+          {/* <h1
             id="aktu"
             style={{
               color: "#ebebeb",
@@ -48,22 +49,27 @@ const IndexPage = () => {
             }}
           >
             PFT Drewneks Sampława
-          </h1>
+          </h1> */}
+          <IndexFirstSec />
         </StyledSliderElement>
       </StyledSlider>
-      <StyledDiv style={{minHeight:"200px"}}>
+      <StyledDiv style={{ minHeight: "200px",display: "flex",flexDirection: "column", justifyContent:'center',alignItems: 'center'}}>
+        <h2 style={{ fontSize: "32px", fontFamily: "poppins", color: "white" }}>
+          Zapraszamy na następne mecze!
+        </h2>
         <MatchesSlider />
       </StyledDiv>
-      <StyledDiv>
-        <MatchIndex />
-      </StyledDiv>
-      <StyledAktu style={{marginTop:0}}>
+      <StyledAktu style={{ marginTop: 0 }}>
         <h2 style={{ fontSize: "32px", fontFamily: "poppins", color: "white" }}>
           Aktualności
         </h2>
         <Aktu />
       </StyledAktu>
-      <StyledAktu style={{height: "10vh"}}>
+      <StyledDiv style={{ minHeight: "60vh" }}>
+        <MatchIndex />
+      </StyledDiv>
+
+      <StyledAktu style={{ marginTop: 0, marginBottom: 0, minHeight: "40vh" }}>
         <ProductsMain />
       </StyledAktu>
       <StyledAktu style={{ minHeight: "30vh" }}>
@@ -78,7 +84,7 @@ const IndexPage = () => {
           <CustomizedTables />
         </div>
       </StyledAktu>
-      
+
       <StyledSposnor>
         <SponsorsTitle>Sponsorzy</SponsorsTitle>
         <div style={{ width: "100%" }}>
@@ -143,12 +149,12 @@ const StyledSlider = styled.div`
   background-size: cover;
 `;
 const StyledSliderElement = styled.div`
-  width: 80%;
+  width: 90%;
   height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  @media only screen and (max-width:765px){
+  @media only screen and (max-width: 765px) {
     justify-content: center;
     text-align: center;
   }
@@ -170,7 +176,6 @@ const SponsorsTitle = styled.p`
   font-family: poppins;
   font-size: 32px;
 `;
-
 
 export default IndexPage;
 
