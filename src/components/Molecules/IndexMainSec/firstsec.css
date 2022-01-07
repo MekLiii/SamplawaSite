@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+
+.container {
+  max-width: 180px !important;
+  height: auto;
+  /* position: absolute;
+  left: 50%;
+  top: 50%; */
+  /* transform: translate(-50%, -50%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:0;
+
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: relative;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+button > svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #ffe600;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  /* font-size: 18px; */
+  font-weight: 100;
+  font-size:clamp(12px,2vw, 18px)
+}
+.btn:hover span{
+  transition: 1s ease-in-out;
+  color: #000;
+}
+@media (max-width: 768px){
+  .border, .center,.btn{
+    height: 40px;
+    width: 160px;
+  };
+  
+}
+.swiper-button-next, .swiper-button-prev{
+  color: #ffe600 !important;
+}

@@ -21,7 +21,6 @@ SwiperCore.use([Autoplay, Navigation]);
 export default function MatchesSlider() {
   const match = mecz.sezon;
   const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
-  console.log(data);
 
   const today = new Date();
   const currentDay =
@@ -29,7 +28,7 @@ export default function MatchesSlider() {
   const currentDate =
     today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
   const resultNextMatch = data.find(({ data }) => data < currentDay);
-  console.log(resultNextMatch);
+
   return (
     <Swiper
       slidesPerView={1}
@@ -57,7 +56,7 @@ export default function MatchesSlider() {
         },
       }}
       className="mySwiper"
-      style={{ height: "200px",backgroundColor: "inherit" }}
+      style={{ height: "200px", backgroundColor: "inherit" }}
     >
       {data.map((el) => (
         <SwiperSlide
@@ -92,7 +91,7 @@ const SliderElement = ({ date, srcPFT, srcEnemy, style, name, nameEnemy }) => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            maxWidth: "50%"
+            maxWidth: "50%",
           }}
         >
           <img
@@ -105,7 +104,7 @@ const SliderElement = ({ date, srcPFT, srcEnemy, style, name, nameEnemy }) => {
               fontFamily: "poppins",
               fontSize: "clamp(10px,5vw,20px)",
               fontWeight: 400,
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             {name}
@@ -118,7 +117,7 @@ const SliderElement = ({ date, srcPFT, srcEnemy, style, name, nameEnemy }) => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            maxWidth: "50%"
+            maxWidth: "50%",
           }}
         >
           <img
@@ -131,7 +130,7 @@ const SliderElement = ({ date, srcPFT, srcEnemy, style, name, nameEnemy }) => {
               fontFamily: "poppins",
               fontSize: "clamp(10px,5vw,20px)",
               fontWeight: 400,
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             {nameEnemy}

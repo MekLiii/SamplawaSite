@@ -3,7 +3,8 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import styled from "styled-components";
-import "./firstsec.scss";
+import "./firstsec.css";
+
 
 // import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.png";
 
@@ -13,10 +14,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import Swiper core and required modules
-import SwiperCore, { Parallax, Pagination, Navigation } from "swiper";
+import SwiperCore, { Parallax, Pagination, Navigation, Autoplay } from "swiper";
+import CoutingDown from "../../Atoms/CoutingDown";
 
 // install Swiper modules
-SwiperCore.use([Parallax, Pagination, Navigation]);
+SwiperCore.use([Parallax, Pagination, Navigation, Autoplay]);
 
 export default function App() {
   const data = useStaticQuery(graphql`
@@ -39,12 +41,12 @@ export default function App() {
   `);
   const dataElement = data.allMarkdownRemark.edges;
   const dataAtom = dataElement.slice().reverse();
-  console.log(dataAtom.map((el) => el.node.frontmatter.zdjecia.slice(7)));
+  // console.log(dataAtom.map((el) => el.node.frontmatter.zdjecia.slice(7)));
   return (
     <Box>
       <Swiper
         style={{
-          "--swiper-navigation-color": "#fff",
+          "--swiper-navigation-color": "#ffe600",
           "--swiper-pagination-color": "#ffe600",
           height: "50%",
           display: "flex",
@@ -56,6 +58,11 @@ export default function App() {
         pagination={{
           clickable: true,
         }}
+        // autoplay={{
+        //   delay: 3500,
+        //   disableOnInteraction: false,
+        // }}
+        loop={true}
         navigation={true}
         className="mySwiper"
       >
@@ -78,17 +85,9 @@ export default function App() {
           >
             <Shadow>
               <ShadowText>{el.node.frontmatter.naglowek}</ShadowText>
-
-              <div class="container">
-                <h1>Pure Css Button Hover effect</h1>
-                <a href="#" class="button">
-                  Hover me
-                </a>
-                <span>
-                  Made by{" "}
-                  <a href="http://alticreation.com/en">alticreation.com</a>
-                </span>
-              </div>
+              <Link to={`/${el.node.frontmatter.date}`}>
+                <Button></Button>
+              </Link>
             </Shadow>
           </SwiperSlide>
         ))}
@@ -97,22 +96,27 @@ export default function App() {
   );
 }
 const Box = styled.div`
-  width: 60%;
+  width: 55%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   @media (max-width: 768px) {
     width: 90%;
+    height: 110%;
   }
 `;
 const Shadow = styled.div`
   width: 100%;
-  height: 20%;
+  min-height: 20%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    height: 50%;
+  }
 `;
 const ShadowText = styled.p`
   font-size: clamp(10px, 5vw, 20px);
@@ -123,35 +127,17 @@ const ShadowButton = styled.button`
     "" /* width:120px;
     height: 50px; */
   }
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  border: 2px solid #ffe600;
-  background: linear-gradient(45deg, #ffe600 50%, #ffe600 50%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-
-  color: #fff; /*For IE*/
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(45deg, orangeRed 50%, transparent 50%);
-    z-index: -1;
-  }
-  &:hover {
-    background-position: 0;
-    font-size: 1.1em;
-
-    color: orangeRed; /*For IE*/
-  }
-  &:hover:after {
-    background-position: 0;
-    font-size: 1.1em;
-    color: orangeRed; /*For IE*/
-  }
 `;
+const Button = () => {
+  return (
+    <div class="center">
+      <button class="btn">
+        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+        </svg>
+        <span>Czytaj dalej</span>
+      </button>
+    </div>
+  );
+};

@@ -13,9 +13,12 @@ import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground
 import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
 import ProductsMain from "../components/Atoms/ProductsMain";
 import MatchesSlider from "../components/Atoms/MatchesSlider";
-import IndexFirstSec from '../components/Molecules/IndexMainSec/IndexFirstSec'
+import IndexFirstSec from "../components/Molecules/IndexMainSec/IndexFirstSec";
+import Fade from "react-reveal/Zoom";
+import Bounce from "react-reveal/Zoom";
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import CoutingDown from "../components/Atoms/CoutingDown";
 
 const IndexPage = () => {
   const responsive = {
@@ -38,23 +41,29 @@ const IndexPage = () => {
   };
   return (
     <Layout>
-      <StyledSlider>
+      <StyledSlider style={{ flexDirection: "column" }}>
         <StyledSliderElement>
-          {/* <h1
-            id="aktu"
-            style={{
-              color: "#ebebeb",
-              fontSize: "clamp(40px,5vw,60px)",
-              fontFamily: "Poppins",
-            }}
-          >
-            PFT Drewneks Sampława
-          </h1> */}
           <IndexFirstSec />
         </StyledSliderElement>
+        <CoutingDown />
       </StyledSlider>
-      <StyledDiv style={{ minHeight: "200px",display: "flex",flexDirection: "column", justifyContent:'center',alignItems: 'center'}}>
-        <h2 style={{ fontSize: "32px", fontFamily: "poppins", color: "white" }}>
+      <StyledDiv
+        style={{
+          minHeight: "200px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "32px",
+            fontFamily: "poppins",
+            color: "white",
+            textAlign: "center",
+          }}
+        >
           Zapraszamy na następne mecze!
         </h2>
         <MatchesSlider />
@@ -63,15 +72,16 @@ const IndexPage = () => {
         <h2 style={{ fontSize: "32px", fontFamily: "poppins", color: "white" }}>
           Aktualności
         </h2>
+
         <Aktu />
       </StyledAktu>
       <StyledDiv style={{ minHeight: "60vh" }}>
         <MatchIndex />
       </StyledDiv>
 
-      <StyledAktu style={{ marginTop: 0, marginBottom: 0, minHeight: "40vh" }}>
+      {/* <StyledAktu style={{ marginTop: 0, marginBottom: 0, minHeight: "40vh" }}>
         <ProductsMain />
-      </StyledAktu>
+      </StyledAktu> */}
       <StyledAktu style={{ minHeight: "30vh" }}>
         <div
           style={{
@@ -149,7 +159,7 @@ const StyledSlider = styled.div`
   background-size: cover;
 `;
 const StyledSliderElement = styled.div`
-  width: 90%;
+  width: 98%;
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -157,17 +167,6 @@ const StyledSliderElement = styled.div`
   @media only screen and (max-width: 765px) {
     justify-content: center;
     text-align: center;
-  }
-`;
-const SyldedEl = styled.div`
-  flex: 1;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media only screen and (max-width: 500px) {
-    width: 100%;
   }
 `;
 const SponsorsTitle = styled.p`

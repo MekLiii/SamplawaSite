@@ -3,6 +3,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import AktuEl from "./AktuEl";
 // import img from "../../../images/article.jpg";
 import styled from "styled-components";
+import Bounce from "react-reveal/Zoom";
 
 function Aktu() {
   const data = useStaticQuery(graphql`
@@ -29,6 +30,7 @@ function Aktu() {
   return (
     <StyledGrid>
       {dataAtom.map((element) => (
+        <Bounce bottom>
         <Link
           to={`/${element.node.frontmatter.date}`}
           key={element.node.frontmatter.naglowek}
@@ -41,6 +43,7 @@ function Aktu() {
             whatNext="Czytaj dalej"
           />
         </Link>
+        </Bounce>
       ))}
     </StyledGrid>
   );
@@ -48,7 +51,7 @@ function Aktu() {
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  width: 90%;
+  width: 90vw;
   height: 90%;
   gap: 20px;
   place-items: center;
