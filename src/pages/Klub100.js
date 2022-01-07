@@ -6,7 +6,6 @@ import klub from "../../content/assets/klub100.jpg";
 import wzor from "../../content/assets/plakietka.jpg";
 
 function Klub100() {
-  console.log(data);
   return (
     <Layout>
       <StyledDiv>

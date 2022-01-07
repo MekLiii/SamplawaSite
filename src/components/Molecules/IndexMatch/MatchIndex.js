@@ -45,7 +45,7 @@ function MatchIndex() {
     const compareDate = newArray[indexOfCurrentDay - 1];
 
     const result = data.find(({ data }) => data == compareDate);
-    console.log(result);
+ 
     const stats = [result.Statystyki];
 
     if (result.Statystyki == undefined) {
@@ -101,14 +101,13 @@ function MatchIndex() {
     const compareDate = newArray[indexOfCurrentDay + 1];
 
     const result = data.find(({ data }) => data == compareDate);
-    console.log(result);
     const stats = [result.Statystyki];
 
     if (result.Statystyki == undefined) {
       stats.unshift("0");
     }
 
-    console.log(newArray);
+ 
     const resultNextMatch = data.find(({ data }) => data == compareDate);
 
     return resultNextMatch;

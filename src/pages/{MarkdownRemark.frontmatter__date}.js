@@ -19,7 +19,6 @@ export default function Template({ data }) {
   const [modalShow, setModalShow] = useState(false);
   // pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n\n(.*?)\n^<\/details>$/ms
   const random = Math.random();
-  console.log(galery);
 
   const Galery = () => {
     if (galery === null) {
@@ -53,9 +52,10 @@ export default function Template({ data }) {
               id="aktu"
               style={{
                 color: "black",
-                fontSize: "clamp(15px,3vw,33px)",
+                fontSize: "clamp(17px,3vw,33px)",
                 fontFamily: "Poppins",
                 padding: "10px",
+                textAlign:"center",
               }}
             >
               {frontmatter.naglowek}
@@ -138,7 +138,7 @@ const StyledSliderElement = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 230, 0, 0.7);
+  background: rgba(255, 230, 0, 0.9);
   border-radius: 5px;
   @media only screen and (max-width: 765px) {
     width: 80%;

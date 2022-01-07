@@ -19,7 +19,6 @@ export default function DenseTable() {
     return a.punkty - b.punkty;
   });
   const dataEl = dataAtom.reverse();
-  console.log(dataAtom)
   return (
     <Box>
       <TableContainer

@@ -55,7 +55,6 @@ function Druzyna() {
   };
 
   const classes = useStyles();
-  console.log(data)
   return (
     <Layout>
       <div style={cointainer}>

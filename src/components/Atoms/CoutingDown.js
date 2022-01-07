@@ -4,8 +4,8 @@ import styled from "styled-components";
 import './app.css'
 
 function CoutingDown() {
-    const chuj = document.getElementsByName('jKgpEx').innerHTML;
-    console.log(chuj)
+    
+    
   return (
     <Box>
         <P>Na boisku widzimy się za:</P>

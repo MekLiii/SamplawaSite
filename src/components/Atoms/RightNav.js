@@ -38,22 +38,22 @@ const RightNav = ({ open }) => {
         <StyledImg src={logo} alt="logo" />
       </Link>
       <Link to="/" style={text}>
-        Główna
+        <P>Główna</P>
       </Link>
       <Link to="/Sklep" style={text}>
-        Sklep
+        <P>Sklep</P>
       </Link>
       <Link to="/Kadra" style={text}>
-        Kadra
+        <P>Kadra</P>
       </Link>
       <Link to="/Galeria" style={text}>
-        Galeria
+        <P>Galeria</P>
       </Link>
       <Link to="/Oklubie" style={text}>
-        O klubie
+        <P>O klubie</P>
       </Link>
       <Link to="/Klub100" style={text}>
-        Klub100
+        <P>Klub100</P>
       </Link>
     </Ul>
   );
@@ -69,5 +69,8 @@ const text = {
   fontWeight: "bold",
   fontSize: "30px",
 };
+const P = styled.span`
+  font-family: poppins;
+`
 
 export default RightNav;
