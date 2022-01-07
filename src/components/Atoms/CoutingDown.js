@@ -4,7 +4,9 @@ import styled from "styled-components";
 import './app.css'
 
 function CoutingDown() {
-    
+  if (typeof window !== `undefined`) {
+    return <div></div>
+  }
     
   return (
     <Box>

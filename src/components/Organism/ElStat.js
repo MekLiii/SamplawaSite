@@ -11,14 +11,11 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { makeStyles } from "@material-ui/core";
 import PlayerSec from "../Atoms/PlayerSec";
-import { faArrowUp } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [age, setAge] = useState("");
   const [whichMecz, setWhichMecz] = useState(slug);
-  const [matchArray, setMatchArray] = useState([]);
   const handleChange = (event) => {
     setAge(event.target.value);
   };
@@ -67,36 +64,89 @@ function ElStat({ pageContext }) {
 
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
-  console.log(matches);
-  const sortArray = () => {};
-  const today = new Date();
-
-  const currentDay =
-    today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
-  const currentMonth =
-    today.getMonth() + 1 > "9"
-      ? today.getMonth() + 1
-      : "0" + (today.getMonth() + 1);
-
-  const currentDate =
-    currentMonth + "/" + currentDay + "/" + today.getFullYear();
-  matchArray.push(currentDate);
-  const newSortedArray = [];
-  matchArray.forEach((el) => newSortedArray.push(new Date(el)));
-  newSortedArray.sort((a, b) => b - a);
-  newSortedArray.reverse();
-  const newArray = [];
-  newSortedArray.forEach((el) =>
-    newArray.push(
-      el.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-      })
-    )
-  );
 
   const whoScored = whichMecz.Statystyki;
+  const today = new Date();
+  const currentDay =
+      today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
+    const currentMonth =
+      today.getMonth() + 1 > "9"
+        ? today.getMonth() + 1
+        : "0" + (today.getMonth() + 1);
+  const currentDate =
+      currentMonth + "/" + currentDay + "/" + today.getFullYear();
+  const Statistics = () => {
+    console.log(whichMecz)
+    if(new Date(whichMecz.data) > new Date(currentDate)){
+      return(
+        <p style={{color:"white",fontSize:"clamp(20px,5vw,40px)"}}>Mecz odbędzie się wkrótce</p>
+      )
+    }
+    return (
+      <PlayersBox>
+        <PlayersHolder>
+          <Title>Skład wyjściowy</Title>
+          {whichMecz.Zawodnicy?.map((el) => (
+            <PlayerSec
+              name={el.Zawodnicy}
+              key={el.Zawodnicy}
+              src={team.team
+                .find((element) => element.name === el.Zawodnicy)
+                ?.zdjecia.slice(7)}
+              minuts={el.minuty}
+              StyleIcon={{ display: "none" }}
+              StyleArrow={{ display: "none" }}
+            />
+          ))}
+        </PlayersHolder>
+        <PlayersHolder>
+          <Title>Zmiany</Title>
+          {whichMecz.Statystyki?.map((el) =>
+            el.Zmiany?.map((el) => (
+              <div style={{ width: "100%" }} key={el.ZmianaNa}>
+                <PlayerSec
+                  name={el.ZmianaNa}
+                  src={team.team
+                    ?.find((element) => element.name === el.ZmianaNa)
+                    ?.zdjecia.slice(7)}
+                  minuts={el.minuta}
+                  StyleIcon={{ display: "none" }}
+                  colorArrow="green"
+                />
+                <PlayerSec
+                  name={el.ZmianaZ}
+                  src={team.team
+                    ?.find((element) => element.name === el.ZmianaZ)
+                    ?.zdjecia.slice(7)}
+                  minuts={el.minuta}
+                  StyleIcon={{ display: "none" }}
+                  StyleArrow={{ transform: "rotate(180deg)" }}
+                  colorArrow="red"
+                />
+              </div>
+            ))
+          )}
+        </PlayersHolder>
+        <PlayersHolder>
+          <Title>Kary</Title>
+          {whichMecz.Statystyki?.map((el) =>
+            el.Kartki?.map((el) => (
+              <PlayerSec
+                name={el.Zawodnicy}
+                key={el.ZmianaNa}
+                src={team.team
+                  ?.find((element) => element.name === el.Zawodnicy)
+                  ?.zdjecia.slice(7)}
+                minuts={el.minuta}
+                color={el.kartka === "czerwona" ? "red" : "yellow"}
+                StyleArrow={{ display: "none" }}
+              />
+            ))
+          )}
+        </PlayersHolder>
+      </PlayersBox>
+    );
+  };
 
   return (
     <Layout>
@@ -128,7 +178,7 @@ function ElStat({ pageContext }) {
                     key={`${el.data}/${el.przeciwnik}`}
                     onClick={() => setWhichMecz(el)}
                   >
-                    {el.gospodarze} - {el.przeciwnik} {el.data}
+                    {"PFT"} - {el.przeciwnik} {el.data}
                   </MenuItem>
                 ))}
               </Select>
@@ -196,68 +246,7 @@ function ElStat({ pageContext }) {
                 )}
               </div>
             </WhoScoredBox>
-            <PlayersBox>
-              <PlayersHolder>
-                <Title>Skład wyjściowy</Title>
-                {whichMecz.Zawodnicy?.map((el) => (
-                  <PlayerSec
-                    name={el.Zawodnicy}
-                    key={el.Zawodnicy}
-                    src={team.team
-                      .find((element) => element.name === el.Zawodnicy)
-                      ?.zdjecia.slice(7)}
-                    minuts={el.minuty}
-                    StyleIcon={{ display: "none" }}
-                    StyleArrow={{ display: "none" }}
-                  />
-                ))}
-              </PlayersHolder>
-              <PlayersHolder>
-                <Title>Zmiany</Title>
-                {whichMecz.Statystyki?.map((el) =>
-                  el.Zmiany?.map((el) => (
-                    <div style={{ width: "100%" }} key={el.ZmianaNa}>
-                      <PlayerSec
-                        name={el.ZmianaNa}
-                        src={team.team
-                          ?.find((element) => element.name === el.ZmianaNa)
-                          ?.zdjecia.slice(7)}
-                        minuts={el.minuta}
-                        StyleIcon={{ display: "none" }}
-                        colorArrow="green"
-                      />
-                      <PlayerSec
-                        name={el.ZmianaZ}
-                        src={team.team
-                          ?.find((element) => element.name === el.ZmianaZ)
-                          ?.zdjecia.slice(7)}
-                        minuts={el.minuta}
-                        StyleIcon={{ display: "none" }}
-                        StyleArrow={{ transform: "rotate(180deg)" }}
-                        colorArrow="red"
-                      />
-                    </div>
-                  ))
-                )}
-              </PlayersHolder>
-              <PlayersHolder>
-                <Title>Kary</Title>
-                {whichMecz.Statystyki?.map((el) =>
-                  el.Kartki?.map((el) => (
-                    <PlayerSec
-                      name={el.Zawodnicy}
-                      key={el.ZmianaNa}
-                      src={team.team
-                        ?.find((element) => element.name === el.Zawodnicy)
-                        ?.zdjecia.slice(7)}
-                      minuts={el.minuta}
-                      color={el.kartka === "czerwona" ? "red" : "yellow"}
-                      StyleArrow={{ display: "none" }}
-                    />
-                  ))
-                )}
-              </PlayersHolder>
-            </PlayersBox>
+            <Statistics />
           </SidebarBottom>
         </Box>
       </Cointainer>
