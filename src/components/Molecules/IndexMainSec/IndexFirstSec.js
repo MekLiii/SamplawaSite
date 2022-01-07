@@ -58,10 +58,10 @@ export default function App() {
         pagination={{
           clickable: true,
         }}
-        // autoplay={{
-        //   delay: 3500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
         loop={true}
         navigation={true}
         className="mySwiper"
