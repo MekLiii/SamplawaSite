@@ -18,7 +18,7 @@ function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [age, setAge] = useState("");
   const [whichMecz, setWhichMecz] = useState(slug);
-
+  const [matchArray, setMatchArray] = useState([]);
   const handleChange = (event) => {
     setAge(event.target.value);
   };
@@ -67,19 +67,35 @@ function ElStat({ pageContext }) {
 
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
-  // const findMatch = matches.find((el) => el.data === whichMecz);
+  console.log(matches);
+  const sortArray = () => {};
+  const today = new Date();
 
-  //Porównanie daty, czy mecz się odbył
-  // const today = new Date();
-  // const actualtDate =
-  //   today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
-  // const ifDate = (date) => {
-  //   return new Date(date);
-  // };
-  // if(ifDate(findMatch?.data) > (ifDate(actualtDate))){
-  //   console.log("Większa")
+  const currentDay =
+    today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
+  const currentMonth =
+    today.getMonth() + 1 > "9"
+      ? today.getMonth() + 1
+      : "0" + (today.getMonth() + 1);
 
-  // }
+  const currentDate =
+    currentMonth + "/" + currentDay + "/" + today.getFullYear();
+  matchArray.push(currentDate);
+  const newSortedArray = [];
+  matchArray.forEach((el) => newSortedArray.push(new Date(el)));
+  newSortedArray.sort((a, b) => b - a);
+  newSortedArray.reverse();
+  const newArray = [];
+  newSortedArray.forEach((el) =>
+    newArray.push(
+      el.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      })
+    )
+  );
+
   const whoScored = whichMecz.Statystyki;
 
   return (
@@ -124,7 +140,9 @@ function ElStat({ pageContext }) {
                 {whichMecz.gospodarze}
               </WhoPlayText>
 
-              <div style={{ flex: 1,display:"flex" ,justifyContent:'center' }}>
+              <div
+                style={{ flex: 1, display: "flex", justifyContent: "center" }}
+              >
                 <WhoPlayText>
                   {whichMecz.pftGoals == undefined ? "0" : whichMecz.pftGoals}
                 </WhoPlayText>
@@ -136,7 +154,9 @@ function ElStat({ pageContext }) {
                     : whichMecz.enemyGoals}
                 </WhoPlayText>
               </div>
-              <WhoPlayText style={{ flex: 1 }}>{whichMecz.przeciwnik}</WhoPlayText>
+              <WhoPlayText style={{ flex: 1 }}>
+                {whichMecz.przeciwnik}
+              </WhoPlayText>
             </WhoPlayBox>
             <WhoScoredBox>
               <div style={{ flex: 1 }}>
