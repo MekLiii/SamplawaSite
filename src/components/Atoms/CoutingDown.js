@@ -59,7 +59,7 @@ function CoutingDown() {
   return (
     <Box>
       <P>Na boisku widzimy się za:</P>
-      <OtherComponent dateTo={resultNextMatch.data}/>
+      <OtherComponent dateTo={resultNextMatch.data} />
     </Box>
   );
 }
