@@ -45,7 +45,7 @@ const IndexPage = () => {
         <StyledSliderElement>
           <IndexFirstSec />
         </StyledSliderElement>
-        {/* <CoutingDown /> */}
+        <CoutingDown />
       </StyledSlider>
       <StyledDiv
         style={{

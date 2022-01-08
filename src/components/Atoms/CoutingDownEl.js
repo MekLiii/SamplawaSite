@@ -10,6 +10,8 @@ function CoutingDownEl({dateTo}) {
         color: "white",
         fontFamily: "poppins",
       }}
+      locales={['rok','miesiąc','dzień','godzina','minuta','sekunda']}
+      locales_plural={['lata','miesiące','dni','godzin','minut','sekund']}
     />
   );
 }
