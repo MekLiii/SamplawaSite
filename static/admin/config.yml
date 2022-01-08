@@ -26,6 +26,7 @@ collections:
               - {label: żółte kartki, name: zKartki, widget: number, required: false}
               - {label: czerwone kartki, name: cKartki, widget: number, required: false}
               - {label: mecze, name: mecze, widget: number, required: false}
+              - {label: minuty, name: minuty, widget: number, required: false}
               - {label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
           - label: Zespół senior
             name: zespolSenior

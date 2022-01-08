@@ -1,13 +1,12 @@
 import React from "react";
-import data from "../../../../content/druzyna.json";
-import TableElement from "../../Atoms/TableElement";
 import "./table.module.css";
 import TableHero from "./TableHero";
 import styled from "styled-components";
-import { PersonCircleOutline } from "react-ionicons";
+import { Link } from "gatsby";
+
 // import chuj from '../../../../static/players/'
 
-function Table({data, title}) {
+function Table({ data, title }) {
   return (
     <div style={mainCoinainer}>
       <div style={heading}>
@@ -15,7 +14,15 @@ function Table({data, title}) {
       </div>
       <GridHolder>
         {data?.map((el) => (
-          <TableHero pozycja={el.pozycja} rola={el.rola} name={el.name} key={el.name} img={`/${el.zdjecia?.slice(8)}`}/>
+          <Link to={`/kadra/${el.name}`}>
+            <TableHero
+              pozycja={el.pozycja}
+              rola={el.rola}
+              name={el.name}
+              key={el.name}
+              img={`/${el.zdjecia?.slice(8)}`}
+            />
+          </Link>
         ))}
       </GridHolder>
     </div>
@@ -45,10 +52,9 @@ const GridHolder = styled.div`
   row-gap: 2.5em;
   width: 90%;
   margin-bottom: 50px;
-  place-items:  center;
+  place-items: center;
 
   @media (max-width: 500px) {
-    
   }
 `;
 

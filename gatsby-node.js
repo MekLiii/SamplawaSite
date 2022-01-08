@@ -48,4 +48,38 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     });
   });
+
+  const resultPlayers = await graphql(`
+  {
+    allContentJson(limit: 1) {
+      nodes {
+        team {
+          asysty
+          bramki
+          mecze
+          cKartki
+          name
+          pozycja
+          numer
+          zKartki
+          zdjecia
+        }
+      }
+    }
+  }
+  
+  `);
+  const templatePathPlayers = path.resolve(`src/components/Organism/Player.js`);
+  resultPlayers.data.allContentJson.nodes.forEach((node) => {
+    node?.team?.forEach((node) => {
+      createPage({
+        path: `/kadra/${node.name}`,
+        component: templatePathPlayers,
+        context: {
+          slug: node,
+        },
+      });
+    });
+  });
 };
+
