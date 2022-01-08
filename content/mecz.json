@@ -145,7 +145,13 @@
                   "ZmianaNa": "Przemysław Cabaj"
                 }
               ],
-              "Kartki": []
+              "Kartki": [],
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Łukasz Ochlak",
+                  "minuta": 55
+                }
+              ]
             }
           ],
           "miejsce": "Sampława",
