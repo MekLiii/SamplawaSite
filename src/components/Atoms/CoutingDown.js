@@ -3,17 +3,20 @@ import DateCountdown from "react-date-countdown-timer";
 import styled from "styled-components";
 import "./app.css";
 
-
 function CoutingDown() {
-  if (typeof window !== `undefined`) {
-    return <div></div>
-  }
-
   return (
     <Box>
       <P>Na boisku widzimy się za:</P>
-      
-      <DateCountdown dateTo="04/12/2022" callback={() => alert("Hello")} style={{fontSize:'clamp(12px,2vw,30px)',color:'white',fontFamily:'poppins'}} />
+
+      <DateCountdown
+        dateTo="04/12/2022"
+        callback={() => alert("Hello")}
+        style={{
+          fontSize: "clamp(12px,2vw,30px)",
+          color: "white",
+          fontFamily: "poppins",
+        }}
+      />
     </Box>
   );
 }
