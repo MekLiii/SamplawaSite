@@ -212,7 +212,12 @@
           "przeciwnik": "Kormoran Zwierzewo",
           "Statystyki": [
             {
-              "BramkiPFT": [],
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Łukasz Ochlak",
+                  "minuta": 56
+                }
+              ],
               "BramkiPrzeciwnika": []
             }
           ],
