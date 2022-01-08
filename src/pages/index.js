@@ -68,7 +68,7 @@ const IndexPage = () => {
         </h2>
         <MatchesSlider />
       </StyledDiv>
-      <StyledAktu style={{ marginTop: 0 }}>
+      <StyledAktu style={{ marginTop: 0,minHeight:"40vh" }}>
         <h2 style={{ fontSize: "32px", fontFamily: "poppins", color: "white" }}>
           Aktualności
         </h2>

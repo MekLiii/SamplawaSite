@@ -23,8 +23,11 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
   const element = parseInt(array[1]);
   const newElement = months[element - 1];
   array[1] = newElement;
+  const handleMore = () => {
+    console.log('chuj')
+  }
   return (
-    <StyledBox>
+    <StyledBox onMouseOver={ handleMore()}>
       <div style={leftSide}>
         <div style={imagine}>
           <img src={img} style={imagine} alt={img} />

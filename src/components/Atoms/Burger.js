@@ -10,11 +10,13 @@ const StyledBurger = styled.div`
   right: 20px;
   z-index: 120;
   display: none;
+  
   @media (max-width: 800px) {
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
   }
+  
   div {
     width: 2rem;
     height: 0.25rem;
@@ -34,18 +36,31 @@ const StyledBurger = styled.div`
     }
   }
 `;
-
+const Box = styled.div`
+display:none;
+@media (max-width:768px){
+  display: block;
+  width:100%;
+  height:10vh;
+  z-index: 120;
+  position: fixed;
+  background-color:rgba(0,0,0,0.7)
+}
+ 
+`
 const Burger = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
+    <Box>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
         <div style={{ backgroundColor: "#ffe600" }} />
         <div style={{ backgroundColor: "#ffe600" }} />
         <div style={{ backgroundColor: "#ffe600" }} />
       </StyledBurger>
       <RightNav open={open} />
+      </Box>
     </>
   );
 };

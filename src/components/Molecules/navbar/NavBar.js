@@ -13,9 +13,11 @@ function NavBar() {
       <Burger />
       <StyledSide>
         <NavElement style={{ flex: 1 }}>
-          <StyledLogo>
-            <StyledImg src={logo} alt={logo} />
-          </StyledLogo>
+          <Flag>
+            <StyledLogo>
+              <StyledImg src={logo} alt={logo} />
+            </StyledLogo>
+          </Flag>
         </NavElement>
         <NavElement style={{ flex: 2 }}>
           <NavLinks>
@@ -94,7 +96,7 @@ const StyledNav = styled.nav`
   }
 `;
 const StyledSide = styled.div`
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
   display: flex;
@@ -149,7 +151,15 @@ const StyledImg = styled.img`
     display: none;
   }
 `;
-
+const Flag = styled.div`
+  background-color: #ffe600;
+  height: 200px;
+  width: 100px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 50% 80%, 0 100%, 0 0);
+`;
 const text = {
   color: "white",
   fontWeight: "500",

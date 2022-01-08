@@ -62,7 +62,7 @@ export default function MatchesSlider() {
         <SwiperSlide
           style={{
             height: "200px",
-            boderRadius: "5px",
+            boderRadius: "50%",
             backgroundColor: "inherit",
           }}
           key={el.data}
@@ -148,10 +148,10 @@ const Box = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  border-radius: 5%;
-  -webkit-box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1);
+  border-radius: 10px;
+  ${'' /* -webkit-box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1);
   -moz-box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1);
-  box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1);
+  box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1); */}
 `;
 const Top = styled.div``;
 const Mid = styled.div`
