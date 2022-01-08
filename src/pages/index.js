@@ -100,7 +100,7 @@ const IndexPage = () => {
         <div style={{ width: "100%" }}>
           <Carousel responsive={responsive}>
             {sponData.Sponsorzy.map((el) => (
-              <SponsorEl name={el.name} img={el.logo} key={el.name} />
+              <SponsorEl name={el.name} img={el.logo} key={el.name + el.logo} />
             ))}
           </Carousel>
         </div>

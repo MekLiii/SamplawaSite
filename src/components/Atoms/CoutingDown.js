@@ -55,7 +55,6 @@ function CoutingDown() {
 
  
     const resultNextMatch = data.find(({ data }) => data == compareDate);
-    console.log(resultNextMatch)
   return (
     <Box>
       <P>Na boisku widzimy się za:</P>

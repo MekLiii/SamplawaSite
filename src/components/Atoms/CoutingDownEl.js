@@ -1,5 +1,5 @@
 import React from "react";
-import DateCountdown from "react-date-countdown-timer";
+// import DateCountdown from "react-date-countdown-timer";
 
 function CoutingDownEl({dateTo}) {
   return (

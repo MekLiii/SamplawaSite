@@ -73,6 +73,7 @@ export default function App() {
         ></div>
         {dataAtom.map((el) => (
           <SwiperSlide
+          key={el.node.frontmatter.data + el.node.frontmatter.naglowek}
             style={{
               backgroundImage: `url(${el.node.frontmatter.zdjecia?.slice(7)})`,
               backgroundRepeat: "no-repeat",
@@ -81,7 +82,7 @@ export default function App() {
               flexDirection: "column",
               justifyContent: "flex-end",
             }}
-            key={el.node.frontmatter.data}
+            
           >
             <Shadow>
               <ShadowText>{el.node.frontmatter.naglowek}</ShadowText>
@@ -130,11 +131,11 @@ const ShadowButton = styled.button`
 `;
 const Button = () => {
   return (
-    <div class="center">
-      <button class="btn">
-        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+    <div className="center">
+      <button className="btn">
+        <svg width="180px" height="60px" viewBox="0 0 180 60" className="border">
+          <polyline points="179,1 179,59 1,59 1,1 179,1" className="bg-line" />
+          <polyline points="179,1 179,59 1,59 1,1 179,1" className="hl-line" />
         </svg>
         <span>Czytaj dalej</span>
       </button>
