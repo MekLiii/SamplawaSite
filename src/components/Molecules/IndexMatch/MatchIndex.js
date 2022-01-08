@@ -52,7 +52,7 @@ function MatchIndex() {
       stats.unshift("0");
     }
 
-    const bramkiPFT =
+    const bramkiPFT = 
       stats[0].BramkiPFT === undefined ? "0" : stats[0].BramkiPFT.length;
     const bramkiPrzeciwnika =
       stats[0].BramkiPrzeciwnika === undefined
