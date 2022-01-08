@@ -1,25 +1,20 @@
 import React from "react";
-import DateCountdown from "react-date-countdown-timer";
+
 import styled from "styled-components";
 import "./app.css";
+import loadable from "@loadable/component";
+
+const OtherComponent = loadable(() => import("./CoutingDownEl"));
 
 function CoutingDown() {
   return (
     <Box>
       <P>Na boisku widzimy się za:</P>
-
-      <DateCountdown
-        dateTo="04/12/2022"
-        callback={() => alert("Hello")}
-        style={{
-          fontSize: "clamp(12px,2vw,30px)",
-          color: "white",
-          fontFamily: "poppins",
-        }}
-      />
+      <OtherComponent dateTo="9/15/2022"/>
     </Box>
   );
 }
+
 
 const Box = styled.div`
   width: 100%;
