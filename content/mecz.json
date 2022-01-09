@@ -218,7 +218,14 @@
                   "minuta": 56
                 }
               ],
-              "BramkiPrzeciwnika": []
+              "BramkiPrzeciwnika": [],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Łukasz Ochlak",
+                  "kartka": "żółta",
+                  "minuta": 12
+                }
+              ]
             }
           ],
           "miejsce": "Sampława",
