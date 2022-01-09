@@ -329,6 +329,45 @@
           "godzina": "16:00",
           "miejsce": " ",
           "logoEnemy": "/static/logo/lzs_huragan_byszwald.png"
+        },
+        {
+          "pftGoals": 2,
+          "data": "01/09/2022",
+          "przeciwnik": "test",
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Łukasz Ochlak",
+                  "minuta": 55
+                }
+              ],
+              "BramkiPrzeciwnika": [],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Łukasz Ochlak",
+                  "kartka": "żółta",
+                  "minuta": 1
+                },
+                {
+                  "Zawodnicy": "Łukasz Ochlak",
+                  "kartka": "czerwona",
+                  "minuta": 2
+                }
+              ]
+            }
+          ],
+          "miejsce": "Lubawa",
+          "Zawodnicy": [
+            {
+              "Zawodnicy": "Łukasz Ochlak",
+              "minuty": 90
+            }
+          ],
+          "gospodarze": "PFT Drewneks Sampława",
+          "enemyGoals": 0,
+          "logoEnemy": "/static/logo/fredynowy.png",
+          "godzina": "15:00"
         }
       ]
     }
