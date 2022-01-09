@@ -6,6 +6,8 @@ import data from "../../../content/mecz.json";
 
 function Player({ pageContext }) {
   const { slug } = pageContext;
+
+  // strzelone bramki
   const matchWhoWhenScored = [];
   const matchWhenPlayersScored = [];
   data.sezon.forEach((el) =>
@@ -16,14 +18,35 @@ function Player({ pageContext }) {
   matchWhoWhenScored.forEach((el) =>
     matchWhenPlayersScored.push(el?.find((el) => el?.Zawodnicy === slug.name))
   );
+  //filtruje elementy które są undefined
   function filter(value) {
     return value != undefined;
   }
+  //stała filtrująca tablice matchWhenPlayersScored
   const sortedArrayWhenScored = matchWhenPlayersScored.filter(filter);
-  console.log(sortedArrayWhenScored);
 
-  //   data.sezon.forEach((el) =>console.log(el.mecz))
+  //ile meczy zagrał zawodnik
+  const playedMatchesAllPlayers = [];
+  data.sezon.forEach((el) =>
+    el?.mecz.forEach((el) => playedMatchesAllPlayers.push(el.Zawodnicy))
+  );
+  const sortedplayedMatchesAllPlayers = playedMatchesAllPlayers.filter(filter);
+  const howManyMatchesPlayed = [];
+  sortedplayedMatchesAllPlayers.forEach((el) =>
+    howManyMatchesPlayed.push(el.find((el) => el.Zawodnicy === slug.name))
+  );
+  const filterArray = howManyMatchesPlayed.filter(filter);
+  // Kartki
+  const cards = [];
+  data.sezon.forEach((el) =>
+    el?.mecz.forEach((el) =>
+      el?.Statystyki?.forEach((el) => cards.push(el?.Kartki))
+    )
+  );
+  console.log(cards);
 
+  const goals = slug.bramki + sortedArrayWhenScored.length;
+  const playedMatches = slug.mecze + filterArray.length;
   return (
     <Layout>
       <Box>
@@ -39,8 +62,8 @@ function Player({ pageContext }) {
           </Left>
           <Right>
             <SezonBox>
-              <p>Bramki:{slug.bramki}</p>
-              <p>Mecze:{slug.mecze}</p>
+              <p>Bramki:{goals}</p>
+              <p>Mecze:{playedMatches}</p>
               <p>Żółte kartki:{slug.cKartki}</p>
               <p>Czerwone Kartki:{slug.zKartki}</p>
             </SezonBox>
