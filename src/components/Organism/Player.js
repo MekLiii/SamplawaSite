@@ -43,10 +43,21 @@ function Player({ pageContext }) {
       el?.Statystyki?.forEach((el) => cards.push(el?.Kartki))
     )
   );
-  console.log(cards);
+  //żółte kartki
+  const yellowCardsArray = []
+  
+  cards.forEach((el) => yellowCardsArray.push(el.find((el) => el.kartka === 'żółta')))
+  const sortedYellowCards = yellowCardsArray.filter(filter)
+  // czerowne kartki
+  const redCardsArray = []
+  
+  cards.forEach((el) => redCardsArray.push(el.find((el) => el.kartka === 'żółta')))
+  const sortedRedCards = redCardsArray.filter(filter)
 
   const goals = slug.bramki + sortedArrayWhenScored.length;
   const playedMatches = slug.mecze + filterArray.length;
+  const yellowCards= slug.zKartki + sortedYellowCards.length;
+  const redCards= slug.cKartki + sortedRedCards.length;
   return (
     <Layout>
       <Box>
@@ -64,8 +75,8 @@ function Player({ pageContext }) {
             <SezonBox>
               <p>Bramki:{goals}</p>
               <p>Mecze:{playedMatches}</p>
-              <p>Żółte kartki:{slug.cKartki}</p>
-              <p>Czerwone Kartki:{slug.zKartki}</p>
+              <p>Żółte kartki:{yellowCards}</p>
+              <p>Czerwone Kartki:{redCards}</p>
             </SezonBox>
             {data.sezon.map((el) => (
               <SezonBox key={el.sezon}>
