@@ -11,6 +11,14 @@ function AccordionEl({ data, slugName }) {
     );
     return playerObject.minuty;
   }
+  function convertData(x) {
+    const newData = new Date(x);
+    return newData.toLocaleDateString("Pl", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+  }
   function MapELement() {
     function CustomToggle({ children, eventKey }) {
       const decoratedOnClick = useAccordionButton(eventKey, () =>
@@ -64,7 +72,7 @@ function AccordionEl({ data, slugName }) {
                   }}
                 >
                   <Body>
-                    <P style={{}}>data: {el.data}</P>
+                    <P style={{}}>data: {convertData(el.data)}</P>
                     <P style={{}}>
                       wynik: {el.pftGoals}-{el.enemyGoals}
                     </P>

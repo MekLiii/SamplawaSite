@@ -87,12 +87,29 @@ function Player({ pageContext }) {
     redCardsArray.push(el.find((el) => el.kartka === "żółta"))
   );
   const sortedRedCards = redCardsArray.filter(filter);
-
+  //Naprowione czerowne kartki
+  const repairRedCars = [];
+  cards.forEach((el) => repairRedCars.push(Object.values(el).find(el => el.Zawodnicy === slug.name && el.kartka === "czerowna")))
+  const filterRepairRedCards = repairRedCars.filter(filter)
+ //Naprawione zolte kartkii
+ const repairYellowCars = [];
+ cards.forEach((el) => repairYellowCars.push(Object.values(el).find(el => el.Zawodnicy === slug.name && el.kartka === "żółta")))
+ 
+ const filterRepairYellowCards = repairYellowCars.filter(filter)
+ //
   const goals = slug.bramki + sortedArrayWhenScored.length;
   const playedMatches = slug.mecze + filterArray.length;
-  const yellowCards = slug.zKartki + sortedYellowCards.length;
-  const redCards = slug.cKartki + sortedRedCards.length;
+  const yellowCards = slug.zKartki + filterRepairYellowCards.length;
+  const redCards = slug.cKartki + filterRepairRedCards.length;
   const minuts = 0;
+  function convertData(x) {
+      const newData = new Date(x);
+      return newData.toLocaleDateString("Pl", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      });
+    }
   return (
     <Layout>
       <Box>
