@@ -132,6 +132,103 @@
     {
       "zdjecia": "/static/players/img/jakub-pokojski.png",
       "name": "Jakub Pokojski",
+      "pozycja": "brak pozycji",
+      "bramki": 9,
+      "minuty": 330
+    },
+    {
+      "zdjecia": "/static/players/img/profile-png-clipart-png-all.png",
+      "name": "Nikodem Mówiński",
+      "bramki": 11,
+      "minuty": 340,
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/static/players/img/fabian-buczkowski.png",
+      "name": "Fabian Buczkowski",
+      "mecze": 5,
+      "minuty": 150,
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/players/test.jpg",
+      "name": "Marika Kasprowicz",
+      "mecze": 3,
+      "bramki": 5,
+      "minuty": 180,
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/static/players/img/radosław-kirzanowski.png",
+      "name": "Radosław Kirzanowski",
+      "mecze": 2,
+      "bramki": 2,
+      "minuty": 80,
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/static/players/img/mateusz-szynaka.png",
+      "name": "Mateusz Szynaka",
+      "mecze": 6,
+      "minuty": 220,
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/players/test.jpg",
+      "name": "Igor Goniszewski",
+      "mecze": 5,
+      "bramki": 8,
+      "minuty": 150,
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/static/players/img/wojciech-zelmański.png",
+      "name": "Wojciech Zelmański",
+      "mecze": 7,
+      "bramki": 10,
+      "minuty": 200,
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/static/players/img/antoni-wiśniewski.png",
+      "name": "Antoni Wiśniewski",
+      "mecze": 4,
+      "bramki": 7,
+      "minuty": 80,
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/static/players/img/antoni-szynaka.png",
+      "name": "Antoni Szynaka",
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/static/players/img/hubert-dąbrowski.png",
+      "name": "Hubert Dąbrowski",
+      "mecze": 1,
+      "bramki": 1,
+      "minuty": 20,
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/static/players/img/oliwier-rudnik.png",
+      "name": "Oliwier Rudnik",
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/static/players/img/ksawery-rudnik.png",
+      "name": "Ksawery Rudnik",
+      "mecze": 10,
+      "bramki": 18,
+      "minuty": 200,
+      "pozycja": "brak pozycji"
+    },
+    {
+      "zdjecia": "/static/players/img/wojtek-żuchowski.png",
+      "name": "Wojtek Żuchowski",
+      "mecze": 5,
+      "bramki": 5,
+      "minuty": 100,
       "pozycja": "brak pozycji"
     }
   ],
