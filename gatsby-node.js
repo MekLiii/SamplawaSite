@@ -34,7 +34,6 @@ exports.createPages = async ({ graphql, actions }) => {
   }
   `);
   const templatePath = path.resolve(`src/components/Organism/ElStat.js`);
-
   result.data.allContentJson.nodes.forEach((node) => {
     node.sezon.forEach((node) => {
       node.mecz.forEach((node) => {

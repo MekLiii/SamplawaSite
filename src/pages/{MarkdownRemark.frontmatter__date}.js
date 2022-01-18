@@ -22,7 +22,7 @@ export default function Template({ data }) {
 
   const Galery = () => {
     if (galery === null) {
-      return <p style={{color:"grey",textAlign:"center"}}>Brak zdjęć</p>;
+      return <p style={{ color: "grey", textAlign: "center" }}>Brak zdjęć</p>;
     } else {
       return galery?.map((item) => (
         <ImageListItem key={item.img}>
@@ -55,7 +55,7 @@ export default function Template({ data }) {
                 fontSize: "clamp(17px,3vw,33px)",
                 fontFamily: "Poppins",
                 padding: "10px",
-                textAlign:"center",
+                textAlign: "center",
               }}
             >
               {frontmatter.naglowek}
@@ -76,27 +76,28 @@ export default function Template({ data }) {
               </Article>
             </SidePost>
             <SidePost style={{ flexDirection: "column" }}>
-              {/* <img src={`/${image}`} className="imgArticle" alt={image} /> */}
-              <ImageList
-                sx={{ width: "auto", height: 450, overFlowY: "hidden" }}
-                cols={3}
-                rowHeight={164}
-              >
-                <Galery />
-                <ModalGalery
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                  data={galery}
-                />
-              </ImageList>
-              <Button
-                onClick={() => {
-                  setModalShow(true);
-                  // setDataImage(galery);
-                }}
-              >
-                Zobacz więcej
-              </Button>
+              <ImageHolder>
+                <ImageList
+                  sx={{ width: "auto", height: 450, overFlowY: "hidden" }}
+                  cols={2}
+                  rowHeight={164}
+                >
+                  <Galery />
+                  <ModalGalery
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                    data={galery}
+                  />
+                </ImageList>
+                <Button
+                  onClick={() => {
+                    setModalShow(true);
+                    // setDataImage(galery);
+                  }}
+                >
+                  Powiększ zdjęcia
+                </Button>
+              </ImageHolder>
             </SidePost>
           </PostGriDholder>
         </Post>
@@ -138,11 +139,12 @@ const StyledSliderElement = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 230, 0, 0.9);
+  background: rgba(255, 230, 0, 0.8);
   border-radius: 5px;
   @media only screen and (max-width: 765px) {
     width: 80%;
     height: 75px;
+    padding: 50px;
   }
 `;
 const Post = styled.div`
@@ -160,6 +162,10 @@ const SidePost = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    align-items: center;
+  }
 `;
 const Article = styled.div`
   width: 90%;
@@ -199,6 +205,20 @@ const Cytat = styled.div`
 const CytatText = styled.p`
   color: grey;
 `;
+const ImageHolder = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media only screen and (max-width:768px){
+    width: 80%;
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+`
 
 export const pageQuery = graphql`
   query ($id: String) {

@@ -40,7 +40,7 @@ collections:
             fields:
               - {label: name, name: name, widget: string}
               - {label: numer Zawodnika, name: numer, widget: number, required: false}
-              - {label: pozycja, name: pozycja, widget: select, options: ["bramkarz", "obrońca", "pomocnik","napastnik"]}
+              - {label: pozycja, name: pozycja, widget: select, options: ["bramkarz", "obrońca", "pomocnik","napastnik","brak pozycji"]}
               - {label: bramki, name: bramki, widget: number, required: false}
               - {label: asysty, name: asysty, widget: number, required: false}
               - {label: żółte kartki, name: zKartki, widget: number, required: false}

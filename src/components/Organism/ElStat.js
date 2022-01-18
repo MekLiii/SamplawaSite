@@ -12,6 +12,7 @@ import Select from "@mui/material/Select";
 import { makeStyles } from "@material-ui/core";
 import PlayerSec from "../Atoms/PlayerSec";
 
+
 function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [age, setAge] = useState("");
@@ -68,26 +69,38 @@ function ElStat({ pageContext }) {
   const whoScored = whichMecz.Statystyki;
   const today = new Date();
   const currentDay =
-      today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
-    const currentMonth =
-      today.getMonth() + 1 > "9"
-        ? today.getMonth() + 1
-        : "0" + (today.getMonth() + 1);
+    today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
+  const currentMonth =
+    today.getMonth() + 1 > "9"
+      ? today.getMonth() + 1
+      : "0" + (today.getMonth() + 1);
   const currentDate =
-      currentMonth + "/" + currentDay + "/" + today.getFullYear();
-  const Statistics = () => {
-    console.log(whichMecz)
-    if(new Date(whichMecz.data) > new Date(currentDate)){
-      return(
-        <p style={{color:"white",fontSize:"clamp(20px,5vw,40px)"}}>Mecz odbędzie się wkrótce</p>
-      )
+    currentMonth + "/" + currentDay + "/" + today.getFullYear();
+    function convertData(x) {
+      const newData = new Date(x);
+      return newData.toLocaleDateString("Pl", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      });
     }
+  const Statistics = () => {
+    console.log(whichMecz);
+    if (new Date(whichMecz.data) > new Date(currentDate)) {
+      return (
+        <p style={{ color: "white", fontSize: "clamp(20px,5vw,40px)" }}>
+          Mecz odbędzie się wkrótce
+        </p>
+      );
+    }
+    
     return (
       <PlayersBox>
         <PlayersHolder>
           <Title>Skład wyjściowy</Title>
           {whichMecz.Zawodnicy?.map((el) => (
             <PlayerSec
+              link={`/kadra/${el.Zawodnicy}`}
               name={el.Zawodnicy}
               key={el.Zawodnicy}
               src={team.team
@@ -226,7 +239,7 @@ function ElStat({ pageContext }) {
                   ))
                 )}
               </div>
-              <span>{whichMecz.data}</span>
+              <span>{convertData(whichMecz.data)}</span>
               <div style={{ flex: 1 }}>
                 {whoScored?.map((el) =>
                   el.BramkiPrzeciwnika?.map((el) => (

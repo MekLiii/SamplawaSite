@@ -107,17 +107,26 @@ function Player({ pageContext }) {
             />
           </Left>
           <Right>
-            <SezonBox style={{height:"10vh"}}>
+            <SezonBox style={{ minHeight: "10vh" }}>
+              <span
+                style={{ fontSize: "clamp(20px, 5vw, 25px)", color: "white",textAlign:"center" }}
+              >
+                Statystyki w karierze PFT Sampława
+              </span>
               <Grid>
-                <P>Bramki: {goals}</P>
-                <P>Mecze: {playedMatches}</P>
-                <P>Żółte kartki: {yellowCards}</P>
-                <P>Czerwone Kartki: {redCards}</P>
-                <P>Rozegrane minuty: {minuty}'</P>
+                <Pcointainer><P>Bramki: </P> <P>{goals}</P></Pcointainer>
+                <Pcointainer><P>Mecze: </P> <P> {playedMatches}</P></Pcointainer>
+                <Pcointainer><P>Żółte kartkii: {""}</P> <P> {yellowCards}</P></Pcointainer>
+                <Pcointainer><P>Czerwone Kartki: </P> <P> {redCards}</P></Pcointainer>
+                <Pcointainer><P>Rozegrane minuty: </P> <P> {minuty}'</P></Pcointainer>
               </Grid>
             </SezonBox>
-            <SezonBox style={{height:"70%"}}>
-              <span style={{color:"white",fontSize:"clamp(15px, 5vw, 30px)"}}>Rozegrane mecze w sezonie: {data.AktualnySezon}</span>
+            <SezonBox style={{ height: "70%" }}>
+              <span
+                style={{ color: "white", fontSize: "clamp(15px, 5vw, 30px)" }}
+              >
+                Rozegrane mecze w sezonie: {data.AktualnySezon}
+              </span>
               <AccordionEl data={sortedArrayWhichMatch} slugName={slug} />
             </SezonBox>
           </Right>
@@ -145,7 +154,7 @@ const Left = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width:768px){
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -158,9 +167,10 @@ const Right = styled.div`
   align-items: center;
   flex-direction: column;
   @media (max-width: 768px) {
-      width:100%;
-      
-    }
+    width: 100%;
+    max-height: 100vh;
+    flex-direction: column-reverse;
+  }
 `;
 const SezonBox = styled.div`
     width: 70%;
@@ -175,7 +185,7 @@ const SezonBox = styled.div`
     margin-top:5vh;
     @media (max-width: 768px) {
       width:100%;
-      justify-content:center;
+      justify-content:flex-start;
       align-items:center;
     }
 `;
@@ -185,15 +195,23 @@ const Grid = styled.div`
   align-items: center;
   width: 100%;
   @media (max-width: 768px) {
-      width:50%;
-      flex-direction: column;
-      align-items: flex-start;
-      min-height: 10vh;
-
-    }
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 13vh;
+  }
 `;
 const P = styled.p`
   color: white;
 `;
+const Pcointainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
+`
 
 export default Player;

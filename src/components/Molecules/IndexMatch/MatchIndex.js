@@ -45,14 +45,14 @@ function MatchIndex() {
     const compareDate = newArray[indexOfCurrentDay - 1];
 
     const result = data.find(({ data }) => data == compareDate);
- 
+
     const stats = [result.Statystyki];
 
     if (result.Statystyki == undefined) {
       stats.unshift("0");
     }
 
-    const bramkiPFT = 
+    const bramkiPFT =
       stats[0].BramkiPFT === undefined ? "0" : stats[0].BramkiPFT.length;
     const bramkiPrzeciwnika =
       stats[0].BramkiPrzeciwnika === undefined
@@ -107,43 +107,51 @@ function MatchIndex() {
       stats.unshift("0");
     }
 
- 
     const resultNextMatch = data.find(({ data }) => data == compareDate);
 
     return resultNextMatch;
   }
   const { result, bramkiPrzeciwnika, bramkiPFT } = lasMatch();
   const resultNextMatch = nextMatch();
+  function convertData(x) {
+    const newData = new Date(x);
+    return newData.toLocaleDateString("Pl", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+  }
+  console.log(convertData("06/30/2022"));
   return (
     <Cointainer>
       <StyledDiv>
-      <Bounce bottom>
-        <MatchElIndex
-          title="Ostatni mecz"
-          data={result.data}
-          letters={result.gospodarze.slice(0, 3)}
-          name={result.gospodarze}
-          score={result.pftGoals}
-          lettersEnemy={result.przeciwnik.slice(0, 3)}
-          nameEnemy={result.przeciwnik}
-          scoreEnemy={result.enemyGoals}
-          whatNext="Zobacz statystyki"
-          link={`/mecze/${result.gospodarze}-${result.przeciwnik}`}
-          sign="-"
-        />
+        <Bounce bottom>
+          <MatchElIndex
+            title="Ostatni mecz"
+            data={convertData(result.data)}
+            letters={result.gospodarze.slice(0, 3)}
+            name={result.gospodarze}
+            score={result.pftGoals}
+            lettersEnemy={result.przeciwnik.slice(0, 3)}
+            nameEnemy={result.przeciwnik}
+            scoreEnemy={result.enemyGoals}
+            whatNext="Zobacz statystyki"
+            link={`/mecze/${result.gospodarze}-${result.przeciwnik}`}
+            sign="-"
+          />
         </Bounce>
-      <Bounce bottom>
-        <MatchElIndex
-          title="Następny mecz"
-          data={resultNextMatch?.data}
-          letters="Sam"
-          name={resultNextMatch?.gospodarze}
-          lettersEnemy="HUR"
-          nameEnemy={resultNextMatch?.przeciwnik}
-          whatNext={`${resultNextMatch?.godzina} ${resultNextMatch?.miejsce}`}
-          sign="VS"
-          link="#"
-        />
+        <Bounce bottom>
+          <MatchElIndex
+            title="Następny mecz"
+            data={convertData(resultNextMatch?.data)}
+            letters="Sam"
+            name={resultNextMatch?.gospodarze}
+            lettersEnemy="HUR"
+            nameEnemy={resultNextMatch?.przeciwnik}
+            whatNext={`${resultNextMatch?.godzina} ${resultNextMatch?.miejsce}`}
+            sign="VS"
+            link="#"
+          />
         </Bounce>
       </StyledDiv>
     </Cointainer>

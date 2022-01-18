@@ -28,7 +28,14 @@ export default function MatchesSlider() {
   const currentDate =
     today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
   const resultNextMatch = data.find(({ data }) => data < currentDay);
-
+  function convertData(x) {
+    const newData = new Date(x);
+    return newData.toLocaleDateString("Pl", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+  }
   return (
     <Swiper
       slidesPerView={1}
@@ -68,7 +75,7 @@ export default function MatchesSlider() {
           key={el.data}
         >
           <SliderElement
-            date={el.data}
+            date={convertData(el.data)}
             srcPFT={logo}
             srcEnemy={el.logoEnemy.slice(7)}
             style={{ backgroundColor: "#ffe600" }}

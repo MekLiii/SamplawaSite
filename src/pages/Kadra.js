@@ -74,7 +74,7 @@ function Druzyna() {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
-
+console.log(kadra)
   const classes = useStyles();
   return (
     <Layout>

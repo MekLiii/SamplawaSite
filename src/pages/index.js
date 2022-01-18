@@ -11,11 +11,9 @@ import sponData from "../../content/sponsors/sponsors.json";
 import CustomizedTables from "../components/Molecules/MatchTable/CustomizedTables";
 import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.png";
 import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
-import ProductsMain from "../components/Atoms/ProductsMain";
 import MatchesSlider from "../components/Atoms/MatchesSlider";
 import IndexFirstSec from "../components/Molecules/IndexMainSec/IndexFirstSec";
-import Fade from "react-reveal/Zoom";
-import Bounce from "react-reveal/Zoom";
+
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import CoutingDown from "../components/Atoms/CoutingDown";
@@ -69,9 +67,9 @@ const IndexPage = () => {
         <MatchesSlider />
       </StyledDiv>
       <StyledAktu style={{ marginTop: 0,minHeight:"40vh" }}>
-        <h2 style={{ fontSize: "32px", fontFamily: "poppins", color: "white" }}>
+        <H2 >
           Aktualności
-        </h2>
+        </H2>
 
         <Aktu />
       </StyledAktu>
@@ -100,7 +98,7 @@ const IndexPage = () => {
         <div style={{ width: "100%" }}>
           <Carousel responsive={responsive}>
             {sponData.Sponsorzy.map((el) => (
-              <SponsorEl name={el.name} img={el.logo} key={el.name + el.logo} />
+              <SponsorEl  img={el.logo} key={el.name + el.logo} />
             ))}
           </Carousel>
         </div>
@@ -175,6 +173,15 @@ const SponsorsTitle = styled.p`
   font-family: poppins;
   font-size: 32px;
 `;
+
+const H2 = styled.h2`
+  font-size:32px;
+  font-family: poppins;
+  color: white;
+  @media only screen and (max-width: 765px) {
+    margin-top:50px;
+  }
+`
 
 export default IndexPage;
 

@@ -14,7 +14,7 @@ function Table({ data, title }) {
       </div>
       <GridHolder>
         {data?.map((el) => (
-          <Link to={`/kadra/${el.name}`} key={el.name}>
+          <Link to={`/kadra/${el.name}`} key={el.name} style={{color: "black"}}>
             <TableHero
               pozycja={el.pozycja}
               rola={el.rola}

@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { TabletPortrait,CaretUpOutline } from "react-ionicons";
+import { Link } from "gatsby";
 
 
 
-function PlayerSec({ minuts, src, name,color,StyleIcon, colorArrow,StyleArrow}) {
+function PlayerSec({ minuts, src, name,color,StyleIcon, colorArrow,StyleArrow,link}) {
   return (
     <PlayersHolder>
       <Bottom>
         <Img src={src} alt={src} />
-        <span>{name}</span>
+        <Link to={link} style={{color:"white"}}><span>{name}</span></Link>
         <span>
           {minuts}' 
           <TabletPortrait color={color} style={StyleIcon}/>
