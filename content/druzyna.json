@@ -128,7 +128,13 @@
       "pozycja": "napastnik"
     }
   ],
-  "mlodzik": [],
+  "mlodzik": [
+    {
+      "zdjecia": "/static/players/img/jakub-pokojski.png",
+      "name": "Jakub Pokojski",
+      "pozycja": "brak pozycji"
+    }
+  ],
   "zespolSenior": [
     {
       "zdjecia": "/static/players/img/69c913c06960b2816d55eb7746db67647eb301.png",
