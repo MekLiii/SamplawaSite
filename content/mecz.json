@@ -224,12 +224,7 @@
             }
           ],
           "miejsce": "Sampława",
-          "Zawodnicy": [
-            {
-              "Zawodnicy": "Krystian Zelmański",
-              "minuty": 90
-            }
-          ],
+          "Zawodnicy": [],
           "gospodarze": "PFT Drewneks Sampława",
           "enemyGoals": 0,
           "logoEnemy": "/static/logo/8205a702cc020a329d65aa0e5e57cdf3da4ae2.png",
