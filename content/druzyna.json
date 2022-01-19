@@ -1,12 +1,13 @@
 {
   "team": [
     {
+      "minuty": 2700,
       "name": "Łukasz Ochlak",
-      "zKartki": 0,
+      "zKartki": 1,
       "asysty": 0,
       "numer": 0,
       "zdjecia": "/static/players/img/0546c55b4ea432ab843603c178999f939faf7a.png",
-      "mecze": 1,
+      "mecze": 29,
       "cKartki": 0,
       "bramki": 0,
       "pozycja": "bramkarz"
@@ -20,77 +21,123 @@
     {
       "zdjecia": "/players/test.jpg",
       "name": "Lucjan Szwarc",
-      "pozycja": "obrońca"
+      "pozycja": "obrońca",
+      "mecze": 6,
+      "zKartki": 1,
+      "minuty": 470
     },
     {
       "zdjecia": "/static/players/img/28befac77f1ad615277eaef8e74bb008eed170.jpg",
       "name": "Szymon Łątkowski",
-      "pozycja": "obrońca"
+      "pozycja": "obrońca",
+      "mecze": 4,
+      "zKartki": 1,
+      "minuty": 324
     },
     {
       "zdjecia": "/static/players/img/946e41f4e17da1a438f3e481d6cfe8bc6e8d12.png",
       "name": "Tomasz Sławiński",
-      "pozycja": "obrońca"
+      "pozycja": "obrońca",
+      "mecze": 26,
+      "minuty": 1201
     },
     {
       "zdjecia": "/static/players/img/a40d8b4ab95d1fc65fc9884c4d0348c9a0ad7d.jpg",
       "name": "Arkadiusz Wietecha",
-      "pozycja": "obrońca"
+      "pozycja": "obrońca",
+      "mecze": 8,
+      "bramki": 2,
+      "minuty": 611
     },
     {
       "zdjecia": "/static/players/img/8cb81e5192a1b88df171a5ed2e1e05e3a004dd.jpg",
       "name": "Wojciech Banacki",
-      "pozycja": "obrońca"
+      "pozycja": "obrońca",
+      "mecze": 9,
+      "minuty": 747,
+      "zKartki": 2
     },
     {
       "zdjecia": "/static/players/img/c3fbf2bca282506c4e895b0609bdb30a93a244.png",
       "name": "Andrzej Podlaszewski",
-      "pozycja": "obrońca"
+      "pozycja": "obrońca",
+      "mecze": 18,
+      "zKartki": 4,
+      "minuty": 1522
     },
     {
       "zdjecia": "/static/players/img/08e35439adc629e44b68fdf1af7cc492b83084.jpg",
       "name": "Sylwester Rynkowski",
-      "pozycja": "obrońca"
+      "pozycja": "obrońca",
+      "mecze": 8,
+      "bramki": 1,
+      "minuty": 386
     },
     {
       "zdjecia": "/static/players/img/e0f34e723f752d0f49d2cddada175bb42b7e87.jpg",
       "name": "Henryk Świątkowski",
-      "pozycja": "obrońca"
+      "pozycja": "obrońca",
+      "mecze": 7,
+      "bramki": 1,
+      "minuty": 451
     },
     {
       "zdjecia": "/static/players/img/6a577e9958eecb116c7820fc7b0799373b87fe.png",
       "name": "Adam Dybich",
-      "pozycja": "obrońca"
+      "pozycja": "obrońca",
+      "mecze": 17,
+      "zKartki": 3,
+      "minuty": 1307
     },
     {
       "zdjecia": "/static/players/img/251f896dcd939a89f64184e3c1beb7c3e55c08.png",
       "name": "Radosław Buczkowski",
-      "pozycja": "pomocnik"
+      "pozycja": "pomocnik",
+      "mecze": 25,
+      "bramki": 3,
+      "asysty": 2,
+      "minuty": 1773
     },
     {
       "zdjecia": "/static/players/img/9ef405f747fc28afaa862fa12229646b32043d.jpg",
       "name": "Cezary Chorzelewski",
-      "pozycja": "pomocnik"
+      "pozycja": "pomocnik",
+      "mecze": 17,
+      "bramki": 1,
+      "zKartki": 1,
+      "minuty": 751
     },
     {
       "zdjecia": "/static/players/img/3e68d120c895e717bc2a755e3801a654af1b70.png",
       "name": "Przemysław Cabaj",
-      "pozycja": "pomocnik"
+      "pozycja": "pomocnik",
+      "mecze": 15,
+      "zKartki": 1,
+      "minuty": 532
     },
     {
       "zdjecia": "/static/players/img/88066503aa140bd7cf767486d89273a8cfbe8c.jpg",
       "name": "Michał Łukaszewski",
-      "pozycja": "pomocnik"
+      "pozycja": "pomocnik",
+      "mecze": 6,
+      "bramki": 1,
+      "minuty": 395
     },
     {
       "zdjecia": "/static/players/img/d92bb8cc349a19efbe834fa81b92653823d3ff.png",
       "name": "Patryk Mówiński",
-      "pozycja": "pomocnik"
+      "pozycja": "pomocnik",
+      "mecze": 19,
+      "bramki": 1,
+      "minuty": 1342
     },
     {
       "zdjecia": "/static/players/img/2ff254a2dc502404aa12c703b1a215709516ff.png",
       "name": "Marek Nastachowski",
-      "pozycja": "pomocnik"
+      "pozycja": "pomocnik",
+      "mecze": 21,
+      "bramki": 2,
+      "minuty": 1351
     },
     {
       "zdjecia": "/static/players/img/c3922da091d840570f5d3dba240dd43f87fe10.jpg",
@@ -100,32 +147,53 @@
     {
       "zdjecia": "/static/players/img/1296a8c5956ab93a7cedb28893fcc07d8d2561.jpg",
       "name": "Dawid Mederski",
-      "pozycja": "napastnik"
+      "pozycja": "napastnik",
+      "mecze": 6,
+      "minuty": 447,
+      "zKartki": 1
     },
     {
       "zdjecia": "/static/players/img/b3e25238c1035389c97c1f0add9c9176d4b6d8.png",
       "name": "Jakub Lendzionowski",
-      "pozycja": "napastnik"
+      "pozycja": "napastnik",
+      "mecze": 20,
+      "bramki": 24,
+      "asysty": 1,
+      "zKartki": 2,
+      "minuty": 1757
     },
     {
       "zdjecia": "/static/players/img/0b8e43bdabac02dbc91731bcde4648837a87ea.png",
       "name": "Szymon Lasikowski",
-      "pozycja": "napastnik"
+      "pozycja": "napastnik",
+      "mecze": 28,
+      "zKartki": 1,
+      "minuty": 1793
     },
     {
       "zdjecia": "/static/players/img/46c1a00b4c50bf90b053e2ce678d58a718ca00.png",
       "name": "Michał Raciborski",
-      "pozycja": "napastnik"
+      "pozycja": "napastnik",
+      "mecze": 20,
+      "bramki": 6,
+      "zKartki": 1,
+      "minuty": 1689
     },
     {
       "zdjecia": "/static/players/img/2cab50fc8d1b92181cf0627cb6a60e2e8dcc4f.jpg",
       "name": "Marek Laskowski",
-      "pozycja": "napastnik"
+      "pozycja": "napastnik",
+      "mecze": 9,
+      "minuty": 289,
+      "bramki": 1
     },
     {
       "zdjecia": "/static/players/img/profile-png-clipart-png-all.png",
       "name": "Sylwester Bukowski",
-      "pozycja": "napastnik"
+      "pozycja": "napastnik",
+      "minuty": 282,
+      "mecze": 6,
+      "bramki": 4
     }
   ],
   "mlodzik": [
