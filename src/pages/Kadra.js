@@ -13,7 +13,7 @@ import styled from "styled-components";
 const useStyles = makeStyles({
   root: {
     width: 380,
-   
+
     "& .MuiOutlinedInput-input": {
       color: "#ffe600",
     },
@@ -41,7 +41,6 @@ const useStyles = makeStyles({
     "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
       borderColor: "#ffe600",
     },
-    
   },
 });
 
@@ -49,17 +48,20 @@ function Druzyna() {
   const [kadra, setKadra] = useState(data.team);
   const [zespol, setZespol] = useState(data.zespolSenior);
   const [age, setAge] = useState("");
-
+  const [link, setLink] = useState(true);
   const handleChange = (event) => {
     setAge(event.target.value);
   };
 
   const classes = useStyles();
-  
+
   return (
     <Layout>
       <div style={cointainer}>
-        <FormControl sx={{margin:"20px", width:"90%"}} className={classes.root} >
+        <FormControl
+          sx={{ margin: "20px", width: "90%" }}
+          className={classes.root}
+        >
           <InputLabel id="demo-simple-select-label" sx={{ color: "#ffe600" }}>
             Wybierz kadre
           </InputLabel>
@@ -72,16 +74,30 @@ function Druzyna() {
             onChange={handleChange}
             classes={{ root: classes.selectRoot }}
           >
-            <MenuItem onClick={() => {setKadra(data.team);setZespol(data.zespolSenior)}} value={"Seniorzy"}>
+            <MenuItem
+              onClick={() => {
+                setKadra(data.team);
+                setZespol(data.zespolSenior);
+                setLink(true)
+              }}
+              value={"Seniorzy"}
+            >
               Seniorzy
             </MenuItem>
-            <MenuItem onClick={() => {setKadra(data.mlodzik);setZespol(data.zespolJunior)}} value={"Młodzik"}>
+            <MenuItem
+              onClick={() => {
+                setKadra(data.mlodzik);
+                setZespol(data.zespolJunior);
+                setLink(false)
+              }}
+              value={"Młodzik"}
+            >
               Młodzik
             </MenuItem>
           </Select>
         </FormControl>
-        <Table data={kadra} title='Zawodnicy'/>
-        <Table data={zespol} title='Zespół' />
+        <Table data={kadra} title="Zawodnicy" linkBoolian={link} />
+        <Table data={zespol} title="Zespół" linkBoolian={link} />
       </div>
     </Layout>
   );

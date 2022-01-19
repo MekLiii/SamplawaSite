@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Accordion, useAccordionButton, Card } from "react-bootstrap";
 import styled from "styled-components";
 import { IoIosArrowDown } from "react-icons/io";
@@ -11,6 +11,8 @@ function AccordionEl({ data, slugName }) {
     );
     return playerObject.minuty;
   }
+  const [toogleIcon, setToogleIcon] = useState(true);
+  console.log(toogleIcon);
   function convertData(x) {
     const newData = new Date(x);
     return newData.toLocaleDateString("Pl", {
@@ -19,10 +21,18 @@ function AccordionEl({ data, slugName }) {
       day: "2-digit",
     });
   }
+  const styleRotate = {
+    rotate: {
+      transform: "rotate(0deg)",
+    },
+    unRotate: {
+      transform: "rotate(180deg)",
+    },
+  };
   function MapELement() {
     function CustomToggle({ children, eventKey }) {
       const decoratedOnClick = useAccordionButton(eventKey, () =>
-        console.log("totally custom!")
+        setToogleIcon(toogleIcon ? false : true)
       );
 
       return (
@@ -56,12 +66,11 @@ function AccordionEl({ data, slugName }) {
                     />
                   </TeamsElement>
                 </Teams>
-                <IoIosArrowDown
-                  color={"#00000"}
-                  rotate
-                  height="250px"
-                  width="250px"
-                />
+                <div
+                  style={toogleIcon ? styleRotate.rotate : styleRotate.unRotate}
+                >
+                  <IoIosArrowDown />
+                </div>
               </CustomToggle>
 
               <Accordion.Collapse eventKey={data.indexOf(el)}>
@@ -88,8 +97,10 @@ function AccordionEl({ data, slugName }) {
       );
     } else {
       return (
-        <div style={{width: '100%',display: 'flex',justifyContent: 'center'}}>
-          <p style={{color: 'white'}}>Brak danych</p>
+        <div
+          style={{ width: "100%", display: "flex", justifyContent: "center" }}
+        >
+          <p style={{ color: "white" }}>Brak danych</p>
         </div>
       );
     }

@@ -68,6 +68,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
   
   `);
+  console.log(resultPlayers)
   const templatePathPlayers = path.resolve(`src/components/Organism/Player.js`);
   resultPlayers.data.allContentJson.nodes.forEach((node) => {
     node?.team?.forEach((node) => {

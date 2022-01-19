@@ -6,25 +6,54 @@ import { Link } from "gatsby";
 
 // import chuj from '../../../../static/players/'
 
-function Table({ data, title }) {
+function Table({ data, title, linkBoolian }) {
+  function MapElement() {
+    if (linkBoolian) {
+      return (
+        <GridHolder>
+          {data?.map((el) => (
+            <div>
+              <Link
+                to={`/kadra/${el.name}`}
+                key={el.name}
+                style={{ color: "black" }}
+              >
+                <TableHero
+                  pozycja={el.pozycja != "brak pozycji" ? el.pozcyja : ""}
+                  rola={el.rola}
+                  name={el.name}
+                  key={el.name}
+                  img={`/${el.zdjecia?.slice(8)}`}
+                />
+              </Link>
+            </div>
+          ))}
+        </GridHolder>
+      );
+    } else {
+      return (
+        <GridHolder>
+          {data?.map((el) => (
+            <div>
+              <TableHero
+                pozycja={el.pozycja != "brak pozycji" ? el.pozcyja : ""}
+                rola={el.rola}
+                name={el.name}
+                key={el.name}
+                img={`/${el.zdjecia?.slice(8)}`}
+              />
+            </div>
+          ))}
+        </GridHolder>
+      );
+    }
+  }
   return (
     <div style={mainCoinainer}>
       <div style={heading}>
         <h1 style={{ color: "white" }}>{title}</h1>
       </div>
-      <GridHolder>
-        {data?.map((el) => (
-          <Link to={`/kadra/${el.name}`} key={el.name} style={{color: "black"}}>
-            <TableHero
-              pozycja={el.pozycja}
-              rola={el.rola}
-              name={el.name}
-              key={el.name}
-              img={`/${el.zdjecia?.slice(8)}`}
-            />
-          </Link>
-        ))}
-      </GridHolder>
+      <MapElement />
     </div>
   );
 }

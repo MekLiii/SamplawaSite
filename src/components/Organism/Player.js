@@ -102,14 +102,6 @@ function Player({ pageContext }) {
   const yellowCards = slug.zKartki + filterRepairYellowCards.length;
   const redCards = slug.cKartki + filterRepairRedCards.length;
   const minuts = 0;
-  function convertData(x) {
-      const newData = new Date(x);
-      return newData.toLocaleDateString("Pl", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-      });
-    }
   return (
     <Layout>
       <Box>
@@ -220,11 +212,12 @@ const Grid = styled.div`
 `;
 const P = styled.p`
   color: white;
+  font-size:clamp(10px, 3vw, 18px);
 `;
 const Pcointainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   @media (max-width: 768px) {
     justify-content: space-between;
