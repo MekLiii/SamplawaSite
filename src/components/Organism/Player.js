@@ -4,8 +4,9 @@ import styled from "styled-components";
 import TableHero from "../Molecules/roles/TableHero";
 import data from "../../../content/mecz.json";
 import AccordionEl from "../Atoms/AccordionEl";
-
-import { useStaticQuery, graphql } from "gatsby";
+import { faFutbol, faSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 function Player({ pageContext }) {
   const { slug } = pageContext;
@@ -89,14 +90,26 @@ function Player({ pageContext }) {
   const sortedRedCards = redCardsArray.filter(filter);
   //Naprowione czerowne kartki
   const repairRedCars = [];
-  cards.forEach((el) => repairRedCars.push(Object.values(el).find(el => el.Zawodnicy === slug.name && el.kartka === "czerowna")))
-  const filterRepairRedCards = repairRedCars.filter(filter)
- //Naprawione zolte kartkii
- const repairYellowCars = [];
- cards.forEach((el) => repairYellowCars.push(Object.values(el).find(el => el.Zawodnicy === slug.name && el.kartka === "żółta")))
- 
- const filterRepairYellowCards = repairYellowCars.filter(filter)
- //
+  cards.forEach((el) =>
+    repairRedCars.push(
+      Object.values(el).find(
+        (el) => el.Zawodnicy === slug.name && el.kartka === "czerowna"
+      )
+    )
+  );
+  const filterRepairRedCards = repairRedCars.filter(filter);
+  //Naprawione zolte kartkii
+  const repairYellowCars = [];
+  cards.forEach((el) =>
+    repairYellowCars.push(
+      Object.values(el).find(
+        (el) => el.Zawodnicy === slug.name && el.kartka === "żółta"
+      )
+    )
+  );
+
+  const filterRepairYellowCards = repairYellowCars.filter(filter);
+  //
   const goals = slug.bramki + sortedArrayWhenScored.length;
   const playedMatches = slug.mecze + filterArray.length;
   const yellowCards = slug.zKartki + filterRepairYellowCards.length;
@@ -118,16 +131,51 @@ function Player({ pageContext }) {
           <Right>
             <SezonBox style={{ minHeight: "10vh" }}>
               <span
-                style={{ fontSize: "clamp(20px, 5vw, 25px)", color: "white",textAlign:"center" }}
+                style={{
+                  fontSize: "clamp(20px, 5vw, 25px)",
+                  color: "white",
+                  textAlign: "center",
+                }}
               >
                 Statystyki w karierze PFT Sampława
               </span>
               <Grid>
-                <Pcointainer><P>Bramki: </P> <P>{goals}</P></Pcointainer>
-                <Pcointainer><P>Mecze: </P> <P> {playedMatches}</P></Pcointainer>
-                <Pcointainer><P>Żółte kartkii: {""}</P> <P> {yellowCards}</P></Pcointainer>
-                <Pcointainer><P>Czerwone Kartki: </P> <P> {redCards}</P></Pcointainer>
-                <Pcointainer><P>Rozegrane minuty: </P> <P> {minuty}'</P></Pcointainer>
+                <Pcointainer>
+                  <P>Bramki: </P>{" "}
+                  <P>
+                    {goals}
+                    <FontAwesomeIcon
+                      icon={faFutbol}
+                      style={{ marginLeft: "5px" }}
+                    />
+                  </P>
+                </Pcointainer>
+                <Pcointainer>
+                  <P>Mecze: </P> <P>{playedMatches}</P>
+                </Pcointainer>
+                <Pcointainer>
+                  <P>Żółte kartkii: {""}</P>{" "}
+                  <P>
+                    {" "}
+                    {yellowCards}
+                    <FontAwesomeIcon
+                      icon={faSquare}
+                      color="#ffe660"
+                      style={{ marginLeft: "5px" }}
+                    />
+                  </P>
+                </Pcointainer>
+                <Pcointainer>
+                  <P>Czerwone Kartki: </P>{" "}
+                  <P>
+                    <FontAwesomeIcon icon="fa-regular fa-rectangle" />{" "}
+                    {redCards}
+                    <FontAwesomeIcon icon={faSquare} color="red" style={{marginLeft:"5px"}}/>
+                  </P>
+                </Pcointainer>
+                <Pcointainer>
+                  <P>Rozegrane minuty: </P> <P> {minuty}'</P>
+                </Pcointainer>
               </Grid>
             </SezonBox>
             <SezonBox style={{ height: "70%" }}>
@@ -212,16 +260,17 @@ const Grid = styled.div`
 `;
 const P = styled.p`
   color: white;
-  font-size:clamp(10px, 3vw, 18px);
+  font-size: clamp(10px, 3vw, 18px);
 `;
 const Pcointainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   @media (max-width: 768px) {
     justify-content: space-between;
   }
-`
+`;
 
 export default Player;
