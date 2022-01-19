@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import styled from "styled-components";
 import TableHero from "../Molecules/roles/TableHero";
 import data from "../../../content/mecz.json";
+import players from "../../../content/druzyna.json"
 import AccordionEl from "../Atoms/AccordionEl";
 import { faFutbol, faSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -62,9 +63,9 @@ function Player({ pageContext }) {
     howManyMatchesPlayed.push(el.find((el) => el.Zawodnicy === slug.name))
   );
   const filterArray = howManyMatchesPlayed.filter(filter);
-  //minuty
-  let minuty = 0;
-  filterArray.forEach((el) => (minuty += el.minuty));
+  console.log(playedMatchesAllPlayers)
+  
+  
 
   // Kartki
   const cards = [];
@@ -109,12 +110,20 @@ function Player({ pageContext }) {
   );
 
   const filterRepairYellowCards = repairYellowCars.filter(filter);
+  //data z zawodnicy.json
+  const playerData = players.team.find((el) => el.name === slug.name);
+  const playerGoals = playerData.bramki;
+  //minuty
+  let minuty = 0;
+  filterArray.forEach((el) => (minuty += el.minuty));
+        console.log(typeof slug.minuty)
+        console.log(slug)
   //
   const goals = slug.bramki + sortedArrayWhenScored.length;
   const playedMatches = slug.mecze + filterArray.length;
   const yellowCards = slug.zKartki + filterRepairYellowCards.length;
   const redCards = slug.cKartki + filterRepairRedCards.length;
-  const minuts = 0;
+  const minuts = minuty + slug.minuty;
   return (
     <Layout>
       <Box>
@@ -174,7 +183,7 @@ function Player({ pageContext }) {
                   </P>
                 </Pcointainer>
                 <Pcointainer>
-                  <P>Rozegrane minuty: </P> <P> {minuty}'</P>
+                  <P>Rozegrane minuty: </P> <P> {minuts}'</P>
                 </Pcointainer>
               </Grid>
             </SezonBox>

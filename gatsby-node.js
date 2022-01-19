@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const resultPlayers = await graphql(`
   {
-    allContentJson(limit: 1) {
+    allContentJson(filter: {}) {
       nodes {
         team {
           asysty
@@ -62,6 +62,7 @@ exports.createPages = async ({ graphql, actions }) => {
           numer
           zKartki
           zdjecia
+          minuty
         }
       }
     }
