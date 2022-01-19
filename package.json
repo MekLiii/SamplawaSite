@@ -56,6 +56,7 @@
     "react-reveal": "^1.2.2",
     "react-swipeable-views": "^0.14.0",
     "react-swipeable-views-utils": "^0.14.0",
+    "recharts": "^2.1.8",
     "sass": "^1.43.4",
     "scss": "^0.2.4",
     "styled-components": "^5.3.3",

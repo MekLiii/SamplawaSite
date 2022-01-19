@@ -1,5 +1,5 @@
 Arguments: 
-  D:\Programy2\Nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-awsome-button
+  D:\Programy2\Nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add echars
 
 PATH: 
   C:\Python310\Scripts\;C:\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Programy2\Nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\dotnet\;C:\Users\Komputer\AppData\Local\Microsoft\WindowsApps;D:\Programy2\Microsoft VS Code\bin;C:\Users\Komputer\AppData\Roaming\npm;C:\Users\Komputer\.dotnet\tools;C:\Users\Komputer\AppData\Local\Yarn\bin;C:\Users\Komputer\AppData\Local\GitHubDesktop\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/react-awsome-button: Not found
+  Error: https://registry.yarnpkg.com/echars: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66140:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140885:22)
       at Request.emit (node:events:390:28)
@@ -49,6 +49,7 @@ npm manifest:
       "@fortawesome/free-brands-svg-icons": "^5.15.4",
       "@fortawesome/free-solid-svg-icons": "^5.15.4",
       "@fortawesome/react-fontawesome": "^0.1.16",
+      "@loadable/component": "^5.15.2",
       "@material-ui/core": "^4.12.3",
       "@material-ui/icons": "^4.11.2",
       "@mdx-js/mdx": "^1.6.22",
@@ -74,14 +75,18 @@ npm manifest:
       "netlify-cms-app": "^2.15.59",
       "puppeteer": "^13.0.1",
       "react": "^17.0.1",
+      "react-awesome-button": "^6.5.1",
       "react-bootstrap": "^2.0.4",
+      "react-date-countdown-timer": "^1.1.0",
       "react-dom": "^17.0.1",
       "react-icons": "^4.3.1",
       "react-ionicons": "^4.2.0",
       "react-multi-carousel": "^2.6.5",
+      "react-reveal": "^1.2.2",
       "react-swipeable-views": "^0.14.0",
       "react-swipeable-views-utils": "^0.14.0",
       "sass": "^1.43.4",
+      "scss": "^0.2.4",
       "styled-components": "^5.3.3",
       "swiper": "^7.4.1"
     }
@@ -1164,6 +1169,13 @@ Lockfile:
     dependencies:
       regenerator-runtime "^0.13.4"
   
+  "@babel/runtime@^7.7.7":
+    version "7.16.7"
+    resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.7.tgz#03ff99f64106588c9c403c6ecb8c3bafbbdff1fa"
+    integrity sha512-9E9FJowqAsytyOY6LG+1KuueckRL+aQW+mKvXRXnuFGyRAyepJPmEo9vgMfXUA6O9u3IeEdv9MAkppFcaQwogQ==
+    dependencies:
+      regenerator-runtime "^0.13.4"
+  
   "@babel/standalone@^7.15.5":
     version "7.16.3"
     resolved "https://registry.npmjs.org/@babel/standalone/-/standalone-7.16.3.tgz"
@@ -1985,6 +1997,15 @@ Lockfile:
     dependencies:
       "@babel/runtime" "^7.7.2"
       regenerator-runtime "^0.13.3"
+  
+  "@loadable/component@^5.15.2":
+    version "5.15.2"
+    resolved "https://registry.yarnpkg.com/@loadable/component/-/component-5.15.2.tgz#b6c418d592e0a64f16b1d614ca9d3b1443d3b498"
+    integrity sha512-ryFAZOX5P2vFkUdzaAtTG88IGnr9qxSdvLRvJySXcUA4B4xVWurUNADu3AnKPksxOZajljqTrDEDcYjeL4lvLw==
+    dependencies:
+      "@babel/runtime" "^7.7.7"
+      hoist-non-react-statics "^3.3.1"
+      react-is "^16.12.0"
   
   "@material-ui/core@3.9.3":
     version "3.9.3"
@@ -11199,6 +11220,11 @@ Lockfile:
       pixelworks "1.1.0"
       rbush "2.0.2"
   
+  ometa@0.2.2:
+    version "0.2.2"
+    resolved "https://registry.yarnpkg.com/ometa/-/ometa-0.2.2.tgz#f53c4735ba6d56af5a46b04dfb7c4334c596d44e"
+    integrity sha1-9TxHNbptVq9aRrBN+3xDNMWW1E4=
+  
   omggif@^1.0.10, omggif@^1.0.9:
     version "1.0.10"
     resolved "https://registry.yarnpkg.com/omggif/-/omggif-1.0.10.tgz#ddaaf90d4a42f532e9e7cb3a95ecdd47f17c7b19"
@@ -12396,6 +12422,13 @@ Lockfile:
       prop-types "^15.6.0"
       teeny-tap "^0.2.0"
   
+  react-awesome-button@^6.5.1:
+    version "6.5.1"
+    resolved "https://registry.yarnpkg.com/react-awesome-button/-/react-awesome-button-6.5.1.tgz#d2103e98dc4d48550efd21dd9ec8f5a09e596407"
+    integrity sha512-94AS4BSIgRCMSHq8wcy3ztostjLK8cqjUX6DT5oWiYNs3uxLv5uk4yFMlzXBjo0I4TERLOZGn66q0xwb+xw5qw==
+    dependencies:
+      web-animation-club "^0.6.0"
+  
   react-bootstrap@^2.0.4:
     version "2.0.4"
     resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.0.4.tgz#dd0f4228db2093ec60663778f2a3690788773b45"
@@ -12443,6 +12476,14 @@ Lockfile:
       prop-types "^15.5.10"
       reactcss "^1.2.0"
       tinycolor2 "^1.4.1"
+  
+  react-date-countdown-timer@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/react-date-countdown-timer/-/react-date-countdown-timer-1.1.0.tgz#cdde8fc8de5430330006949d31a4f7d83b6e66c0"
+    integrity sha512-VoGxLvvR9zdRMiGRnEMTObp2xFzo65+mhOl5Jueio0zZ/7Vc2ntNA5xFsRXy4KMyYR9AGuAWhlEOAfiFmg5sbw==
+    dependencies:
+      prop-types "^15.7.2"
+      react "^16.4.2"
   
   react-datetime@^3.1.1:
     version "3.1.1"
@@ -12713,6 +12754,13 @@ Lockfile:
     resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.9.0.tgz"
     integrity sha512-Gvzk7OZpiqKSkxsQvO/mbTN1poglhmAV7gR/DdIrRrSMXraRQQlfikRJOr3Nb9GTMPC5kof948Zy6jJZIFtDvQ==
   
+  react-reveal@^1.2.2:
+    version "1.2.2"
+    resolved "https://registry.yarnpkg.com/react-reveal/-/react-reveal-1.2.2.tgz#f47fbc44debc4c185ae2163a215a9e822c7adfef"
+    integrity sha512-JCv3fAoU6Z+Lcd8U48bwzm4pMZ79qsedSXYwpwt6lJNtj/v5nKJYZZbw3yhaQPPgYePo3Y0NOCoYOq/jcsisuw==
+    dependencies:
+      prop-types "^15.5.10"
+  
   react-router-dom@^5.1.2, react-router-dom@^5.2.0:
     version "5.3.0"
     resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-5.3.0.tgz"
@@ -12936,7 +12984,7 @@ Lockfile:
       loose-envify "^1.1.0"
       object-assign "^4.1.1"
   
-  react@^16.8.4:
+  react@^16.4.2, react@^16.8.4:
     version "16.14.0"
     resolved "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
     integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
@@ -13763,6 +13811,13 @@ Lockfile:
       "@types/json-schema" "^7.0.8"
       ajv "^6.12.5"
       ajv-keywords "^3.5.2"
+  
+  scss@^0.2.4:
+    version "0.2.4"
+    resolved "https://registry.yarnpkg.com/scss/-/scss-0.2.4.tgz#040d903ed37c5d4fa4ad33ae1fd389ac12a4e065"
+    integrity sha1-BA2QPtN8XU+krTOuH9OJrBKk4GU=
+    dependencies:
+      ometa "0.2.2"
   
   section-matter@^1.0.0:
     version "1.0.0"
@@ -15753,6 +15808,11 @@ Lockfile:
     version "1.1.3"
     resolved "https://registry.npmjs.org/weak-lru-cache/-/weak-lru-cache-1.1.3.tgz"
     integrity sha512-5LDIv+sr6uzT94Hhcq7Qv7gt3jxol4iMWUqOgJSLYbB5oO7bTSMqIBtKsytm8N2BufYOdJw86/qu+SDfbo/wKQ==
+  
+  web-animation-club@^0.6.0:
+    version "0.6.0"
+    resolved "https://registry.yarnpkg.com/web-animation-club/-/web-animation-club-0.6.0.tgz#c1dd79646b21e4265b5f95ae9cb8b93b73e05e47"
+    integrity sha512-9W+EQu1HiaPLe/7WZlhJ2ULqQ4VL80RPDYW+ZcjfTKp6ayOuT1k3SVO6+tu0VBRmOqueJ/mrG+rjjInIv8Aglg==
   
   web-namespaces@^1.0.0, web-namespaces@^1.1.2:
     version "1.1.4"

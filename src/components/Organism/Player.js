@@ -3,11 +3,12 @@ import Layout from "./Layout";
 import styled from "styled-components";
 import TableHero from "../Molecules/roles/TableHero";
 import data from "../../../content/mecz.json";
-import players from "../../../content/druzyna.json"
+import players from "../../../content/druzyna.json";
 import AccordionEl from "../Atoms/AccordionEl";
 import { faFutbol, faSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import Chart from "../Atoms/Chart";
 
 function Player({ pageContext }) {
   const { slug } = pageContext;
@@ -63,9 +64,7 @@ function Player({ pageContext }) {
     howManyMatchesPlayed.push(el.find((el) => el.Zawodnicy === slug.name))
   );
   const filterArray = howManyMatchesPlayed.filter(filter);
-  console.log(playedMatchesAllPlayers)
-  
-  
+  console.log(playedMatchesAllPlayers);
 
   // Kartki
   const cards = [];
@@ -116,8 +115,8 @@ function Player({ pageContext }) {
   //minuty
   let minuty = 0;
   filterArray.forEach((el) => (minuty += el.minuty));
-        console.log(typeof slug.minuty)
-        console.log(slug)
+  console.log(typeof slug.minuty);
+  console.log(slug);
   //
   const goals = slug.bramki + sortedArrayWhenScored.length;
   const playedMatches = slug.mecze + filterArray.length;
@@ -136,6 +135,7 @@ function Player({ pageContext }) {
               key={slug.name}
               img={`/${slug.zdjecia?.slice(8)}`}
             />
+            <Chart allMiuts={minuts} coutMatches={playedMatches * 90}/>
           </Left>
           <Right>
             <SezonBox style={{ minHeight: "10vh" }}>
@@ -179,7 +179,11 @@ function Player({ pageContext }) {
                   <P>
                     <FontAwesomeIcon icon="fa-regular fa-rectangle" />{" "}
                     {redCards}
-                    <FontAwesomeIcon icon={faSquare} color="red" style={{marginLeft:"5px"}}/>
+                    <FontAwesomeIcon
+                      icon={faSquare}
+                      color="red"
+                      style={{ marginLeft: "5px" }}
+                    />
                   </P>
                 </Pcointainer>
                 <Pcointainer>
@@ -220,6 +224,7 @@ const Left = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction:column;
   @media (max-width: 768px) {
     width: 100%;
   }
