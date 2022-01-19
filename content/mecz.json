@@ -205,24 +205,7 @@
           "pftGoals": 0,
           "data": "02/12/2022",
           "przeciwnik": "Kormoran Zwierzewo",
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Łukasz Ochlak",
-                  "minuta": 56
-                }
-              ],
-              "BramkiPrzeciwnika": [],
-              "Kartki": [
-                {
-                  "Zawodnicy": "Łukasz Ochlak",
-                  "kartka": "żółta",
-                  "minuta": 12
-                }
-              ]
-            }
-          ],
+          "Statystyki": [],
           "miejsce": "Sampława",
           "Zawodnicy": [],
           "gospodarze": "PFT Drewneks Sampława",
