@@ -20,7 +20,7 @@ export default function Template({ data }) {
   const [modalShow, setModalShow] = useState(false);
   // pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n\n(.*?)\n^<\/details>$/ms
   const random = Math.random();
-  console.log(data.markdownRemark.html);
+  console.log(data);
   const Galery = () => {
     if (galery === null) {
       return <p style={{ color: "grey", textAlign: "center" }}>Brak zdjęć</p>;
