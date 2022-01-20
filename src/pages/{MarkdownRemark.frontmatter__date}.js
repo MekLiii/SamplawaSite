@@ -67,13 +67,13 @@ export default function Template({ data }) {
           <PostGriDholder>
             <SidePost>
               <Article>
-                <Text>{frontmatter.tresc}</Text>
+                
                 <ReactMarkdown>{frontmatter.tresc}</ReactMarkdown>
-                {frontmatter.AdditionalText?.map((el) => (
+                {/* {frontmatter.AdditionalText?.map((el) => (
                   <ReactMarkdown key={el.addText}>
                     {el.addText}
                   </ReactMarkdown>
-                ))}
+                ))} */}
               </Article>
             </SidePost>
             <SidePost style={{ flexDirection: "column" }}>
