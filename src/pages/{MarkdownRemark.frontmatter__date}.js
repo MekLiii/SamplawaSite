@@ -181,6 +181,7 @@ const Text = styled.p`
   font-size: 16px;
   color: white;
   line-height: 30px;
+  margin-bottom:10px !important;
 `;
 const Button = styled.div`
   width: 140px;
