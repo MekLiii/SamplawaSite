@@ -31,29 +31,29 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open }) => {
+const RightNav = ({ open,close }) => {
   return (
     <Ul open={open}>
       <Link to="/" style={text}>
         <StyledImg src={logo} alt="logo" />
       </Link>
       <Link to="/" style={text}>
-        <P>Główna</P>
+        <P onClick={close}>Główna</P>
       </Link>
       <Link to="/Sklep" style={text}>
-        <P>Sklep</P>
+        <P onClick={close}>Sklep</P>
       </Link>
       <Link to="/Kadra" style={text}>
-        <P>Kadra</P>
+        <P onClick={close}>Kadra</P>
       </Link>
       <Link to="/Galeria" style={text}>
-        <P>Galeria</P>
+        <P onClick={close}>Galeria</P>
       </Link>
       <Link to="/Oklubie" style={text}>
-        <P>O klubie</P>
+        <P onClick={close}>O klubie</P>
       </Link>
       <Link to="/Klub100" style={text}>
-        <P>Klub100</P>
+        <P onClick={close}>Klub100</P>
       </Link>
     </Ul>
   );

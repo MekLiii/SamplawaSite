@@ -50,6 +50,7 @@ display:none;
 `
 const Burger = () => {
   const [open, setOpen] = useState(false);
+  const [close, setClose] = useState(false);
 
   return (
     <>
@@ -59,7 +60,7 @@ const Burger = () => {
         <div style={{ backgroundColor: "#ffe600" }} />
         <div style={{ backgroundColor: "#ffe600" }} />
       </StyledBurger>
-      <RightNav open={open} />
+      <RightNav open={open} close={()=> setOpen(false)}/>
       </Box>
     </>
   );

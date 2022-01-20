@@ -12,7 +12,7 @@ function Table({ data, title, linkBoolian }) {
       return (
         <GridHolder>
           {data?.map((el) => (
-            <div>
+            <div key={el.name}>
               <Link
                 to={`/kadra/${el.name}`}
                 key={el.name}
@@ -34,7 +34,7 @@ function Table({ data, title, linkBoolian }) {
       return (
         <GridHolder>
           {data?.map((el) => (
-            <div>
+            <div key={el.name}>
               <TableHero
                 pozycja={el.pozycja != "brak pozycji" ? el.pozcyja : ""}
                 rola={el.rola}

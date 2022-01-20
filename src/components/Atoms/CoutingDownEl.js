@@ -6,7 +6,7 @@ function CoutingDownEl({dateTo}) {
     <DateCountdown
       dateTo={dateTo}
       style={{
-        fontSize: "clamp(12px,2vw,30px)",
+        fontSize: "clamp(15px,2vw,30px)",
         color: "white",
         fontFamily: "poppins",
       }}

@@ -13,10 +13,11 @@ tbody > tr:nth-last-child(3) > th:nth-child(1) {
 
     @media only screen and (max-width:765px) {
         .TableContainer{
-            overflow: auto;
+            overflow: hidden;
         }
         table{
-            overflow: auto;
+            overflow: hidden;
         }
+        
     }
 

@@ -54,7 +54,7 @@ const IndexPage = () => {
           alignItems: "center",
         }}
       >
-        <h2
+        {/* <h2
           style={{
             fontSize: "32px",
             fontFamily: "poppins",
@@ -63,7 +63,7 @@ const IndexPage = () => {
           }}
         >
           Zapraszamy na następne mecze!
-        </h2>
+        </h2> */}
         <MatchesSlider />
       </StyledDiv>
       <StyledAktu style={{ marginTop: 0,minHeight:"40vh" }}>

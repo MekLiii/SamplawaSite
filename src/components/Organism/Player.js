@@ -135,7 +135,18 @@ function Player({ pageContext }) {
               key={slug.name}
               img={`/${slug.zdjecia?.slice(8)}`}
             />
-            <Chart allMiuts={minuts} coutMatches={playedMatches * 90}/>
+            <ChartContainer>
+              <Chart
+                allMiuts={minuts}
+                coutMatches={playedMatches * 90 - minuts}
+                title="Średni czas na boisku"
+              />
+              <Chart
+                allMiuts={ (goals / playedMatches) * 100} // skutecznosc
+                coutMatches={100 - ((goals / playedMatches) * 100)} // wszystkie mecze
+                title={`Skuteczność zawodnika w ${playedMatches} meczach`}
+              />
+            </ChartContainer>
           </Left>
           <Right>
             <SezonBox style={{ minHeight: "10vh" }}>
@@ -177,7 +188,7 @@ function Player({ pageContext }) {
                 <Pcointainer>
                   <P>Czerwone Kartki: </P>{" "}
                   <P>
-                    <FontAwesomeIcon icon="fa-regular fa-rectangle" />{" "}
+                    
                     {redCards}
                     <FontAwesomeIcon
                       icon={faSquare}
@@ -218,15 +229,18 @@ const Cointainer = styled.div`
   }
 `;
 const Left = styled.div`
-  max-height: 70vh;
-  min-height: 77vh;
+  max-height: 80vh;
+  min-height: 70vh;
   width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction:column;
+  flex-direction: column;
+  margin-top:7vh;
   @media (max-width: 768px) {
     width: 100%;
+    max-height: 170vh;
+  min-height: 77vh;
   }
 `;
 const Right = styled.div`
@@ -286,5 +300,16 @@ const Pcointainer = styled.div`
     justify-content: space-between;
   }
 `;
-
+const ChartContainer = styled.div`
+  display: flex;
+  width: 100%;
+  min-height: 10vh;
+  justify-content:center;
+  align-items:center;
+  margin-top:3vh;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top:0;
+  }
+`;
 export default Player;

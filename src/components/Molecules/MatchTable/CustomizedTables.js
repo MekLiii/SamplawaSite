@@ -9,12 +9,10 @@ import Paper from "@mui/material/Paper";
 import data from "../../../../content/tabelaSenior.json";
 import "./matchTable.module.css";
 import styled from "styled-components";
-import { People, Flag,Football,Podium,Ellipse } from "react-ionicons";
+import { People, Flag, Football, Podium, Ellipse } from "react-ionicons";
 import Bounce from "react-reveal/Zoom";
 
-
 export default function DenseTable() {
-  
   const dataAtom = data.Tabela.sort((a, b) => {
     return a.punkty - b.punkty;
   });
@@ -24,19 +22,18 @@ export default function DenseTable() {
       <TableContainer
         component={Paper}
         style={{
-          overflow: "auto",
+          overflow: "hidden",
           height: "100%",
           borderRadius: "0px",
           backgroundColor: "rgba(255,255,255,0)",
           width: "100%",
           // margin: "10px",
-          
         }}
         className={`TableContainer`}
         id="TableContainer"
       >
         <Table
-          sx={{ minWidth: "100%",overflow: "hidden" }}
+          sx={{ minWidth: "100%", overflow: "hidden" }}
           size="small"
           aria-label="a dense table"
           style={{ height: "100%" }}
@@ -46,7 +43,7 @@ export default function DenseTable() {
               <TableCell
                 align="right"
                 width="30px"
-                sx={{ textAlign: "center",borderBottom:0 }}
+                sx={{ textAlign: "center", borderBottom: 0 }}
               >
                 <Centered>
                   <Icon>
@@ -55,7 +52,10 @@ export default function DenseTable() {
                   <P>Pozycja</P>
                 </Centered>
               </TableCell>
-              <TableCell align="center" sx={{ textAlign: "center",borderBottom:0 }}>
+              <TableCell
+                align="center"
+                sx={{ textAlign: "center", borderBottom: 0 }}
+              >
                 <Centered>
                   <Icon>
                     <People color={"#ffe600"} height="20px" width="20px" />
@@ -63,15 +63,23 @@ export default function DenseTable() {
                   <P>Drużyna</P>
                 </Centered>
               </TableCell>
-              <TableCell align="center" sx={{ textAlign: "center",borderBottom:0 }}>
-                <Centered>
-                  <Icon>
-                    <Football color={"#ffe600"} height="20px" width="20px" />
-                  </Icon>
-                  <P>Mecze</P>
-                </Centered>
-              </TableCell>
-              <TableCell align="center" sx={{ textAlign: "center",borderBottom:0 }}>
+              <MobileColum>
+                <TableCell
+                  align="center"
+                  sx={{ textAlign: "center", borderBottom: 0 }}
+                >
+                  <Centered>
+                    <Icon>
+                      <Football color={"#ffe600"} height="20px" width="20px" />
+                    </Icon>
+                    <P>Mecze</P>
+                  </Centered>
+                </TableCell>
+              </MobileColum>
+              <TableCell
+                align="center"
+                sx={{ textAlign: "center", borderBottom: 0 }}
+              >
                 <Centered>
                   <Icon>
                     <Podium color={"#ffe600"} height="20px" width="20px" />
@@ -79,14 +87,19 @@ export default function DenseTable() {
                   <P>Punkty</P>
                 </Centered>
               </TableCell>
-              <TableCell align="center" sx={{ textAlign: "center",borderBottom:0 }}>
-              <Centered>
-                  <Icon>
-                    <Ellipse color={"#ffe600"} height="20px" width="20px" />
-                  </Icon>
-                  <P >Bramki</P>
-                </Centered>
-              </TableCell>
+              <MobileColum>
+                <TableCell
+                  align="center"
+                  sx={{ textAlign: "center", borderBottom: 0 }}
+                >
+                  <Centered>
+                    <Icon>
+                      <Ellipse color={"#ffe600"} height="20px" width="20px" />
+                    </Icon>
+                    <P>Bramki</P>
+                  </Centered>
+                </TableCell>
+              </MobileColum>
             </TableRow>
           </TableHead>
           <TableBody id="tbody">
@@ -121,16 +134,20 @@ export default function DenseTable() {
                 >
                   {el.druzyna}
                 </TableCell>
-                <TableCell
-                  align="center"
-                  style={{
-                    color: "white",
-                    border: "1px solid rgba(255, 255, 255, 0.2)",
-                    padding: "10px",
-                  }}
-                >
-                  {el.mecze}
-                </TableCell>
+                <MobileColum>
+                  <TableCell
+                    align="center"
+                    style={{
+                      color: "white",
+                      border: "1px solid rgba(255, 255, 255, 0.2)",
+                      padding: "10px",
+                      width: "100%",
+                      boxSizing: "border-box",
+                    }}
+                  >
+                    {el.mecze}
+                  </TableCell>
+                </MobileColum>
                 <TableCell
                   align="center"
                   style={{
@@ -140,16 +157,22 @@ export default function DenseTable() {
                 >
                   {el.punkty}
                 </TableCell>
-                <TableCell
-                  align="center"
-                  style={{
-                    color: "white",
-                    border: "1px solid rgba(255, 255, 255, 0.2)",
-                    padding: "3px 10px",
-                  }}
-                >
-                  {el.bramki}
-                </TableCell>
+                <MobileColum>
+                  <TableCell
+                    align="center"
+                    style={{
+                      color: "white",
+                      border: "1px solid rgba(255, 255, 255, 0.2)",
+                      // padding: "3px 10px",
+                      padding: "10px",
+                      width: "100%",
+                      boxSizing: "border-box",
+                      // height: "100%"
+                    }}
+                  >
+                    {el.bramki}
+                  </TableCell>
+                </MobileColum>
               </TableRow>
             ))}
           </TableBody>
@@ -170,7 +193,6 @@ const Box = styled.div`
   @media (max-width: 740px) {
     width: 100%;
   }
-  
 `;
 const Centered = styled.div`
   display: flex;
@@ -191,7 +213,7 @@ const IconItem = styled.div`
   @media (max-width: 735px) {
     width: 100%;
   }
-`
+`;
 const Icon = ({ children }) => {
   return (
     <IconItem
@@ -209,6 +231,16 @@ const Icon = ({ children }) => {
     </IconItem>
   );
 };
+const MobileColum = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+box-sizing: border-box;
+border:none;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 
 const iconStyle = {
   color: "#FFE600",
