@@ -149,7 +149,7 @@ const StyledSliderElement = styled.div`
     padding: 50px;
   }
 `;
-const Post = styled.div`
+const Post = styled.main`
   width: 100%;
   min-height: 60vh;
 `;
