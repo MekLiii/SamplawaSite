@@ -180,7 +180,7 @@ collections:
           name: images
           widget: list
           fields:
-            - { label: "Featured Image", name: "thumbnail", widget: "image", allow_multiple: true, choose_url: true, media_folder: /static/Galery/ } 
+            - { label: "Featured Image", name: "images", widget: "image", allow_multiple: true, choose_url: true, media_folder: /static/Galery/ } 
 
   - label: "Tabela"
     name: "tabela"

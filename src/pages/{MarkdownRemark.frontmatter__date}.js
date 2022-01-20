@@ -16,7 +16,6 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark;
   const image = frontmatter?.zdjecia?.substr(8);
   const galery = frontmatter?.images;
-  const [dataImage, setDataImage] = useState();
   const [modalShow, setModalShow] = useState(false);
   // pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n\n(.*?)\n^<\/details>$/ms
   const random = Math.random();
