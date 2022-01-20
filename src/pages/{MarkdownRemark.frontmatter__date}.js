@@ -9,6 +9,7 @@ import styled from "styled-components";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ModalGalery from "../components/Molecules/galery/ModalGalery";
+import ReactMarkdown from "react-markdown";
 
 export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
@@ -19,7 +20,7 @@ export default function Template({ data }) {
   const [modalShow, setModalShow] = useState(false);
   // pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n\n(.*?)\n^<\/details>$/ms
   const random = Math.random();
-
+  console.log(data.markdownRemark.html);
   const Galery = () => {
     if (galery === null) {
       return <p style={{ color: "grey", textAlign: "center" }}>Brak zdjęć</p>;
@@ -67,11 +68,11 @@ export default function Template({ data }) {
             <SidePost>
               <Article>
                 <Text>{frontmatter.tresc}</Text>
-                <Cytat>
-                  <CytatText>{frontmatter?.cytat}</CytatText>
-                </Cytat>
+                <ReactMarkdown>{frontmatter.tresc}</ReactMarkdown>
                 {frontmatter.AdditionalText?.map((el) => (
-                  <Text key={el.addText}>{el.addText}</Text>
+                  <ReactMarkdown key={el.addText}>
+                    {el.addText}
+                  </ReactMarkdown>
                 ))}
               </Article>
             </SidePost>
@@ -100,6 +101,7 @@ export default function Template({ data }) {
               </ImageHolder>
             </SidePost>
           </PostGriDholder>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
         </Post>
       </Box>
     </LayOut>
@@ -181,7 +183,7 @@ const Text = styled.p`
   font-size: 16px;
   color: white;
   line-height: 30px;
-  margin-bottom:10px !important;
+  margin-bottom: 10px !important;
 `;
 const Button = styled.div`
   width: 140px;
@@ -212,14 +214,14 @@ const ImageHolder = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width: 768px) {
     width: 80%;
-    
+
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-`
+`;
 
 export const pageQuery = graphql`
   query ($id: String) {
