@@ -10,6 +10,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ModalGalery from "../components/Molecules/galery/ModalGalery";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from 'remark-gfm'
 
 export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
