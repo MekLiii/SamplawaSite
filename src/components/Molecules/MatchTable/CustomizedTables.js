@@ -231,7 +231,7 @@ const Icon = ({ children }) => {
     </IconItem>
   );
 };
-const MobileColum = styled.div`
+const MobileColum = styled.tr`
 display:flex;
 align-items:center;
 justify-content:center;

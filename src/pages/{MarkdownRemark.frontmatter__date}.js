@@ -25,7 +25,7 @@ export default function Template({ data }) {
       return <p style={{ color: "grey", textAlign: "center" }}>Brak zdjęć</p>;
     } else {
       return galery?.map((item) => (
-        <ImageListItem key={item.img}>
+        <ImageListItem key={`${item.img}+ ${galery.indexOf(item)}`}>
           <img
             key={`${item.img}+${item.thumbnail}+${random}`}
             src={`/${item.thumbnail.slice(8)}`}
