@@ -70,7 +70,7 @@ const Box = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  gap:5px;
+  gap:15px;
   @media (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
