@@ -30,7 +30,7 @@ function Aktu() {
   return (
     <StyledGrid>
       {dataAtom.map((element) => (
-        <Bounce bottom key={element.node.frontmatter.naglowek}>
+        <Bounce bottom key={element.node.frontmatter.naglowek + element.node.frontmatter.date}>
         <Link
           to={`/${element.node.frontmatter.date}`}
           
