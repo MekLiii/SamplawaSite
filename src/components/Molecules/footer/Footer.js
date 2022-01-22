@@ -1,30 +1,51 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   const date = new Date();
   const year = date.getFullYear();
   return (
     <footer style={footer}>
-      <a
-        href="https://www.facebook.com/WyrownawczaAkademiaPilkarska"
-        target="_blank"
-      >
-        <div
-          style={{
-            width: "37px",
-            height: "37px",
-            backgroundColor: "#ffe600",
-            borderRadius: "11px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+      <div style={{display: 'flex',gap:'15px'}}>
+        <a
+          href="https://www.facebook.com/WyrownawczaAkademiaPilkarska"
+          target="_blank"
         >
-          <FontAwesomeIcon icon={faFacebookF} size="1x" color="black" />
-        </div>
-      </a>
+          <div
+            style={{
+              width: "37px",
+              height: "37px",
+              backgroundColor: "#ffe600",
+              borderRadius: "11px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <FontAwesomeIcon icon={faFacebookF} size="1x" color="black" />
+          </div>
+        </a>
+        <a
+          href="https://www.facebook.com/WyrownawczaAkademiaPilkarska"
+          target="_blank"
+        >
+          <div
+            style={{
+              width: "37px",
+              height: "37px",
+              backgroundColor: "#ffe600",
+              borderRadius: "11px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <FontAwesomeIcon icon={faInstagram} size="1x" color="black" />
+          </div>
+        </a>
+      </div>
       <p
         style={{
           fontSize: "14px",

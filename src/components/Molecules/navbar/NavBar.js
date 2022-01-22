@@ -6,6 +6,7 @@ import "./navbar.module.css";
 import Burger from "../../Atoms/Burger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function NavBar() {
   return (
@@ -60,7 +61,7 @@ function NavBar() {
             </Link>
           </NavLinks>
         </NavElement>
-        <NavElement style={{ flex: 1 }}>
+        <NavElement style={{ flex: 1,justifyContent: 'center',gap:"15px" }}>
           <a
             href="https://www.facebook.com/WyrownawczaAkademiaPilkarska"
             target="_blank"
@@ -77,9 +78,30 @@ function NavBar() {
               }}
             >
               <FontAwesomeIcon icon={faFacebookF} size="1x" color="black" />
+              
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/pft_drewneks_samplawa/"
+            target="_blank"
+          >
+            <div
+              style={{
+                width: "37px",
+                height: "37px",
+                backgroundColor: "#ffe600",
+                borderRadius: "11px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <FontAwesomeIcon icon={faInstagram} size="2x" color="black" />
+              
             </div>
           </a>
         </NavElement>
+        
       </StyledSide>
     </StyledNav>
   );

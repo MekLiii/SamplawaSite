@@ -243,10 +243,6 @@ export const pageQuery = graphql`
         images {
           thumbnail
         }
-        AdditionalText {
-          addText
-        }
-        cytat
       }
     }
   }
