@@ -3,7 +3,7 @@
 }
 .odometer-block{
     color:white;
-    font-size: clamp(10px, 3vw, 50px);
+    font-size: clamp(15px, 3vw, 50px);
 }
 .fnTXKJ:nth-child(2){
     display: none;

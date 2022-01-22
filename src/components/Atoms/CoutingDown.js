@@ -69,11 +69,13 @@ const Box = styled.div`
   height: 10vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap:5px;
   @media (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap:0;
   }
 `;
 const P = styled.p`

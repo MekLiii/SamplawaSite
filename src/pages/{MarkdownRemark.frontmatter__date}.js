@@ -20,7 +20,7 @@ export default function Template({ data }) {
   const [modalShow, setModalShow] = useState(false);
   // pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n\n(.*?)\n^<\/details>$/ms
   const random = Math.random();
-  console.log(data);
+  console.log(data.markdownRemark.frontmatter.tresc);
   const Galery = () => {
     if (galery === null) {
       return <p style={{ color: "grey", textAlign: "center" }}>Brak zdjęć</p>;
@@ -38,6 +38,11 @@ export default function Template({ data }) {
       ));
     }
   };
+  let galerySize = 450; //naprawic
+  if(galerySize.length == 1){
+    return galerySize = 250;
+  }
+  console.log(data)
   return (
     <LayOut
       style={{
@@ -68,7 +73,7 @@ export default function Template({ data }) {
             <SidePost>
               <Article>
                 
-                <ReactMarkdown>{frontmatter.tresc}</ReactMarkdown>
+                <ReactMarkdown linkTarget="_blank">{frontmatter.tresc}</ReactMarkdown>
                 {/* {frontmatter.AdditionalText?.map((el) => (
                   <ReactMarkdown key={el.addText}>
                     {el.addText}
@@ -76,10 +81,10 @@ export default function Template({ data }) {
                 ))} */}
               </Article>
             </SidePost>
-            <SidePost style={{ flexDirection: "column" }}>
+            <SidePost style={{ flexDirection: "column",justifyContent: "flex-start"}}>
               <ImageHolder>
                 <ImageList
-                  sx={{ width: "auto", height: 450, overFlowY: "hidden" }}
+                  sx={{ width: "auto", height: `${galerySize}`,minHeight: 250, overflow: "hidden" }}
                   cols={2}
                   rowHeight={164}
                 >
@@ -167,6 +172,7 @@ const SidePost = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
     align-items: center;
+    min-height: 20vh;
   }
 `;
 const Article = styled.div`
@@ -194,6 +200,7 @@ const Button = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin:15px;
 `;
 const Cytat = styled.div`
   width: 90%;

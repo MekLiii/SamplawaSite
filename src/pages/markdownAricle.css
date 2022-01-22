@@ -33,6 +33,7 @@
 }
 header p{
     color:white;
+    margin-bottom:15px !important;
 }
 @media (max-width: 768px){
     header p{
