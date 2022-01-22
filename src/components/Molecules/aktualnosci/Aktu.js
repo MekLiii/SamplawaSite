@@ -13,7 +13,6 @@ function Aktu() {
           node {
             frontmatter {
               date
-              
               naglowek
               tresc
               title
@@ -26,11 +25,12 @@ function Aktu() {
   `);
 
   const dataElement = data.allMarkdownRemark.edges;
+  console.log(dataElement);
   const dataAtom = dataElement.slice().reverse();
   return (
     <StyledGrid>
       {dataAtom.map((element) => (
-        <Bounce bottom key={element.node.frontmatter.naglowek + element.node.frontmatter.date}>
+        <Bounce bottom key={element.node.frontmatter.naglowek}>
         <Link
           to={`/${element.node.frontmatter.date}`}
           
