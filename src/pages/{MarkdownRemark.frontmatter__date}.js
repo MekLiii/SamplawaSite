@@ -10,17 +10,18 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ModalGalery from "../components/Molecules/galery/ModalGalery";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from 'remark-gfm'
+
 
 export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
+  console.log(markdownRemark)
   const { frontmatter, html } = markdownRemark;
   const image = frontmatter?.zdjecia?.substr(8);
   const galery = frontmatter?.images;
   const [modalShow, setModalShow] = useState(false);
   // pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n\n(.*?)\n^<\/details>$/ms
   const random = Math.random();
-  console.log(data.markdownRemark.frontmatter.tresc);
+  console.log(data.markdownRemark.frontmatter);
   const Galery = () => {
     if (galery === null) {
       return <p style={{ color: "grey", textAlign: "center" }}>Brak zdjęć</p>;
@@ -195,12 +196,13 @@ const Button = styled.div`
   width: 140px;
   height: 33px;
   background-color: #ffe600;
-  border-radius: 5%;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   margin:15px;
+  color:black;
 `;
 const Cytat = styled.div`
   width: 90%;

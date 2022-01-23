@@ -10,7 +10,6 @@ import data from "../../../../content/tabelaSenior.json";
 import "./matchTable.module.css";
 import styled from "styled-components";
 import { People, Flag, Football, Podium, Ellipse } from "react-ionicons";
-import Bounce from "react-reveal/Zoom";
 
 export default function DenseTable() {
   const dataAtom = data.Tabela.sort((a, b) => {

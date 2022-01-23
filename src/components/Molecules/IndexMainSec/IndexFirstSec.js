@@ -73,7 +73,7 @@ export default function App() {
         ></div>
         {dataAtom.map((el) => (
           <SwiperSlide
-          key={el.node.frontmatter.data + el.node.frontmatter.naglowek}
+          key={dataAtom.indexOf(el) + el.node.frontmatter.naglowek}
             style={{
               backgroundImage: `url(${el.node.frontmatter.zdjecia?.slice(7)})`,
               backgroundRepeat: "no-repeat",

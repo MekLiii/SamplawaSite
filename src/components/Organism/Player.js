@@ -139,12 +139,12 @@ function Player({ pageContext }) {
               <Chart
                 allMiuts={minuts}
                 coutMatches={playedMatches * 90 - minuts}
-                title="Średni czas na boisku"
+                title={`Średni czas na boisku w ${playedMatches} meczach`}
               />
               <Chart
                 allMiuts={ (goals / playedMatches) * 100} // skutecznosc
                 coutMatches={100 - ((goals / playedMatches) * 100)} // wszystkie mecze
-                title={`Skuteczność zawodnika w ${playedMatches} meczach`}
+                title={playedMatches === 0 ? '' : `Skuteczność zawodnika w ${playedMatches} meczach`}
               />
             </ChartContainer>
           </Left>
@@ -253,6 +253,7 @@ const Right = styled.div`
   flex-direction: column;
   @media (max-width: 768px) {
     width: 100%;
+    min-height: 70vh;
     max-height: 100vh;
     flex-direction: column-reverse;
   }

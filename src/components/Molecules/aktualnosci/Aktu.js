@@ -7,36 +7,39 @@ import Bounce from "react-reveal/Zoom";
 
 function Aktu() {
   const data = useStaticQuery(graphql`
-    {
-      allMarkdownRemark(filter: { frontmatter: { date: { glob: "*" } } }) {
-        edges {
-          node {
-            frontmatter {
-              date
-              naglowek
-              tresc
-              title
-              zdjecia
-            }
+  {
+    allMarkdownRemark(
+      filter: {frontmatter: {date: {glob: "*"}}}
+      sort: {fields: frontmatter___date}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            date
+            naglowek
+            tresc
+            title
+            zdjecia
           }
         }
       }
     }
+  }
   `);
 
-  const dataElement = data.allMarkdownRemark.edges;
-  console.log(dataElement);
-  const dataAtom = dataElement.slice().reverse();
+  const dataElement = data.allMarkdownRemark.edges.sort((a,b) => a - b);
+  console.log(dataElement.sort((a,b) => a - b));
+  const dataAtom = dataElement;
   return (
     <StyledGrid>
       {dataAtom.map((element) => (
-        <Bounce bottom key={element.node.frontmatter.naglowek}>
+        <Bounce bottom key={dataAtom.indexOf(element)}>
         <Link
           to={`/${element.node.frontmatter.date}`}
           
         >
           <AktuEl
-            key={element.node.frontmatter.naglowek}
+            // key={element.node.frontmatter.naglowek}
             heading={element.node.frontmatter.naglowek}
             data={element.node.frontmatter.date}
             img={`${element.node.frontmatter.zdjecia?.slice(8)}`}

@@ -42,7 +42,7 @@ function Footer() {
               alignItems: "center",
             }}
           >
-            <FontAwesomeIcon icon={faInstagram} size="1x" color="black" />
+            <FontAwesomeIcon icon={faInstagram} size="2x" color="black" />
           </div>
         </a>
       </div>
