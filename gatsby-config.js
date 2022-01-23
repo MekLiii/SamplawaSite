@@ -4,6 +4,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `Aktualnosci`,
@@ -22,7 +28,7 @@ module.exports = {
     
 
     `gatsby-transformer-remark`,
-    "gatsby-plugin-netlify-cms",
+    // "gatsby-plugin-netlify-cms",
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-material-ui`,
@@ -50,6 +56,7 @@ module.exports = {
         path: `${__dirname}/content/`
       },
     },
+    
     // `gatsby-plugin-fontawesome-css`
   ],
 };
