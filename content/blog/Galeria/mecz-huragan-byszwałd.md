@@ -1,7 +1,0 @@
----
-czas: 21-12-21
-opis: Mecz huragan-byszwałd
-images:
-  - thumbnail: /static/Galery/8f56de7c898ca65e4caa246b89a9bb8b99e450.jpg
-  - thumbnail: /static/Galery/24e84486d3ed4e3e61ef5cca01ce237fe205b4.jpg
----
