@@ -8,26 +8,27 @@ import ModalGalery from "../components/Molecules/galery/ModalGalery";
 
 function Galeria() {
   const data = useStaticQuery(graphql`
-    {
-      allMarkdownRemark(filter: { frontmatter: { opis: { glob: "*" } } }) {
-        edges {
-          node {
-            frontmatter {
-              opis
-              images {
-                thumbnail
+      {
+        allMarkdownRemark(filter: { frontmatter: { opis: { glob: "*" } } }) {
+          edges {
+            node {
+              frontmatter {
+                opis
+                images {
+                  thumbnail
+                }
+                czas
               }
-              czas
             }
           }
         }
       }
-    }
   `);
   data.allMarkdownRemark.edges.reverse();
   const [dataImage, setDataImage] = useState();
   const [modalShow, setModalShow] = useState(false);
   const dataAtom = data.allMarkdownRemark.edges.reverse();
+  console.log(data)
 
   return (
     <Layout>

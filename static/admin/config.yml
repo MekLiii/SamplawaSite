@@ -7,6 +7,7 @@ media_library:
   name: uploadcare
   config:
     publicKey: 075151893a65319cd6da
+    multiple: true
 public_folder: /img
 
 collections:
@@ -265,18 +266,7 @@ collections:
     fields:
       - { label: 'data', name: 'czas', widget: 'date', date_format: true,format: 'DD-MM-YYYY', required: true}
       - { label: 'Krótki opis', name: 'opis', widget: 'string' }
-      -   label: Zdjecia
-          name: images
-          widget: list
-          fields:
-            - label: "Featured Image" 
-              name: "thumbnail"
-              widget: "image" 
-              choose_url: true  
-              media_folder: /static/Galery/
-              media_library:
-                config:
-                  multiple: true
+      - { label: "zdjecia", name: "imagesGal", widget: "image", choose_url: true, media_folder: /static/prod/}
   
                 
 
