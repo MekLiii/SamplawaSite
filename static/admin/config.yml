@@ -173,13 +173,9 @@ collections:
     fields:
       - { label: 'naglowek', name: 'naglowek', widget: 'string' }
       - { label: 'Data publikacji', name: 'date', widget: 'date', format: "DD-MM-YYYY"}
-      - { label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, media_folder: /static/img/}
+      - { label: "zdjecia", name: "imagesGal", widget: "image", choose_url: true, media_folder: /static/prod/} 
       - { label: 'tresc', name: 'tresc', widget: 'markdown', required: false }
-      -   label: Zdjecia
-          name: images
-          widget: list
-          fields:
-            - { label: "Featured Image", name: "thumbnail", widget: "image", allow_multiple: true, choose_url: true, media_folder: /static/Galery/ } 
+      
 
   - label: "Tabela"
     name: "tabela"
