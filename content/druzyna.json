@@ -6,20 +6,26 @@
       "zKartki": 1,
       "asysty": 0,
       "numer": 0,
-      "zdjecia": "https://ucarecdn.com/a865d0c3-b8cf-4ecb-899d-843e1cc1c3a6/",
+      "zdjecia": [
+        "https://ucarecdn.com/a865d0c3-b8cf-4ecb-899d-843e1cc1c3a6/"
+      ],
       "mecze": 28,
       "cKartki": 0,
       "bramki": 0,
       "pozycja": "bramkarz"
     },
     {
-      "zdjecia": "https://ucarecdn.com/eca27b52-81d6-407b-a0a1-4ad4e0d06522/",
+      "zdjecia": [
+        "https://ucarecdn.com/eca27b52-81d6-407b-a0a1-4ad4e0d06522/"
+      ],
       "name": "Krystian Zelmański",
       "pozycja": "bramkarz",
       "numer": 0
     },
     {
-      "zdjecia": "https://ucarecdn.com/e8fdf59f-d004-418d-ad25-593f86958d39/",
+      "zdjecia": [
+        "https://ucarecdn.com/e8fdf59f-d004-418d-ad25-593f86958d39/"
+      ],
       "name": "Lucjan Szwarc",
       "pozycja": "obrońca",
       "mecze": 6,
@@ -27,7 +33,9 @@
       "minuty": 470
     },
     {
-      "zdjecia": "https://ucarecdn.com/e4f9087e-f1eb-4161-820d-39134f73a75e/",
+      "zdjecia": [
+        "https://ucarecdn.com/e4f9087e-f1eb-4161-820d-39134f73a75e/"
+      ],
       "name": "Szymon Łątkowski",
       "pozycja": "obrońca",
       "mecze": 4,
@@ -35,14 +43,18 @@
       "minuty": 324
     },
     {
-      "zdjecia": "https://ucarecdn.com/9fea27b8-564b-44d9-8b8a-81e51332e143/",
+      "zdjecia": [
+        "https://ucarecdn.com/9fea27b8-564b-44d9-8b8a-81e51332e143/"
+      ],
       "name": "Tomasz Sławiński",
       "pozycja": "obrońca",
       "mecze": 26,
       "minuty": 1201
     },
     {
-      "zdjecia": "https://ucarecdn.com/fd767182-6fd3-4491-8d6c-b380555827a3/",
+      "zdjecia": [
+        "https://ucarecdn.com/fd767182-6fd3-4491-8d6c-b380555827a3/"
+      ],
       "name": "Arkadiusz Wietecha",
       "pozycja": "obrońca",
       "mecze": 8,
@@ -50,7 +62,9 @@
       "minuty": 611
     },
     {
-      "zdjecia": "https://ucarecdn.com/42f6f20b-1f62-4da7-8c4b-59ae20a1ef2f/",
+      "zdjecia": [
+        "https://ucarecdn.com/42f6f20b-1f62-4da7-8c4b-59ae20a1ef2f/"
+      ],
       "name": "Wojciech Banacki",
       "pozycja": "obrońca",
       "mecze": 9,
@@ -58,7 +72,9 @@
       "zKartki": 2
     },
     {
-      "zdjecia": "https://ucarecdn.com/0cd2b540-6874-4332-88a7-34dd18d9bd04/",
+      "zdjecia": [
+        "https://ucarecdn.com/0cd2b540-6874-4332-88a7-34dd18d9bd04/"
+      ],
       "name": "Andrzej Podlaszewski",
       "pozycja": "obrońca",
       "mecze": 18,
@@ -66,7 +82,9 @@
       "minuty": 1522
     },
     {
-      "zdjecia": "https://ucarecdn.com/4d98b779-6440-470c-8e33-6c981b16fd9e/",
+      "zdjecia": [
+        "https://ucarecdn.com/4d98b779-6440-470c-8e33-6c981b16fd9e/"
+      ],
       "name": "Sylwester Rynkowski",
       "pozycja": "obrońca",
       "mecze": 8,
@@ -74,7 +92,9 @@
       "minuty": 386
     },
     {
-      "zdjecia": "https://ucarecdn.com/9ffe54fb-98d1-4869-a9ec-5ed0f2dc0525/",
+      "zdjecia": [
+        "https://ucarecdn.com/9ffe54fb-98d1-4869-a9ec-5ed0f2dc0525/"
+      ],
       "name": "Henryk Świątkowski",
       "pozycja": "obrońca",
       "mecze": 7,
@@ -82,7 +102,9 @@
       "minuty": 451
     },
     {
-      "zdjecia": "https://ucarecdn.com/4e44d6b8-3ccd-45cf-a599-292f780737f7/",
+      "zdjecia": [
+        "https://ucarecdn.com/4e44d6b8-3ccd-45cf-a599-292f780737f7/"
+      ],
       "name": "Adam Dybich",
       "pozycja": "obrońca",
       "mecze": 17,
@@ -90,9 +112,7 @@
       "minuty": 1307
     },
     {
-      "zdjecia": [
-        "https://ucarecdn.com/a9e170bf-9dd2-424b-902f-6f9e35d55ff5/"
-      ],
+      "zdjecia": "/static/players/img/251f896dcd939a89f64184e3c1beb7c3e55c08.png",
       "name": "Radosław Buczkowski",
       "pozycja": "pomocnik",
       "mecze": 25,
@@ -101,7 +121,9 @@
       "minuty": 1773
     },
     {
-      "zdjecia": "https://ucarecdn.com/f7ab57e2-6767-49b9-82be-027a379d91b2/",
+      "zdjecia": [
+        "https://ucarecdn.com/f7ab57e2-6767-49b9-82be-027a379d91b2/"
+      ],
       "name": "Cezary Chorzelewski",
       "pozycja": "pomocnik",
       "mecze": 17,
@@ -110,7 +132,9 @@
       "minuty": 751
     },
     {
-      "zdjecia": "https://ucarecdn.com/515a5a20-00d9-43b7-a9e1-5b66e6d83b20/",
+      "zdjecia": [
+        "https://ucarecdn.com/515a5a20-00d9-43b7-a9e1-5b66e6d83b20/"
+      ],
       "name": "Przemysław Cabaj",
       "pozycja": "pomocnik",
       "mecze": 15,
@@ -118,7 +142,9 @@
       "minuty": 532
     },
     {
-      "zdjecia": "https://ucarecdn.com/36e4166d-e9d4-4cc4-9ba9-55c323c8a156/",
+      "zdjecia": [
+        "https://ucarecdn.com/36e4166d-e9d4-4cc4-9ba9-55c323c8a156/"
+      ],
       "name": "Michał Łukaszewski",
       "pozycja": "pomocnik",
       "mecze": 6,
@@ -126,7 +152,9 @@
       "minuty": 395
     },
     {
-      "zdjecia": "https://ucarecdn.com/4f9414a0-68ad-4def-9938-abcaa71ad65c/",
+      "zdjecia": [
+        "https://ucarecdn.com/4f9414a0-68ad-4def-9938-abcaa71ad65c/"
+      ],
       "name": "Patryk Mówiński",
       "pozycja": "pomocnik",
       "mecze": 19,
@@ -134,7 +162,9 @@
       "minuty": 1342
     },
     {
-      "zdjecia": "https://ucarecdn.com/6a895139-6a16-472f-847d-8e930796cae5/",
+      "zdjecia": [
+        "https://ucarecdn.com/6a895139-6a16-472f-847d-8e930796cae5/"
+      ],
       "name": "Marek Nastachowski",
       "pozycja": "pomocnik",
       "mecze": 21,
@@ -142,12 +172,16 @@
       "minuty": 1351
     },
     {
-      "zdjecia": "https://ucarecdn.com/90ce4054-6b0a-42cc-9690-150aba7c7c68/",
+      "zdjecia": [
+        "https://ucarecdn.com/90ce4054-6b0a-42cc-9690-150aba7c7c68/"
+      ],
       "name": "Paweł Kryżba",
       "pozycja": "pomocnik"
     },
     {
-      "zdjecia": "https://ucarecdn.com/67aa7888-ad7a-4a07-a2c1-1eab3db5897c/",
+      "zdjecia": [
+        "https://ucarecdn.com/67aa7888-ad7a-4a07-a2c1-1eab3db5897c/"
+      ],
       "name": "Dawid Mederski",
       "pozycja": "napastnik",
       "mecze": 6,
@@ -155,7 +189,9 @@
       "zKartki": 1
     },
     {
-      "zdjecia": "https://ucarecdn.com/6c907e9c-11ff-4452-927c-834c13a1f37e/",
+      "zdjecia": [
+        "https://ucarecdn.com/6c907e9c-11ff-4452-927c-834c13a1f37e/"
+      ],
       "name": "Jakub Lendzionowski",
       "pozycja": "napastnik",
       "mecze": 20,
@@ -165,7 +201,9 @@
       "minuty": 1757
     },
     {
-      "zdjecia": "https://ucarecdn.com/ea0ee0b6-603e-4249-91f0-64674757573e/",
+      "zdjecia": [
+        "https://ucarecdn.com/ea0ee0b6-603e-4249-91f0-64674757573e/"
+      ],
       "name": "Szymon Lasikowski",
       "pozycja": "napastnik",
       "mecze": 28,
@@ -173,7 +211,9 @@
       "minuty": 1793
     },
     {
-      "zdjecia": "https://ucarecdn.com/e7e06951-595f-4225-97e1-f5df1f99ae7e/",
+      "zdjecia": [
+        "https://ucarecdn.com/e7e06951-595f-4225-97e1-f5df1f99ae7e/"
+      ],
       "name": "Michał Raciborski",
       "pozycja": "napastnik",
       "mecze": 20,
@@ -182,7 +222,9 @@
       "minuty": 1689
     },
     {
-      "zdjecia": "https://ucarecdn.com/0fdeaf1d-cdc8-4128-829f-f3099325153b/",
+      "zdjecia": [
+        "https://ucarecdn.com/0fdeaf1d-cdc8-4128-829f-f3099325153b/"
+      ],
       "name": "Marek Laskowski",
       "pozycja": "napastnik",
       "mecze": 9,
@@ -190,9 +232,7 @@
       "bramki": 1
     },
     {
-      "zdjecia": [
-        "https://ucarecdn.com/446440a9-5795-4fa7-ae87-bf98a84a7461/"
-      ],
+      "zdjecia": "/static/players/img/profile-png-clipart-png-all.png",
       "name": "Sylwester Bukowski",
       "pozycja": "napastnik",
       "minuty": 282,
@@ -205,7 +245,7 @@
       "zdjecia": "/static/players/img/jakub-pokojski.png",
       "name": "Jakub Pokojski",
       "pozycja": "brak pozycji",
-      "bramki": 9, 
+      "bramki": 9,
       "minuty": 330
     },
     {
@@ -306,37 +346,27 @@
   ],
   "zespolSenior": [
     {
-      "zdjecia": [
-        "https://ucarecdn.com/62cef814-96f9-46ce-bed9-1787df83395e/"
-      ],
+      "zdjecia": "/static/players/img/69c913c06960b2816d55eb7746db67647eb301.png",
       "name": " Łukasz Wietecha",
       "rola": "Trener"
     },
     {
-      "zdjecia": [
-        "https://ucarecdn.com/df9bd69e-0bce-427c-97dc-c78a36ce0ef9/"
-      ],
-      "name": "Mariusz Ruczyński ",
+      "zdjecia": "/static/players/img/a2d196a9f93936303fb887fc27d6622e26c4c0.jpg",
+      "name": "Mariusz Ruczyński",
       "rola": "Drugi trener"
     },
     {
-      "zdjecia": [
-        "https://ucarecdn.com/85f82bbd-4ad7-4310-ac3d-4d1de200b32c/"
-      ],
+      "zdjecia": "/static/players/img/f4b3697c14ce3e299a73c83fc429eb937ef3b5.png",
       "name": "Marcin Wietecha",
       "rola": "Kierownik drużyny"
     },
     {
-      "zdjecia": [
-        "https://ucarecdn.com/d8d60970-b5b3-4d4a-b5fe-06a73044dde8/"
-      ],
+      "zdjecia": "/static/players/img/c02ddd1b18541ecc5432a3da53bb9620ec0eac.png",
       "name": "Sławomir Sarlej",
       "rola": "Kierownik drużyny"
     },
     {
-      "zdjecia": [
-        "https://ucarecdn.com/782403a8-dba2-4c56-8a11-2d239768d268/"
-      ],
+      "zdjecia": "/static/players/img/a7279fc31fd28ebec637e13a133228fd79b182.png",
       "name": "Wojciech Jurkiewicz",
       "rola": "Opieka medyczna"
     }
