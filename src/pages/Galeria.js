@@ -78,9 +78,9 @@ const StyledGrid = styled.div`
   height: 100%;
   gap: 10px;
   place-items: center;
-  @media only screen and (max-width: 500px) {
+  ${'' /* @media only screen and (max-width: 500px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-  }
+  } */}
 `;
