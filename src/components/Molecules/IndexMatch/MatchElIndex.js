@@ -61,6 +61,7 @@ const StatHolders = styled.div`
     height:auto;
     display:flex;
     align-items: center;
+    justify-content: space-around;
 `
 
 export default MatchElIndex;

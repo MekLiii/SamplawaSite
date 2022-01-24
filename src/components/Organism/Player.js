@@ -272,9 +272,11 @@ const SezonBox = styled.div`
     align-items: center;
     margin-top:5vh;
     @media (max-width: 900px) {
-      width:100%;
+      width:95%;
       justify-content:flex-start;
       align-items:center;
+      border-radius:5px;
+      min-height:30vh;
     }
 `;
 const Grid = styled.div`

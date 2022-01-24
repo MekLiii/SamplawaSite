@@ -64,6 +64,11 @@ function ElStat({ pageContext }) {
 
   const ActualSeson = data.AktualnySezon;
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
+  
+  const sortedArray = [];
+  matches.forEach((el) => el.Zawodnicy ? sortedArray.push(el) : console.log("not pushed"))
+  console.log(sortedArray)
+  
 
   const whoScored = whichMecz.Statystyki;
   const today = new Date();
@@ -83,9 +88,7 @@ function ElStat({ pageContext }) {
       day: "2-digit",
     });
   }
-  console.log(whoScored)
   const Statistics = () => {
-    console.log(whichMecz);
     if (new Date(whichMecz.data) > new Date(currentDate)) {
       return (
         <p style={{ color: "white", fontSize: "clamp(20px,5vw,40px)" }}>
@@ -118,6 +121,7 @@ function ElStat({ pageContext }) {
             el.Zmiany?.map((el) => (
               <div style={{ width: "100%" }} key={el.ZmianaNa}>
                 <PlayerSec
+                link={`/kadra/${el.ZmianaNa}`}
                   name={el.ZmianaNa}
                   src={team.team
                     ?.find((element) => element.name === el.ZmianaNa)
@@ -127,6 +131,7 @@ function ElStat({ pageContext }) {
                   colorArrow="green"
                 />
                 <PlayerSec
+                link={`/kadra/${el.ZmianaZ}`}
                   name={el.ZmianaZ}
                   src={team.team
                     ?.find((element) => element.name === el.ZmianaZ)
@@ -146,6 +151,7 @@ function ElStat({ pageContext }) {
           {whichMecz.Statystyki?.map((el) =>
             el.Kartki?.map((el) => (
               <PlayerSec
+              link={`/kadra/${el.Zawodnicy}`}
                 name={el.Zawodnicy}
                 key={el.ZmianaNa}
                 src={team.team
@@ -186,7 +192,7 @@ function ElStat({ pageContext }) {
                 onChange={handleChange}
                 classes={{ root: classes.selectRoot }}
               >
-                {matches?.map((el) => (
+                {sortedArray?.map((el) => (
                   <MenuItem
                     value={el.data}
                     key={`${el.data}/${el.przeciwnik}`}
@@ -223,8 +229,8 @@ function ElStat({ pageContext }) {
                   {whichMecz.przeciwnik}
                 </WhoPlayText>
               </WhoPlayBox>
-              <WhoScoredBox>
-                <div style={{ flex: 1 }}>
+              {/* <WhoScoredBox> */}
+                {/* <div style={{ flex: 1 }}>
                   {whoScored?.map((el) =>
                     el.BramkiPFT?.map((el) => (
                       <div
@@ -240,7 +246,7 @@ function ElStat({ pageContext }) {
                       </div>
                     ))
                   )}
-                </div>
+                </div> */}
                 {/* <span>{convertData(whichMecz.data)}</span> */}
                 {/* <div style={{ flex: 1 }}>
                   {whoScored?.map((el) =>
@@ -260,7 +266,7 @@ function ElStat({ pageContext }) {
                     ))
                   )}
                 </div> */}
-              </WhoScoredBox>
+              {/* </WhoScoredBox> */}
             </WhoMother>
             <Statistics />
           </SidebarBottom>
@@ -318,8 +324,9 @@ const WhoPlayBox = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #ffe600;
-  border-bottom: 1px solid black;
+  background-color: black;
+  
+  border: 1px solid #ffe600;
   @media (min-width: 900px);
 `;
 
@@ -344,6 +351,8 @@ const WhoPlayText = styled.p`
   font-size: clamp(15px, 5vw, 33px);
   margin-bottom: 0;
   text-align: center;
+  color:#ffe600;
+
 `;
 const PlayersBox = styled.div`
   width: 100%;
