@@ -40,7 +40,7 @@ export default function DenseTable() {
           <TableHead style={{ backgroundColor: "#ffe600" }}>
             <TableRow>
               <TableCell
-                align="right"
+                align="center"
                 width="30px"
                 sx={{ textAlign: "center", borderBottom: 0 }}
               >
