@@ -112,7 +112,9 @@
       "minuty": 1307
     },
     {
-      "zdjecia": "/static/players/img/251f896dcd939a89f64184e3c1beb7c3e55c08.png",
+      "zdjecia": [
+        "https://ucarecdn.com/cb29d842-e81c-4dbd-99c7-ee521ffe7d1a/"
+      ],
       "name": "Radosław Buczkowski",
       "pozycja": "pomocnik",
       "mecze": 25,
@@ -232,7 +234,9 @@
       "bramki": 1
     },
     {
-      "zdjecia": "/static/players/img/profile-png-clipart-png-all.png",
+      "zdjecia": [
+        "https://ucarecdn.com/e9a82e92-6c92-4959-9181-302fbbbc034a/"
+      ],
       "name": "Sylwester Bukowski",
       "pozycja": "napastnik",
       "minuty": 282,
