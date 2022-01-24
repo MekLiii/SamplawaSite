@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Chart from "../Atoms/Chart";
 
+
 function Player({ pageContext }) {
   const { slug } = pageContext;
   //aktualny sezon
@@ -47,7 +48,7 @@ function Player({ pageContext }) {
     )
   );
   const sortedArrayWhichMatch = playedMatechNotFilter.filter(filter);
-
+      console.log(sortedArrayWhichMatch)
   //stała filtrująca tablice matchWhenPlayersScored
   const sortedArrayWhenScored = matchWhenPlayersScored.filter(filter);
 
@@ -110,6 +111,7 @@ function Player({ pageContext }) {
   //data z zawodnicy.json
   const playerData = players.team.find((el) => el.name === slug.name);
   const playerGoals = playerData.bramki;
+  console.log(playerData)
   //minuty
   let minuty = 0;
   filterArray.forEach((el) => (minuty += el.minuty));
@@ -129,7 +131,7 @@ function Player({ pageContext }) {
               rola={slug.rola}
               name={slug.name}
               key={slug.name}
-              img={`/${slug.zdjecia?.slice(8)}`}
+              img={`${playerData.zdjecia}`}
             />
             <ChartContainer>
               <Chart
