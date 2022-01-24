@@ -146,7 +146,12 @@
                 }
               ],
               "Kartki": [],
-              "BramkiPFT": []
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Krystian Zelmański",
+                  "minuta": 55
+                }
+              ]
             }
           ],
           "miejsce": "Sampława",
