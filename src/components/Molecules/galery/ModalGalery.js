@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 function ModalGalery(props) {
+  console.log(props.data)
   return (
     <Modal
       {...props}
@@ -33,14 +34,14 @@ function ModalGalery(props) {
             {/* <SwiperSlide>Slide 1</SwiperSlide> */}
             {props.data?.map((el) => (
               <SwiperSlide
-                key={`${el.thumbnail}/${props.data.indexOf(el?.thumbnail)}`}
+                key={`${props.data.indexOf(el)}}`}
               >
                 <img
                   className="d-block w-100"
                   id={`img`}
                   style={{ objectFit: "contain" }}
-                  src={`/${el.thumbnail?.slice(8)}`}
-                  alt={el.thumbnail?.slice(8)}
+                  src={`${props.data[props.data.indexOf(el)]}`}
+                  alt={el}
                   // key={`${el.thumbnail}/${props.data.indexOf(el?.thumbnail)}`}
                 />
               </SwiperSlide>

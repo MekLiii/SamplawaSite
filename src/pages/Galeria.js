@@ -8,27 +8,25 @@ import ModalGalery from "../components/Molecules/galery/ModalGalery";
 
 function Galeria() {
   const data = useStaticQuery(graphql`
-      {
-        allMarkdownRemark(filter: { frontmatter: { opis: { glob: "*" } } }) {
-          edges {
-            node {
-              frontmatter {
-                opis
-                images {
-                  thumbnail
-                }
-                czas
-              }
-            }
+  {
+    allMarkdownRemark(filter: {frontmatter: {opis: {glob: "*"}}}) {
+      edges {
+        node {
+          frontmatter {
+            opis
+            czas
+            imagesGal
           }
         }
       }
+    }
+  }
   `);
   data.allMarkdownRemark.edges.reverse();
   const [dataImage, setDataImage] = useState();
   const [modalShow, setModalShow] = useState(false);
   const dataAtom = data.allMarkdownRemark.edges.reverse();
-  console.log(data)
+  console.log(dataImage)
 
   return (
     <Layout>
@@ -41,10 +39,10 @@ function Galeria() {
               heading={el.node.frontmatter.opis}
               whatNext="Zobacz zdjecia"
               data={el.node.frontmatter.czas}
-              img={`/${el.node.frontmatter.images[0].thumbnail.slice(8)}`}
+              img={`${el.node.frontmatter.imagesGal[0]}`}
               onClick={() => {
                 setModalShow(true);
-                setDataImage(el.node.frontmatter.images);
+                setDataImage(el.node.frontmatter.imagesGal);
                 
               }}
             />
