@@ -10,19 +10,12 @@ import data from "../../../../content/tabelaSenior.json";
 import "./matchTable.module.css";
 import styled from "styled-components";
 import { People, Flag, Football, Podium, Ellipse } from "react-ionicons";
-import loadable from "@loadable/component";
-
-
-
 
 export default function DenseTable() {
   const dataAtom = data.Tabela.sort((a, b) => {
     return a.punkty - b.punkty;
   });
   const dataEl = dataAtom.reverse();
-  let x;
-  loadable(x = window.matchMedia("(max-width: 768px)"))
-  console.log(x)
   return (
     <Box>
       <TableContainer
@@ -69,19 +62,7 @@ export default function DenseTable() {
                   <P>Drużyna</P>
                 </Centered>
               </TableCell>
-            
-                <TableCell
-                  align="center"
-                  sx={{ textAlign: "center", borderBottom: 0,display:x ? 'none' : 'auto' }}
-                >
-                  <Centered>
-                    <Icon>
-                      <Football color={"#ffe600"} height="20px" width="20px" />
-                    </Icon>
-                    <P>Mecze</P>
-                  </Centered>
-                </TableCell>
-              
+
               <TableCell
                 align="center"
                 sx={{ textAlign: "center", borderBottom: 0 }}
@@ -93,10 +74,21 @@ export default function DenseTable() {
                   <P>Punkty</P>
                 </Centered>
               </TableCell>
+              <TableCell
+                align="center"
+                sx={{ textAlign: "center", borderBottom: 0 }}
+              >
+                <Centered>
+                  <Icon>
+                    <Football color={"#ffe600"} height="20px" width="20px" />
+                  </Icon>
+                  <P>Mecze</P>
+                </Centered>
+              </TableCell>
 
               <TableCell
                 align="center"
-                sx={{ textAlign: "center", borderBottom: 0,display:x ? 'none' : 'auto' }}
+                sx={{ textAlign: "center", borderBottom: 0 }}
               >
                 <Centered>
                   <Icon>
@@ -139,21 +131,6 @@ export default function DenseTable() {
                 >
                   {el.druzyna}
                 </TableCell>
-
-                <TableCell
-                  align="center"
-                  style={{
-                    color: "white",
-                    border: "1px solid rgba(255, 255, 255, 0.2)",
-                    padding: "10px",
-                    width: "100%",
-                    boxSizing: "border-box",
-                    display:x ? 'none' : 'auto'
-                  }}
-                >
-                  {el.mecze}
-                </TableCell>
-
                 <TableCell
                   align="center"
                   style={{
@@ -162,6 +139,18 @@ export default function DenseTable() {
                   }}
                 >
                   {el.punkty}
+                </TableCell>
+                <TableCell
+                  align="center"
+                  style={{
+                    color: "white",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
+                    padding: "10px",
+                    width: "100%",
+                    boxSizing: "border-box",
+                  }}
+                >
+                  {el.mecze}
                 </TableCell>
 
                 <TableCell
@@ -174,7 +163,6 @@ export default function DenseTable() {
                     width: "100%",
                     boxSizing: "border-box",
                     // height: "100%"
-                    display:x ? 'none' : 'auto'
                   }}
                 >
                   {el.bramki}
@@ -237,6 +225,16 @@ const Icon = ({ children }) => {
     </IconItem>
   );
 };
+const MobileColum = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: none;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 
 const iconStyle = {
   color: "#FFE600",

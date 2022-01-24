@@ -18,6 +18,17 @@ tbody > tr:nth-last-child(3) > th:nth-child(1) {
         table{
             overflow: hidden;
         }
+        .mecze{
+            display:none !important;
+        }
         
     }
+    @media (max-width: 740px) {
+        .mecze{
+            display:none;
+        }
+      }
 
+.mecze, .css-13213bb-MuiTableCell-root{
+    display:none !important;
+}
