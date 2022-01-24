@@ -19,7 +19,7 @@ function Aktu() {
             naglowek
             tresc
             title
-            zdjecia
+            imagesGal
           }
         }
       }
@@ -42,7 +42,7 @@ function Aktu() {
             // key={element.node.frontmatter.naglowek}
             heading={element.node.frontmatter.naglowek}
             data={element.node.frontmatter.date}
-            img={`${element.node.frontmatter.zdjecia?.slice(8)}`}
+            img={`${element.node.frontmatter.imagesGal[0]}`}
             whatNext="Czytaj dalej"
           />
         </Link>
