@@ -346,27 +346,37 @@
   ],
   "zespolSenior": [
     {
-      "zdjecia": "/static/players/img/69c913c06960b2816d55eb7746db67647eb301.png",
+      "zdjecia": [
+        "https://ucarecdn.com/4ec093c2-0a1c-4b65-b2d6-3ff9c3082022/"
+      ],
       "name": " Łukasz Wietecha",
       "rola": "Trener"
     },
     {
-      "zdjecia": "/static/players/img/a2d196a9f93936303fb887fc27d6622e26c4c0.jpg",
+      "zdjecia": [
+        "https://ucarecdn.com/a436d4cb-3918-4ac9-9052-2b9723d421ce/"
+      ],
       "name": "Mariusz Ruczyński",
       "rola": "Drugi trener"
     },
     {
-      "zdjecia": "/static/players/img/f4b3697c14ce3e299a73c83fc429eb937ef3b5.png",
+      "zdjecia": [
+        "https://ucarecdn.com/4bfd4a80-0631-49ab-922e-bce0c7790f16/"
+      ],
       "name": "Marcin Wietecha",
       "rola": "Kierownik drużyny"
     },
     {
-      "zdjecia": "/static/players/img/c02ddd1b18541ecc5432a3da53bb9620ec0eac.png",
+      "zdjecia": [
+        "https://ucarecdn.com/cb4cdc8e-44e9-42db-8eed-ea9c0409b610/"
+      ],
       "name": "Sławomir Sarlej",
       "rola": "Kierownik drużyny"
     },
     {
-      "zdjecia": "/static/players/img/a7279fc31fd28ebec637e13a133228fd79b182.png",
+      "zdjecia": [
+        "https://ucarecdn.com/d93f0b51-abec-4f7a-8f00-330e6de3f574/"
+      ],
       "name": "Wojciech Jurkiewicz",
       "rola": "Opieka medyczna"
     }
