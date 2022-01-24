@@ -32,7 +32,7 @@ function MatchElIndex({ title,data,letters,name,score,lettersEnemy,nameEnemy,sco
 const Box = styled.div`
   height: 100%;
   @media (max-width:768px){
-    margin-top:50px;
+    ${'' /* margin-top:50px; */}
   }
 `;
 const Divider = styled.div`

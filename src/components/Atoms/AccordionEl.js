@@ -81,7 +81,7 @@ function AccordionEl({ data, slugName }) {
                   }}
                 >
                   <Body>
-                    <P style={{}}>data: {convertData(el.data)}</P>
+                    <P style={{}}>{convertData(el.data)}</P>
                     <P style={{}}>
                       wynik: {el.pftGoals}-{el.enemyGoals}
                     </P>

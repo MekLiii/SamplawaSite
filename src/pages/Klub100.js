@@ -82,7 +82,7 @@ function Klub100() {
               }}
             >
               <P>Wzór karty członkowskiej</P>
-              <img src={wzor} alt="wzor" style={{ width: "300px" }} />
+              <img src={wzor} alt="wzor" style={{ width: "100%" }} />
             </StyledSection>
             <StyledSection></StyledSection>
           </StyledCard>

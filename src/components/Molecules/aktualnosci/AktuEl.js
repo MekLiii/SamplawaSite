@@ -25,7 +25,7 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
   array[1] = newElement;
 
   return (
-    <StyledBox>
+    <StyledBox onClick={onClick} style={{cursor: "pointer"}}>
       <div style={leftSide}>
         <div style={imagine}>
           <img src={img} style={imagine} alt={img} />

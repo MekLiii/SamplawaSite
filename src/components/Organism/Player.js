@@ -224,8 +224,10 @@ const Cointainer = styled.div`
   min-height: 77vh;
   width: 100%;
   display: flex;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     flex-direction: column;
+    justify-content:center;
+    align-items: center;
   }
 `;
 const Left = styled.div`
@@ -237,10 +239,10 @@ const Left = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top:7vh;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     width: 100%;
     max-height: 170vh;
-  min-height: 77vh;
+    min-height: 77vh;
   }
 `;
 const Right = styled.div`
@@ -269,7 +271,7 @@ const SezonBox = styled.div`
     
     align-items: center;
     margin-top:5vh;
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       width:100%;
       justify-content:flex-start;
       align-items:center;
@@ -280,7 +282,7 @@ const Grid = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     width: 50%;
     flex-direction: column;
     align-items: flex-start;
@@ -308,7 +310,7 @@ const ChartContainer = styled.div`
   justify-content:center;
   align-items:center;
   margin-top:3vh;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     flex-direction: column;
     margin-top:0;
   }

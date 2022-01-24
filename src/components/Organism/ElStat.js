@@ -12,7 +12,6 @@ import Select from "@mui/material/Select";
 import { makeStyles } from "@material-ui/core";
 import PlayerSec from "../Atoms/PlayerSec";
 
-
 function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [age, setAge] = useState("");
@@ -76,14 +75,15 @@ function ElStat({ pageContext }) {
       : "0" + (today.getMonth() + 1);
   const currentDate =
     currentMonth + "/" + currentDay + "/" + today.getFullYear();
-    function convertData(x) {
-      const newData = new Date(x);
-      return newData.toLocaleDateString("Pl", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-      });
-    }
+  function convertData(x) {
+    const newData = new Date(x);
+    return newData.toLocaleDateString("Pl", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+  }
+  console.log(whoScored)
   const Statistics = () => {
     console.log(whichMecz);
     if (new Date(whichMecz.data) > new Date(currentDate)) {
@@ -93,7 +93,7 @@ function ElStat({ pageContext }) {
         </p>
       );
     }
-    
+
     return (
       <PlayersBox>
         <PlayersHolder>
@@ -142,6 +142,7 @@ function ElStat({ pageContext }) {
         </PlayersHolder>
         <PlayersHolder>
           <Title>Kary</Title>
+
           {whichMecz.Statystyki?.map((el) =>
             el.Kartki?.map((el) => (
               <PlayerSec
@@ -198,67 +199,69 @@ function ElStat({ pageContext }) {
             </FormControl>
           </SidebarTop>
           <SidebarBottom>
-            <WhoPlayBox>
-              <WhoPlayText style={{ flex: 1 }}>
-                {whichMecz.gospodarze}
-              </WhoPlayText>
-
-              <div
-                style={{ flex: 1, display: "flex", justifyContent: "center" }}
-              >
-                <WhoPlayText>
-                  {whichMecz.pftGoals == undefined ? "0" : whichMecz.pftGoals}
+            <WhoMother>
+              <WhoPlayBox>
+                <WhoPlayText style={{ flex: 1 }}>
+                  {whichMecz.gospodarze}
                 </WhoPlayText>
 
-                <WhoPlayText>-:-</WhoPlayText>
-                <WhoPlayText>
-                  {whichMecz.enemyGoals == undefined
-                    ? "0"
-                    : whichMecz.enemyGoals}
+                <div
+                  style={{ flex: 1, display: "flex", justifyContent: "center" }}
+                >
+                  <WhoPlayText>
+                    {whichMecz.pftGoals == undefined ? "0" : whichMecz.pftGoals}
+                  </WhoPlayText>
+
+                  <WhoPlayText>-:-</WhoPlayText>
+                  <WhoPlayText>
+                    {whichMecz.enemyGoals == undefined
+                      ? "0"
+                      : whichMecz.enemyGoals}
+                  </WhoPlayText>
+                </div>
+                <WhoPlayText style={{ flex: 1 }}>
+                  {whichMecz.przeciwnik}
                 </WhoPlayText>
-              </div>
-              <WhoPlayText style={{ flex: 1 }}>
-                {whichMecz.przeciwnik}
-              </WhoPlayText>
-            </WhoPlayBox>
-            <WhoScoredBox>
-              <div style={{ flex: 1 }}>
-                {whoScored?.map((el) =>
-                  el.BramkiPFT?.map((el) => (
-                    <div
-                      key={el.Zawodnicy}
-                      style={{
-                        display: "flex",
-                        justifyContent: "flex-start",
-                        flex: 1,
-                      }}
-                    >
-                      <WhoScoredText>{el.Zawodnicy}</WhoScoredText>
-                      <WhoScoredText>{`${el.minuta}'`}</WhoScoredText>
-                    </div>
-                  ))
-                )}
-              </div>
-              <span>{convertData(whichMecz.data)}</span>
-              <div style={{ flex: 1 }}>
-                {whoScored?.map((el) =>
-                  el.BramkiPrzeciwnika?.map((el) => (
-                    <div
-                      key={el.BramkiPrzeciwnika}
-                      style={{
-                        display: "flex",
-                        justifyContent: "flex-start",
-                        flexDirection: "row-reverse",
-                        flex: 1,
-                      }}
-                    >
-                      <WhoScoredText>{el.Zawodnicy}</WhoScoredText>
-                      <WhoScoredText>{`${el.minuta}'`}</WhoScoredText>
-                    </div>
-                  ))
-                )}
-              </div>
-            </WhoScoredBox>
+              </WhoPlayBox>
+              <WhoScoredBox>
+                <div style={{ flex: 1 }}>
+                  {whoScored?.map((el) =>
+                    el.BramkiPFT?.map((el) => (
+                      <div
+                        key={el.Zawodnicy}
+                        style={{
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          flex: 1,
+                        }}
+                      >
+                        <WhoScoredText>{el.Zawodnicy}</WhoScoredText>
+                        <WhoScoredText>{`${el.minuta}'`}</WhoScoredText>
+                      </div>
+                    ))
+                  )}
+                </div>
+                {/* <span>{convertData(whichMecz.data)}</span> */}
+                {/* <div style={{ flex: 1 }}>
+                  {whoScored?.map((el) =>
+                    el.BramkiPrzeciwnika?.map((el) => (
+                      <div
+                        key={el.BramkiPrzeciwnika}
+                        style={{
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          flexDirection: "row-reverse",
+                          flex: 1,
+                        }}
+                      >
+                        <WhoScoredText>{el.Zawodnicy}</WhoScoredText>
+                        <WhoScoredText>{`${el.minuta}'`}</WhoScoredText>
+                      </div>
+                    ))
+                  )}
+                </div> */}
+              </WhoScoredBox>
+            </WhoMother>
             <Statistics />
           </SidebarBottom>
         </Box>
@@ -275,7 +278,12 @@ const Cointainer = styled.div`
   align-items: center;
   margin-bottom: 10px;
 `;
-
+const WhoMother = styled.div`
+  width: 100%;
+  @media (max-width: 900px) {
+    width: 90%;
+  }
+`;
 const Box = styled.div`
   width: 90%;
   min-height: 82vh;
@@ -312,7 +320,9 @@ const WhoPlayBox = styled.div`
   align-items: center;
   background-color: #ffe600;
   border-bottom: 1px solid black;
+  @media (min-width: 900px);
 `;
+
 const WhoScoredBox = styled.div`
   width: 100%;
   height: 30%;
@@ -354,3 +364,4 @@ const Title = styled.p`
   color: white;
   font-size: clamp(15px, 5vw, 33px);
 `;
+

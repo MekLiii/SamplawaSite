@@ -85,7 +85,7 @@ const BoxImg = styled.div`
 `;
 const Img = styled.img`
   width: 70%;
-  height: 70%;
+  height: auto;
   border-radius: 50%;
   border: 3px solid black;
   padding: 10px;
