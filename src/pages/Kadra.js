@@ -57,7 +57,7 @@ function Druzyna() {
 
   return (
     <Layout>
-      <div style={cointainer}>
+      <Cointainer>
         <FormControl
           sx={{ margin: "20px", width: "90%" }}
           className={classes.root}
@@ -98,7 +98,7 @@ function Druzyna() {
         </FormControl>
         <Table data={kadra} title="Zawodnicy" linkBoolian={link} />
         <Table data={zespol} title="Zespół" linkBoolian={link} />
-      </div>
+      </Cointainer>
     </Layout>
   );
 }
@@ -111,6 +111,18 @@ const cointainer = {
   justifyContent: "center",
   alignItems: "center",
 };
+const Cointainer = styled.div`
+  min-height:82vh;
+  height:auto;
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items:center;
+  margin-top:5vh;
+  @media (max-width: 900px){
+    margin-top:0;
+  }
+`
 const Img = styled.img`
   width: 65%;
   height: 65%;
