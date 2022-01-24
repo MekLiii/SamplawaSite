@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 function ModalGalery(props) {
-  console.log(props.data)
   return (
     <Modal
       {...props}

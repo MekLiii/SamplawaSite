@@ -121,7 +121,6 @@ function MatchIndex() {
       day: "2-digit",
     });
   }
-  console.log(convertData("06/30/2022"));
   return (
     <Cointainer>
       <StyledDiv>

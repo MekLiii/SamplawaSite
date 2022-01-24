@@ -12,7 +12,6 @@ function AccordionEl({ data, slugName }) {
     return playerObject.minuty;
   }
   const [toogleIcon, setToogleIcon] = useState(true);
-  console.log(toogleIcon);
   function convertData(x) {
     const newData = new Date(x);
     return newData.toLocaleDateString("Pl", {

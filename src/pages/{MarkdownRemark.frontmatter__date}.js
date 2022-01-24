@@ -14,13 +14,12 @@ import ReactMarkdown from "react-markdown";
 
 export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
-  console.log(markdownRemark)
   const { frontmatter, html } = markdownRemark;
   const galery = frontmatter?.imagesGal;
   const [modalShow, setModalShow] = useState(false);
   // pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n\n(.*?)\n^<\/details>$/ms
   const random = Math.random();
-  console.log(galery)
+
 
   const Galery = () => {
     if (galery === null) {
@@ -43,7 +42,6 @@ export default function Template({ data }) {
   if(galerySize.length == 1){
     return galerySize = 250;
   }
-  console.log(data)
   return (
     <LayOut
       style={{

@@ -21,7 +21,6 @@ function NextMatch() {
     b = b.split("/").reverse().join("");
     return a > b ? 1 : a < b ? -1 : 0;
   });
-  console.log(matchArray)
   const indexOfCurrentDay = matchArray.indexOf(currentDate);
   const compareDate = matchArray[indexOfCurrentDay + 1];
 
@@ -29,7 +28,7 @@ function NextMatch() {
   
   
 
-    console.log(result);
+
   return (
     <StyledDiv>
       <div style={displayFlex}>

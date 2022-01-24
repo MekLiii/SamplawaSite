@@ -37,7 +37,6 @@ export default function Chart({ allMiuts, coutMatches, title }) {
     { name: "Group A", value: allMiuts },
     { name: "Group B", value: coutMatches < 0 ? 0 : coutMatches },
   ];
-  console.log(allMiuts, coutMatches);
   if(coutMatches == ("0" || NaN) || allMiuts ==("0" || NaN)) {
       return <div></div>;
   }else{

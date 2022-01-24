@@ -28,7 +28,6 @@ function Aktu() {
   `);
 
   const dataElement = data.allMarkdownRemark.edges.sort((a,b) => a - b);
-  console.log(dataElement.sort((a,b) => a - b));
   const dataAtom = dataElement;
   return (
     <StyledGrid>

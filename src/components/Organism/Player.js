@@ -37,7 +37,7 @@ function Player({ pageContext }) {
   playedMatchesArray.forEach((el) =>
     el.Zawodnicy ? objectToArray.push([el]) : []
   );
-  // console.log(objectToArray)
+
   const playedMatechNotFilter = [];
   objectToArray.forEach((el) =>
     playedMatechNotFilter.push(
@@ -47,7 +47,6 @@ function Player({ pageContext }) {
     )
   );
   const sortedArrayWhichMatch = playedMatechNotFilter.filter(filter);
-  console.log(sortedArrayWhichMatch);
 
   //stała filtrująca tablice matchWhenPlayersScored
   const sortedArrayWhenScored = matchWhenPlayersScored.filter(filter);
@@ -64,7 +63,6 @@ function Player({ pageContext }) {
     howManyMatchesPlayed.push(el.find((el) => el.Zawodnicy === slug.name))
   );
   const filterArray = howManyMatchesPlayed.filter(filter);
-  console.log(playedMatchesAllPlayers);
 
   // Kartki
   const cards = [];
@@ -115,8 +113,6 @@ function Player({ pageContext }) {
   //minuty
   let minuty = 0;
   filterArray.forEach((el) => (minuty += el.minuty));
-  console.log(typeof slug.minuty);
-  console.log(slug);
   //
   const goals = slug.bramki + sortedArrayWhenScored.length;
   const playedMatches = slug.mecze + filterArray.length;

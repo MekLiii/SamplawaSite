@@ -66,8 +66,8 @@ function ElStat({ pageContext }) {
   const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
   
   const sortedArray = [];
-  matches.forEach((el) => el.Zawodnicy ? sortedArray.push(el) : console.log("not pushed"))
-  console.log(sortedArray)
+  matches.forEach((el) => el.Zawodnicy ? sortedArray.push(el) : "")
+
   
 
   const whoScored = whichMecz.Statystyki;
