@@ -10,14 +10,19 @@ import data from "../../../../content/tabelaSenior.json";
 import "./matchTable.module.css";
 import styled from "styled-components";
 import { People, Flag, Football, Podium, Ellipse } from "react-ionicons";
+import loadable from "@loadable/component";
+
+
+
 
 export default function DenseTable() {
   const dataAtom = data.Tabela.sort((a, b) => {
     return a.punkty - b.punkty;
   });
   const dataEl = dataAtom.reverse();
-  const x = window.matchMedia("(max-width: 768px)")
-  
+  let x;
+  loadable(x = window.matchMedia("(max-width: 768px)"))
+  console.log(x)
   return (
     <Box>
       <TableContainer

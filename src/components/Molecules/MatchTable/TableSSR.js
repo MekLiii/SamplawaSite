@@ -1,0 +1,1 @@
+export const x = window.matchMedia("(max-width: 768px)")
