@@ -114,7 +114,7 @@ const StyledCard = styled.div`
   padding: 20px;
 `;
 const StyledSection = styled.div`
-  width: 90%;
+  width: 100%;
 `;
 const P = styled.p`
   color: #979797;

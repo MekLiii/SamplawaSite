@@ -108,7 +108,7 @@ function ElStat({ pageContext }) {
               key={el.Zawodnicy}
               src={team.team
                 .find((element) => element.name === el.Zawodnicy)
-                ?.zdjecia.slice(7)}
+                ?.zdjecia}
               minuts={el.minuty}
               StyleIcon={{ display: "none" }}
               StyleArrow={{ display: "none" }}
@@ -125,7 +125,7 @@ function ElStat({ pageContext }) {
                   name={el.ZmianaNa}
                   src={team.team
                     ?.find((element) => element.name === el.ZmianaNa)
-                    ?.zdjecia.slice(7)}
+                    ?.zdjecia}
                   minuts={el.minuta}
                   StyleIcon={{ display: "none" }}
                   colorArrow="green"
@@ -135,7 +135,7 @@ function ElStat({ pageContext }) {
                   name={el.ZmianaZ}
                   src={team.team
                     ?.find((element) => element.name === el.ZmianaZ)
-                    ?.zdjecia.slice(7)}
+                    ?.zdjecia}
                   minuts={el.minuta}
                   StyleIcon={{ display: "none" }}
                   StyleArrow={{ transform: "rotate(180deg)" }}
