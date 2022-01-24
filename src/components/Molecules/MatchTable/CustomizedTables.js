@@ -16,6 +16,8 @@ export default function DenseTable() {
     return a.punkty - b.punkty;
   });
   const dataEl = dataAtom.reverse();
+  const x = window.matchMedia("(max-width: 768px)")
+  
   return (
     <Box>
       <TableContainer
@@ -62,10 +64,10 @@ export default function DenseTable() {
                   <P>Drużyna</P>
                 </Centered>
               </TableCell>
-              <MobileColum>
+            
                 <TableCell
                   align="center"
-                  sx={{ textAlign: "center", borderBottom: 0 }}
+                  sx={{ textAlign: "center", borderBottom: 0,display:x ? 'none' : 'auto' }}
                 >
                   <Centered>
                     <Icon>
@@ -74,7 +76,7 @@ export default function DenseTable() {
                     <P>Mecze</P>
                   </Centered>
                 </TableCell>
-              </MobileColum>
+              
               <TableCell
                 align="center"
                 sx={{ textAlign: "center", borderBottom: 0 }}
@@ -86,19 +88,18 @@ export default function DenseTable() {
                   <P>Punkty</P>
                 </Centered>
               </TableCell>
-              <MobileColum>
-                <TableCell
-                  align="center"
-                  sx={{ textAlign: "center", borderBottom: 0 }}
-                >
-                  <Centered>
-                    <Icon>
-                      <Ellipse color={"#ffe600"} height="20px" width="20px" />
-                    </Icon>
-                    <P>Bramki</P>
-                  </Centered>
-                </TableCell>
-              </MobileColum>
+
+              <TableCell
+                align="center"
+                sx={{ textAlign: "center", borderBottom: 0,display:x ? 'none' : 'auto' }}
+              >
+                <Centered>
+                  <Icon>
+                    <Ellipse color={"#ffe600"} height="20px" width="20px" />
+                  </Icon>
+                  <P>Bramki</P>
+                </Centered>
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody id="tbody">
@@ -133,20 +134,21 @@ export default function DenseTable() {
                 >
                   {el.druzyna}
                 </TableCell>
-                <MobileColum>
-                  <TableCell
-                    align="center"
-                    style={{
-                      color: "white",
-                      border: "1px solid rgba(255, 255, 255, 0.2)",
-                      padding: "10px",
-                      width: "100%",
-                      boxSizing: "border-box",
-                    }}
-                  >
-                    {el.mecze}
-                  </TableCell>
-                </MobileColum>
+
+                <TableCell
+                  align="center"
+                  style={{
+                    color: "white",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
+                    padding: "10px",
+                    width: "100%",
+                    boxSizing: "border-box",
+                    display:x ? 'none' : 'auto'
+                  }}
+                >
+                  {el.mecze}
+                </TableCell>
+
                 <TableCell
                   align="center"
                   style={{
@@ -156,22 +158,22 @@ export default function DenseTable() {
                 >
                   {el.punkty}
                 </TableCell>
-                <MobileColum>
-                  <TableCell
-                    align="center"
-                    style={{
-                      color: "white",
-                      border: "1px solid rgba(255, 255, 255, 0.2)",
-                      // padding: "3px 10px",
-                      padding: "10px",
-                      width: "100%",
-                      boxSizing: "border-box",
-                      // height: "100%"
-                    }}
-                  >
-                    {el.bramki}
-                  </TableCell>
-                </MobileColum>
+
+                <TableCell
+                  align="center"
+                  style={{
+                    color: "white",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
+                    // padding: "3px 10px",
+                    padding: "10px",
+                    width: "100%",
+                    boxSizing: "border-box",
+                    // height: "100%"
+                    display:x ? 'none' : 'auto'
+                  }}
+                >
+                  {el.bramki}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -230,16 +232,6 @@ const Icon = ({ children }) => {
     </IconItem>
   );
 };
-const MobileColum = styled.tr`
-display:flex;
-align-items:center;
-justify-content:center;
-box-sizing: border-box;
-border:none;
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
 
 const iconStyle = {
   color: "#FFE600",
