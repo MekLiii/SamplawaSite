@@ -23,7 +23,7 @@ function Table({ data, title, linkBoolian }) {
                   rola={el.rola}
                   name={el.name}
                   key={el.name}
-                  img={`/${el.zdjecia?.slice(8)}`}
+                  img={`${el.zdjecia}`}
                 />
               </Link>
             </div>
