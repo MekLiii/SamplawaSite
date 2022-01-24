@@ -16,12 +16,12 @@ export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   console.log(markdownRemark)
   const { frontmatter, html } = markdownRemark;
-  const image = frontmatter?.zdjecia?.substr(8);
-  const galery = frontmatter?.images;
+  const galery = frontmatter?.imagesGal;
   const [modalShow, setModalShow] = useState(false);
   // pattern: /^<details>$\s*?<summary>(.*?)<\/summary>\n\n(.*?)\n^<\/details>$/ms
   const random = Math.random();
-  console.log(data.markdownRemark.frontmatter);
+  console.log(galery)
+
   const Galery = () => {
     if (galery === null) {
       return <p style={{ color: "grey", textAlign: "center" }}>Brak zdjęć</p>;
@@ -30,9 +30,9 @@ export default function Template({ data }) {
         <ImageListItem key={`${item.img}+ ${galery.indexOf(item)}`}>
           <img
             key={`${item.img}+${item.thumbnail}+${random}`}
-            src={`/${item.thumbnail.slice(8)}`}
-            srcSet={`/${item.thumbnail.slice(8)}`}
-            alt={item.thumbnail.slice(8)}
+            src={item}
+            srcSet={item}
+            alt={item.imagesGal}
             loading="lazy"
           />
         </ImageListItem>
@@ -241,10 +241,8 @@ export const pageQuery = graphql`
         naglowek
         title
         tresc
-        zdjecia
-        images {
-          thumbnail
-        }
+        imagesGal
+        
       }
     }
   }

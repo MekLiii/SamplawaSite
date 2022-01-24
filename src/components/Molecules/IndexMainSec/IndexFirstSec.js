@@ -28,11 +28,10 @@ export default function App() {
           node {
             frontmatter {
               date
-
               naglowek
               tresc
               title
-              zdjecia
+              imagesGal
             }
           }
         }
@@ -75,7 +74,7 @@ export default function App() {
           <SwiperSlide
           key={dataAtom.indexOf(el) + el.node.frontmatter.naglowek}
             style={{
-              backgroundImage: `url(${el.node.frontmatter.zdjecia?.slice(7)})`,
+              backgroundImage: `url(${el.node.frontmatter.imagesGal[0]})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               display: "flex",

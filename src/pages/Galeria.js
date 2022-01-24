@@ -26,7 +26,7 @@ function Galeria() {
   const [dataImage, setDataImage] = useState();
   const [modalShow, setModalShow] = useState(false);
   const dataAtom = data.allMarkdownRemark.edges.reverse();
-  console.log(dataImage)
+  console.log(dataAtom)
 
   return (
     <Layout>

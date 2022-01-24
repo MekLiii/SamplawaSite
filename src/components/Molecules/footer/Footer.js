@@ -28,7 +28,7 @@ function Footer() {
           </div>
         </a>
         <a
-          href="https://www.facebook.com/WyrownawczaAkademiaPilkarska"
+          href="https://www.instagram.com/pft_drewneks_samplawa/"
           target="_blank"
         >
           <div
