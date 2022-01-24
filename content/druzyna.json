@@ -112,13 +112,7 @@
       "minuty": 1307
     },
     {
-<<<<<<< HEAD
-      "zdjecia": [
-        "https://ucarecdn.com/a9e170bf-9dd2-424b-902f-6f9e35d55ff5/"
-      ],
-=======
       "zdjecia": "/static/players/img/251f896dcd939a89f64184e3c1beb7c3e55c08.png",
->>>>>>> 76b498e (fd)
       "name": "Radosław Buczkowski",
       "pozycja": "pomocnik",
       "mecze": 25,
@@ -238,13 +232,7 @@
       "bramki": 1
     },
     {
-<<<<<<< HEAD
-      "zdjecia": [
-        "https://ucarecdn.com/446440a9-5795-4fa7-ae87-bf98a84a7461/"
-      ],
-=======
       "zdjecia": "/static/players/img/profile-png-clipart-png-all.png",
->>>>>>> 76b498e (fd)
       "name": "Sylwester Bukowski",
       "pozycja": "napastnik",
       "minuty": 282,
@@ -358,13 +346,7 @@
   ],
   "zespolSenior": [
     {
-<<<<<<< HEAD
-      "zdjecia": [
-        "https://ucarecdn.com/62cef814-96f9-46ce-bed9-1787df83395e/"
-      ],
-=======
       "zdjecia": "/static/players/img/69c913c06960b2816d55eb7746db67647eb301.png",
->>>>>>> 76b498e (fd)
       "name": " Łukasz Wietecha",
       "rola": "Trener"
     },
