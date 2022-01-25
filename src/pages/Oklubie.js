@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Organism/Layout";
 import styled from "styled-components";
-import logo from "../../content/assets/logo.jpg";
+import logo from "../../content/assets/logo.webp";
 import AdresEL from "../components/Atoms/AdressEl";
 import data from "../../content/oKlubieData.json";
 
@@ -65,6 +65,7 @@ function Oklubie() {
                 <div style={OpisTopEL} id="OpisTotpEl">
                   {data.zarzad.map((el) => (
                     <AdresEL
+                      key={el.name}
                       prop={el.name}
                       desc={el.funkcja}
                       style={{
@@ -77,10 +78,10 @@ function Oklubie() {
                 </div>
                 <div style={OpisBotEL}>
                   {data.Osiagniecia.map((el) => (
-                    <div>
+                    <div key={el.osiagniecie}>
                       <AdresEL prop={el.year} />
                       {el.osiagniecie.map((el) => (
-                        <AdresEL desc={`-${el.osiagniecie}`} />
+                        <AdresEL key={el.osiagniecie} desc={`-${el.osiagniecie}`} />
                       ))}
                     </div>
                   ))}

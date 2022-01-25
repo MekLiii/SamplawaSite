@@ -8,7 +8,7 @@ const StyledBurger = styled.div`
   position: fixed;
   top: 15px;
   right: 20px;
-  z-index: 120;
+  z-index: 121;
   display: none;
   
   @media (max-width: 800px) {
@@ -20,7 +20,7 @@ const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => (open ? "#ccc" : "#333")};
+    background-color: ${({ open }) => (open ? "black" : "#ffe600")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
@@ -42,7 +42,7 @@ display:none;
   display: block;
   width:100%;
   height:10vh;
-  z-index: 120;
+  z-index: 121;
   position: fixed;
   background-color:rgba(0,0,0,0.7)
 }
@@ -56,9 +56,9 @@ const Burger = () => {
     <>
     <Box>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div style={{ backgroundColor: "#ffe600" }} />
-        <div style={{ backgroundColor: "#ffe600" }} />
-        <div style={{ backgroundColor: "#ffe600" }} />
+        <div  />
+        <div  />
+        <div  />
       </StyledBurger>
       <RightNav open={open} close={()=> setOpen(false)}/>
       </Box>

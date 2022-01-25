@@ -2,8 +2,8 @@ import React from "react";
 import Layout from "../components/Organism/Layout";
 import styled from "styled-components";
 import data from "../../content/klub100.json";
-import klub from "../../content/assets/klub100.jpg";
-import wzor from "../../content/assets/plakietka.jpg";
+import klub from "../../content/assets/klub100.webp";
+import wzor from "../../content/assets/plakietka.webp";
 
 function Klub100() {
   return (

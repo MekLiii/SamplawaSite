@@ -5,6 +5,7 @@ import NavBar from "../Molecules/navbar/NavBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "gatsby";
+import bgPattern from '../../../content/assets/bg-pattran.png'
 
 function Layout({ children, style,currectSiteProp }) {
   return (
@@ -27,7 +28,7 @@ function Layout({ children, style,currectSiteProp }) {
   );
 }
 const StyledBox = styled.div`
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
+  background-image: url(${bgPattern});
   background-color: black;
 `;
 const AbsoluteFb = styled.div`

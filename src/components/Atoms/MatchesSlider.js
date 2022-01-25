@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 import mecz from "../../../content/mecz.json";
-import logo from "../../../content/assets/logo.jpg";
+import logo from "../../../content/assets/logo.webp";
 import "./app.css";
 
 // Import Swiper styles

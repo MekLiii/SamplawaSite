@@ -34,6 +34,7 @@ const Ul = styled.ul`
 const RightNav = ({ open,close }) => {
   return (
     <Ul open={open}>
+  
       <Link to="/" style={text}>
         <StyledImg src={logo} alt="logo" />
       </Link>

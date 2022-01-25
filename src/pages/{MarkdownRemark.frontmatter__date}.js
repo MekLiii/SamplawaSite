@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
 import LayOut from "../components/Organism/Layout";
-import backGroundImage from "../../content/assets/e8fb669ffbde1c40061ce3d70931341d301230.jpg";
+import backGroundImage from "../../content/assets/e8fb669ffbde1c40061ce3d70931341d301230.webp";
 
 import "./markdownAricle.css";
 import styled from "styled-components";

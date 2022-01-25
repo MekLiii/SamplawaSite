@@ -145,8 +145,8 @@ export default function DenseTable() {
                   style={{
                     color: "white",
                     border: "1px solid rgba(255, 255, 255, 0.2)",
-                    padding: "10px",
-                    width: "100%",
+                    // padding: "10px",
+                    // width: "100%",
                     boxSizing: "border-box",
                   }}
                 >
@@ -158,9 +158,9 @@ export default function DenseTable() {
                   style={{
                     color: "white",
                     border: "1px solid rgba(255, 255, 255, 0.2)",
-                    // padding: "3px 10px",
+                    padding: "3px 10px",
                     padding: "10px",
-                    width: "100%",
+                   
                     boxSizing: "border-box",
                     // height: "100%"
                   }}

@@ -56,6 +56,15 @@ module.exports = {
         path: `${__dirname}/content/`
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `PFT Sampława`,
+        short_name: `PFT`,
+        start_url: `/`,
+        icon:`content/assets/logo.png`,
+      },
+    },
     
     // `gatsby-plugin-fontawesome-css`
   ],

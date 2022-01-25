@@ -9,10 +9,11 @@ import "react-multi-carousel/lib/styles.css";
 import SponsorEl from "../components/Atoms/SponsorEl";
 import sponData from "../../content/sponsors/sponsors.json";
 import CustomizedTables from "../components/Molecules/MatchTable/CustomizedTables";
-import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.png";
+import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.webp";
 import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
 import MatchesSlider from "../components/Atoms/MatchesSlider";
 import IndexFirstSec from "../components/Molecules/IndexMainSec/IndexFirstSec";
+import bgPattern from '../../content/assets/bg-pattran.png'
 
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
@@ -123,7 +124,8 @@ const StyledSposnor = styled.div`
   width: 100%;
   min-height: 40vh;
   background-color: #ffe600;
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
+  ${'' /* background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=891eaf0a-cf35-409a-b706-b751f8f44f95"); */}
+  background-image: url(${bgPattern});
   display: flex;
   background-image: back;
   align-items: center;
