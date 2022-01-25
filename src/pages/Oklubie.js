@@ -7,7 +7,7 @@ import data from "../../content/oKlubieData.json";
 
 function Oklubie() {
   return (
-    <Layout>
+    <Layout currectSiteProp="oklubie">
       <Cointainer>
         <h2 style={{ color: "rgb(255, 230, 0)" }}>O klubie</h2>
         <StyledBox>

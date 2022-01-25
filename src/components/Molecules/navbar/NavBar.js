@@ -8,7 +8,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-function NavBar() {
+function NavBar({currectSiteProp}) {
+  const [currectSite, setCurentSite] = useState(currectSiteProp);
+  const style = {
+    currentButton: {
+      backgroundColor: "#ffe600",
+      padding: "8px",
+      borderRadius: "11px",
+      color: "black",
+      boxShadow: '-1px -1px 3px 0px #c2af00e5 inset',
+      boxShadow: '1px 1px 2px 0px #ffff00e5 inset',
+      boxShadow: '-1px 1px 2px 0px #c2af0033 inset',
+      boxShadow: '1px -1px 2px 0px #c2af0033 inset',
+      boxShadow: '1px 1px 2px 0px #c2af0080',
+      boxShadow: '-1px -1px 2px 0px #ffff004d',
+    },
+    oldCurrentButton:{}
+  };
+
   return (
     <StyledNav>
       <Burger />
@@ -22,46 +39,37 @@ function NavBar() {
         </NavElement>
         <NavElement style={{ flex: 2 }}>
           <NavLinks>
-            <Link to="/" style={text}>
-              <PnavLinksMain
-                style={{
-                  backgroundColor: "#ffe600",
-                  padding: "8px",
-                  borderRadius: "11px",
-                  color: "black",
-                }}
-              >
-                Główna
-              </PnavLinksMain>
+            <Link to="/" style={text} >
+              <PnavLinksMain style={currectSite === "main" ? style.currentButton : style.oldCurrentButton}>Główna</PnavLinksMain>
             </Link>
           </NavLinks>
           <NavLinks>
-            <Link to="/Kadra" style={text}>
-              <PnavLinks>Kadra</PnavLinks>
+            <Link to="/Kadra" style={text} onClick={() => setCurentSite('kadra')}>
+              <PnavLinks style={currectSite === "kadra" ? style.currentButton : style.oldCurrentButton}>Kadra</PnavLinks>
             </Link>
           </NavLinks>
           <NavLinks>
-            <Link to="/Sklep" style={text}>
-              <PnavLinks>Sklep</PnavLinks>
+            <Link to="/Sklep" style={text} onClick={() => setCurentSite('sklep')}>
+              <PnavLinks style={currectSite === "sklep" ? style.currentButton : style.oldCurrentButton}>Sklep</PnavLinks>
             </Link>
           </NavLinks>
           <NavLinks>
-            <Link to="/Galeria" style={text}>
-              <PnavLinks>Galeria</PnavLinks>
+            <Link to="/Galeria" style={text} onClick={() => setCurentSite('galeria')}>
+              <PnavLinks style={currectSite === "galeria" ? style.currentButton : style.oldCurrentButton}>Galeria</PnavLinks>
             </Link>
           </NavLinks>
           <NavLinks>
-            <Link to="/Oklubie" style={text}>
-              <PnavLinks>O klubie</PnavLinks>
+            <Link to="/Oklubie" style={text} onClick={() => setCurentSite('oklubie')}>
+              <PnavLinks style={currectSite === "oklubie" ? style.currentButton : style.oldCurrentButton}>O klubie</PnavLinks>
             </Link>
           </NavLinks>
           <NavLinks>
-            <Link to="/Klub100" style={text}>
-              <PnavLinks>Klub100</PnavLinks>
+            <Link to="/Klub100" style={text} onClick={() => setCurentSite('klub100')}>
+              <PnavLinks style={currectSite === "klub100" ? style.currentButton : style.oldCurrentButton}>Klub100</PnavLinks>
             </Link>
           </NavLinks>
         </NavElement>
-        <NavElement style={{ flex: 1,justifyContent: 'center',gap:"15px" }}>
+        <NavElement style={{ flex: 1, justifyContent: "center", gap: "15px" }}>
           <a
             href="https://www.facebook.com/WyrownawczaAkademiaPilkarska"
             target="_blank"
@@ -78,7 +86,6 @@ function NavBar() {
               }}
             >
               <FontAwesomeIcon icon={faFacebookF} size="1x" color="black" />
-              
             </div>
           </a>
           <a
@@ -97,11 +104,9 @@ function NavBar() {
               }}
             >
               <FontAwesomeIcon icon={faInstagram} size="2x" color="black" />
-              
             </div>
           </a>
         </NavElement>
-        
       </StyledSide>
     </StyledNav>
   );
@@ -147,12 +152,7 @@ const PnavLinks = styled.p`
   font-family: "Poppins", sans-serif;
 `;
 const PnavLinksMain = styled.p`
-  box-shadow: -1px -1px 3px 0px #c2af00e5 inset;
-  box-shadow: 1px 1px 2px 0px #ffff00e5 inset;
-  box-shadow: -1px 1px 2px 0px #c2af0033 inset;
-  box-shadow: 1px -1px 2px 0px #c2af0033 inset;
-  box-shadow: 1px 1px 2px 0px #c2af0080;
-  box-shadow: -1px -1px 2px 0px #ffff004d;
+ 
   font-size: 17px;
   color: white;
   font-family: "Poppins", sans-serif;
@@ -178,8 +178,8 @@ const Flag = styled.div`
   height: 200px;
   width: 100px;
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 50% 80%, 0 100%, 0 0);
 `;
 const text = {

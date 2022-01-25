@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const resultPlayers = await graphql(`
   {
-    allContentJson(filter: {}, skip: 5) {
+    allContentJson {
       nodes {
         team {
           asysty
@@ -66,6 +66,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   }
+  
   
   `);
   console.log(resultPlayers)

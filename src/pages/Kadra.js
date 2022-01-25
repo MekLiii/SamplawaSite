@@ -56,7 +56,7 @@ function Druzyna() {
   const classes = useStyles();
 
   return (
-    <Layout>
+    <Layout currectSiteProp="kadra">
       <Cointainer>
         <FormControl
           sx={{ margin: "20px", width: "90%" }}

@@ -24,7 +24,7 @@ function Sklep() {
  
 
   return (
-    <Layout>
+    <Layout currectSiteProp="sklep">
       <Cointainer>
         <Box>
           <GridHolder>

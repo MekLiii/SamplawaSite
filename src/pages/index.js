@@ -38,7 +38,7 @@ const IndexPage = () => {
     },
   };
   return (
-    <Layout>
+    <Layout currectSiteProp="main">
       <StyledSlider style={{ flexDirection: "column" }}>
         <StyledSliderElement>
           <IndexFirstSec />

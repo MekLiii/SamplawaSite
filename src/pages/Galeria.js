@@ -28,7 +28,7 @@ function Galeria() {
   const dataAtom = data.allMarkdownRemark.edges.reverse();
 
   return (
-    <Layout>
+    <Layout currectSiteProp="galeria">
       <StyledElement>
         <StyledGrid>
           {dataAtom.map((el) => (

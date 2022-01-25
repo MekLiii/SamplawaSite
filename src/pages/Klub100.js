@@ -7,7 +7,7 @@ import wzor from "../../content/assets/plakietka.jpg";
 
 function Klub100() {
   return (
-    <Layout>
+    <Layout currectSiteProp="klub100">
       <StyledDiv>
         <StyledBox>
           <StyledCard>

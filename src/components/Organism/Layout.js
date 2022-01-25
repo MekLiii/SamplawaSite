@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "gatsby";
 
-function Layout({ children, style }) {
+function Layout({ children, style,currectSiteProp }) {
   return (
     <StyledBox>
-      <NavBar />
+      <NavBar currectSiteProp={currectSiteProp}/>
 
       <a
         href="https://www.facebook.com/WyrownawczaAkademiaPilkarska"
