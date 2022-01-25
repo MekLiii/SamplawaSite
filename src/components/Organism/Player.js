@@ -9,6 +9,7 @@ import { faFutbol, faSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Chart from "../Atoms/Chart";
+import bgPattern from '../../../content/assets/bg-pattran.png'
 
 
 function Player({ pageContext }) {
@@ -262,7 +263,7 @@ const SezonBox = styled.div`
     width: 70%;
     min-height: 200px;
     background-color:black;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
+    background-image: url(${bgPattern});
     border 1px solid #ffe600;
     display: flex;
     flex-direction: column;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import RightNav from "./RightNav";
+import logo from '../../../content/assets/logo.webp'
 
 const StyledBurger = styled.div`
   width: 2rem;
@@ -39,7 +40,7 @@ const StyledBurger = styled.div`
 const Box = styled.div`
 display:none;
 @media (max-width:768px){
-  display: block;
+  display: flex;
   width:100%;
   height:10vh;
   z-index: 121;
@@ -55,6 +56,7 @@ const Burger = () => {
   return (
     <>
     <Box>
+    <img src={logo} alt={logo} style={{width: 'auto',margin:"3%"}}/>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
         <div  />
         <div  />

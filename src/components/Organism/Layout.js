@@ -34,9 +34,10 @@ const StyledBox = styled.div`
 const AbsoluteFb = styled.div`
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   background-color: #ffe600;
   border-radius: 50%;
+  border:2px solid black;
   width: 50px;
   height: 50px;
   z-index: 300;
