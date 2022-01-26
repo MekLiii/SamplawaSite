@@ -9,8 +9,7 @@ import { faFutbol, faSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Chart from "../Atoms/Chart";
-import bgPattern from '../../../content/assets/bg-pattran.png'
-
+import bgPattern from "../../../content/assets/bg-pattran.png";
 
 function Player({ pageContext }) {
   const { slug } = pageContext;
@@ -49,7 +48,7 @@ function Player({ pageContext }) {
     )
   );
   const sortedArrayWhichMatch = playedMatechNotFilter.filter(filter);
-      console.log(sortedArrayWhichMatch)
+  console.log(sortedArrayWhichMatch);
   //stała filtrująca tablice matchWhenPlayersScored
   const sortedArrayWhenScored = matchWhenPlayersScored.filter(filter);
 
@@ -76,25 +75,25 @@ function Player({ pageContext }) {
 
   //żółte kartki
   const yellowCardsArray = [];
-
+  yellowCardsArray.filter(filter);
   cards.forEach((el) =>
-    yellowCardsArray.push(el.find((el) => el.kartka === "żółta"))
+    yellowCardsArray.push(el?.find((el) => el.kartka === "żółta"))
   );
   const sortedYellowCards = yellowCardsArray.filter(filter);
   // czerowne kartki
   const redCardsArray = [];
 
   cards.forEach((el) =>
-    redCardsArray.push(el.find((el) => el.kartka === "żółta"))
+    redCardsArray.push(el?.find((el) => el.kartka === "żółta"))
   );
   const sortedRedCards = redCardsArray.filter(filter);
   //Naprowione czerowne kartki
   const repairRedCars = [];
   cards.forEach((el) =>
     repairRedCars.push(
-      Object.values(el).find(
+      el != undefined ? Object.values(el).find(
         (el) => el.Zawodnicy === slug.name && el.kartka === "czerowna"
-      )
+      ) : console.log('chuj')
     )
   );
   const filterRepairRedCards = repairRedCars.filter(filter);
@@ -102,9 +101,9 @@ function Player({ pageContext }) {
   const repairYellowCars = [];
   cards.forEach((el) =>
     repairYellowCars.push(
-      Object.values(el).find(
+      el != undefined ? Object.values(el).find(
         (el) => el.Zawodnicy === slug.name && el.kartka === "żółta"
-      )
+      ) : console.log('chuj')
     )
   );
 
@@ -112,7 +111,7 @@ function Player({ pageContext }) {
   //data z zawodnicy.json
   const playerData = players.team.find((el) => el.name === slug.name);
   const playerGoals = playerData.bramki;
-  console.log(playerData)
+  console.log(playerData);
   //minuty
   let minuty = 0;
   filterArray.forEach((el) => (minuty += el.minuty));
@@ -141,9 +140,13 @@ function Player({ pageContext }) {
                 title={`Średni czas na boisku w ${playedMatches} meczach`}
               />
               <Chart
-                allMiuts={ (goals / playedMatches) * 100} // skutecznosc
-                coutMatches={100 - ((goals / playedMatches) * 100)} // wszystkie mecze
-                title={playedMatches === 0 ? '' : `Skuteczność zawodnika w ${playedMatches} meczach`}
+                allMiuts={(goals / playedMatches) * 100} // skutecznosc
+                coutMatches={100 - (goals / playedMatches) * 100} // wszystkie mecze
+                title={
+                  playedMatches === 0
+                    ? ""
+                    : `Skuteczność zawodnika w ${playedMatches} meczach`
+                }
               />
             </ChartContainer>
           </Left>
@@ -187,7 +190,6 @@ function Player({ pageContext }) {
                 <Pcointainer>
                   <P>Czerwone Kartki: </P>{" "}
                   <P>
-                    
                     {redCards}
                     <FontAwesomeIcon
                       icon={faSquare}
@@ -225,7 +227,7 @@ const Cointainer = styled.div`
   display: flex;
   @media (max-width: 900px) {
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
   }
 `;
@@ -237,7 +239,7 @@ const Left = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top:7vh;
+  margin-top: 7vh;
   @media (max-width: 900px) {
     width: 100%;
     max-height: 170vh;
@@ -308,12 +310,12 @@ const ChartContainer = styled.div`
   display: flex;
   width: 100%;
   min-height: 10vh;
-  justify-content:center;
-  align-items:center;
-  margin-top:3vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
   @media (max-width: 900px) {
     flex-direction: column;
-    margin-top:0;
+    margin-top: 0;
   }
 `;
 export default Player;
