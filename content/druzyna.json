@@ -1,16 +1,16 @@
 {
   "team": [
     {
-      "minuty": 2700,
+      "minuty": "",
       "name": "Łukasz Ochlak",
-      "zKartki": 1,
+      "zKartki": "",
       "asysty": 0,
       "numer": 0,
       "zdjecia": [
         "https://ucarecdn.com/a865d0c3-b8cf-4ecb-899d-843e1cc1c3a6/"
       ],
-      "mecze": 28,
-      "cKartki": 0,
+      "mecze": "",
+      "cKartki": "",
       "bramki": 0,
       "pozycja": "bramkarz"
     },
