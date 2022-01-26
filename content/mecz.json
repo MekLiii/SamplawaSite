@@ -115,6 +115,11 @@
           "pftGoals": 0,
           "data": "10/23/2021",
           "przeciwnik": "LZS TORPEDA Rożental",
+          "Sztab": [
+            {
+              "zespolSenior": " Łukasz Wietecha"
+            }
+          ],
           "Statystyki": [
             {
               "BramkiPrzeciwnika": [],
@@ -146,59 +151,78 @@
                 }
               ],
               "Kartki": [],
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Krystian Zelmański",
-                  "minuta": 55
-                }
-              ]
+              "BramkiPFT": []
             }
           ],
           "miejsce": "Sampława",
           "Zawodnicy": [
             {
               "Zawodnicy": "Łukasz Ochlak",
-              "minuty": 0
+              "minuty": 90
             },
             {
               "Zawodnicy": "Adam Dybich",
-              "minuty": 0
+              "minuty": 90
             },
             {
               "Zawodnicy": "Andrzej Podlaszewski",
-              "minuty": 0
+              "minuty": 90
             },
             {
               "Zawodnicy": "Sylwester Rynkowski",
-              "minuty": 0
+              "minuty": 90
             },
             {
               "Zawodnicy": "Tomasz Sławiński",
-              "minuty": 0
+              "minuty": 60
             },
             {
               "Zawodnicy": "Szymon Łątkowski",
-              "minuty": 0
+              "minuty": 50
             },
             {
               "Zawodnicy": "Jakub Lendzionowski",
-              "minuty": 0
+              "minuty": 90
             },
             {
               "Zawodnicy": "Dawid Mederski",
-              "minuty": 0
+              "minuty": 71
             },
             {
               "Zawodnicy": "Michał Raciborski",
-              "minuty": 0
+              "minuty": 70
             },
             {
               "Zawodnicy": "Marek Laskowski",
-              "minuty": 0
+              "minuty": 46
             },
             {
               "Zawodnicy": "Sylwester Bukowski",
-              "minuty": 0
+              "minuty": 55
+            },
+            {
+              "minuty": 35,
+              "Zawodnicy": "Cezary Chorzelewski"
+            },
+            {
+              "minuty": 19,
+              "Zawodnicy": "Przemysław Cabaj"
+            },
+            {
+              "minuty": 70,
+              "Zawodnicy": "Marek Nastachowski"
+            },
+            {
+              "minuty": 40,
+              "Zawodnicy": "Radosław Buczkowski"
+            },
+            {
+              "minuty": 44,
+              "Zawodnicy": "Patryk Mówiński"
+            },
+            {
+              "minuty": 30,
+              "Zawodnicy": "Szymon Lasikowski"
             }
           ],
           "gospodarze": "PFT DREWNEKS SAMPŁAWA",
