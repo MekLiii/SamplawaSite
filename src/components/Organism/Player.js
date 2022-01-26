@@ -15,6 +15,11 @@ function Player({ pageContext }) {
   const { slug } = pageContext;
   //aktualny sezon
   // strzelone bramki
+  //filter
+  function filter(value) {
+    return value != undefined;
+  }
+  //
   const matchWhoWhenScored = [];
   const matchWhenPlayersScored = [];
   data.sezon.forEach((el) =>
@@ -25,11 +30,25 @@ function Player({ pageContext }) {
   matchWhoWhenScored.forEach((el) =>
     matchWhenPlayersScored.push(el?.find((el) => el?.Zawodnicy === slug.name))
   );
-
-  //filtruje elementy które są undefined
-  function filter(value) {
-    return value != undefined;
+  const scoredGoals = []
+  function filterNames(element){
+    return (element.Zawodnicy === slug.name && element.length != 0);
   }
+  
+  let chuj = [];
+  matchWhoWhenScored.forEach((el) =>
+  chuj.push((el?.filter(filterNames))?.length) 
+  );
+  const filtredCHuj =  chuj.filter(filter)
+  
+  let sum = 0;
+  
+  for (let i = 0; i < filtredCHuj.length; i++) {
+      sum += filtredCHuj[i];
+  }
+  
+  //filtruje elementy które są undefined
+  
   // zagrane mecze
   const playedMatchesArray = data.sezon.find(
     (el) => el.sezon === "2021/2022"
@@ -48,9 +67,10 @@ function Player({ pageContext }) {
     )
   );
   const sortedArrayWhichMatch = playedMatechNotFilter.filter(filter);
-  console.log(sortedArrayWhichMatch);
+
   //stała filtrująca tablice matchWhenPlayersScored
   const sortedArrayWhenScored = matchWhenPlayersScored.filter(filter);
+    
 
   //ile meczy zagrał zawodnik
   const playedMatchesAllPlayers = [];
@@ -64,7 +84,7 @@ function Player({ pageContext }) {
     howManyMatchesPlayed.push(el.find((el) => el.Zawodnicy === slug.name))
   );
   const filterArray = howManyMatchesPlayed.filter(filter);
-      console.log(filterArray);
+    
   // Kartki
   const cards = [];
   data.sezon.forEach((el) =>
@@ -111,14 +131,15 @@ function Player({ pageContext }) {
   //data z zawodnicy.json
   const playerData = players.team.find((el) => el.name === slug.name);
   const playerGoals = playerData.bramki;
-  console.log(playerData); 
+  
   //minuty
   let minuty = 0;
   filterArray.forEach((el) => (minuty += el.minuty));
   //
 
-  const goals =  sortedArrayWhenScored.length;
-  const playedMatches =  filterArray.length;
+  // const goals =  scoredGoals.length;
+  const goals =  sum;
+  const playedMatches =  sortedArrayWhichMatch.length;
   const yellowCards =  filterRepairYellowCards.length;
   const redCards =  + filterRepairRedCards.length;
   const minuts = minuty;
