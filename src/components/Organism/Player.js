@@ -64,7 +64,7 @@ function Player({ pageContext }) {
     howManyMatchesPlayed.push(el.find((el) => el.Zawodnicy === slug.name))
   );
   const filterArray = howManyMatchesPlayed.filter(filter);
-
+      console.log(filterArray);
   // Kartki
   const cards = [];
   data.sezon.forEach((el) =>
@@ -93,7 +93,7 @@ function Player({ pageContext }) {
     repairRedCars.push(
       el != undefined ? Object.values(el).find(
         (el) => el.Zawodnicy === slug.name && el.kartka === "czerowna"
-      ) : console.log('chuj')
+      ) : console.log()
     )
   );
   const filterRepairRedCards = repairRedCars.filter(filter);
@@ -103,7 +103,7 @@ function Player({ pageContext }) {
     repairYellowCars.push(
       el != undefined ? Object.values(el).find(
         (el) => el.Zawodnicy === slug.name && el.kartka === "żółta"
-      ) : console.log('chuj')
+      ) : console.log()
     )
   );
 
@@ -116,7 +116,8 @@ function Player({ pageContext }) {
   let minuty = 0;
   filterArray.forEach((el) => (minuty += el.minuty));
   //
-  const goals =  + sortedArrayWhenScored.length;
+  console.log(sortedArrayWhenScored)
+  const goals =  sortedArrayWhenScored.length;
   const playedMatches =  filterArray.length;
   const yellowCards =  filterRepairYellowCards.length;
   const redCards =  + filterRepairRedCards.length;

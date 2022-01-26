@@ -28,6 +28,10 @@ export default function MatchesSlider() {
   const currentDate =
     today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
   const resultNextMatch = data.find(({ data }) => data < currentDay);
+
+ const sortedArrayDates = [];
+  data.forEach((el) => el.Zawodnicy?.length > 0?"" : sortedArrayDates.push(el))
+  console.log(sortedArrayDates)
   function convertData(x) {
     const newData = new Date(x);
     return newData.toLocaleDateString("Pl", {
@@ -40,10 +44,10 @@ export default function MatchesSlider() {
     <Swiper
       slidesPerView={1}
       spaceBetween={5}
-      autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 2000,
+      //   disableOnInteraction: false,
+      // }}
       loop={true}
       // pagination={{
       //   clickable: true,
@@ -63,9 +67,14 @@ export default function MatchesSlider() {
         },
       }}
       className="mySwiper"
-      style={{ height: "200px", backgroundColor: "inherit" }}
+      style={{
+        height: "300px",
+        backgroundColor: "inherit",
+        display: "flex",
+        alignItems: "center",
+      }}
     >
-      {data.map((el) => (
+      {sortedArrayDates.map((el) => (
         <SwiperSlide
           style={{
             height: "200px",
@@ -81,16 +90,26 @@ export default function MatchesSlider() {
             style={{ backgroundColor: "#ffe600" }}
             name={el.gospodarze}
             nameEnemy={el.przeciwnik}
+            time={el.godzina}
+            place={el.miejsce}
           />
         </SwiperSlide>
       ))}
     </Swiper>
   );
 }
-const SliderElement = ({ date, srcPFT, srcEnemy, style, name, nameEnemy }) => {
+const SliderElement = ({
+  date,
+  srcPFT,
+  srcEnemy,
+  style,
+  name,
+  nameEnemy,
+  time,
+  place,
+}) => {
   return (
     <Box style={style}>
-      <Top>{date}</Top>
       <Mid>
         <div
           style={{
@@ -144,7 +163,11 @@ const SliderElement = ({ date, srcPFT, srcEnemy, style, name, nameEnemy }) => {
           </p>
         </div>
       </Mid>
-      <Bot></Bot>
+      <Bot>
+        <P>{time}</P>
+        <P>Boisko: {place}</P>
+        <P>{date}</P>
+      </Bot>
     </Box>
   );
 };
@@ -152,13 +175,15 @@ const Box = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: space-around;
   flex-direction: column;
   border-radius: 10px;
-  ${'' /* -webkit-box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1);
+  ${
+    "" /* -webkit-box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1);
   -moz-box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1);
-  box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1); */}
+  box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1); */
+  }
 `;
 const Top = styled.div``;
 const Mid = styled.div`
@@ -167,5 +192,15 @@ const Mid = styled.div`
   justify-content: space-around;
   align-items: center;
 `;
-const P = styled.p``;
-const Bot = styled.div``;
+const P = styled.p`
+  color: #ffe600;
+`;
+const Bot = styled.div`
+  width: 100%;
+  background-color: black;
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+`;
