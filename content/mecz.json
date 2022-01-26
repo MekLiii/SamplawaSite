@@ -1239,6 +1239,138 @@
             "https://ucarecdn.com/16b8c76b-acf1-4e28-b68d-605edba8b189/"
           ],
           "godzina": "16:00"
+        },
+        {
+          "pftGoals": 0,
+          "data": "10/16/2021",
+          "przeciwnik": "LZS Zamek Szymbark ",
+          "Sztab": [
+            {
+              "zespolSenior": " Łukasz Wietecha"
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Adam Dybich",
+                  "kartka": "żółta",
+                  "minuta": 59
+                },
+                {
+                  "Zawodnicy": "Andrzej Podlaszewski",
+                  "kartka": "żółta",
+                  "minuta": 93
+                },
+                {
+                  "Zawodnicy": "Andrzej Podlaszewski",
+                  "kartka": "czerwona",
+                  "minuta": 93
+                }
+              ],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Henryk Świątkowski",
+                  "minuta": 27,
+                  "ZmianaNa": "Sylwester Rynkowski"
+                },
+                {
+                  "ZmianaZ": "Tomasz Sławiński",
+                  "minuta": 74,
+                  "ZmianaNa": "Przemysław Cabaj"
+                },
+                {
+                  "ZmianaZ": "Dawid Mederski",
+                  "minuta": 86,
+                  "ZmianaNa": "Cezary Chorzelewski"
+                },
+                {
+                  "ZmianaZ": "Patryk Mówiński",
+                  "minuta": 60,
+                  "ZmianaNa": "Marek Laskowski"
+                },
+                {
+                  "ZmianaZ": "Sylwester Bukowski",
+                  "minuta": 60,
+                  "ZmianaNa": "Szymon Lasikowski"
+                }
+              ]
+            }
+          ],
+          "miejsce": "Szymbark ",
+          "Zawodnicy": [
+            {
+              "minuty": 90,
+              "Zawodnicy": "Adam Dybich"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Andrzej Podlaszewski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Łukasz Ochlak"
+            },
+            {
+              "minuty": 27,
+              "Zawodnicy": "Henryk Świątkowski"
+            },
+            {
+              "minuty": 74,
+              "Zawodnicy": "Tomasz Sławiński"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Michał Raciborski"
+            },
+            {
+              "minuty": 86,
+              "Zawodnicy": "Dawid Mederski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Jakub Lendzionowski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Radosław Buczkowski"
+            },
+            {
+              "minuty": 60,
+              "Zawodnicy": "Patryk Mówiński"
+            },
+            {
+              "minuty": 60,
+              "Zawodnicy": "Sylwester Bukowski"
+            },
+            {
+              "minuty": 4,
+              "Zawodnicy": "Cezary Chorzelewski"
+            },
+            {
+              "minuty": 16,
+              "Zawodnicy": "Przemysław Cabaj"
+            },
+            {
+              "minuty": 30,
+              "Zawodnicy": "Szymon Lasikowski"
+            },
+            {
+              "minuty": 60,
+              "Zawodnicy": "Marek Laskowski"
+            },
+            {
+              "minuty": 27,
+              "Zawodnicy": "Sylwester Rynkowski"
+            }
+          ],
+          "gospodarze": "PFT Drewneks Sampława",
+          "enemyGoals": 1,
+          "logoEnemy": [
+            "https://ucarecdn.com/06c11540-eb12-49d2-b562-ea34ce97d6ee/"
+          ],
+          "godzina": "16:00"
         }
       ]
     }
