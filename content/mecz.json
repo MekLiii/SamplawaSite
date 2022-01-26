@@ -448,6 +448,133 @@
             "https://ucarecdn.com/37e84c4e-2e87-45d1-b6a0-55ed19fb1dbe/"
           ],
           "godzina": "14:00"
+        },
+        {
+          "pftGoals": 1,
+          "data": "09/04/2021",
+          "przeciwnik": "Olimpia Kisielice",
+          "Sztab": [
+            {
+              "zespolSenior": " Łukasz Wietecha"
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Jakub Lendzionowski",
+                  "minuta": 43
+                }
+              ],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Patryk Mówiński",
+                  "kartka": "żółta",
+                  "minuta": 60
+                }
+              ],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Arkadiusz Wietecha",
+                  "minuta": 75,
+                  "ZmianaNa": "Przemysław Cabaj"
+                },
+                {
+                  "ZmianaZ": "Adam Dybich",
+                  "minuta": 65,
+                  "ZmianaNa": "Sylwester Rynkowski"
+                },
+                {
+                  "ZmianaZ": "Wojciech Banacki",
+                  "minuta": 45,
+                  "ZmianaNa": "Henryk Świątkowski"
+                },
+                {
+                  "ZmianaZ": "Radosław Buczkowski",
+                  "minuta": 45,
+                  "ZmianaNa": "Patryk Mówiński"
+                },
+                {
+                  "ZmianaZ": "Szymon Lasikowski",
+                  "minuta": 65,
+                  "ZmianaNa": "Marek Laskowski"
+                }
+              ]
+            }
+          ],
+          "miejsce": "Kisielice",
+          "Zawodnicy": [
+            {
+              "Zawodnicy": "Łukasz Ochlak",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Andrzej Podlaszewski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Arkadiusz Wietecha",
+              "minuty": 75
+            },
+            {
+              "Zawodnicy": "Adam Dybich",
+              "minuty": 65
+            },
+            {
+              "Zawodnicy": "Wojciech Banacki",
+              "minuty": 45
+            },
+            {
+              "Zawodnicy": "Szymon Łątkowski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Michał Łukaszewski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Radosław Buczkowski",
+              "minuty": 45
+            },
+            {
+              "Zawodnicy": "Michał Raciborski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Szymon Łątkowski",
+              "minuty": 65
+            },
+            {
+              "Zawodnicy": "Jakub Lendzionowski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Marek Laskowski",
+              "minuty": 65
+            },
+            {
+              "Zawodnicy": "Przemysław Cabaj",
+              "minuty": 75
+            },
+            {
+              "Zawodnicy": "Patryk Mówiński",
+              "minuty": 45
+            },
+            {
+              "Zawodnicy": "Sylwester Rynkowski",
+              "minuty": 65
+            },
+            {
+              "Zawodnicy": "Henryk Świątkowski",
+              "minuty": 45
+            }
+          ],
+          "gospodarze": "PFT Drewneks Sampława",
+          "enemyGoals": 1,
+          "logoEnemy": [
+            "https://ucarecdn.com/aba11a6e-1cfb-4068-abdf-412297b252c8/"
+          ],
+          "godzina": "17:00"
         }
       ]
     }
