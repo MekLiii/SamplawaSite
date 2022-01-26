@@ -68,9 +68,9 @@ const IndexPage = () => {
         <MatchesSlider />
       </StyledDiv>
       <StyledAktu style={{ marginTop: 0,minHeight:"40vh" }}>
-        <H2 >
+        <SponsorsTitle style={{color:"white"}} >
           Aktualności
-        </H2>
+        </SponsorsTitle>
 
         <Aktu />
       </StyledAktu>
@@ -81,6 +81,10 @@ const IndexPage = () => {
       {/* <StyledAktu style={{ marginTop: 0, marginBottom: 0, minHeight: "40vh" }}>
         <ProductsMain />
       </StyledAktu> */}
+      <StyledAktu style={{backgroundColor:'#ffe600',minHeight: "45vh",backgroundImage:`url(${bgPattern})`}}>
+      <SponsorsTitle>Strzelcy PFT Sampława</SponsorsTitle>
+      <div></div>
+      </StyledAktu>
       <StyledAktu style={{ minHeight: "30vh" }}>
         <div
           style={{

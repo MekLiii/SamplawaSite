@@ -27,7 +27,12 @@ function Table({ data, title, linkBoolian }) {
                 />
               </Link>
             </div>
+            
           ))}
+          <div>
+            <p>Bramkarze</p>
+
+          </div>
         </GridHolder>
       );
     } else {

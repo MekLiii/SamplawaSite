@@ -5,7 +5,6 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 import "./firstsec.css";
 
-
 // import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.png";
 
 // Import Swiper styles
@@ -43,55 +42,57 @@ export default function App() {
   // console.log(dataAtom.map((el) => el.node.frontmatter.zdjecia.slice(7)));
   return (
     <Box>
-      <Swiper
-        style={{
-          "--swiper-navigation-color": "#ffe600",
-          "--swiper-pagination-color": "#ffe600",
-          height: "50%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        speed={600}
-        parallax={true}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
-        loop={true}
-        navigation={true}
-        className="mySwiper"
-      >
-        <div
-          slot="container-start"
-          className="parallax-bg"
-          data-swiper-parallax="-23%"
-        ></div>
-        {dataAtom.map((el) => (
-          <SwiperSlide
-          key={dataAtom.indexOf(el) + el.node.frontmatter.naglowek}
-            style={{
-              backgroundImage: `url(${el.node.frontmatter.imagesGal[0]})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "flex-end",
-            }}
-            
-          >
-            <Shadow>
-              <ShadowText>{el.node.frontmatter.naglowek}</ShadowText>
-              <Link to={`/${el.node.frontmatter.date}`}>
-                <Button></Button>
-              </Link>
-            </Shadow>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <StyledBorder>
+        <Swiper
+          style={{
+            "--swiper-navigation-color": "#ffe600",
+            "--swiper-pagination-color": "#ffe600",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: "5px",
+          }}
+          speed={600}
+          parallax={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          navigation={true}
+          className="mySwiper"
+        >
+          <div
+            slot="container-start"
+            className="parallax-bg"
+            data-swiper-parallax="-23%"
+          ></div>
+          {dataAtom.map((el) => (
+            <SwiperSlide
+              key={dataAtom.indexOf(el) + el.node.frontmatter.naglowek}
+              style={{
+                backgroundImage: `url(${el.node.frontmatter.imagesGal[0]})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end",
+              }}
+            >
+              <Shadow>
+                <ShadowText>{el.node.frontmatter.naglowek}</ShadowText>
+                <Link to={`/${el.node.frontmatter.date}`}>
+                  <Button></Button>
+                </Link>
+              </Shadow>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </StyledBorder>
     </Box>
   );
 }
@@ -101,6 +102,7 @@ const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media (max-width: 768px) {
     width: 90%;
     height: 110%;
@@ -128,11 +130,29 @@ const ShadowButton = styled.button`
     height: 50px; */
   }
 `;
+const StyledBorder = styled.div`
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${"" /* padding:20px; */}
+  border:1px solid #ffe600;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 70px -9px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 70px -9px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 70px -9px rgba(0, 0, 0, 1);
+`;
 const Button = () => {
   return (
     <div className="center">
       <button className="btn">
-        <svg width="180px" height="60px" viewBox="0 0 180 60" className="border">
+        <svg
+          width="180px"
+          height="60px"
+          viewBox="0 0 180 60"
+          className="border"
+        >
           <polyline points="179,1 179,59 1,59 1,1 179,1" className="bg-line" />
           <polyline points="179,1 179,59 1,59 1,1 179,1" className="hl-line" />
         </svg>

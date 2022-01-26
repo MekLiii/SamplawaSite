@@ -62,6 +62,8 @@ collections:
               - {label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, default: "/players/test.jpg", media_folder: "/static/players/img/"}
   - label: "mecze"
     name: "mecze"
+    editor:
+      preview: false
     files:
       - label: "mecz"
         name: "mecz"
@@ -98,6 +100,19 @@ collections:
                           options_length: 50,    
                       }
                     - {label: Rozegrane minuty, name: minuty, widget: number}
+                  - label: Sztab
+                    name: Sztab
+                    widget: list
+                    fields:
+                    - {label: "sztab",
+                          name: "zespolSenior",
+                          widget: "relation",
+                          collection: zawodnicy,
+                          search_fields: [zespolSenior.*.name],
+                          display_fields: [zespolSenior.*.name],
+                          value_field: zespolSenior.*.name,
+                          options_length: 25,    
+                      }
                   - label: Statystyki
                     name: Statystyki
                     widget: list
@@ -192,31 +207,13 @@ collections:
               - {label: logo, name: logo, widget: image, required: false}
               - {label: Mecze, name: mecze, widget: number}
               - {label: bramki, name: bramki , widget: number}
-              - {label: Link do strony, name: link , widget: string}
-              - {label: "Logo", name: "logoEnemy", widget: "image", choose_url: true, media_folder: /static/logo/}
-      - label: "tabela Junior"
-        name: "tabelaJunior"
-        file: "content/tabelaJunior.json"
-        fields:
-          - label: Juniorzy
-            name: Tabela
-            widget: list
-            fields:
-              - {label: druzyna, name: druzyna, widget: string}
-              - {label: logo, name: logo, widget: image, required: false}
-              - {label: Mecze, name: mecze, widget: number}
-              - {label: bramki, name: bramki , widget: number}
-          - label: Tabela Junior
-            name: TabelaJunior
-            widget: list
-            fields:
-              - {label: druzyna, name: druzyna, widget: string}
-              - {label: logo, name: logo, widget: image, required: false}
-              - {label: Mecze, name: mecze, widget: number}
               - {label: zwyciestwa, name: zwyciestwa, widget: number}
               - {label: porazki, name: porazki , widget: number}
               - {label: remisy, name: remisy , widget: number}
-              - {label: bramki, name: bramki , widget: number}
+              - {label: Link do strony, name: link , widget: string}
+              - {label: "Logo", name: "logoEnemy", widget: "image", choose_url: true, media_folder: /static/logo/}
+              
+              
   - label: "O klubie"
     name: "Oklubie"
     files:
