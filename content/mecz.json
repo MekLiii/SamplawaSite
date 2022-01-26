@@ -710,6 +710,120 @@
             "https://ucarecdn.com/05a77227-0771-450f-92f1-0fa72b42e341/"
           ],
           "godzina": "17:00"
+        },
+        {
+          "pftGoals": 0,
+          "data": "09/18/2021",
+          "przeciwnik": "Wicher Gwiździny",
+          "Sztab": [
+            {
+              "zespolSenior": " Łukasz Wietecha"
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Michał Raciborski",
+                  "minuta": 15
+                },
+                {
+                  "Zawodnicy": "Sylwester Rynkowski",
+                  "minuta": 37
+                },
+                {
+                  "Zawodnicy": "Sylwester Bukowski",
+                  "minuta": 51
+                },
+                {
+                  "Zawodnicy": "Jakub Lendzionowski",
+                  "minuta": 79
+                }
+              ],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Michał Łukaszewski",
+                  "minuta": 55,
+                  "ZmianaNa": "Radosław Buczkowski"
+                },
+                {
+                  "ZmianaZ": "Tomasz Sławiński",
+                  "minuta": 55,
+                  "ZmianaNa": "Szymon Lasikowski"
+                },
+                {
+                  "ZmianaZ": "Lucjan Szwarc",
+                  "minuta": 55,
+                  "ZmianaNa": "Andrzej Podlaszewski"
+                }
+              ]
+            }
+          ],
+          "miejsce": "Gwiździny",
+          "Zawodnicy": [
+            {
+              "minuty": 90,
+              "Zawodnicy": "Michał Raciborski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Sylwester Rynkowski"
+            },
+            {
+              "minuty": 55,
+              "Zawodnicy": "Sylwester Bukowski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Jakub Lendzionowski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Łukasz Ochlak"
+            },
+            {
+              "minuty": 70,
+              "Zawodnicy": "Henryk Świątkowski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Patryk Mówiński"
+            },
+            {
+              "minuty": 55,
+              "Zawodnicy": "Michał Łukaszewski"
+            },
+            {
+              "minuty": 55,
+              "Zawodnicy": "Tomasz Sławiński"
+            },
+            {
+              "minuty": 55,
+              "Zawodnicy": "Lucjan Szwarc"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Marek Laskowski"
+            },
+            {
+              "minuty": 35,
+              "Zawodnicy": "Andrzej Podlaszewski"
+            },
+            {
+              "minuty": 35,
+              "Zawodnicy": "Radosław Buczkowski"
+            },
+            {
+              "minuty": 35,
+              "Zawodnicy": "Szymon Lasikowski"
+            }
+          ],
+          "gospodarze": "PFT Drewneks Sampława",
+          "enemyGoals": 4,
+          "logoEnemy": [
+            "https://ucarecdn.com/98faa086-d2ba-46ca-8353-17c63601a2b9/"
+          ],
+          "godzina": "14:00"
         }
       ]
     }
