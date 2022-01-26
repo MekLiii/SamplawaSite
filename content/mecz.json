@@ -942,6 +942,152 @@
             "https://ucarecdn.com/126aed4d-09b6-4413-87d8-c26278970bb6/"
           ],
           "godzina": "17:00"
+        },
+        {
+          "pftGoals": 1,
+          "data": "10/02/2021",
+          "przeciwnik": "UKS MAŁY JEZIORAK IŁAWA",
+          "Sztab": [
+            {
+              "zespolSenior": " Łukasz Wietecha"
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Sylwester Bukowski",
+                  "minuta": 67
+                }
+              ],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Henryk Świątkowski",
+                  "kartka": "żółta",
+                  "minuta": 31
+                },
+                {
+                  "Zawodnicy": "Radosław Buczkowski",
+                  "kartka": "żółta",
+                  "minuta": 66
+                },
+                {
+                  "Zawodnicy": "Jakub Lendzionowski",
+                  "kartka": "żółta",
+                  "minuta": 72
+                },
+                {
+                  "Zawodnicy": "Szymon Lasikowski",
+                  "kartka": "żółta",
+                  "minuta": 82
+                }
+              ],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Sylwester Bukowski",
+                  "minuta": 50,
+                  "ZmianaNa": "Patryk Mówiński"
+                },
+                {
+                  "ZmianaZ": "Henryk Świątkowski",
+                  "minuta": 82,
+                  "ZmianaNa": "Sylwester Rynkowski"
+                },
+                {
+                  "ZmianaZ": "Jakub Lendzionowski",
+                  "minuta": 72,
+                  "ZmianaNa": "Szymon Lasikowski"
+                },
+                {
+                  "ZmianaZ": "Michał Łukaszewski",
+                  "minuta": 56,
+                  "ZmianaNa": "Radosław Buczkowski"
+                },
+                {
+                  "ZmianaZ": "Arkadiusz Wietecha",
+                  "minuta": 56,
+                  "ZmianaNa": "Szymon Łątkowski"
+                }
+              ]
+            }
+          ],
+          "miejsce": "Iława",
+          "Zawodnicy": [
+            {
+              "minuty": 50,
+              "Zawodnicy": "Sylwester Bukowski"
+            },
+            {
+              "minuty": 82,
+              "Zawodnicy": "Henryk Świątkowski"
+            },
+            {
+              "minuty": 72,
+              "Zawodnicy": "Jakub Lendzionowski"
+            },
+            {
+              "minuty": 56,
+              "Zawodnicy": "Michał Łukaszewski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Lucjan Szwarc"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Andrzej Podlaszewski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Michał Raciborski"
+            },
+            {
+              "minuty": 82,
+              "Zawodnicy": "Dawid Mederski"
+            },
+            {
+              "minuty": 56,
+              "Zawodnicy": "Arkadiusz Wietecha"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Łukasz Ochlak"
+            },
+            {
+              "minuty": 18,
+              "Zawodnicy": "Szymon Lasikowski"
+            },
+            {
+              "minuty": 34,
+              "Zawodnicy": "Szymon Łątkowski"
+            },
+            {
+              "minuty": 34,
+              "Zawodnicy": "Radosław Buczkowski"
+            },
+            {
+              "minuty": 40,
+              "Zawodnicy": "Patryk Mówiński"
+            },
+            {
+              "minuty": 8,
+              "Zawodnicy": "Marek Laskowski"
+            },
+            {
+              "minuty": 8,
+              "Zawodnicy": "Sylwester Rynkowski"
+            },
+            {
+              "minuty": 25,
+              "Zawodnicy": "Adam Dybich"
+            }
+          ],
+          "gospodarze": "PFT Drewneks Sampława",
+          "enemyGoals": 1,
+          "logoEnemy": [
+            "https://ucarecdn.com/4c8147d2-2d74-4683-b461-95183899c1ce/"
+          ],
+          "godzina": "16:00"
         }
       ]
     }
