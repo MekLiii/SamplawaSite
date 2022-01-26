@@ -111,7 +111,7 @@ function Player({ pageContext }) {
   //data z zawodnicy.json
   const playerData = players.team.find((el) => el.name === slug.name);
   const playerGoals = playerData.bramki;
-  console.log(playerData);
+  console.log(playerData); 
   //minuty
   let minuty = 0;
   filterArray.forEach((el) => (minuty += el.minuty));
