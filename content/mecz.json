@@ -307,6 +307,147 @@
           "godzina": "16:00",
           "miejsce": " ",
           "logoEnemy": "/static/logo/lzs_huragan_byszwald.png"
+        },
+        {
+          "pftGoals": 4,
+          "data": "01/26/2022",
+          "przeciwnik": "UKS ŻAK JAMIELNIK",
+          "Sztab": [
+            {
+              "zespolSenior": " Łukasz Wietecha"
+            },
+            {
+              "zespolSenior": "Sławomir Sarlej"
+            },
+            {
+              "zespolSenior": "Wojciech Jurkiewicz"
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Michał Łukaszewski",
+                  "minuta": 42
+                },
+                {
+                  "Zawodnicy": "Jakub Lendzionowski",
+                  "minuta": 42
+                },
+                {
+                  "Zawodnicy": "Jakub Lendzionowski",
+                  "minuta": 60
+                },
+                {
+                  "Zawodnicy": "Jakub Lendzionowski",
+                  "minuta": 78
+                }
+              ],
+              "BramkiPrzeciwnika": [],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Lucjan Szwarc",
+                  "kartka": "żółta",
+                  "minuta": 20
+                },
+                {
+                  "Zawodnicy": "Dawid Mederski",
+                  "kartka": "żółta",
+                  "minuta": 42
+                },
+                {
+                  "Zawodnicy": "Szymon Łątkowski",
+                  "kartka": "żółta",
+                  "minuta": 62
+                },
+                {
+                  "Zawodnicy": "Przemysław Cabaj",
+                  "kartka": "żółta",
+                  "minuta": 85
+                }
+              ],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Wojciech Banacki",
+                  "minuta": 72,
+                  "ZmianaNa": "Sylwester Rynkowski"
+                },
+                {
+                  "ZmianaZ": "Szymon Lasikowski",
+                  "minuta": 72,
+                  "ZmianaNa": "Tomasz Sławiński"
+                },
+                {
+                  "ZmianaZ": "Szymon Łątkowski",
+                  "minuta": 60,
+                  "ZmianaNa": "Arkadiusz Wietecha"
+                },
+                {
+                  "ZmianaZ": "Jakub Lendzionowski",
+                  "minuta": 80,
+                  "ZmianaNa": "Przemysław Cabaj"
+                },
+                {
+                  "ZmianaZ": "Michał Raciborski",
+                  "minuta": 80,
+                  "ZmianaNa": "Marek Laskowski"
+                }
+              ]
+            }
+          ],
+          "miejsce": "JAMIELNIK",
+          "Zawodnicy": [
+            {
+              "Zawodnicy": "Łukasz Ochlak",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Lucjan Szwarc",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Andrzej Podlaszewski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Wojciech Banacki",
+              "minuty": 72
+            },
+            {
+              "Zawodnicy": "Szymon Lasikowski",
+              "minuty": 72
+            },
+            {
+              "Zawodnicy": "Dawid Mederski",
+              "minuty": 60
+            },
+            {
+              "Zawodnicy": "Szymon Łątkowski",
+              "minuty": 60
+            },
+            {
+              "Zawodnicy": "Radosław Buczkowski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Michał Łukaszewski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Jakub Lendzionowski",
+              "minuty": 80
+            },
+            {
+              "Zawodnicy": "Michał Raciborski",
+              "minuty": 80
+            }
+          ],
+          "gospodarze": "PFT Drewneks Sampława",
+          "enemyGoals": 1,
+          "logoEnemy": [
+            "https://ucarecdn.com/37e84c4e-2e87-45d1-b6a0-55ed19fb1dbe/"
+          ],
+          "godzina": "14:00"
         }
       ]
     }
