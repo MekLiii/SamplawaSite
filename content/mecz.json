@@ -575,6 +575,141 @@
             "https://ucarecdn.com/aba11a6e-1cfb-4068-abdf-412297b252c8/"
           ],
           "godzina": "17:00"
+        },
+        {
+          "pftGoals": 3,
+          "data": "09/11/2021",
+          "przeciwnik": "LZS Fijewo",
+          "Sztab": [
+            {
+              "zespolSenior": " Łukasz Wietecha"
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Jakub Lendzionowski",
+                  "minuta": 26
+                },
+                {
+                  "Zawodnicy": "Jakub Lendzionowski",
+                  "minuta": 30
+                },
+                {
+                  "Zawodnicy": "Henryk Świątkowski",
+                  "minuta": 71
+                }
+              ],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Henryk Świątkowski",
+                  "kartka": "żółta",
+                  "minuta": 50
+                }
+              ],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Tomasz Sławiński",
+                  "minuta": 65,
+                  "ZmianaNa": "Szymon Lasikowski"
+                },
+                {
+                  "ZmianaZ": "Michał Łukaszewski",
+                  "minuta": 58,
+                  "ZmianaNa": "Radosław Buczkowski"
+                },
+                {
+                  "ZmianaZ": "Patryk Mówiński",
+                  "minuta": 74,
+                  "ZmianaNa": "Sylwester Bukowski"
+                },
+                {
+                  "ZmianaZ": "Cezary Chorzelewski",
+                  "minuta": 46,
+                  "ZmianaNa": "Przemysław Cabaj"
+                },
+                {
+                  "ZmianaZ": "Adam Dybich",
+                  "minuta": 65,
+                  "ZmianaNa": "Marek Laskowski"
+                }
+              ]
+            }
+          ],
+          "miejsce": "Samława",
+          "Zawodnicy": [
+            {
+              "Zawodnicy": "Łukasz Ochlak",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Lucjan Szwarc",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Andrzej Podlaszewski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Tomasz Sławiński",
+              "minuty": 65
+            },
+            {
+              "Zawodnicy": "Henryk Świątkowski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Michał Łukaszewski",
+              "minuty": 58
+            },
+            {
+              "Zawodnicy": "Patryk Mówiński",
+              "minuty": 74
+            },
+            {
+              "Zawodnicy": "Cezary Chorzelewski",
+              "minuty": 46
+            },
+            {
+              "Zawodnicy": "Michał Raciborski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Adam Dybich",
+              "minuty": 65
+            },
+            {
+              "Zawodnicy": "Jakub Lendzionowski",
+              "minuty": 90
+            },
+            {
+              "Zawodnicy": "Przemysław Cabaj",
+              "minuty": 44
+            },
+            {
+              "Zawodnicy": "Marek Laskowski",
+              "minuty": 25
+            },
+            {
+              "Zawodnicy": "Radosław Buczkowski",
+              "minuty": 32
+            },
+            {
+              "Zawodnicy": "Szymon Lasikowski",
+              "minuty": 25
+            },
+            {
+              "Zawodnicy": "Sylwester Bukowski",
+              "minuty": 16
+            }
+          ],
+          "gospodarze": "PFT Drewneks Sampława",
+          "enemyGoals": 1,
+          "logoEnemy": [
+            "https://ucarecdn.com/05a77227-0771-450f-92f1-0fa72b42e341/"
+          ],
+          "godzina": "17:00"
         }
       ]
     }
