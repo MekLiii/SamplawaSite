@@ -227,7 +227,9 @@
           ],
           "gospodarze": "PFT DREWNEKS SAMPŁAWA",
           "enemyGoals": 3,
-          "logoEnemy": "/static/logo/torpeda_rozental.png",
+          "logoEnemy": [
+            "https://ucarecdn.com/0cff89e1-ca4e-49b4-a2fe-4e3e9d12383f/"
+          ],
           "godzina": "16:00"
         },
         {
