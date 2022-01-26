@@ -1088,6 +1088,157 @@
             "https://ucarecdn.com/4c8147d2-2d74-4683-b461-95183899c1ce/"
           ],
           "godzina": "16:00"
+        },
+        {
+          "pftGoals": 5,
+          "data": "10/09/2021",
+          "przeciwnik": "Wel Bratian",
+          "Sztab": [
+            {
+              "zespolSenior": " Łukasz Wietecha"
+            }
+          ],
+          "Statystyki": [
+            {
+              "BramkiPFT": [
+                {
+                  "Zawodnicy": "Sylwester Bukowski",
+                  "minuta": 1
+                },
+                {
+                  "Zawodnicy": "Jakub Lendzionowski",
+                  "minuta": 19
+                },
+                {
+                  "Zawodnicy": "Sylwester Bukowski",
+                  "minuta": 39
+                },
+                {
+                  "Zawodnicy": "Jakub Lendzionowski",
+                  "minuta": 58
+                },
+                {
+                  "Zawodnicy": "Marek Laskowski",
+                  "minuta": 78
+                }
+              ],
+              "Kartki": [
+                {
+                  "Zawodnicy": "Radosław Buczkowski",
+                  "kartka": "żółta",
+                  "minuta": 55
+                }
+              ],
+              "Zmiany": [
+                {
+                  "ZmianaZ": "Lucjan Szwarc",
+                  "minuta": 55,
+                  "ZmianaNa": "Tomasz Sławiński"
+                },
+                {
+                  "ZmianaZ": "Sylwester Rynkowski",
+                  "minuta": 46,
+                  "ZmianaNa": "Radosław Buczkowski"
+                },
+                {
+                  "ZmianaZ": "Henryk Świątkowski",
+                  "minuta": 65,
+                  "ZmianaNa": "Szymon Lasikowski"
+                },
+                {
+                  "ZmianaZ": "Michał Raciborski",
+                  "minuta": 65,
+                  "ZmianaNa": "Cezary Chorzelewski"
+                },
+                {
+                  "ZmianaZ": "Michał Łukaszewski",
+                  "minuta": 46,
+                  "ZmianaNa": "Patryk Mówiński"
+                }
+              ]
+            }
+          ],
+          "miejsce": "Sampława",
+          "Zawodnicy": [
+            {
+              "minuty": 90,
+              "Zawodnicy": "Łukasz Ochlak"
+            },
+            {
+              "minuty": 55,
+              "Zawodnicy": "Lucjan Szwarc"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Andrzej Podlaszewski"
+            },
+            {
+              "minuty": 46,
+              "Zawodnicy": "Sylwester Rynkowski"
+            },
+            {
+              "minuty": 65,
+              "Zawodnicy": "Henryk Świątkowski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Szymon Łątkowski"
+            },
+            {
+              "minuty": 90,
+              "Zawodnicy": "Jakub Lendzionowski"
+            },
+            {
+              "minuty": 65,
+              "Zawodnicy": "Michał Raciborski"
+            },
+            {
+              "minuty": 46,
+              "Zawodnicy": "Michał Łukaszewski"
+            },
+            {
+              "minuty": 46,
+              "Zawodnicy": "Sylwester Bukowski"
+            },
+            {
+              "minuty": 65,
+              "Zawodnicy": "Dawid Mederski"
+            },
+            {
+              "minuty": 44,
+              "Zawodnicy": "Radosław Buczkowski"
+            },
+            {
+              "minuty": 44,
+              "Zawodnicy": "Patryk Mówiński"
+            },
+            {
+              "minuty": 35,
+              "Zawodnicy": "Tomasz Sławiński"
+            },
+            {
+              "minuty": 25,
+              "Zawodnicy": "Szymon Lasikowski"
+            },
+            {
+              "minuty": 25,
+              "Zawodnicy": "Marek Laskowski"
+            },
+            {
+              "minuty": 44,
+              "Zawodnicy": "Adam Dybich"
+            },
+            {
+              "minuty": 25,
+              "Zawodnicy": "Cezary Chorzelewski"
+            }
+          ],
+          "gospodarze": "PFT Drewneks Sampława",
+          "enemyGoals": 1,
+          "logoEnemy": [
+            "https://ucarecdn.com/16b8c76b-acf1-4e28-b68d-605edba8b189/"
+          ],
+          "godzina": "16:00"
         }
       ]
     }
