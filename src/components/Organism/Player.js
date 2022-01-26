@@ -116,11 +116,11 @@ function Player({ pageContext }) {
   let minuty = 0;
   filterArray.forEach((el) => (minuty += el.minuty));
   //
-  const goals = slug.bramki + sortedArrayWhenScored.length;
-  const playedMatches = slug.mecze + filterArray.length;
-  const yellowCards = slug.zKartki + filterRepairYellowCards.length;
-  const redCards = slug.cKartki + filterRepairRedCards.length;
-  const minuts = minuty + slug.minuty;
+  const goals =  + sortedArrayWhenScored.length;
+  const playedMatches =  filterArray.length;
+  const yellowCards =  filterRepairYellowCards.length;
+  const redCards =  + filterRepairRedCards.length;
+  const minuts = minuty;
   return (
     <Layout>
       <Box>

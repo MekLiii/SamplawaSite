@@ -53,19 +53,13 @@ exports.createPages = async ({ graphql, actions }) => {
     allContentJson {
       nodes {
         team {
-          asysty
-          bramki
-          mecze
-          cKartki
           name
           pozycja
-          numer
-          zKartki
-          minuty
         }
       }
     }
   }
+  
   
   
   `);
