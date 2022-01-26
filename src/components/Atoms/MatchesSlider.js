@@ -22,16 +22,11 @@ export default function MatchesSlider() {
   const match = mecz.sezon;
   const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
 
-  const today = new Date();
-  const currentDay =
-    today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
-  const currentDate =
-    today.getMonth() + 1 + "/" + currentDay + "/" + today.getFullYear();
-  const resultNextMatch = data.find(({ data }) => data < currentDay);
-
- const sortedArrayDates = [];
-  data.forEach((el) => el.Zawodnicy?.length > 0?"" : sortedArrayDates.push(el))
-  console.log(sortedArrayDates)
+  const sortedArrayDates = [];
+  data.forEach((el) =>
+    el.Zawodnicy?.length > 0 ? "" : sortedArrayDates.push(el)
+  );
+  console.log(sortedArrayDates);
   function convertData(x) {
     const newData = new Date(x);
     return newData.toLocaleDateString("Pl", {
@@ -44,10 +39,10 @@ export default function MatchesSlider() {
     <Swiper
       slidesPerView={1}
       spaceBetween={5}
-      // autoplay={{
-      //   delay: 2000,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 2000,
+        disableOnInteraction: false,
+      }}
       loop={true}
       // pagination={{
       //   clickable: true,
@@ -86,7 +81,7 @@ export default function MatchesSlider() {
           <SliderElement
             date={convertData(el.data)}
             srcPFT={logo}
-            srcEnemy={el.logoEnemy.slice(7)}
+            srcEnemy={el.logoEnemy}
             style={{ backgroundColor: "#ffe600" }}
             name={el.gospodarze}
             nameEnemy={el.przeciwnik}
@@ -179,13 +174,8 @@ const Box = styled.div`
   align-items: space-around;
   flex-direction: column;
   border-radius: 10px;
-  ${
-    "" /* -webkit-box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1);
-  -moz-box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1);
-  box-shadow: 0px 0px 29px -16px rgba(255, 230, 0, 1); */
-  }
 `;
-const Top = styled.div``;
+
 const Mid = styled.div`
   width: 100%;
   display: flex;
@@ -200,7 +190,7 @@ const Bot = styled.div`
   background-color: black;
   border-bottom-right-radius: 9px;
   border-bottom-left-radius: 9px;
-  display:flex;
-  justify-content:space-around;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 `;

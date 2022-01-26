@@ -116,7 +116,7 @@ function Player({ pageContext }) {
   let minuty = 0;
   filterArray.forEach((el) => (minuty += el.minuty));
   //
-  console.log(sortedArrayWhenScored)
+
   const goals =  sortedArrayWhenScored.length;
   const playedMatches =  filterArray.length;
   const yellowCards =  filterRepairYellowCards.length;

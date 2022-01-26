@@ -59,8 +59,8 @@ function AccordionEl({ data, slugName }) {
                   <TeamsElement>
                     <P>{el.przeciwnik}</P>
                     <img
-                      src={el.logoEnemy.slice(7)}
-                      alt={el.logoEnemy.slice(7)}
+                      src={el.logoEnemy}
+                      alt={el.logoEnemy}
                       style={{ width: "50%", maxWidth: "30px", height: "auto" }}
                     />
                   </TeamsElement>
