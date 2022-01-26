@@ -99,7 +99,7 @@ collections:
                           value_field: team.*.name,
                           options_length: 50,    
                       }
-                    - {label: Rozegrane minuty, name: minuty, widget: number}
+                    - {label: Rozegrane minuty, name: minuty, widget: number,default: 90}
                   - label: Sztab
                     name: Sztab
                     widget: list
