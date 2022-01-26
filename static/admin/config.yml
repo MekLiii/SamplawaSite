@@ -96,7 +96,7 @@ collections:
                           collection: zawodnicy,
                           search_fields: [team.*.name],
                           display_fields: [team.*.name],
-                          value_field: team.*.name,
+                          value_field: team.*.name, 
                           options_length: 50,    
                       }
                     - {label: Rozegrane minuty, name: minuty, widget: number,default: 90}
