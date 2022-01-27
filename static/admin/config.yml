@@ -267,6 +267,7 @@ collections:
             widget: list
             fields:
                 - {label: nazwa, name: nazwa, widget: string}
+                - {label: opis, name: opis, widget: markdown}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
           - label: SPONSOR STRATEGICZNY
@@ -274,6 +275,7 @@ collections:
             widget: list
             fields:
                 - {label: nazwa, name: nazwa, widget: string}
+                - {label: opis, name: opis, widget: markdown}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
           - label: SPONSOR SILVER
@@ -281,6 +283,7 @@ collections:
             widget: list
             fields:
                 - {label: nazwa, name: nazwa, widget: string}
+                - {label: opis, name: opis, widget: markdown}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
           - label: SPONSOR BRĄZ
@@ -288,6 +291,7 @@ collections:
             widget: list
             fields:
                 - {label: nazwa, name: nazwa, widget: string}
+                - {label: opis, name: opis, widget: markdown}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
           - label: Sponsorzy medialni
@@ -295,6 +299,7 @@ collections:
             widget: list
             fields:
                 - {label: nazwa, name: nazwa, widget: string}
+                - {label: opis, name: opis, widget: markdown}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
                 
