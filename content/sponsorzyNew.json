@@ -4,7 +4,8 @@
       "nazwa": "Drewneks ",
       "logo": [
         "https://ucarecdn.com/91c46668-afa9-49a9-b8ce-f120fff8efc6/"
-      ]
+      ],
+      "link": "http://drewneks.pl"
     }
   ],
   "sponsStrategy": [
@@ -20,25 +21,29 @@
       "nazwa": "Drewhit",
       "logo": [
         "https://ucarecdn.com/9dbbb464-3108-48c5-8894-3969bbbf3626/"
-      ]
+      ],
+      "link": "http://www.drewhit.pl"
     },
     {
       "nazwa": "Plast-fol",
       "logo": [
         "https://ucarecdn.com/9a613cd9-ffad-462d-ab92-2249c415d026/"
-      ]
+      ],
+      "link": "http://www.plast-fol.com/index-pl.html"
     },
     {
       "nazwa": "Drew vip",
       "logo": [
         "https://ucarecdn.com/8d545895-9c1f-4386-a6a8-081cb97db540/"
-      ]
+      ],
+      "link": "https://betonowe-drewno.com"
     },
     {
       "nazwa": "Panele elewacyjne",
       "logo": [
         "https://ucarecdn.com/65678ce0-4a0f-4277-a223-0c0e094f3d2c/"
-      ]
+      ],
+      "link": "https://paneleelewacyjne.pl"
     }
   ],
   "sponsBrown": [
@@ -78,7 +83,8 @@
       "nazwa": "Migawka",
       "logo": [
         "https://ucarecdn.com/f6e08de3-28d1-42da-a857-e2e3443e6e6b/"
-      ]
+      ],
+      "link": "https://www.facebook.com/Migawka-Foto-Video-1655792757828982/"
     }
   ]
 }
