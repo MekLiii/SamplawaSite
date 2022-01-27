@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { TabletPortrait,CaretUpOutline } from "react-ionicons";
 import { Link } from "gatsby";
+import bgPattern from '../../../content/assets/bg-pattran.png'
 
 
 
@@ -10,7 +11,7 @@ function PlayerSec({ minuts, src, name,color,StyleIcon, colorArrow,StyleArrow,li
     <PlayersHolder>
       <Bottom>
         <Img src={src} alt={src} />
-        <Link to={link} style={{color:"white"}}><span>{name}</span></Link>
+        <Link to={link} style={{color:"black"}}><span>{name}</span></Link>
         <span>
           {minuts}' 
           <TabletPortrait color={color} style={StyleIcon}/>
@@ -30,6 +31,7 @@ const PlayersHolder = styled.div`
    margin-bottom:10px;
   justify-content: center;
   align-items: center;
+
   
 `;
 const Top = styled.div`
@@ -47,8 +49,10 @@ const Bottom = styled.div`
   align-items: center;
   background-color: black;
   border:1px solid #ffe600;
-  color:white;
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/samplawa-e85f7.appspot.com/o/bg-pattran.png?alt=media&token=8d50b11b-d328-466e-81e8-333962ee63c8");
+  color:black;
+  background-color:rgba(255, 230, 0, 0.8);
+  background-image: url(${bgPattern});
+  border:1px solid black;
   @media (max-width: 768px) {
       width:90%;
   }

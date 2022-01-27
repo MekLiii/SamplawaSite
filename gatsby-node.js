@@ -27,11 +27,15 @@ exports.createPages = async ({ graphql, actions }) => {
                 minuta
               }
             }
+            Sztab {
+              zespolSenior
+            }
           }
         }
       }
     }
   }
+  
   `);
   const templatePath = path.resolve(`src/components/Organism/ElStat.js`);
   result.data.allContentJson.nodes.forEach((node) => {

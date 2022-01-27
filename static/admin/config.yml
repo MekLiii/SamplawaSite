@@ -253,7 +253,40 @@ collections:
       - { label: 'data', name: 'czas', widget: 'date', date_format: true,format: 'DD-MM-YYYY', required: true}
       - { label: 'Krótki opis', name: 'opis', widget: 'string' }
       - { label: "zdjecia", name: "imagesGal", widget: "image", choose_url: true, media_folder: /static/prod/}
-  
+  - label: "Sponsorzy"
+    name: "Sponsorzy"
+    editor:
+      preview: false
+    files:
+      - label: "Sponsorzy"
+        name: "Sponsorzy"
+        file: "content/sponsorzyNew.json"
+        fields:
+          - label: SPONSOR TYTULARNY
+            name: sponsTitle
+            widget: list
+            fields:
+                - {label: nazwa, name: nazwa, widget: string}
+                - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
+          - label: SPONSOR STRATEGICZNY
+            name: sponsStrategy
+            widget: list
+            fields:
+                - {label: nazwa, name: nazwa, widget: string}
+                - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
+          - label: SPONSOR SILVER
+            name: sponsSilver
+            widget: list
+            fields:
+                - {label: nazwa, name: nazwa, widget: string}
+                - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
+          - label: SPONSOR BRĄZ
+            name: sponsBrown
+            widget: list
+            fields:
+                - {label: nazwa, name: nazwa, widget: string}
+                - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
+                
                 
 
               

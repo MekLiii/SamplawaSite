@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import SponsorEl from "../components/Atoms/SponsorEl";
-import sponData from "../../content/sponsors/sponsors.json";
+import sponData from "../../content/sponsors.json";
 import CustomizedTables from "../components/Molecules/MatchTable/CustomizedTables";
 import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.webp";
 import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";

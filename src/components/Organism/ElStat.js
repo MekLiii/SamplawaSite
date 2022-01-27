@@ -19,6 +19,9 @@ function ElStat({ pageContext }) {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
+ 
+  const sztab = team.team.zespolSenior;
+  console.log(sztab)
 
   const useStyles = makeStyles({
     root: {

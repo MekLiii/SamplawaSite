@@ -59,6 +59,11 @@ function NavBar({currectSiteProp}) {
             </Link>
           </NavLinks>
           <NavLinks>
+            <Link to="/Sponsorzy" style={text} onClick={() => setCurentSite('galeria')}>
+              <PnavLinks style={currectSite === "sponsorzy" ? style.currentButton : style.oldCurrentButton}>Sponsorzy</PnavLinks>
+            </Link>
+          </NavLinks>
+          <NavLinks>
             <Link to="/Oklubie" style={text} onClick={() => setCurentSite('oklubie')}>
               <PnavLinks style={currectSite === "oklubie" ? style.currentButton : style.oldCurrentButton}>O klubie</PnavLinks>
             </Link>
