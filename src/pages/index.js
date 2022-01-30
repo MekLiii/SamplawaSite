@@ -178,7 +178,7 @@ const IndexPage = () => {
             src={
               teamData.team.find(
                 (el) => el.name === sorted[sorted.length - 2][0]
-              ).zdjecia[0]
+              ).zdjeciaBetter[0]
             }
           />
           <Shotters
@@ -187,7 +187,7 @@ const IndexPage = () => {
             src={
               teamData.team.find(
                 (el) => el.name === sorted[sorted.length - 1][0]
-              ).zdjecia[0]
+              ).zdjeciaBetter[0]
             }
           />
           <Shotters
@@ -196,7 +196,7 @@ const IndexPage = () => {
             src={
               teamData.team.find(
                 (el) => el.name === sorted[sorted.length - 3][0]
-              ).zdjecia[0]
+              ).zdjeciaBetter[0]
             }
           />
         </ShootersBox>

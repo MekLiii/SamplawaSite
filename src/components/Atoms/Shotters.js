@@ -3,10 +3,13 @@ import styled from "styled-components";
 import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Fade from "react-reveal/Zoom";
+import mecz from '../../../content/mecz.json'
 
 function Shotters({ src, goals, name, height }) {
-  return (
-    <Fade bottom>
+  console.log(mecz)
+  if(src === undefined){
+    return(
+      <Fade bottom>
       <Box style={{ height: `${height}` }}>
         <Arrow>
           <FontAwesomeIcon
@@ -23,6 +26,32 @@ function Shotters({ src, goals, name, height }) {
 
         <Hopper>
           <P>{name}</P>
+          <P style={{fontSize:"15px"}}>Strzelone bramki w sezonie {mecz.AktualnySezon}</P>
+          <P>{goals}</P>
+        </Hopper>
+      </Box>
+    </Fade>
+    )
+  }else
+  return (
+    <Fade bottom>
+      <Box style={{ height: `${height}` }}>
+        <Arrow>
+          <FontAwesomeIcon
+            icon={faAngleDoubleUp}
+            style={{}}
+            size="2x"
+            color="black"
+          />
+        </Arrow>
+        <Flag>
+          <P>{goals}</P>
+        </Flag>
+        <Img src={src} />
+
+        <Hopper >
+          <P>{name}</P>
+          <P style={{fontSize:"15px"}}>Strzelone bramki w sezonie {mecz.AktualnySezon}</P>
           <P>{goals}</P>
         </Hopper>
       </Box>
@@ -107,7 +136,7 @@ const Flag = styled.div`
   top: 0;
   left: 25px;
   @media (max-width:650px){
-    
+
   }
 `;
 export default Shotters;
