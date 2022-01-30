@@ -10,7 +10,7 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 990px) {
     z-index: 120;
     flex-flow: column nowrap;
     background-color: #ffe600;
@@ -26,7 +26,7 @@ const Ul = styled.ul`
       color: #fff;
     }
   }
-  @media (min-width: 800px) {
+  @media (min-width: 990px) {
     display: none;
   }
 `;
@@ -49,6 +49,9 @@ const RightNav = ({ open,close }) => {
       </Link>
       <Link to="/Galeria" style={text}>
         <P onClick={close}>Galeria</P>
+      </Link>
+      <Link to="/Sponsorzy" style={text}>
+        <P onClick={close}>Sponsorzy</P>
       </Link>
       <Link to="/Oklubie" style={text}>
         <P onClick={close}>O klubie</P>

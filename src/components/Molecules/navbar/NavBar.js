@@ -135,7 +135,7 @@ const StyledSide = styled.div`
   ${"" /* background-color:pink; */}
   ${"" /* align-items: flex-end; */}
   z-index:2;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 990px) {
     display: none;
   }
 `;

@@ -5,7 +5,7 @@ function SponsorEl({ img, name }) {
   return (
     <div style={flex}>
       <StyledImg>
-        <img src={img} alt="Logo sponsora" style={imgStyle}/>
+        <img src={img} alt="Logo sponsora" style={imgStyle} />
       </StyledImg>
       <p style={{ color: "black" }}>{name}</p>
     </div>
@@ -19,15 +19,15 @@ const flex = {
 };
 const StyledImg = styled.div`
   width: 350px;
-  height:250px;
-  ${'' /* background-color:pink; */}
+  height: 250px;
+  ${"" /* background-color:pink; */}
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 const imgStyle = {
-    width:'250px',
-    // height:'50px',
-}
+  width: "250px",
+  // height:'50px',
+};
 
 export default SponsorEl;

@@ -12,7 +12,7 @@ const StyledBurger = styled.div`
   z-index: 121;
   display: none;
   
-  @media (max-width: 800px) {
+  @media (max-width: 990px) {
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
@@ -39,7 +39,7 @@ const StyledBurger = styled.div`
 `;
 const Box = styled.div`
 display:none;
-@media (max-width:768px){
+@media (max-width:990px){
   display: flex;
   width:100%;
   height:10vh;

@@ -226,11 +226,11 @@ function Player({ pageContext }) {
               </Grid>
             </SezonBox>
             <SezonBox style={{ height: "70%" }}>
-              <span
+              {/* <span
                 style={{ color: "white", fontSize: "clamp(15px, 5vw, 30px)" }}
               >
                 Rozegrane mecze w sezonie: {data.AktualnySezon}
-              </span>
+              </span> */}
               <AccordionEl data={sortedArrayWhichMatch} slugName={slug} />
             </SezonBox>
           </Right>

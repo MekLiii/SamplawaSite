@@ -26,7 +26,6 @@ export default function MatchesSlider() {
   data.forEach((el) =>
     el.Zawodnicy?.length > 0 ? "" : sortedArrayDates.push(el)
   );
-  console.log(sortedArrayDates);
   function convertData(x) {
     const newData = new Date(x);
     return newData.toLocaleDateString("Pl", {
@@ -39,10 +38,10 @@ export default function MatchesSlider() {
     <Swiper
       slidesPerView={1}
       spaceBetween={5}
-      autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 2000,
+      //   disableOnInteraction: false,
+      // }}
       loop={true}
       // pagination={{
       //   clickable: true,
@@ -173,7 +172,7 @@ const Box = styled.div`
   justify-content: flex-end;
   align-items: space-around;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 11px;
 `;
 
 const Mid = styled.div`

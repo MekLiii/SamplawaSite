@@ -25,7 +25,8 @@ collections:
             fields:
               - {label: name, name: name, widget: string}
               - {label: pozycja, name: pozycja, widget: select, options: ["bramkarz", "obrońca", "pomocnik","napastnik"]}
-              - {label: "zdjecia", name: "zdjecia", widget: "image", choose_url: true, multiple: false,default: "/players/test.jpg", media_folder: "/static/players/img/"}
+              - {label: "zdjecia 170x170", name: "zdjecia", widget: "image", choose_url: true, multiple: false,default: "/players/test.jpg"}
+              - {label: "zdjecia w lepszej roździelczości", name: "zdjeciaBetter", widget: "image", choose_url: true, multiple: false, required: false}
           - label: Zespół senior
             name: zespolSenior
             widget: list
@@ -267,7 +268,6 @@ collections:
             widget: list
             fields:
                 - {label: nazwa, name: nazwa, widget: string}
-                - {label: opis, name: opis, widget: markdown}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
           - label: SPONSOR STRATEGICZNY
@@ -275,7 +275,6 @@ collections:
             widget: list
             fields:
                 - {label: nazwa, name: nazwa, widget: string}
-                - {label: opis, name: opis, widget: markdown}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
           - label: SPONSOR SILVER
@@ -283,7 +282,6 @@ collections:
             widget: list
             fields:
                 - {label: nazwa, name: nazwa, widget: string}
-                - {label: opis, name: opis, widget: markdown}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
           - label: SPONSOR BRĄZ
@@ -291,7 +289,6 @@ collections:
             widget: list
             fields:
                 - {label: nazwa, name: nazwa, widget: string}
-                - {label: opis, name: opis, widget: markdown}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
           - label: Sponsorzy medialni
@@ -299,7 +296,6 @@ collections:
             widget: list
             fields:
                 - {label: nazwa, name: nazwa, widget: string}
-                - {label: opis, name: opis, widget: markdown}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
                 

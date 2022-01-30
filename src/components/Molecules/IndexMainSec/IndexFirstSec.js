@@ -103,7 +103,7 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 990px) {
     width: 90%;
     height: 110%;
   }

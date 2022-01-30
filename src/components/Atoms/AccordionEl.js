@@ -31,7 +31,7 @@ function AccordionEl({ data, slugName }) {
   function MapELement() {
     function CustomToggle({ children, eventKey }) {
       const decoratedOnClick = useAccordionButton(eventKey, () =>
-        setToogleIcon(toogleIcon ? false : true)
+        setToogleIcon(eventKey)
       );
 
       return (
@@ -66,7 +66,7 @@ function AccordionEl({ data, slugName }) {
                   </TeamsElement>
                 </Teams>
                 <div
-                  style={toogleIcon ? styleRotate.rotate : styleRotate.unRotate}
+                  style={toogleIcon === data.indexOf(el) ? styleRotate.rotate : styleRotate.unRotate}
                 >
                   <IoIosArrowDown />
                 </div>

@@ -6,18 +6,19 @@ import bgPattern from '../../../content/assets/bg-pattran.png'
 
 
 
-function PlayerSec({ minuts, src, name,color,StyleIcon, colorArrow,StyleArrow,link}) {
+function PlayerSec({ minuts, src, name,color,StyleIcon, colorArrow,StyleArrow,link,styleMinuts,rola,styleRola}) {
   return (
     <PlayersHolder>
       <Bottom>
         <Img src={src} alt={src} />
         <Link to={link} style={{color:"black"}}><span>{name}</span></Link>
-        <span>
+        <span style={styleMinuts}>
           {minuts}' 
           <TabletPortrait color={color} style={StyleIcon}/>
           <CaretUpOutline color={colorArrow} style={StyleArrow}/>
           
         </span>
+        <span style={styleRola}>{rola}</span>
       </Bottom>
     </PlayersHolder>
   );
