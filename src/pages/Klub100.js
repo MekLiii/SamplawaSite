@@ -3,7 +3,7 @@ import Layout from "../components/Organism/Layout";
 import styled from "styled-components";
 import data from "../../content/klub100.json";
 import klub from "../../content/assets/klub100.webp";
-import wzor from "../../content/assets/plakietka.webp";
+import wzor from "../../content/assets/szablon.webp";
 
 function Klub100() {
   return (
@@ -71,7 +71,8 @@ function Klub100() {
               }}
             >
               <P>{data.Pozostale.title}</P>
-              <P>{data.Pozostale.Link}</P>
+              {/* <P>{data.Pozostale.Link}</P> */}
+              <P><a href="#">Formularz pobierzesz tutaj</a></P>
             </StyledSection>
             <StyledSection
               style={{
