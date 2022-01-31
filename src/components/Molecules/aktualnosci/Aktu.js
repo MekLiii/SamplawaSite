@@ -36,8 +36,14 @@ function Aktu() {
     ul: {
       "& .MuiPaginationItem-root": {
         color: "#ffe600",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
       },
     },
+    li:{
+      textAlign: "center",
+    }
   }));
   const classes = useStyles();
  
@@ -84,10 +90,10 @@ function Aktu() {
       </StyledGrid>
       <Pagination
         page={page}
-        classes={{ ul: classes.ul }}
+        classes={{ ul: classes.ul,li: classes.li }}
         count={Math.ceil(dataAtom.length / 4)}
         onChange={handleChange}
-        style={{height:'5vh',display:'flex',justifyContent: 'center',alignItems: 'center'}}
+        style={{height:'5vh',display:`${dataAtom.length <= 4 ? 'none' : 'inline'}`}}
       />
     </div>
   );
