@@ -74,6 +74,7 @@ function Sklep() {
 }
 const Cointainer = styled.div`
   min-height: 82vh;
+  margin-top:50px;
 `;
 const GridHolder = styled.div`
   height: 100%;

@@ -146,7 +146,7 @@ const IndexPage = () => {
 
         <Aktu />
       </StyledAktu>
-      <StyledDiv style={{ minHeight: "60vh" }}>
+      <StyledDiv style={{ minHeight: "60vh",marginTop:"10vh" }}>
         <MatchIndex />
       </StyledDiv>
 
@@ -162,16 +162,7 @@ const IndexPage = () => {
         }}
       >
         <SponsorsTitle>Strzelcy PFT Sampława</SponsorsTitle>
-
-        {/* <div>{sorted[sorted.length - 1][0]}{sorted[sorted.length - 1][1]}</div> */}
-        <ShootersBox
-          // style={{
-          //   display: "flex",
-          //   justifyContent: "space-around",
-          //   alignItems: "flex-end",
-          //   width: "100%",
-          // }}
-        >
+        <ShootersBox>
           <Shotters
             name={sorted[sorted.length - 2][0]}
             goals={sorted[sorted.length - 2][1]}
@@ -254,21 +245,17 @@ const StyledSposnor = styled.div`
   flex-direction: column;
 `;
 const ShootersBox = styled.div`
- 
-  
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap:30px;
- 
+  gap: 30px;
+
   align-items: center;
   justify-items: center;
-  @media only screen and (max-width:1200px){
-
-    padding-bottom:50px;
+  @media only screen and (max-width: 1200px) {
+    padding-bottom: 50px;
     flex-direction: column;
-    
   }
 `;
 
