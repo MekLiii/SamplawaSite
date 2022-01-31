@@ -59,9 +59,6 @@ const IndexPage = () => {
     return value.BramkiPFT.length > 0;
   }
 
-  //
-  // console.log(data.allContentJson.nodes)
-  // console.log(data.allContentJson.nodes)
   // filtrowanie danych zawodników, wyciąganie strzelców
   const actualSezon = mecze.AktualnySezon;
   const playerData = [];
@@ -88,12 +85,6 @@ const IndexPage = () => {
   //sortuje obiekt
   let entries = Object.entries(counts);
   let sorted = entries.sort((a, b) => a[1] - b[1]);
-  // [["bar",15],["me",75],["you",100],["foo",116]]
-  console.log(sorted[sorted.length - 1][0]);
-  console.log(
-    teamData.team.find((el) => el.name === sorted[sorted.length - 1][0])
-  );
-  // team.team.forEach((el) => console.log(el))
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 2000, min: 2000 },

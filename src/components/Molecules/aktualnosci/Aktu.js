@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import AktuEl from "./AktuEl";
 // import img from "../../../images/article.jpg";
@@ -6,7 +6,7 @@ import styled from "styled-components";
 import Bounce from "react-reveal/Zoom";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 function Aktu() {
   const data = useStaticQuery(graphql`
@@ -35,15 +35,40 @@ function Aktu() {
   const useStyles = makeStyles(() => ({
     ul: {
       "& .MuiPaginationItem-root": {
-        color: "#ffe600"
-      }
-    }
+        color: "#ffe600",
+      },
+    },
   }));
   const classes = useStyles();
+ 
+ 
+  const [slicer, setSlicer] = useState(0);
+  const [slicerTwo, setSlicerTwo] = useState(4);
+  const [page, setPage] = useState(1);
+  const handleChange = (e, p) => {
+    setPage(p);
+    if(p > page){
+      setSlicer(()=> (slicer + 4))
+      setSlicerTwo(()=> (slicerTwo + 4))
+    }
+    if(p< page){
+      setSlicer(()=> (slicer - 4))
+      setSlicerTwo(()=> (slicerTwo - 4))
+    }
+    
+  };
+  
   return (
-    <div style={{display:'flex',flexDirection: 'column',justifyContent: 'center',alignItems: 'center'}}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <StyledGrid>
-        {dataAtom.map((element) => (
+        {dataAtom.slice(slicer,slicerTwo).map((element) => (
           <Bounce bottom key={dataAtom.indexOf(element)}>
             <Link to={`/${element.node.frontmatter.date}`}>
               <AktuEl
@@ -57,7 +82,13 @@ function Aktu() {
           </Bounce>
         ))}
       </StyledGrid>
-      <Pagination classes={{ ul: classes.ul }} count={10} />
+      <Pagination
+        page={page}
+        classes={{ ul: classes.ul }}
+        count={Math.ceil(dataAtom.length / 4)}
+        onChange={handleChange}
+        style={{height:'5vh',display:'flex',justifyContent: 'center',alignItems: 'center'}}
+      />
     </div>
   );
 }

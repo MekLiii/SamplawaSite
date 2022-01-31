@@ -6,7 +6,7 @@ import Fade from "react-reveal/Zoom";
 import mecz from '../../../content/mecz.json'
 
 function Shotters({ src, goals, name, height }) {
-  console.log(mecz)
+  
   if(src === undefined){
     return(
       <Fade bottom>
