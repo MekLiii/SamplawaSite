@@ -116,6 +116,9 @@ const Box = styled.div`
 const Img = styled.img`
   width: auto;
   height: 100%;
+  @media (max-width:400px) {
+    width: 100%;
+  }
 `;
 const P = styled.p`
   color: #ffe600;

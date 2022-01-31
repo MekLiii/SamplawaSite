@@ -16,10 +16,11 @@ const flex = {
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
+  width: "100%",
 };
 const StyledImg = styled.div`
-  width: 350px;
-  height: 250px;
+  width: 100%;
+  height: auto;
   ${"" /* background-color:pink; */}
   display: flex;
   justify-content: center;

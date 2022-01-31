@@ -14,7 +14,14 @@ import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
 import MatchesSlider from "../components/Atoms/MatchesSlider";
 import IndexFirstSec from "../components/Molecules/IndexMainSec/IndexFirstSec";
 import bgPattern from "../../content/assets/bg-pattran.png";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
+
+// install Swiper modules
+
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import CoutingDown from "../components/Atoms/CoutingDown";
@@ -22,6 +29,7 @@ import mecze from "../../content/mecz.json";
 import Shotters from "../components/Atoms/Shotters";
 import teamData from "../../content/druzyna.json";
 
+SwiperCore.use([Autoplay, Navigation]);
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
@@ -137,7 +145,7 @@ const IndexPage = () => {
 
         <Aktu />
       </StyledAktu>
-      <StyledDiv style={{ minHeight: "60vh",marginTop:"10vh" }}>
+      <StyledDiv style={{ minHeight: "60vh", marginTop: "10vh" }}>
         <MatchIndex />
       </StyledDiv>
 
@@ -199,11 +207,48 @@ const IndexPage = () => {
       <StyledSposnor>
         <SponsorsTitle>Sponsorzy</SponsorsTitle>
         <div style={{ width: "100%" }}>
-          <Carousel responsive={responsive}>
-            {sponData.Sponsorzy.map((el) => (
-              <SponsorEl img={el.logo} key={el.name + el.logo} />
-            ))}
-          </Carousel>
+          <Link to="/Sponsorzy">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={5}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              pagination={{
+                clickable: true,
+                color:"black"
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+                },
+              }}
+              className="mySwiper"
+              style={{
+                height: "300px",
+                backgroundColor: "inherit",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              {sponData.Sponsorzy.map((el) => (
+                <SwiperSlide style={{ background: "none" }}>
+                  <SponsorEl img={el.logo} key={el.name + el.logo} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Link>
         </div>
       </StyledSposnor>
     </Layout>
