@@ -252,6 +252,11 @@ const Cointainer = styled.div`
     justify-content: center;
     align-items: center;
   }
+  @media (max-width: 1400px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const Left = styled.div`
   max-height: 80vh;
@@ -276,10 +281,14 @@ const Right = styled.div`
 
   align-items: center;
   flex-direction: column;
-  @media (max-width: 768px) {
+  @media (max-width: 1400px) {
     width: 100%;
     min-height: 70vh;
     max-height: 100vh;
+    
+  }
+  @media (max-width: 800px) {
+   
     flex-direction: column-reverse;
   }
 `;
@@ -288,7 +297,7 @@ const SezonBox = styled.div`
     min-height: 200px;
     background-color:black;
     background-image: url(${bgPattern});
-    border 1px solid #ffe600;
+    border: 1px solid #ffe600;
     display: flex;
     flex-direction: column;
     

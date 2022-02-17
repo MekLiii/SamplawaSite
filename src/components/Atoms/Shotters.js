@@ -81,7 +81,7 @@ const Arrow = styled.div`
   animation: MoveUpDown 1s linear infinite;
   opacity: 1;
   transition: all 0.3s ease-in;
-}
+
 
 @keyframes MoveUpDown {
   0%, 100% {

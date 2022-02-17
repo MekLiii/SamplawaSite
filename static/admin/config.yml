@@ -277,6 +277,13 @@ collections:
                 - {label: nazwa, name: nazwa, widget: string}
                 - {label: Link do strony, name: link, widget: string, required: false}
                 - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
+          - label: SPONSOR Gold
+            name: sponsGold
+            widget: list
+            fields:
+                - {label: nazwa, name: nazwa, widget: string}
+                - {label: Link do strony, name: link, widget: string, required: false}
+                - {label: "logo", name: "logo", widget: "image", choose_url: true, media_folder: /static/prod/}
           - label: SPONSOR SILVER
             name: sponsSilver
             widget: list
