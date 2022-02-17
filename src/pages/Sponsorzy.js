@@ -9,10 +9,11 @@ import Fade from 'react-reveal/Fade';
 function Sponsorzy() {
   const titleSponsor = data.sponsTitle;
   const strategySponsor = data.sponsStrategy;
+  const goldSponsor = data.sponsGold;
   const silverSponsor = data.sponsSilver;
   const bronzeSponsor = data.sponsBrown;
   const mediaSponsor = data.sponsMed;
-  console.log(titleSponsor);
+  console.log(goldSponsor);
   return (
     <Layout currectSiteProp="sponsorzy">
       <Cointainer>
@@ -30,6 +31,16 @@ function Sponsorzy() {
             <Fade left>
             <SponsorHoldersBox>
               {strategySponsor.map((el) => (
+                <SponsorEl key={el.nazwa} src={el.logo} name={el.nazwa} link={el.link}/>
+              ))}
+            </SponsorHoldersBox>
+            </Fade>
+          </SponsorBox>
+          <SponsorBox style={{ alignItems: "flex-start" }}>
+            <P>SPONSOR Gold</P>
+            <Fade right>
+            <SponsorHoldersBox>
+              {goldSponsor.map((el) => (
                 <SponsorEl key={el.nazwa} src={el.logo} name={el.nazwa} link={el.link}/>
               ))}
             </SponsorHoldersBox>
