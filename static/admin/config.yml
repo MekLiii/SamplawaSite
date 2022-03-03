@@ -204,7 +204,6 @@ collections:
               - {label: zwyciestwa, name: zwyciestwa, widget: number}
               - {label: porazki, name: porazki , widget: number}
               - {label: remisy, name: remisy , widget: number}
-              - {label: Link do strony, name: link , widget: string}
               - {label: "Logo", name: "logoEnemy", widget: "image", choose_url: true, media_folder: /static/logo/}
               
               
