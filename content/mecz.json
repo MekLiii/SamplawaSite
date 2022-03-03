@@ -248,8 +248,8 @@
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
+          "pftGoals": 1,
+          "enemyGoals": 5,
           "data": "02/19/2022",
           "przeciwnik": "Orzeł Ulnowo",
           "godzina": "17:45",
@@ -260,8 +260,8 @@
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
+          "pftGoals": 1,
+          "enemyGoals": 8,
           "data": "02/26/2022",
           "przeciwnik": "KS Constract Lubawa",
           "godzina": "17:45",
@@ -758,7 +758,7 @@
           "godzina": "17:00"
         },
         {
-          "pftGoals": 0,
+          "pftGoals": 4,
           "data": "09/18/2021",
           "przeciwnik": "Wicher Gwiździny",
           "Sztab": [
@@ -865,7 +865,7 @@
             }
           ],
           "gospodarze": "PFT Drewneks Sampława",
-          "enemyGoals": 4,
+          "enemyGoals": 0,
           "logoEnemy": [
             "https://ucarecdn.com/9e558b94-3238-45ba-a53c-90a20a06c066/"
           ],
