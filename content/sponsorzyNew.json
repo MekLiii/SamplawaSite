@@ -98,13 +98,6 @@
         "https://ucarecdn.com/f6e08de3-28d1-42da-a857-e2e3443e6e6b/"
       ],
       "link": "https://www.facebook.com/Migawka-Foto-Video-1655792757828982/"
-    },
-    {
-      "logo": [
-        "https://ucarecdn.com/45edcf0d-9dc4-4f52-a33a-7b3ece9823f8/"
-      ],
-      "nazwa": "LZS",
-      "link": "https://www.facebook.com/Gminne-Zrzeszenie-Ludowe-Zespoły-Sportowe-w-Lubawie-506312126960528/"
     }
   ],
   "sponsGold": [
@@ -113,6 +106,13 @@
       "link": "https://szwarc-transport-wojciech-szwarc.business.site",
       "logo": [
         "https://ucarecdn.com/60564bfb-eabb-42e8-a3c5-895c8b392ee4/"
+      ]
+    },
+    {
+      "nazwa": "LZS Lubawa",
+      "link": "http://lzs.gminalubawa.pl/",
+      "logo": [
+        "https://ucarecdn.com/6603072e-a56d-43b1-add0-582a5c159646/"
       ]
     }
   ]
