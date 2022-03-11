@@ -94,7 +94,7 @@ const SponsorEl = ({ src, name, link }) => {
         alignItems: "center",
       }}
     >
-      <a href={link === undefined ? "#" : link} target="_blank" >
+      <a href={link === undefined ? "#" : link} target="_blank" style={{display: "flex", flexDirection: "column",justifyContent: "center", alignItems: "center"}}>
         <StyledImg src={src} alt={src} />
         <PsponsName>{name}</PsponsName>
       </a>
