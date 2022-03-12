@@ -19,7 +19,7 @@ function MatchElIndex({ title,data,letters,name,score,lettersEnemy,nameEnemy,sco
                 </StatHolders>
                 <div>
                 <Link to={link}>
-                    <div style={{backgroundColor:"#ffe600", width:"146px",height:"46px",display:'grid',placeItems:"center", color:"black", borderRadius:"20px"}}>
+                    <div style={{backgroundColor:"#ffe600", minWidth:"146px",height:"46px",display:'grid',placeItems:"center", color:"black", borderRadius:"20px",padding:"0 10px"}}>
                     <span style={{color:"black", fontSize:"clamp(5px,5vw,13px)",fontWeight:600,fontFamily:"poppins"}}>{whatNext}</span>
                     </div>
                     </Link>
