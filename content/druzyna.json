@@ -19,17 +19,6 @@
     },
     {
       "zdjecia": [
-        "https://ucarecdn.com/eca27b52-81d6-407b-a0a1-4ad4e0d06522/"
-      ],
-      "name": "Krystian Zelmański",
-      "pozycja": "bramkarz",
-      "numer": 0,
-      "zdjeciaBetter": [
-        "https://ucarecdn.com/bd83f8c4-4e39-4e00-b22a-661c16bc6977/"
-      ]
-    },
-    {
-      "zdjecia": [
         "https://ucarecdn.com/e8fdf59f-d004-418d-ad25-593f86958d39/"
       ],
       "name": "Lucjan Szwarc",
@@ -246,21 +235,6 @@
       ]
     },
     {
-      "zdjeciaBetter": [
-        "https://ucarecdn.com/1bdc8d84-aff2-467b-9372-11bacd40b66e/"
-      ],
-      "minuty": 1757,
-      "name": "Jakub Lendzionowski",
-      "zKartki": 2,
-      "asysty": 1,
-      "zdjecia": [
-        "https://ucarecdn.com/6c907e9c-11ff-4452-927c-834c13a1f37e/"
-      ],
-      "mecze": 20,
-      "bramki": 24,
-      "pozycja": "napastnik"
-    },
-    {
       "zdjecia": [
         "https://ucarecdn.com/ea0ee0b6-603e-4249-91f0-64674757573e/"
       ],
@@ -311,6 +285,36 @@
       "bramki": 4,
       "zdjeciaBetter": [
         "https://ucarecdn.com/f1a66294-dee1-4a8e-81eb-3cd475a5c879/"
+      ]
+    },
+    {
+      "zdjecia": [
+        "https://ucarecdn.com/c9bbb366-1af6-4a09-bb20-220f776e4652/"
+      ],
+      "name": "Remigiusz Gamański",
+      "pozycja": "bramkarz",
+      "zdjeciaBetter": [
+        "https://ucarecdn.com/3aaa9a7d-3ff2-4901-92a8-da995bfa2a62/"
+      ]
+    },
+    {
+      "zdjecia": [
+        "https://ucarecdn.com/b6fd9f6f-de11-42ce-812f-fd65fd5910fa/"
+      ],
+      "name": "Fabian Kozłowski",
+      "pozycja": "pomocnik",
+      "zdjeciaBetter": [
+        "https://ucarecdn.com/ee643158-4364-44da-a3a9-661d987850b0/"
+      ]
+    },
+    {
+      "zdjecia": [
+        "https://ucarecdn.com/23bf8428-9077-41fb-86ab-5d66605fc40a/"
+      ],
+      "name": "Mateusz Wasielewski",
+      "pozycja": "obrońca",
+      "zdjeciaBetter": [
+        "https://ucarecdn.com/59385953-cfcf-4b00-821b-300f9fa8dd76/"
       ]
     }
   ],
