@@ -145,7 +145,7 @@ function MatchIndex() {
             data={convertData(resultNextMatch?.data)}
             letters="PFT"
             name={resultNextMatch?.gospodarze}
-            lettersEnemy={result.przeciwnik.slice(0, 3)}
+            lettersEnemy={resultNextMatch.przeciwnik.slice(0, 3)}
             nameEnemy={resultNextMatch?.przeciwnik}
             whatNext={`${resultNextMatch?.godzina} ${resultNextMatch?.miejsce}`}
             sign="VS"
