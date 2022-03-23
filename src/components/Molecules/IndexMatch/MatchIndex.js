@@ -143,9 +143,9 @@ function MatchIndex() {
           <MatchElIndex
             title="Następny mecz"
             data={convertData(resultNextMatch?.data)}
-            letters="Sam"
+            letters="PFT"
             name={resultNextMatch?.gospodarze}
-            lettersEnemy="HUR"
+            lettersEnemy={result.przeciwnik.slice(0, 3)}
             nameEnemy={resultNextMatch?.przeciwnik}
             whatNext={`${resultNextMatch?.godzina} ${resultNextMatch?.miejsce}`}
             sign="VS"
