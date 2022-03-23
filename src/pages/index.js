@@ -175,9 +175,10 @@ const IndexPage = () => {
             name={sorted[sorted.length - 1][0]}
             goals={sorted[sorted.length - 1][1]}
             src={
-              teamData.team.find(
-                (el) => el.name === sorted[sorted.length - 1][0]
-              )?.zdjeciaBetter[0]
+//               teamData.team.find(
+//                 (el) => el.name === sorted[sorted.length - 1][0]
+//               )?.zdjeciaBetter[0]
+https://www.pftsamplawa.com/players/img/b3e25238c1035389c97c1f0add9c9176d4b6d8.png
             }
           />
           <Shotters
