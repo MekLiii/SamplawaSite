@@ -262,7 +262,7 @@ const IndexPage = () => {
               {sponData.sponsBrown.map((el) => (
                 <SwiperSlide style={{ background: "none" }}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
-                </SwiperSlide>
+                </SwiperSlide> 
               ))}
               {sponData.sponsMed.map((el) => (
                 <SwiperSlide style={{ background: "none" }}>
