@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import SponsorEl from "../components/Atoms/SponsorEl";
-import sponData from "../../content/sponsors.json";
+import sponData from "../../content/sponsorzyNew.json";
 import CustomizedTables from "../components/Molecules/MatchTable/CustomizedTables";
 import backGroundImage from "../../content/assets/unsplash_JP0qiWQzjrgbackground.webp";
 import MatchIndex from "../components/Molecules/IndexMatch/MatchIndex";
@@ -111,6 +111,7 @@ const IndexPage = () => {
       items: 1,
     },
   };
+  console.log(sponData)
   return (
     <Layout currectSiteProp="main">
       <StyledSlider style={{ flexDirection: "column" }}>
@@ -178,7 +179,7 @@ const IndexPage = () => {
 //               teamData.team.find(
 //                 (el) => el.name === sorted[sorted.length - 1][0]
 //               )?.zdjeciaBetter[0]
-https://www.pftsamplawa.com/players/img/b3e25238c1035389c97c1f0add9c9176d4b6d8.png
+'https://www.pftsamplawa.com/players/img/b3e25238c1035389c97c1f0add9c9176d4b6d8.png'
             }
           />
           <Shotters
@@ -243,7 +244,32 @@ https://www.pftsamplawa.com/players/img/b3e25238c1035389c97c1f0add9c9176d4b6d8.p
                 alignItems: "center",
               }}
             >
-              {sponData.Sponsorzy.map((el) => (
+              {sponData.sponsTitle.map((el) => (
+                <SwiperSlide style={{ background: "none" }}>
+                  <SponsorEl img={el.logo} key={el.name + el.logo} />
+                </SwiperSlide>
+              ))}
+              {sponData.sponsStrategy.map((el) => (
+                <SwiperSlide style={{ background: "none" }}>
+                  <SponsorEl img={el.logo} key={el.name + el.logo} />
+                </SwiperSlide>
+              ))}
+              {sponData.sponsSilver.map((el) => (
+                <SwiperSlide style={{ background: "none" }}>
+                  <SponsorEl img={el.logo} key={el.name + el.logo} />
+                </SwiperSlide>
+              ))}
+              {sponData.sponsBrown.map((el) => (
+                <SwiperSlide style={{ background: "none" }}>
+                  <SponsorEl img={el.logo} key={el.name + el.logo} />
+                </SwiperSlide>
+              ))}
+              {sponData.sponsMed.map((el) => (
+                <SwiperSlide style={{ background: "none" }}>
+                  <SponsorEl img={el.logo} key={el.name + el.logo} />
+                </SwiperSlide>
+              ))}
+              {sponData.sponsGold.map((el) => (
                 <SwiperSlide style={{ background: "none" }}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
