@@ -59,7 +59,7 @@ function Sponsorzy() {
           <SponsorBox style={{ alignItems: "flex-end" }}>
             <P>SPONSOR BRĄZ</P>
             <Fade left>
-            <SponsorHoldersBox>
+            <SponsorHoldersBox style={{marginBottom:"20px"}}>
               {bronzeSponsor.map((el) => (
                 <SponsorEl key={el.nazwa} src={el.logo} name={el.nazwa} link={el.link}/>
               ))}
@@ -134,8 +134,10 @@ const SponsorBox = styled.div`
 `;
 const SponsorHoldersBox = styled.div`
   width: auto;
-  height: 100%;
+  /* height: 100%; */
+  min-height: 20vh;
   display: flex;
+  flex-wrap: wrap;
   gap: 50px;
   @media (max-width:1000px){
       flex-direction: column;
