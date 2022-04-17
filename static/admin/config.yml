@@ -107,7 +107,7 @@ collections:
                           value_field: zespolSenior.*.name,
                           options_length: 25,    
                       }
-                   m,- label: Statystyki
+                  - label: Statystyki
                     name: Statystyki
                     widget: list
                     max: 1
@@ -188,8 +188,8 @@ collections:
     label: 'mecze'
     folder: 'content/mecze/mecz'
     create: true
-    slug: '{{date}}'
-    path: '{{date}}'
+    slug: '{{przeciwnik}}'
+    path: '{{przeciwnik}}'
     editor:
       preview: false
     fields:
@@ -285,7 +285,7 @@ collections:
               display_fields: [team.*.name],
               value_field: team.*.name,
               options_length: 50,    
-              } 
+                            } 
               
           
              
