@@ -82,3 +82,50 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 };
 
+
+// query MyQuery {
+//   allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/mecze/"}}) {
+//     nodes {
+//       frontmatter {
+//         Zawodnicy {
+//           Zawodnicy
+//           minuty
+//         }
+//         czas
+//         data
+//         enemyGoals
+//         godzina
+//         gospodarze
+//         logoEnemy
+//         pftGoals
+//         miejsce
+//         opis
+//         pftGoals
+//         price
+//         przeciwnik
+//         thumbnail
+//         Zmiany {
+//           ZmianaNa
+//           ZmianaZ
+//           minuta
+//         }
+//         Sztab {
+//           zespolSenior
+//         }
+//         Kartki {
+//           Zawodnicy
+//           minuta
+//           kartka
+//         }
+//         BramkiPrzeciwnika {
+//           name
+//           minuta
+//         }
+//         BramkiPFT {
+//           Zawodnicy
+//           minuta
+//         }
+//       }
+//     }
+//   }
+// }
