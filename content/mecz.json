@@ -1,1425 +1,1425 @@
-{
-  "sezon": [
-    {
-      "sezon": "2020/2021",
-      "mecz": [
-        {
-          "pftGoals": 0,
-          "data": "10/23/2021",
-          "przeciwnik": "LZS TORPEDA Rożental",
-          "Statystyki": [
-            {
-              "BramkiPrzeciwnika": [],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Tomasz Sławiński",
-                  "minuta": 50,
-                  "ZmianaNa": "Szymon Lasikowski"
-                },
-                {
-                  "ZmianaZ": "Szymon Łątkowski",
-                  "minuta": 50,
-                  "ZmianaNa": "Radosław Buczkowski"
-                },
-                {
-                  "ZmianaZ": "Michał Raciborski",
-                  "minuta": 70,
-                  "ZmianaNa": "Marek Nastachowski"
-                },
-                {
-                  "ZmianaZ": "Marek Laskowski",
-                  "minuta": 46,
-                  "ZmianaNa": "Patryk Mówiński"
-                },
-                {
-                  "ZmianaZ": "Dawid Mederski",
-                  "minuta": 71,
-                  "ZmianaNa": "Przemysław Cabaj"
-                }
-              ],
-              "Kartki": []
-            }
-          ],
-          "miejsce": "Sampława",
-          "Zawodnicy": [
-            {
-              "Zawodnicy": "Łukasz Ochlak",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Adam Dybich",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Andrzej Podlaszewski",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Sylwester Rynkowski",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Tomasz Sławiński",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Szymon Łątkowski",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Jakub Lendzionowski",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Dawid Mederski",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Michał Raciborski",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Marek Laskowski",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Dawid Mederski",
-              "minuty": 0
-            },
-            {
-              "Zawodnicy": "Sylwester Bukowski",
-              "minuty": 0
-            }
-          ],
-          "gospodarze": "PFT DREWNEKS SAMPŁAWA",
-          "enemyGoals": 3,
-          "logoEnemy": "/static/logo/torpeda_rozental.png",
-          "godzina": "16:00"
-        },
-        {
-          "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
-          "data": "02/12/2022",
-          "przeciwnik": "Kormoran Zwierzewo",
-          "godzina": "17:00",
-          "miejsce": " ",
-          "logoEnemy": "/static/logo/8205a702cc020a329d65aa0e5e57cdf3da4ae2.png"
-        }
-      ]
-    },
-    {
-      "sezon": "2021/2022",
-      "mecz": [
-        {
-          "pftGoals": 0,
-          "data": "10/23/2021",
-          "przeciwnik": "LZS TORPEDA Rożental",
-          "Sztab": [
-            {
-              "zespolSenior": " Łukasz Wietecha"
-            }
-          ],
-          "Statystyki": [
-            {
-              "BramkiPrzeciwnika": [],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Tomasz Sławiński",
-                  "minuta": 50,
-                  "ZmianaNa": "Szymon Lasikowski"
-                },
-                {
-                  "ZmianaZ": "Szymon Łątkowski",
-                  "minuta": 50,
-                  "ZmianaNa": "Radosław Buczkowski"
-                },
-                {
-                  "ZmianaZ": "Michał Raciborski",
-                  "minuta": 70,
-                  "ZmianaNa": "Marek Nastachowski"
-                },
-                {
-                  "ZmianaZ": "Marek Laskowski",
-                  "minuta": 46,
-                  "ZmianaNa": "Patryk Mówiński"
-                },
-                {
-                  "ZmianaZ": "Dawid Mederski",
-                  "minuta": 71,
-                  "ZmianaNa": "Przemysław Cabaj"
-                }
-              ],
-              "Kartki": [],
-              "BramkiPFT": []
-            }
-          ],
-          "miejsce": "Sampława",
-          "Zawodnicy": [
-            {
-              "Zawodnicy": "Łukasz Ochlak",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Adam Dybich",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Andrzej Podlaszewski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Sylwester Rynkowski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Tomasz Sławiński",
-              "minuty": 60
-            },
-            {
-              "Zawodnicy": "Szymon Łątkowski",
-              "minuty": 50
-            },
-            {
-              "Zawodnicy": "Jakub Lendzionowski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Dawid Mederski",
-              "minuty": 71
-            },
-            {
-              "Zawodnicy": "Michał Raciborski",
-              "minuty": 70
-            },
-            {
-              "Zawodnicy": "Marek Laskowski",
-              "minuty": 46
-            },
-            {
-              "Zawodnicy": "Sylwester Bukowski",
-              "minuty": 55
-            },
-            {
-              "minuty": 35,
-              "Zawodnicy": "Cezary Chorzelewski"
-            },
-            {
-              "minuty": 19,
-              "Zawodnicy": "Przemysław Cabaj"
-            },
-            {
-              "minuty": 70,
-              "Zawodnicy": "Marek Nastachowski"
-            },
-            {
-              "minuty": 40,
-              "Zawodnicy": "Radosław Buczkowski"
-            },
-            {
-              "minuty": 44,
-              "Zawodnicy": "Patryk Mówiński"
-            },
-            {
-              "minuty": 30,
-              "Zawodnicy": "Szymon Lasikowski"
-            }
-          ],
-          "gospodarze": "PFT DREWNEKS SAMPŁAWA",
-          "enemyGoals": 3,
-          "logoEnemy": [
-            "https://ucarecdn.com/0cff89e1-ca4e-49b4-a2fe-4e3e9d12383f/"
-          ],
-          "godzina": "16:00"
-        },
-        {
-          "pftGoals": 2,
-          "data": "02/12/2022",
-          "przeciwnik": "Kormoran Zwierzewo",
-          "Statystyki": [],
-          "miejsce": "Sampława",
-          "Zawodnicy": [],
-          "gospodarze": "PFT Drewneks Sampława",
-          "enemyGoals": 4,
-          "logoEnemy": [
-            "https://ucarecdn.com/c43b2aab-0b52-4095-85b5-d90226d2f5e3/"
-          ],
-          "godzina": "17:00"
-        },
-        {
-          "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 1,
-          "enemyGoals": 5,
-          "data": "02/19/2022",
-          "przeciwnik": "Orzeł Ulnowo",
-          "godzina": "17:45",
-          "miejsce": "Sampława",
-          "logoEnemy": [
-            "https://ucarecdn.com/589bd474-744d-435e-9272-f066e7686ba5/"
-          ]
-        },
-        {
-          "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 1,
-          "enemyGoals": 8,
-          "data": "02/26/2022",
-          "przeciwnik": "KS Constract Lubawa",
-          "godzina": "17:45",
-          "miejsce": " ",
-          "logoEnemy": [
-            "https://ucarecdn.com/eb433a6c-d3e0-477c-92b6-84e54d84aff1/"
-          ]
-        },
-        {
-          "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 7,
-          "data": "03/05/2022",
-          "przeciwnik": "Radomniak Radomno",
-          "godzina": "18:00",
-          "miejsce": " ",
-          "logoEnemy": [
-            "https://ucarecdn.com/a861d3fd-4384-421d-912f-0aee733df99d/"
-          ]
-        },
-        {
-          "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
-          "data": "03/12/2022",
-          "przeciwnik": "LZS Frednowy",
-          "godzina": "18:00",
-          "miejsce": " Boisko sztuczne w Iławie",
-          "logoEnemy": [
-            "https://ucarecdn.com/31ca62cb-0a10-40ef-ba71-94817a0895da/"
-          ]
-        },
-        {
-          "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 6,
-          "enemyGoals": 6,
-          "data": "03/19/2022",
-          "przeciwnik": "Jordan Kazanice",
-          "godzina": "16:00",
-          "miejsce": " ",
-          "logoEnemy": [
-            "https://ucarecdn.com/9d5624ac-d21e-413a-8ee5-06e3580fe317/"
-          ]
-        },
-        {
-          "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
-          "data": "03/26/2022",
-          "przeciwnik": "Olimpia Kisielice",
-          "godzina": "16:00",
-          "miejsce": " ",
-          "logoEnemy": [
-            "https://ucarecdn.com/79ab7f01-fc02-4c7e-be5d-ceff3d386bd1/"
-          ]
-        },
-        {
-          "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
-          "data": "04/02/2022",
-          "przeciwnik": "Agricola Mierki",
-          "godzina": "16:00",
-          "miejsce": " ",
-          "logoEnemy": [
-            "https://ucarecdn.com/ad9ae771-0d86-4746-95f7-a9000317d4db/"
-          ]
-        },
-        {
-          "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 4,
-          "data": "04/09/2022",
-          "przeciwnik": "GKS Dąbrówno",
-          "godzina": "16:00",
-          "miejsce": " ",
-          "logoEnemy": [
-            "https://ucarecdn.com/062905cd-030e-4e2e-8b90-f942fe1d2b1d/"
-          ]
-        },
-        {
-          "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 11,
-          "enemyGoals": 0,
-          "data": "04/16/2022",
-          "przeciwnik": "LZS Huragan Byszwałd",
-          "godzina": "16:00",
-          "miejsce": " ",
-          "logoEnemy": [
-            "https://ucarecdn.com/9db26905-9a31-44fe-8fa2-352342ce9d86/"
-          ]
-        },
-        {
-          "pftGoals": 4,
-          "data": "08/29/2021",
-          "przeciwnik": "UKS ŻAK JAMIELNIK",
-          "Sztab": [
-            {
-              "zespolSenior": " Łukasz Wietecha"
-            },
-            {
-              "zespolSenior": "Sławomir Sarlej"
-            },
-            {
-              "zespolSenior": "Wojciech Jurkiewicz"
-            }
-          ],
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Michał Łukaszewski",
-                  "minuta": 42
-                },
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "minuta": 42
-                },
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "minuta": 60
-                },
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "minuta": 78
-                }
-              ],
-              "BramkiPrzeciwnika": [],
-              "Kartki": [
-                {
-                  "Zawodnicy": "Lucjan Szwarc",
-                  "kartka": "żółta",
-                  "minuta": 20
-                },
-                {
-                  "Zawodnicy": "Dawid Mederski",
-                  "kartka": "żółta",
-                  "minuta": 42
-                },
-                {
-                  "Zawodnicy": "Szymon Łątkowski",
-                  "kartka": "żółta",
-                  "minuta": 62
-                },
-                {
-                  "Zawodnicy": "Przemysław Cabaj",
-                  "kartka": "żółta",
-                  "minuta": 85
-                }
-              ],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Wojciech Banacki",
-                  "minuta": 72,
-                  "ZmianaNa": "Sylwester Rynkowski"
-                },
-                {
-                  "ZmianaZ": "Szymon Lasikowski",
-                  "minuta": 72,
-                  "ZmianaNa": "Tomasz Sławiński"
-                },
-                {
-                  "ZmianaZ": "Szymon Łątkowski",
-                  "minuta": 60,
-                  "ZmianaNa": "Arkadiusz Wietecha"
-                },
-                {
-                  "ZmianaZ": "Jakub Lendzionowski",
-                  "minuta": 80,
-                  "ZmianaNa": "Przemysław Cabaj"
-                },
-                {
-                  "ZmianaZ": "Michał Raciborski",
-                  "minuta": 80,
-                  "ZmianaNa": "Marek Laskowski"
-                }
-              ]
-            }
-          ],
-          "miejsce": "JAMIELNIK",
-          "Zawodnicy": [
-            {
-              "Zawodnicy": "Łukasz Ochlak",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Lucjan Szwarc",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Andrzej Podlaszewski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Wojciech Banacki",
-              "minuty": 72
-            },
-            {
-              "Zawodnicy": "Szymon Lasikowski",
-              "minuty": 72
-            },
-            {
-              "Zawodnicy": "Dawid Mederski",
-              "minuty": 60
-            },
-            {
-              "Zawodnicy": "Szymon Łątkowski",
-              "minuty": 60
-            },
-            {
-              "Zawodnicy": "Radosław Buczkowski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Michał Łukaszewski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Jakub Lendzionowski",
-              "minuty": 80
-            },
-            {
-              "Zawodnicy": "Michał Raciborski",
-              "minuty": 80
-            }
-          ],
-          "gospodarze": "PFT Drewneks Sampława",
-          "enemyGoals": 1,
-          "logoEnemy": [
-            "https://ucarecdn.com/e14da4db-e077-499a-9385-6cd05bf2c8f1/"
-          ],
-          "godzina": "14:00"
-        },
-        {
-          "pftGoals": 1,
-          "data": "09/04/2021",
-          "przeciwnik": "Olimpia Kisielice",
-          "Sztab": [
-            {
-              "zespolSenior": " Łukasz Wietecha"
-            }
-          ],
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "minuta": 43
-                }
-              ],
-              "Kartki": [
-                {
-                  "Zawodnicy": "Patryk Mówiński",
-                  "kartka": "żółta",
-                  "minuta": 60
-                }
-              ],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Arkadiusz Wietecha",
-                  "minuta": 75,
-                  "ZmianaNa": "Przemysław Cabaj"
-                },
-                {
-                  "ZmianaZ": "Adam Dybich",
-                  "minuta": 65,
-                  "ZmianaNa": "Sylwester Rynkowski"
-                },
-                {
-                  "ZmianaZ": "Wojciech Banacki",
-                  "minuta": 45,
-                  "ZmianaNa": "Henryk Świątkowski"
-                },
-                {
-                  "ZmianaZ": "Radosław Buczkowski",
-                  "minuta": 45,
-                  "ZmianaNa": "Patryk Mówiński"
-                },
-                {
-                  "ZmianaZ": "Szymon Lasikowski",
-                  "minuta": 65,
-                  "ZmianaNa": "Marek Laskowski"
-                }
-              ]
-            }
-          ],
-          "miejsce": "Kisielice",
-          "Zawodnicy": [
-            {
-              "Zawodnicy": "Łukasz Ochlak",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Andrzej Podlaszewski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Arkadiusz Wietecha",
-              "minuty": 75
-            },
-            {
-              "Zawodnicy": "Adam Dybich",
-              "minuty": 65
-            },
-            {
-              "Zawodnicy": "Wojciech Banacki",
-              "minuty": 45
-            },
-            {
-              "Zawodnicy": "Szymon Łątkowski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Michał Łukaszewski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Radosław Buczkowski",
-              "minuty": 45
-            },
-            {
-              "Zawodnicy": "Michał Raciborski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Szymon Łątkowski",
-              "minuty": 65
-            },
-            {
-              "Zawodnicy": "Jakub Lendzionowski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Marek Laskowski",
-              "minuty": 25
-            },
-            {
-              "Zawodnicy": "Przemysław Cabaj",
-              "minuty": 15
-            },
-            {
-              "Zawodnicy": "Patryk Mówiński",
-              "minuty": 45
-            },
-            {
-              "Zawodnicy": "Sylwester Rynkowski",
-              "minuty": 25
-            },
-            {
-              "Zawodnicy": "Henryk Świątkowski",
-              "minuty": 45
-            }
-          ],
-          "gospodarze": "PFT Drewneks Sampława",
-          "enemyGoals": 1,
-          "logoEnemy": [
-            "https://ucarecdn.com/cbe0bfce-0408-458f-8c39-386583a4a753/"
-          ],
-          "godzina": "17:00"
-        },
-        {
-          "pftGoals": 3,
-          "data": "09/11/2021",
-          "przeciwnik": "LZS Fijewo",
-          "Sztab": [
-            {
-              "zespolSenior": " Łukasz Wietecha"
-            }
-          ],
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "minuta": 26
-                },
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "minuta": 30
-                },
-                {
-                  "Zawodnicy": "Henryk Świątkowski",
-                  "minuta": 71
-                }
-              ],
-              "Kartki": [
-                {
-                  "Zawodnicy": "Henryk Świątkowski",
-                  "kartka": "żółta",
-                  "minuta": 50
-                }
-              ],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Tomasz Sławiński",
-                  "minuta": 65,
-                  "ZmianaNa": "Szymon Lasikowski"
-                },
-                {
-                  "ZmianaZ": "Michał Łukaszewski",
-                  "minuta": 58,
-                  "ZmianaNa": "Radosław Buczkowski"
-                },
-                {
-                  "ZmianaZ": "Patryk Mówiński",
-                  "minuta": 74,
-                  "ZmianaNa": "Sylwester Bukowski"
-                },
-                {
-                  "ZmianaZ": "Cezary Chorzelewski",
-                  "minuta": 46,
-                  "ZmianaNa": "Przemysław Cabaj"
-                },
-                {
-                  "ZmianaZ": "Adam Dybich",
-                  "minuta": 65,
-                  "ZmianaNa": "Marek Laskowski"
-                }
-              ]
-            }
-          ],
-          "miejsce": "Samława",
-          "Zawodnicy": [
-            {
-              "Zawodnicy": "Łukasz Ochlak",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Lucjan Szwarc",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Andrzej Podlaszewski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Tomasz Sławiński",
-              "minuty": 65
-            },
-            {
-              "Zawodnicy": "Henryk Świątkowski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Michał Łukaszewski",
-              "minuty": 58
-            },
-            {
-              "Zawodnicy": "Patryk Mówiński",
-              "minuty": 74
-            },
-            {
-              "Zawodnicy": "Cezary Chorzelewski",
-              "minuty": 46
-            },
-            {
-              "Zawodnicy": "Michał Raciborski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Adam Dybich",
-              "minuty": 65
-            },
-            {
-              "Zawodnicy": "Jakub Lendzionowski",
-              "minuty": 90
-            },
-            {
-              "Zawodnicy": "Przemysław Cabaj",
-              "minuty": 44
-            },
-            {
-              "Zawodnicy": "Marek Laskowski",
-              "minuty": 25
-            },
-            {
-              "Zawodnicy": "Radosław Buczkowski",
-              "minuty": 32
-            },
-            {
-              "Zawodnicy": "Szymon Lasikowski",
-              "minuty": 25
-            },
-            {
-              "Zawodnicy": "Sylwester Bukowski",
-              "minuty": 16
-            }
-          ],
-          "gospodarze": "PFT Drewneks Sampława",
-          "enemyGoals": 1,
-          "logoEnemy": [
-            "https://ucarecdn.com/c8323fdf-f34c-40cb-bd37-40d8ff3669f9/"
-          ],
-          "godzina": "17:00"
-        },
-        {
-          "pftGoals": 4,
-          "data": "09/18/2021",
-          "przeciwnik": "Wicher Gwiździny",
-          "Sztab": [
-            {
-              "zespolSenior": " Łukasz Wietecha"
-            }
-          ],
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Michał Raciborski",
-                  "minuta": 15
-                },
-                {
-                  "Zawodnicy": "Sylwester Rynkowski",
-                  "minuta": 37
-                },
-                {
-                  "Zawodnicy": "Sylwester Bukowski",
-                  "minuta": 51
-                },
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "minuta": 79
-                }
-              ],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Michał Łukaszewski",
-                  "minuta": 55,
-                  "ZmianaNa": "Radosław Buczkowski"
-                },
-                {
-                  "ZmianaZ": "Tomasz Sławiński",
-                  "minuta": 55,
-                  "ZmianaNa": "Szymon Lasikowski"
-                },
-                {
-                  "ZmianaZ": "Lucjan Szwarc",
-                  "minuta": 55,
-                  "ZmianaNa": "Andrzej Podlaszewski"
-                }
-              ]
-            }
-          ],
-          "miejsce": "Gwiździny",
-          "Zawodnicy": [
-            {
-              "minuty": 90,
-              "Zawodnicy": "Michał Raciborski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Sylwester Rynkowski"
-            },
-            {
-              "minuty": 55,
-              "Zawodnicy": "Sylwester Bukowski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Jakub Lendzionowski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Łukasz Ochlak"
-            },
-            {
-              "minuty": 70,
-              "Zawodnicy": "Henryk Świątkowski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Patryk Mówiński"
-            },
-            {
-              "minuty": 55,
-              "Zawodnicy": "Michał Łukaszewski"
-            },
-            {
-              "minuty": 55,
-              "Zawodnicy": "Tomasz Sławiński"
-            },
-            {
-              "minuty": 55,
-              "Zawodnicy": "Lucjan Szwarc"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Marek Laskowski"
-            },
-            {
-              "minuty": 35,
-              "Zawodnicy": "Andrzej Podlaszewski"
-            },
-            {
-              "minuty": 35,
-              "Zawodnicy": "Radosław Buczkowski"
-            },
-            {
-              "minuty": 35,
-              "Zawodnicy": "Szymon Lasikowski"
-            }
-          ],
-          "gospodarze": "PFT Drewneks Sampława",
-          "enemyGoals": 0,
-          "logoEnemy": [
-            "https://ucarecdn.com/9e558b94-3238-45ba-a53c-90a20a06c066/"
-          ],
-          "godzina": "14:00"
-        },
-        {
-          "pftGoals": 2,
-          "data": "09/25/2021",
-          "przeciwnik": "LZS Huragan Byszwałd",
-          "Sztab": [
-            {
-              "zespolSenior": " Łukasz Wietecha"
-            }
-          ],
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Michał Raciborski",
-                  "minuta": 58
-                },
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "minuta": 58
-                }
-              ],
-              "Kartki": [
-                {
-                  "Zawodnicy": "Radosław Buczkowski",
-                  "kartka": "żółta",
-                  "minuta": 55
-                },
-                {
-                  "Zawodnicy": "Andrzej Podlaszewski",
-                  "kartka": "żółta",
-                  "minuta": 83
-                }
-              ],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Henryk Świątkowski",
-                  "minuta": 72,
-                  "ZmianaNa": "Tomasz Sławiński"
-                },
-                {
-                  "ZmianaZ": "Szymon Lasikowski",
-                  "minuta": 60,
-                  "ZmianaNa": "Marek Laskowski"
-                },
-                {
-                  "ZmianaZ": "Przemysław Cabaj",
-                  "minuta": 7,
-                  "ZmianaNa": "Michał Raciborski"
-                }
-              ]
-            }
-          ],
-          "miejsce": "Sampława",
-          "Zawodnicy": [
-            {
-              "minuty": 90,
-              "Zawodnicy": "Jakub Lendzionowski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Radosław Buczkowski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Andrzej Podlaszewski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Patryk Mówiński"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Lucjan Szwarc"
-            },
-            {
-              "minuty": 72,
-              "Zawodnicy": "Henryk Świątkowski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Łukasz Ochlak"
-            },
-            {
-              "minuty": 46,
-              "Zawodnicy": "Sylwester Rynkowski"
-            },
-            {
-              "minuty": 60,
-              "Zawodnicy": "Szymon Lasikowski"
-            },
-            {
-              "minuty": 83,
-              "Zawodnicy": "Dawid Mederski"
-            },
-            {
-              "minuty": 7,
-              "Zawodnicy": "Przemysław Cabaj"
-            },
-            {
-              "minuty": 83,
-              "Zawodnicy": "Michał Raciborski"
-            },
-            {
-              "minuty": 40,
-              "Zawodnicy": "Marek Laskowski"
-            },
-            {
-              "minuty": 18,
-              "Zawodnicy": "Tomasz Sławiński"
-            }
-          ],
-          "gospodarze": "PFT Drewneks Sampława",
-          "enemyGoals": 2,
-          "logoEnemy": [
-            "https://ucarecdn.com/126aed4d-09b6-4413-87d8-c26278970bb6/"
-          ],
-          "godzina": "17:00"
-        },
-        {
-          "pftGoals": 1,
-          "data": "10/02/2021",
-          "przeciwnik": "UKS MAŁY JEZIORAK IŁAWA",
-          "Sztab": [
-            {
-              "zespolSenior": " Łukasz Wietecha"
-            }
-          ],
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Sylwester Bukowski",
-                  "minuta": 67
-                }
-              ],
-              "Kartki": [
-                {
-                  "Zawodnicy": "Henryk Świątkowski",
-                  "kartka": "żółta",
-                  "minuta": 31
-                },
-                {
-                  "Zawodnicy": "Radosław Buczkowski",
-                  "kartka": "żółta",
-                  "minuta": 66
-                },
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "kartka": "żółta",
-                  "minuta": 72
-                },
-                {
-                  "Zawodnicy": "Szymon Lasikowski",
-                  "kartka": "żółta",
-                  "minuta": 82
-                }
-              ],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Sylwester Bukowski",
-                  "minuta": 50,
-                  "ZmianaNa": "Patryk Mówiński"
-                },
-                {
-                  "ZmianaZ": "Henryk Świątkowski",
-                  "minuta": 82,
-                  "ZmianaNa": "Sylwester Rynkowski"
-                },
-                {
-                  "ZmianaZ": "Jakub Lendzionowski",
-                  "minuta": 72,
-                  "ZmianaNa": "Szymon Lasikowski"
-                },
-                {
-                  "ZmianaZ": "Michał Łukaszewski",
-                  "minuta": 56,
-                  "ZmianaNa": "Radosław Buczkowski"
-                },
-                {
-                  "ZmianaZ": "Arkadiusz Wietecha",
-                  "minuta": 56,
-                  "ZmianaNa": "Szymon Łątkowski"
-                }
-              ]
-            }
-          ],
-          "miejsce": "Iława",
-          "Zawodnicy": [
-            {
-              "minuty": 50,
-              "Zawodnicy": "Sylwester Bukowski"
-            },
-            {
-              "minuty": 82,
-              "Zawodnicy": "Henryk Świątkowski"
-            },
-            {
-              "minuty": 72,
-              "Zawodnicy": "Jakub Lendzionowski"
-            },
-            {
-              "minuty": 56,
-              "Zawodnicy": "Michał Łukaszewski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Lucjan Szwarc"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Andrzej Podlaszewski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Michał Raciborski"
-            },
-            {
-              "minuty": 82,
-              "Zawodnicy": "Dawid Mederski"
-            },
-            {
-              "minuty": 56,
-              "Zawodnicy": "Arkadiusz Wietecha"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Łukasz Ochlak"
-            },
-            {
-              "minuty": 18,
-              "Zawodnicy": "Szymon Lasikowski"
-            },
-            {
-              "minuty": 34,
-              "Zawodnicy": "Szymon Łątkowski"
-            },
-            {
-              "minuty": 34,
-              "Zawodnicy": "Radosław Buczkowski"
-            },
-            {
-              "minuty": 40,
-              "Zawodnicy": "Patryk Mówiński"
-            },
-            {
-              "minuty": 8,
-              "Zawodnicy": "Marek Laskowski"
-            },
-            {
-              "minuty": 8,
-              "Zawodnicy": "Sylwester Rynkowski"
-            },
-            {
-              "minuty": 25,
-              "Zawodnicy": "Adam Dybich"
-            }
-          ],
-          "gospodarze": "PFT Drewneks Sampława",
-          "enemyGoals": 1,
-          "logoEnemy": [
-            "https://ucarecdn.com/4c8147d2-2d74-4683-b461-95183899c1ce/"
-          ],
-          "godzina": "16:00"
-        },
-        {
-          "pftGoals": 5,
-          "data": "10/09/2021",
-          "przeciwnik": "Wel Bratian",
-          "Sztab": [
-            {
-              "zespolSenior": " Łukasz Wietecha"
-            }
-          ],
-          "Statystyki": [
-            {
-              "BramkiPFT": [
-                {
-                  "Zawodnicy": "Sylwester Bukowski",
-                  "minuta": 1
-                },
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "minuta": 19
-                },
-                {
-                  "Zawodnicy": "Sylwester Bukowski",
-                  "minuta": 39
-                },
-                {
-                  "Zawodnicy": "Jakub Lendzionowski",
-                  "minuta": 58
-                },
-                {
-                  "Zawodnicy": "Marek Laskowski",
-                  "minuta": 78
-                }
-              ],
-              "Kartki": [
-                {
-                  "Zawodnicy": "Radosław Buczkowski",
-                  "kartka": "żółta",
-                  "minuta": 55
-                }
-              ],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Lucjan Szwarc",
-                  "minuta": 55,
-                  "ZmianaNa": "Tomasz Sławiński"
-                },
-                {
-                  "ZmianaZ": "Sylwester Rynkowski",
-                  "minuta": 46,
-                  "ZmianaNa": "Radosław Buczkowski"
-                },
-                {
-                  "ZmianaZ": "Henryk Świątkowski",
-                  "minuta": 65,
-                  "ZmianaNa": "Szymon Lasikowski"
-                },
-                {
-                  "ZmianaZ": "Michał Raciborski",
-                  "minuta": 65,
-                  "ZmianaNa": "Cezary Chorzelewski"
-                },
-                {
-                  "ZmianaZ": "Michał Łukaszewski",
-                  "minuta": 46,
-                  "ZmianaNa": "Patryk Mówiński"
-                }
-              ]
-            }
-          ],
-          "miejsce": "Sampława",
-          "Zawodnicy": [
-            {
-              "minuty": 90,
-              "Zawodnicy": "Łukasz Ochlak"
-            },
-            {
-              "minuty": 55,
-              "Zawodnicy": "Lucjan Szwarc"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Andrzej Podlaszewski"
-            },
-            {
-              "minuty": 46,
-              "Zawodnicy": "Sylwester Rynkowski"
-            },
-            {
-              "minuty": 65,
-              "Zawodnicy": "Henryk Świątkowski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Szymon Łątkowski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Jakub Lendzionowski"
-            },
-            {
-              "minuty": 65,
-              "Zawodnicy": "Michał Raciborski"
-            },
-            {
-              "minuty": 46,
-              "Zawodnicy": "Michał Łukaszewski"
-            },
-            {
-              "minuty": 46,
-              "Zawodnicy": "Sylwester Bukowski"
-            },
-            {
-              "minuty": 65,
-              "Zawodnicy": "Dawid Mederski"
-            },
-            {
-              "minuty": 44,
-              "Zawodnicy": "Radosław Buczkowski"
-            },
-            {
-              "minuty": 44,
-              "Zawodnicy": "Patryk Mówiński"
-            },
-            {
-              "minuty": 35,
-              "Zawodnicy": "Tomasz Sławiński"
-            },
-            {
-              "minuty": 25,
-              "Zawodnicy": "Szymon Lasikowski"
-            },
-            {
-              "minuty": 25,
-              "Zawodnicy": "Marek Laskowski"
-            },
-            {
-              "minuty": 44,
-              "Zawodnicy": "Adam Dybich"
-            },
-            {
-              "minuty": 25,
-              "Zawodnicy": "Cezary Chorzelewski"
-            }
-          ],
-          "gospodarze": "PFT Drewneks Sampława",
-          "enemyGoals": 1,
-          "logoEnemy": [
-            "https://ucarecdn.com/16b8c76b-acf1-4e28-b68d-605edba8b189/"
-          ],
-          "godzina": "16:00"
-        },
-        {
-          "pftGoals": 0,
-          "data": "10/16/2021",
-          "przeciwnik": "LZS Zamek Szymbark ",
-          "Sztab": [
-            {
-              "zespolSenior": " Łukasz Wietecha"
-            }
-          ],
-          "Statystyki": [
-            {
-              "BramkiPFT": [],
-              "Kartki": [
-                {
-                  "Zawodnicy": "Adam Dybich",
-                  "kartka": "żółta",
-                  "minuta": 59
-                },
-                {
-                  "Zawodnicy": "Andrzej Podlaszewski",
-                  "kartka": "żółta",
-                  "minuta": 93
-                },
-                {
-                  "Zawodnicy": "Andrzej Podlaszewski",
-                  "kartka": "czerwona",
-                  "minuta": 93
-                }
-              ],
-              "Zmiany": [
-                {
-                  "ZmianaZ": "Henryk Świątkowski",
-                  "minuta": 27,
-                  "ZmianaNa": "Sylwester Rynkowski"
-                },
-                {
-                  "ZmianaZ": "Tomasz Sławiński",
-                  "minuta": 74,
-                  "ZmianaNa": "Przemysław Cabaj"
-                },
-                {
-                  "ZmianaZ": "Dawid Mederski",
-                  "minuta": 86,
-                  "ZmianaNa": "Cezary Chorzelewski"
-                },
-                {
-                  "ZmianaZ": "Patryk Mówiński",
-                  "minuta": 60,
-                  "ZmianaNa": "Marek Laskowski"
-                },
-                {
-                  "ZmianaZ": "Sylwester Bukowski",
-                  "minuta": 60,
-                  "ZmianaNa": "Szymon Lasikowski"
-                }
-              ]
-            }
-          ],
-          "miejsce": "Szymbark ",
-          "Zawodnicy": [
-            {
-              "minuty": 90,
-              "Zawodnicy": "Adam Dybich"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Andrzej Podlaszewski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Łukasz Ochlak"
-            },
-            {
-              "minuty": 27,
-              "Zawodnicy": "Henryk Świątkowski"
-            },
-            {
-              "minuty": 74,
-              "Zawodnicy": "Tomasz Sławiński"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Michał Raciborski"
-            },
-            {
-              "minuty": 86,
-              "Zawodnicy": "Dawid Mederski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Jakub Lendzionowski"
-            },
-            {
-              "minuty": 90,
-              "Zawodnicy": "Radosław Buczkowski"
-            },
-            {
-              "minuty": 60,
-              "Zawodnicy": "Patryk Mówiński"
-            },
-            {
-              "minuty": 60,
-              "Zawodnicy": "Sylwester Bukowski"
-            },
-            {
-              "minuty": 4,
-              "Zawodnicy": "Cezary Chorzelewski"
-            },
-            {
-              "minuty": 16,
-              "Zawodnicy": "Przemysław Cabaj"
-            },
-            {
-              "minuty": 30,
-              "Zawodnicy": "Szymon Lasikowski"
-            },
-            {
-              "minuty": 60,
-              "Zawodnicy": "Marek Laskowski"
-            },
-            {
-              "minuty": 27,
-              "Zawodnicy": "Sylwester Rynkowski"
-            }
-          ],
-          "gospodarze": "PFT Drewneks Sampława",
-          "enemyGoals": 1,
-          "logoEnemy": [
-            "https://ucarecdn.com/06c11540-eb12-49d2-b562-ea34ce97d6ee/"
-          ],
-          "godzina": "16:00"
-        }
-      ]
-    }
-  ],
-  "AktualnySezon": "2021/2022"
-}
+// {
+//   "sezon": [
+//     {
+//       "sezon": "2020/2021",
+//       "mecz": [
+//         {
+//           "pftGoals": 0,
+//           "data": "10/23/2021",
+//           "przeciwnik": "LZS TORPEDA Rożental",
+//           "Statystyki": [
+//             {
+//               "BramkiPrzeciwnika": [],
+//               "Zmiany": [
+//                 {
+//                   "ZmianaZ": "Tomasz Sławiński",
+//                   "minuta": 50,
+//                   "ZmianaNa": "Szymon Lasikowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Szymon Łątkowski",
+//                   "minuta": 50,
+//                   "ZmianaNa": "Radosław Buczkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Michał Raciborski",
+//                   "minuta": 70,
+//                   "ZmianaNa": "Marek Nastachowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Marek Laskowski",
+//                   "minuta": 46,
+//                   "ZmianaNa": "Patryk Mówiński"
+//                 },
+//                 {
+//                   "ZmianaZ": "Dawid Mederski",
+//                   "minuta": 71,
+//                   "ZmianaNa": "Przemysław Cabaj"
+//                 }
+//               ],
+//               "Kartki": []
+//             }
+//           ],
+//           "miejsce": "Sampława",
+//           "Zawodnicy": [
+//             {
+//               "Zawodnicy": "Łukasz Ochlak",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Adam Dybich",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Andrzej Podlaszewski",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Sylwester Rynkowski",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Tomasz Sławiński",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Szymon Łątkowski",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Jakub Lendzionowski",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Dawid Mederski",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Michał Raciborski",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Marek Laskowski",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Dawid Mederski",
+//               "minuty": 0
+//             },
+//             {
+//               "Zawodnicy": "Sylwester Bukowski",
+//               "minuty": 0
+//             }
+//           ],
+//           "gospodarze": "PFT DREWNEKS SAMPŁAWA",
+//           "enemyGoals": 3,
+//           "logoEnemy": "/static/logo/torpeda_rozental.png",
+//           "godzina": "16:00"
+//         },
+//         {
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "pftGoals": 0,
+//           "enemyGoals": 0,
+//           "data": "02/12/2022",
+//           "przeciwnik": "Kormoran Zwierzewo",
+//           "godzina": "17:00",
+//           "miejsce": " ",
+//           "logoEnemy": "/static/logo/8205a702cc020a329d65aa0e5e57cdf3da4ae2.png"
+//         }
+//       ]
+//     },
+//     {
+//       "sezon": "2021/2022",
+//       "mecz": [
+//         {
+//           "pftGoals": 0,
+//           "data": "10/23/2021",
+//           "przeciwnik": "LZS TORPEDA Rożental",
+//           "Sztab": [
+//             {
+//               "zespolSenior": " Łukasz Wietecha"
+//             }
+//           ],
+//           "Statystyki": [
+//             {
+//               "BramkiPrzeciwnika": [],
+//               "Zmiany": [
+//                 {
+//                   "ZmianaZ": "Tomasz Sławiński",
+//                   "minuta": 50,
+//                   "ZmianaNa": "Szymon Lasikowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Szymon Łątkowski",
+//                   "minuta": 50,
+//                   "ZmianaNa": "Radosław Buczkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Michał Raciborski",
+//                   "minuta": 70,
+//                   "ZmianaNa": "Marek Nastachowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Marek Laskowski",
+//                   "minuta": 46,
+//                   "ZmianaNa": "Patryk Mówiński"
+//                 },
+//                 {
+//                   "ZmianaZ": "Dawid Mederski",
+//                   "minuta": 71,
+//                   "ZmianaNa": "Przemysław Cabaj"
+//                 }
+//               ],
+//               "Kartki": [],
+//               "BramkiPFT": []
+//             }
+//           ],
+//           "miejsce": "Sampława",
+//           "Zawodnicy": [
+//             {
+//               "Zawodnicy": "Łukasz Ochlak",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Adam Dybich",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Andrzej Podlaszewski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Sylwester Rynkowski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Tomasz Sławiński",
+//               "minuty": 60
+//             },
+//             {
+//               "Zawodnicy": "Szymon Łątkowski",
+//               "minuty": 50
+//             },
+//             {
+//               "Zawodnicy": "Jakub Lendzionowski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Dawid Mederski",
+//               "minuty": 71
+//             },
+//             {
+//               "Zawodnicy": "Michał Raciborski",
+//               "minuty": 70
+//             },
+//             {
+//               "Zawodnicy": "Marek Laskowski",
+//               "minuty": 46
+//             },
+//             {
+//               "Zawodnicy": "Sylwester Bukowski",
+//               "minuty": 55
+//             },
+//             {
+//               "minuty": 35,
+//               "Zawodnicy": "Cezary Chorzelewski"
+//             },
+//             {
+//               "minuty": 19,
+//               "Zawodnicy": "Przemysław Cabaj"
+//             },
+//             {
+//               "minuty": 70,
+//               "Zawodnicy": "Marek Nastachowski"
+//             },
+//             {
+//               "minuty": 40,
+//               "Zawodnicy": "Radosław Buczkowski"
+//             },
+//             {
+//               "minuty": 44,
+//               "Zawodnicy": "Patryk Mówiński"
+//             },
+//             {
+//               "minuty": 30,
+//               "Zawodnicy": "Szymon Lasikowski"
+//             }
+//           ],
+//           "gospodarze": "PFT DREWNEKS SAMPŁAWA",
+//           "enemyGoals": 3,
+//           "logoEnemy": [
+//             "https://ucarecdn.com/0cff89e1-ca4e-49b4-a2fe-4e3e9d12383f/"
+//           ],
+//           "godzina": "16:00"
+//         },
+//         {
+//           "pftGoals": 2,
+//           "data": "02/12/2022",
+//           "przeciwnik": "Kormoran Zwierzewo",
+//           "Statystyki": [],
+//           "miejsce": "Sampława",
+//           "Zawodnicy": [],
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "enemyGoals": 4,
+//           "logoEnemy": [
+//             "https://ucarecdn.com/c43b2aab-0b52-4095-85b5-d90226d2f5e3/"
+//           ],
+//           "godzina": "17:00"
+//         },
+//         {
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "pftGoals": 1,
+//           "enemyGoals": 5,
+//           "data": "02/19/2022",
+//           "przeciwnik": "Orzeł Ulnowo",
+//           "godzina": "17:45",
+//           "miejsce": "Sampława",
+//           "logoEnemy": [
+//             "https://ucarecdn.com/589bd474-744d-435e-9272-f066e7686ba5/"
+//           ]
+//         },
+//         {
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "pftGoals": 1,
+//           "enemyGoals": 8,
+//           "data": "02/26/2022",
+//           "przeciwnik": "KS Constract Lubawa",
+//           "godzina": "17:45",
+//           "miejsce": " ",
+//           "logoEnemy": [
+//             "https://ucarecdn.com/eb433a6c-d3e0-477c-92b6-84e54d84aff1/"
+//           ]
+//         },
+//         {
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "pftGoals": 0,
+//           "enemyGoals": 7,
+//           "data": "03/05/2022",
+//           "przeciwnik": "Radomniak Radomno",
+//           "godzina": "18:00",
+//           "miejsce": " ",
+//           "logoEnemy": [
+//             "https://ucarecdn.com/a861d3fd-4384-421d-912f-0aee733df99d/"
+//           ]
+//         },
+//         {
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "pftGoals": 0,
+//           "enemyGoals": 0,
+//           "data": "03/12/2022",
+//           "przeciwnik": "LZS Frednowy",
+//           "godzina": "18:00",
+//           "miejsce": " Boisko sztuczne w Iławie",
+//           "logoEnemy": [
+//             "https://ucarecdn.com/31ca62cb-0a10-40ef-ba71-94817a0895da/"
+//           ]
+//         },
+//         {
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "pftGoals": 6,
+//           "enemyGoals": 6,
+//           "data": "03/19/2022",
+//           "przeciwnik": "Jordan Kazanice",
+//           "godzina": "16:00",
+//           "miejsce": " ",
+//           "logoEnemy": [
+//             "https://ucarecdn.com/9d5624ac-d21e-413a-8ee5-06e3580fe317/"
+//           ]
+//         },
+//         {
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "pftGoals": 0,
+//           "enemyGoals": 0,
+//           "data": "03/26/2022",
+//           "przeciwnik": "Olimpia Kisielice",
+//           "godzina": "16:00",
+//           "miejsce": " ",
+//           "logoEnemy": [
+//             "https://ucarecdn.com/79ab7f01-fc02-4c7e-be5d-ceff3d386bd1/"
+//           ]
+//         },
+//         {
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "pftGoals": 0,
+//           "enemyGoals": 0,
+//           "data": "04/02/2022",
+//           "przeciwnik": "Agricola Mierki",
+//           "godzina": "16:00",
+//           "miejsce": " ",
+//           "logoEnemy": [
+//             "https://ucarecdn.com/ad9ae771-0d86-4746-95f7-a9000317d4db/"
+//           ]
+//         },
+//         {
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "pftGoals": 0,
+//           "enemyGoals": 4,
+//           "data": "04/09/2022",
+//           "przeciwnik": "GKS Dąbrówno",
+//           "godzina": "16:00",
+//           "miejsce": " ",
+//           "logoEnemy": [
+//             "https://ucarecdn.com/062905cd-030e-4e2e-8b90-f942fe1d2b1d/"
+//           ]
+//         },
+//         {
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "pftGoals": 11,
+//           "enemyGoals": 0,
+//           "data": "04/16/2022",
+//           "przeciwnik": "LZS Huragan Byszwałd",
+//           "godzina": "16:00",
+//           "miejsce": " ",
+//           "logoEnemy": [
+//             "https://ucarecdn.com/9db26905-9a31-44fe-8fa2-352342ce9d86/"
+//           ]
+//         },
+//         {
+//           "pftGoals": 4,
+//           "data": "08/29/2021",
+//           "przeciwnik": "UKS ŻAK JAMIELNIK",
+//           "Sztab": [
+//             {
+//               "zespolSenior": " Łukasz Wietecha"
+//             },
+//             {
+//               "zespolSenior": "Sławomir Sarlej"
+//             },
+//             {
+//               "zespolSenior": "Wojciech Jurkiewicz"
+//             }
+//           ],
+//           "Statystyki": [
+//             {
+//               "BramkiPFT": [
+//                 {
+//                   "Zawodnicy": "Michał Łukaszewski",
+//                   "minuta": 42
+//                 },
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "minuta": 42
+//                 },
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "minuta": 60
+//                 },
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "minuta": 78
+//                 }
+//               ],
+//               "BramkiPrzeciwnika": [],
+//               "Kartki": [
+//                 {
+//                   "Zawodnicy": "Lucjan Szwarc",
+//                   "kartka": "żółta",
+//                   "minuta": 20
+//                 },
+//                 {
+//                   "Zawodnicy": "Dawid Mederski",
+//                   "kartka": "żółta",
+//                   "minuta": 42
+//                 },
+//                 {
+//                   "Zawodnicy": "Szymon Łątkowski",
+//                   "kartka": "żółta",
+//                   "minuta": 62
+//                 },
+//                 {
+//                   "Zawodnicy": "Przemysław Cabaj",
+//                   "kartka": "żółta",
+//                   "minuta": 85
+//                 }
+//               ],
+//               "Zmiany": [
+//                 {
+//                   "ZmianaZ": "Wojciech Banacki",
+//                   "minuta": 72,
+//                   "ZmianaNa": "Sylwester Rynkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Szymon Lasikowski",
+//                   "minuta": 72,
+//                   "ZmianaNa": "Tomasz Sławiński"
+//                 },
+//                 {
+//                   "ZmianaZ": "Szymon Łątkowski",
+//                   "minuta": 60,
+//                   "ZmianaNa": "Arkadiusz Wietecha"
+//                 },
+//                 {
+//                   "ZmianaZ": "Jakub Lendzionowski",
+//                   "minuta": 80,
+//                   "ZmianaNa": "Przemysław Cabaj"
+//                 },
+//                 {
+//                   "ZmianaZ": "Michał Raciborski",
+//                   "minuta": 80,
+//                   "ZmianaNa": "Marek Laskowski"
+//                 }
+//               ]
+//             }
+//           ],
+//           "miejsce": "JAMIELNIK",
+//           "Zawodnicy": [
+//             {
+//               "Zawodnicy": "Łukasz Ochlak",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Lucjan Szwarc",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Andrzej Podlaszewski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Wojciech Banacki",
+//               "minuty": 72
+//             },
+//             {
+//               "Zawodnicy": "Szymon Lasikowski",
+//               "minuty": 72
+//             },
+//             {
+//               "Zawodnicy": "Dawid Mederski",
+//               "minuty": 60
+//             },
+//             {
+//               "Zawodnicy": "Szymon Łątkowski",
+//               "minuty": 60
+//             },
+//             {
+//               "Zawodnicy": "Radosław Buczkowski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Michał Łukaszewski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Jakub Lendzionowski",
+//               "minuty": 80
+//             },
+//             {
+//               "Zawodnicy": "Michał Raciborski",
+//               "minuty": 80
+//             }
+//           ],
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "enemyGoals": 1,
+//           "logoEnemy": [
+//             "https://ucarecdn.com/e14da4db-e077-499a-9385-6cd05bf2c8f1/"
+//           ],
+//           "godzina": "14:00"
+//         },
+//         {
+//           "pftGoals": 1,
+//           "data": "09/04/2021",
+//           "przeciwnik": "Olimpia Kisielice",
+//           "Sztab": [
+//             {
+//               "zespolSenior": " Łukasz Wietecha"
+//             }
+//           ],
+//           "Statystyki": [
+//             {
+//               "BramkiPFT": [
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "minuta": 43
+//                 }
+//               ],
+//               "Kartki": [
+//                 {
+//                   "Zawodnicy": "Patryk Mówiński",
+//                   "kartka": "żółta",
+//                   "minuta": 60
+//                 }
+//               ],
+//               "Zmiany": [
+//                 {
+//                   "ZmianaZ": "Arkadiusz Wietecha",
+//                   "minuta": 75,
+//                   "ZmianaNa": "Przemysław Cabaj"
+//                 },
+//                 {
+//                   "ZmianaZ": "Adam Dybich",
+//                   "minuta": 65,
+//                   "ZmianaNa": "Sylwester Rynkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Wojciech Banacki",
+//                   "minuta": 45,
+//                   "ZmianaNa": "Henryk Świątkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Radosław Buczkowski",
+//                   "minuta": 45,
+//                   "ZmianaNa": "Patryk Mówiński"
+//                 },
+//                 {
+//                   "ZmianaZ": "Szymon Lasikowski",
+//                   "minuta": 65,
+//                   "ZmianaNa": "Marek Laskowski"
+//                 }
+//               ]
+//             }
+//           ],
+//           "miejsce": "Kisielice",
+//           "Zawodnicy": [
+//             {
+//               "Zawodnicy": "Łukasz Ochlak",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Andrzej Podlaszewski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Arkadiusz Wietecha",
+//               "minuty": 75
+//             },
+//             {
+//               "Zawodnicy": "Adam Dybich",
+//               "minuty": 65
+//             },
+//             {
+//               "Zawodnicy": "Wojciech Banacki",
+//               "minuty": 45
+//             },
+//             {
+//               "Zawodnicy": "Szymon Łątkowski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Michał Łukaszewski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Radosław Buczkowski",
+//               "minuty": 45
+//             },
+//             {
+//               "Zawodnicy": "Michał Raciborski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Szymon Łątkowski",
+//               "minuty": 65
+//             },
+//             {
+//               "Zawodnicy": "Jakub Lendzionowski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Marek Laskowski",
+//               "minuty": 25
+//             },
+//             {
+//               "Zawodnicy": "Przemysław Cabaj",
+//               "minuty": 15
+//             },
+//             {
+//               "Zawodnicy": "Patryk Mówiński",
+//               "minuty": 45
+//             },
+//             {
+//               "Zawodnicy": "Sylwester Rynkowski",
+//               "minuty": 25
+//             },
+//             {
+//               "Zawodnicy": "Henryk Świątkowski",
+//               "minuty": 45
+//             }
+//           ],
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "enemyGoals": 1,
+//           "logoEnemy": [
+//             "https://ucarecdn.com/cbe0bfce-0408-458f-8c39-386583a4a753/"
+//           ],
+//           "godzina": "17:00"
+//         },
+//         {
+//           "pftGoals": 3,
+//           "data": "09/11/2021",
+//           "przeciwnik": "LZS Fijewo",
+//           "Sztab": [
+//             {
+//               "zespolSenior": " Łukasz Wietecha"
+//             }
+//           ],
+//           "Statystyki": [
+//             {
+//               "BramkiPFT": [
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "minuta": 26
+//                 },
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "minuta": 30
+//                 },
+//                 {
+//                   "Zawodnicy": "Henryk Świątkowski",
+//                   "minuta": 71
+//                 }
+//               ],
+//               "Kartki": [
+//                 {
+//                   "Zawodnicy": "Henryk Świątkowski",
+//                   "kartka": "żółta",
+//                   "minuta": 50
+//                 }
+//               ],
+//               "Zmiany": [
+//                 {
+//                   "ZmianaZ": "Tomasz Sławiński",
+//                   "minuta": 65,
+//                   "ZmianaNa": "Szymon Lasikowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Michał Łukaszewski",
+//                   "minuta": 58,
+//                   "ZmianaNa": "Radosław Buczkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Patryk Mówiński",
+//                   "minuta": 74,
+//                   "ZmianaNa": "Sylwester Bukowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Cezary Chorzelewski",
+//                   "minuta": 46,
+//                   "ZmianaNa": "Przemysław Cabaj"
+//                 },
+//                 {
+//                   "ZmianaZ": "Adam Dybich",
+//                   "minuta": 65,
+//                   "ZmianaNa": "Marek Laskowski"
+//                 }
+//               ]
+//             }
+//           ],
+//           "miejsce": "Samława",
+//           "Zawodnicy": [
+//             {
+//               "Zawodnicy": "Łukasz Ochlak",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Lucjan Szwarc",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Andrzej Podlaszewski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Tomasz Sławiński",
+//               "minuty": 65
+//             },
+//             {
+//               "Zawodnicy": "Henryk Świątkowski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Michał Łukaszewski",
+//               "minuty": 58
+//             },
+//             {
+//               "Zawodnicy": "Patryk Mówiński",
+//               "minuty": 74
+//             },
+//             {
+//               "Zawodnicy": "Cezary Chorzelewski",
+//               "minuty": 46
+//             },
+//             {
+//               "Zawodnicy": "Michał Raciborski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Adam Dybich",
+//               "minuty": 65
+//             },
+//             {
+//               "Zawodnicy": "Jakub Lendzionowski",
+//               "minuty": 90
+//             },
+//             {
+//               "Zawodnicy": "Przemysław Cabaj",
+//               "minuty": 44
+//             },
+//             {
+//               "Zawodnicy": "Marek Laskowski",
+//               "minuty": 25
+//             },
+//             {
+//               "Zawodnicy": "Radosław Buczkowski",
+//               "minuty": 32
+//             },
+//             {
+//               "Zawodnicy": "Szymon Lasikowski",
+//               "minuty": 25
+//             },
+//             {
+//               "Zawodnicy": "Sylwester Bukowski",
+//               "minuty": 16
+//             }
+//           ],
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "enemyGoals": 1,
+//           "logoEnemy": [
+//             "https://ucarecdn.com/c8323fdf-f34c-40cb-bd37-40d8ff3669f9/"
+//           ],
+//           "godzina": "17:00"
+//         },
+//         {
+//           "pftGoals": 4,
+//           "data": "09/18/2021",
+//           "przeciwnik": "Wicher Gwiździny",
+//           "Sztab": [
+//             {
+//               "zespolSenior": " Łukasz Wietecha"
+//             }
+//           ],
+//           "Statystyki": [
+//             {
+//               "BramkiPFT": [
+//                 {
+//                   "Zawodnicy": "Michał Raciborski",
+//                   "minuta": 15
+//                 },
+//                 {
+//                   "Zawodnicy": "Sylwester Rynkowski",
+//                   "minuta": 37
+//                 },
+//                 {
+//                   "Zawodnicy": "Sylwester Bukowski",
+//                   "minuta": 51
+//                 },
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "minuta": 79
+//                 }
+//               ],
+//               "Zmiany": [
+//                 {
+//                   "ZmianaZ": "Michał Łukaszewski",
+//                   "minuta": 55,
+//                   "ZmianaNa": "Radosław Buczkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Tomasz Sławiński",
+//                   "minuta": 55,
+//                   "ZmianaNa": "Szymon Lasikowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Lucjan Szwarc",
+//                   "minuta": 55,
+//                   "ZmianaNa": "Andrzej Podlaszewski"
+//                 }
+//               ]
+//             }
+//           ],
+//           "miejsce": "Gwiździny",
+//           "Zawodnicy": [
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Michał Raciborski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Sylwester Rynkowski"
+//             },
+//             {
+//               "minuty": 55,
+//               "Zawodnicy": "Sylwester Bukowski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Jakub Lendzionowski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Łukasz Ochlak"
+//             },
+//             {
+//               "minuty": 70,
+//               "Zawodnicy": "Henryk Świątkowski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Patryk Mówiński"
+//             },
+//             {
+//               "minuty": 55,
+//               "Zawodnicy": "Michał Łukaszewski"
+//             },
+//             {
+//               "minuty": 55,
+//               "Zawodnicy": "Tomasz Sławiński"
+//             },
+//             {
+//               "minuty": 55,
+//               "Zawodnicy": "Lucjan Szwarc"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Marek Laskowski"
+//             },
+//             {
+//               "minuty": 35,
+//               "Zawodnicy": "Andrzej Podlaszewski"
+//             },
+//             {
+//               "minuty": 35,
+//               "Zawodnicy": "Radosław Buczkowski"
+//             },
+//             {
+//               "minuty": 35,
+//               "Zawodnicy": "Szymon Lasikowski"
+//             }
+//           ],
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "enemyGoals": 0,
+//           "logoEnemy": [
+//             "https://ucarecdn.com/9e558b94-3238-45ba-a53c-90a20a06c066/"
+//           ],
+//           "godzina": "14:00"
+//         },
+//         {
+//           "pftGoals": 2,
+//           "data": "09/25/2021",
+//           "przeciwnik": "LZS Huragan Byszwałd",
+//           "Sztab": [
+//             {
+//               "zespolSenior": " Łukasz Wietecha"
+//             }
+//           ],
+//           "Statystyki": [
+//             {
+//               "BramkiPFT": [
+//                 {
+//                   "Zawodnicy": "Michał Raciborski",
+//                   "minuta": 58
+//                 },
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "minuta": 58
+//                 }
+//               ],
+//               "Kartki": [
+//                 {
+//                   "Zawodnicy": "Radosław Buczkowski",
+//                   "kartka": "żółta",
+//                   "minuta": 55
+//                 },
+//                 {
+//                   "Zawodnicy": "Andrzej Podlaszewski",
+//                   "kartka": "żółta",
+//                   "minuta": 83
+//                 }
+//               ],
+//               "Zmiany": [
+//                 {
+//                   "ZmianaZ": "Henryk Świątkowski",
+//                   "minuta": 72,
+//                   "ZmianaNa": "Tomasz Sławiński"
+//                 },
+//                 {
+//                   "ZmianaZ": "Szymon Lasikowski",
+//                   "minuta": 60,
+//                   "ZmianaNa": "Marek Laskowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Przemysław Cabaj",
+//                   "minuta": 7,
+//                   "ZmianaNa": "Michał Raciborski"
+//                 }
+//               ]
+//             }
+//           ],
+//           "miejsce": "Sampława",
+//           "Zawodnicy": [
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Jakub Lendzionowski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Radosław Buczkowski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Andrzej Podlaszewski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Patryk Mówiński"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Lucjan Szwarc"
+//             },
+//             {
+//               "minuty": 72,
+//               "Zawodnicy": "Henryk Świątkowski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Łukasz Ochlak"
+//             },
+//             {
+//               "minuty": 46,
+//               "Zawodnicy": "Sylwester Rynkowski"
+//             },
+//             {
+//               "minuty": 60,
+//               "Zawodnicy": "Szymon Lasikowski"
+//             },
+//             {
+//               "minuty": 83,
+//               "Zawodnicy": "Dawid Mederski"
+//             },
+//             {
+//               "minuty": 7,
+//               "Zawodnicy": "Przemysław Cabaj"
+//             },
+//             {
+//               "minuty": 83,
+//               "Zawodnicy": "Michał Raciborski"
+//             },
+//             {
+//               "minuty": 40,
+//               "Zawodnicy": "Marek Laskowski"
+//             },
+//             {
+//               "minuty": 18,
+//               "Zawodnicy": "Tomasz Sławiński"
+//             }
+//           ],
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "enemyGoals": 2,
+//           "logoEnemy": [
+//             "https://ucarecdn.com/126aed4d-09b6-4413-87d8-c26278970bb6/"
+//           ],
+//           "godzina": "17:00"
+//         },
+//         {
+//           "pftGoals": 1,
+//           "data": "10/02/2021",
+//           "przeciwnik": "UKS MAŁY JEZIORAK IŁAWA",
+//           "Sztab": [
+//             {
+//               "zespolSenior": " Łukasz Wietecha"
+//             }
+//           ],
+//           "Statystyki": [
+//             {
+//               "BramkiPFT": [
+//                 {
+//                   "Zawodnicy": "Sylwester Bukowski",
+//                   "minuta": 67
+//                 }
+//               ],
+//               "Kartki": [
+//                 {
+//                   "Zawodnicy": "Henryk Świątkowski",
+//                   "kartka": "żółta",
+//                   "minuta": 31
+//                 },
+//                 {
+//                   "Zawodnicy": "Radosław Buczkowski",
+//                   "kartka": "żółta",
+//                   "minuta": 66
+//                 },
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "kartka": "żółta",
+//                   "minuta": 72
+//                 },
+//                 {
+//                   "Zawodnicy": "Szymon Lasikowski",
+//                   "kartka": "żółta",
+//                   "minuta": 82
+//                 }
+//               ],
+//               "Zmiany": [
+//                 {
+//                   "ZmianaZ": "Sylwester Bukowski",
+//                   "minuta": 50,
+//                   "ZmianaNa": "Patryk Mówiński"
+//                 },
+//                 {
+//                   "ZmianaZ": "Henryk Świątkowski",
+//                   "minuta": 82,
+//                   "ZmianaNa": "Sylwester Rynkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Jakub Lendzionowski",
+//                   "minuta": 72,
+//                   "ZmianaNa": "Szymon Lasikowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Michał Łukaszewski",
+//                   "minuta": 56,
+//                   "ZmianaNa": "Radosław Buczkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Arkadiusz Wietecha",
+//                   "minuta": 56,
+//                   "ZmianaNa": "Szymon Łątkowski"
+//                 }
+//               ]
+//             }
+//           ],
+//           "miejsce": "Iława",
+//           "Zawodnicy": [
+//             {
+//               "minuty": 50,
+//               "Zawodnicy": "Sylwester Bukowski"
+//             },
+//             {
+//               "minuty": 82,
+//               "Zawodnicy": "Henryk Świątkowski"
+//             },
+//             {
+//               "minuty": 72,
+//               "Zawodnicy": "Jakub Lendzionowski"
+//             },
+//             {
+//               "minuty": 56,
+//               "Zawodnicy": "Michał Łukaszewski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Lucjan Szwarc"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Andrzej Podlaszewski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Michał Raciborski"
+//             },
+//             {
+//               "minuty": 82,
+//               "Zawodnicy": "Dawid Mederski"
+//             },
+//             {
+//               "minuty": 56,
+//               "Zawodnicy": "Arkadiusz Wietecha"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Łukasz Ochlak"
+//             },
+//             {
+//               "minuty": 18,
+//               "Zawodnicy": "Szymon Lasikowski"
+//             },
+//             {
+//               "minuty": 34,
+//               "Zawodnicy": "Szymon Łątkowski"
+//             },
+//             {
+//               "minuty": 34,
+//               "Zawodnicy": "Radosław Buczkowski"
+//             },
+//             {
+//               "minuty": 40,
+//               "Zawodnicy": "Patryk Mówiński"
+//             },
+//             {
+//               "minuty": 8,
+//               "Zawodnicy": "Marek Laskowski"
+//             },
+//             {
+//               "minuty": 8,
+//               "Zawodnicy": "Sylwester Rynkowski"
+//             },
+//             {
+//               "minuty": 25,
+//               "Zawodnicy": "Adam Dybich"
+//             }
+//           ],
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "enemyGoals": 1,
+//           "logoEnemy": [
+//             "https://ucarecdn.com/4c8147d2-2d74-4683-b461-95183899c1ce/"
+//           ],
+//           "godzina": "16:00"
+//         },
+//         {
+//           "pftGoals": 5,
+//           "data": "10/09/2021",
+//           "przeciwnik": "Wel Bratian",
+//           "Sztab": [
+//             {
+//               "zespolSenior": " Łukasz Wietecha"
+//             }
+//           ],
+//           "Statystyki": [
+//             {
+//               "BramkiPFT": [
+//                 {
+//                   "Zawodnicy": "Sylwester Bukowski",
+//                   "minuta": 1
+//                 },
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "minuta": 19
+//                 },
+//                 {
+//                   "Zawodnicy": "Sylwester Bukowski",
+//                   "minuta": 39
+//                 },
+//                 {
+//                   "Zawodnicy": "Jakub Lendzionowski",
+//                   "minuta": 58
+//                 },
+//                 {
+//                   "Zawodnicy": "Marek Laskowski",
+//                   "minuta": 78
+//                 }
+//               ],
+//               "Kartki": [
+//                 {
+//                   "Zawodnicy": "Radosław Buczkowski",
+//                   "kartka": "żółta",
+//                   "minuta": 55
+//                 }
+//               ],
+//               "Zmiany": [
+//                 {
+//                   "ZmianaZ": "Lucjan Szwarc",
+//                   "minuta": 55,
+//                   "ZmianaNa": "Tomasz Sławiński"
+//                 },
+//                 {
+//                   "ZmianaZ": "Sylwester Rynkowski",
+//                   "minuta": 46,
+//                   "ZmianaNa": "Radosław Buczkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Henryk Świątkowski",
+//                   "minuta": 65,
+//                   "ZmianaNa": "Szymon Lasikowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Michał Raciborski",
+//                   "minuta": 65,
+//                   "ZmianaNa": "Cezary Chorzelewski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Michał Łukaszewski",
+//                   "minuta": 46,
+//                   "ZmianaNa": "Patryk Mówiński"
+//                 }
+//               ]
+//             }
+//           ],
+//           "miejsce": "Sampława",
+//           "Zawodnicy": [
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Łukasz Ochlak"
+//             },
+//             {
+//               "minuty": 55,
+//               "Zawodnicy": "Lucjan Szwarc"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Andrzej Podlaszewski"
+//             },
+//             {
+//               "minuty": 46,
+//               "Zawodnicy": "Sylwester Rynkowski"
+//             },
+//             {
+//               "minuty": 65,
+//               "Zawodnicy": "Henryk Świątkowski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Szymon Łątkowski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Jakub Lendzionowski"
+//             },
+//             {
+//               "minuty": 65,
+//               "Zawodnicy": "Michał Raciborski"
+//             },
+//             {
+//               "minuty": 46,
+//               "Zawodnicy": "Michał Łukaszewski"
+//             },
+//             {
+//               "minuty": 46,
+//               "Zawodnicy": "Sylwester Bukowski"
+//             },
+//             {
+//               "minuty": 65,
+//               "Zawodnicy": "Dawid Mederski"
+//             },
+//             {
+//               "minuty": 44,
+//               "Zawodnicy": "Radosław Buczkowski"
+//             },
+//             {
+//               "minuty": 44,
+//               "Zawodnicy": "Patryk Mówiński"
+//             },
+//             {
+//               "minuty": 35,
+//               "Zawodnicy": "Tomasz Sławiński"
+//             },
+//             {
+//               "minuty": 25,
+//               "Zawodnicy": "Szymon Lasikowski"
+//             },
+//             {
+//               "minuty": 25,
+//               "Zawodnicy": "Marek Laskowski"
+//             },
+//             {
+//               "minuty": 44,
+//               "Zawodnicy": "Adam Dybich"
+//             },
+//             {
+//               "minuty": 25,
+//               "Zawodnicy": "Cezary Chorzelewski"
+//             }
+//           ],
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "enemyGoals": 1,
+//           "logoEnemy": [
+//             "https://ucarecdn.com/16b8c76b-acf1-4e28-b68d-605edba8b189/"
+//           ],
+//           "godzina": "16:00"
+//         },
+//         {
+//           "pftGoals": 0,
+//           "data": "10/16/2021",
+//           "przeciwnik": "LZS Zamek Szymbark ",
+//           "Sztab": [
+//             {
+//               "zespolSenior": " Łukasz Wietecha"
+//             }
+//           ],
+//           "Statystyki": [
+//             {
+//               "BramkiPFT": [],
+//               "Kartki": [
+//                 {
+//                   "Zawodnicy": "Adam Dybich",
+//                   "kartka": "żółta",
+//                   "minuta": 59
+//                 },
+//                 {
+//                   "Zawodnicy": "Andrzej Podlaszewski",
+//                   "kartka": "żółta",
+//                   "minuta": 93
+//                 },
+//                 {
+//                   "Zawodnicy": "Andrzej Podlaszewski",
+//                   "kartka": "czerwona",
+//                   "minuta": 93
+//                 }
+//               ],
+//               "Zmiany": [
+//                 {
+//                   "ZmianaZ": "Henryk Świątkowski",
+//                   "minuta": 27,
+//                   "ZmianaNa": "Sylwester Rynkowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Tomasz Sławiński",
+//                   "minuta": 74,
+//                   "ZmianaNa": "Przemysław Cabaj"
+//                 },
+//                 {
+//                   "ZmianaZ": "Dawid Mederski",
+//                   "minuta": 86,
+//                   "ZmianaNa": "Cezary Chorzelewski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Patryk Mówiński",
+//                   "minuta": 60,
+//                   "ZmianaNa": "Marek Laskowski"
+//                 },
+//                 {
+//                   "ZmianaZ": "Sylwester Bukowski",
+//                   "minuta": 60,
+//                   "ZmianaNa": "Szymon Lasikowski"
+//                 }
+//               ]
+//             }
+//           ],
+//           "miejsce": "Szymbark ",
+//           "Zawodnicy": [
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Adam Dybich"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Andrzej Podlaszewski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Łukasz Ochlak"
+//             },
+//             {
+//               "minuty": 27,
+//               "Zawodnicy": "Henryk Świątkowski"
+//             },
+//             {
+//               "minuty": 74,
+//               "Zawodnicy": "Tomasz Sławiński"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Michał Raciborski"
+//             },
+//             {
+//               "minuty": 86,
+//               "Zawodnicy": "Dawid Mederski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Jakub Lendzionowski"
+//             },
+//             {
+//               "minuty": 90,
+//               "Zawodnicy": "Radosław Buczkowski"
+//             },
+//             {
+//               "minuty": 60,
+//               "Zawodnicy": "Patryk Mówiński"
+//             },
+//             {
+//               "minuty": 60,
+//               "Zawodnicy": "Sylwester Bukowski"
+//             },
+//             {
+//               "minuty": 4,
+//               "Zawodnicy": "Cezary Chorzelewski"
+//             },
+//             {
+//               "minuty": 16,
+//               "Zawodnicy": "Przemysław Cabaj"
+//             },
+//             {
+//               "minuty": 30,
+//               "Zawodnicy": "Szymon Lasikowski"
+//             },
+//             {
+//               "minuty": 60,
+//               "Zawodnicy": "Marek Laskowski"
+//             },
+//             {
+//               "minuty": 27,
+//               "Zawodnicy": "Sylwester Rynkowski"
+//             }
+//           ],
+//           "gospodarze": "PFT Drewneks Sampława",
+//           "enemyGoals": 1,
+//           "logoEnemy": [
+//             "https://ucarecdn.com/06c11540-eb12-49d2-b562-ea34ce97d6ee/"
+//           ],
+//           "godzina": "16:00"
+//         }
+//       ]
+//     }
+//   ],
+//   "AktualnySezon": "2021/2022"
+// }
