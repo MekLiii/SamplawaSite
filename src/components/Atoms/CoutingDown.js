@@ -47,14 +47,14 @@ function CoutingDown() {
   const compareDate = newArray[indexOfCurrentDay + 1];
 
   const result = data.find(({ data }) => data == compareDate);
-  const stats = [result.Statystyki];
+  const stats = [result?.Statystyki];
 
-  if (result.Statystyki == undefined) {
+  if (result?.Statystyki == undefined) {
     stats.unshift("0");
   }
 
-  const resultNextMatch = data.find(({ data }) => data == compareDate);
-  if (resultNextMatch.data === currentDate) {
+  const resultNextMatch = data?.find(({ data }) => data == compareDate);
+  if (resultNextMatch?.data === currentDate) {
     return (
       <Box>
         <P>
@@ -64,11 +64,16 @@ function CoutingDown() {
       </Box>
     );
   }
+  console.log(resultNextMatch);
   return (
-    <Box>
-      <P>Na boisku widzimy się za:</P>
-      <OtherComponent dateTo={resultNextMatch.data} />
-    </Box>
+    <div>
+      {resultNextMatch != undefined && (
+        <Box>
+          <P>Na boisku widzimy się za:</P>
+          <OtherComponent dateTo={resultNextMatch?.data} />
+        </Box>
+      )}
+    </div>
   );
 }
 

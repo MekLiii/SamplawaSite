@@ -101,9 +101,9 @@ function MatchIndex() {
     const compareDate = newArray[indexOfCurrentDay + 1];
 
     const result = data.find(({ data }) => data == compareDate);
-    const stats = [result.Statystyki];
+    const stats = [result?.Statystyki];
 
-    if (result.Statystyki == undefined) {
+    if (result?.Statystyki == undefined) {
       stats.unshift("0");
     }
 
@@ -121,37 +121,43 @@ function MatchIndex() {
       day: "2-digit",
     });
   }
+  console.log(resultNextMatch);
   return (
     <Cointainer>
       <StyledDiv>
         <Bounce bottom>
           <MatchElIndex
             title="Ostatni mecz"
-            data={convertData(result.data)}
-            letters={result.gospodarze.slice(0, 3)}
-            name={result.gospodarze}
-            score={result.pftGoals}
-            lettersEnemy={result.przeciwnik.slice(0, 3)}
-            nameEnemy={result.przeciwnik}
-            scoreEnemy={result.enemyGoals}
+            data={convertData(result?.data)}
+            letters={result?.gospodarze.slice(0, 3)}
+            name={result?.gospodarze}
+            score={result?.pftGoals}
+            lettersEnemy={result?.przeciwnik.slice(0, 3)}
+            nameEnemy={result?.przeciwnik}
+            scoreEnemy={result?.enemyGoals}
             whatNext="Zobacz statystyki"
-            link={`/mecze/${result.gospodarze}-${result.przeciwnik}`}
+            link={`/mecze/${result?.gospodarze}-${result?.przeciwnik}`}
             sign="-"
           />
         </Bounce>
-        <Bounce bottom>
-          <MatchElIndex
-            title="Następny mecz"
-            data={convertData(resultNextMatch?.data)}
-            letters="PFT"
-            name={resultNextMatch?.gospodarze}
-            lettersEnemy={resultNextMatch.przeciwnik.slice(0, 3)}
-            nameEnemy={resultNextMatch?.przeciwnik}
-            whatNext={`${resultNextMatch?.godzina} ${resultNextMatch?.miejsce}`}
-            sign="VS"
-             
-          />
-        </Bounce>
+        {resultNextMatch !== undefined ? (
+          <Bounce bottom>
+            <MatchElIndex
+              title="Następny mecz"
+              data={convertData(resultNextMatch?.data)}
+              letters="PFT"
+              name={resultNextMatch?.gospodarze}
+              lettersEnemy={resultNextMatch?.przeciwnik.slice(0, 3)}
+              nameEnemy={resultNextMatch?.przeciwnik}
+              whatNext={`${resultNextMatch?.godzina} ${resultNextMatch?.miejsce}`}
+              sign="VS"
+            />
+          </Bounce>
+        ) : (
+          <Bounce bottom>
+            <MatchElIndex sign="Brak następnych meczy" />
+          </Bounce>
+        )}
       </StyledDiv>
     </Cointainer>
   );
