@@ -1477,6 +1477,18 @@
           "logoEnemy": [
             "https://ucarecdn.com/e546fa5a-7ff0-4153-9e4f-3475e3b999a0/"
           ]
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "06/04/2022",
+          "przeciwnik": "Wel Bratian",
+          "godzina": "17:00",
+          "miejsce": "Sampława",
+          "logoEnemy": [
+            "https://ucarecdn.com/0f091715-1627-40e5-9d69-11e3fd7de8be/"
+          ]
         }
       ]
     }
