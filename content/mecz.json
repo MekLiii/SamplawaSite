@@ -1417,6 +1417,18 @@
             "https://ucarecdn.com/06c11540-eb12-49d2-b562-ea34ce97d6ee/"
           ],
           "godzina": "16:00"
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "04/23/2022",
+          "logoEnemy": [
+            "https://ucarecdn.com/f1f0d28b-bd3d-4bb1-b664-c2cf516d7dbf/"
+          ],
+          "przeciwnik": "UKS Żak Jamielnik",
+          "godzina": "17:00",
+          "miejsce": "Boisko w Sampławie"
         }
       ]
     }
