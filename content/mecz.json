@@ -1441,6 +1441,18 @@
           "przeciwnik": "Olmpia Kisielice",
           "godzina": "16:00",
           "miejsce": "Boisko w Sampławie"
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "04/14/2022",
+          "logoEnemy": [
+            "https://ucarecdn.com/ba245a25-ef8d-475d-aafd-c3a9f7508fc7/"
+          ],
+          "przeciwnik": "Wicher Gwiździny",
+          "godzina": "17:00",
+          "miejsce": "Boisko w Sampłąwie"
         }
       ]
     }
