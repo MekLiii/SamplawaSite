@@ -1465,6 +1465,18 @@
           "logoEnemy": [
             "https://ucarecdn.com/ddad6389-3500-4c2a-966a-28a22b0a3aff/"
           ]
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "05/28/2022",
+          "przeciwnik": "Mały Jeziorak Iława",
+          "godzina": "17:00",
+          "miejsce": "Sampława",
+          "logoEnemy": [
+            "https://ucarecdn.com/e546fa5a-7ff0-4153-9e4f-3475e3b999a0/"
+          ]
         }
       ]
     }
