@@ -1489,6 +1489,18 @@
           "logoEnemy": [
             "https://ucarecdn.com/0f091715-1627-40e5-9d69-11e3fd7de8be/"
           ]
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "04/19/2022",
+          "przeciwnik": "GKS LZS Szymbark",
+          "godzina": "17:00",
+          "miejsce": "Sampława",
+          "logoEnemy": [
+            "https://ucarecdn.com/718923ba-4ead-4c67-a651-2b22daa26e53/"
+          ]
         }
       ]
     }
