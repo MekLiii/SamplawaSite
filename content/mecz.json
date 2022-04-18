@@ -1446,13 +1446,25 @@
           "gospodarze": "PFT Drewneks Sampława",
           "pftGoals": 0,
           "enemyGoals": 0,
-          "data": "04/14/2022",
+          "data": "05/14/2022",
           "logoEnemy": [
             "https://ucarecdn.com/ba245a25-ef8d-475d-aafd-c3a9f7508fc7/"
           ],
           "przeciwnik": "Wicher Gwiździny",
           "godzina": "17:00",
           "miejsce": "Boisko w Sampłąwie"
+        },
+        {
+          "gospodarze": "PFT Drewneks Sampława",
+          "pftGoals": 0,
+          "enemyGoals": 0,
+          "data": "05/21/2022",
+          "przeciwnik": "Huragan Byszwałd",
+          "godzina": "17:00",
+          "miejsce": "Sampława",
+          "logoEnemy": [
+            "https://ucarecdn.com/ddad6389-3500-4c2a-966a-28a22b0a3aff/"
+          ]
         }
       ]
     }
