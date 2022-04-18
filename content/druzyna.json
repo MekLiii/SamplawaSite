@@ -153,16 +153,6 @@
     },
     {
       "zdjecia": [
-        "https://ucarecdn.com/f8e2f132-2b42-4361-a339-1592633f69f5/"
-      ],
-      "name": "Szymon Nojman",
-      "pozycja": "obrońca",
-      "zdjeciaBetter": [
-        "https://ucarecdn.com/55fac669-6505-42a5-8373-21c8d6aedaa1/"
-      ]
-    },
-    {
-      "zdjecia": [
         "https://ucarecdn.com/b66c6662-8d49-4fee-b757-34de7e086f47/"
       ],
       "name": "Radosław Buczkowski",
@@ -346,6 +336,11 @@
       "zdjeciaBetter": [
         "https://ucarecdn.com/b3b6cc4b-9c8f-4fdb-b541-e231ffff3643/"
       ]
+    },
+    {
+      "zdjecia": "/players/test.jpg",
+      "name": "Łukasz Wietecha",
+      "pozycja": "pomocnik"
     }
   ],
   "mlodzik": [
