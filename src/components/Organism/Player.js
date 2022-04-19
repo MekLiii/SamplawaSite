@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "./Layout";
 import styled from "styled-components";
 import TableHero from "../Molecules/roles/TableHero";
-import data from "../../../content/mecz.json";
+// import data from "../../../content/mecz.json";
 import players from "../../../content/druzyna.json";
 import AccordionEl from "../Atoms/AccordionEl";
 import { faFutbol, faSquare } from "@fortawesome/free-solid-svg-icons";
@@ -10,139 +10,77 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Chart from "../Atoms/Chart";
 import bgPattern from "../../../content/assets/bg-pattran.png";
+import { useStaticQuery, graphql } from "gatsby"
 
 function Player({ pageContext }) {
   const { slug } = pageContext;
-  //aktualny sezon
-  // strzelone bramki
-  //filter
-  function filter(value) {
-    return value != undefined;
-  }
-  //
-  const matchWhoWhenScored = [];
-  const matchWhenPlayersScored = [];
-  data.sezon.forEach((el) =>
-    el?.mecz.forEach((el) =>
-      el?.Statystyki?.forEach((el) => matchWhoWhenScored.push(el?.BramkiPFT))
-    )
-  );
-  matchWhoWhenScored.forEach((el) =>
-    matchWhenPlayersScored.push(el?.find((el) => el?.Zawodnicy === slug.name))
-  );
-  const scoredGoals = []
-  function filterNames(element){
-    return (element.Zawodnicy === slug.name && element.length != 0);
-  }
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/mecze/"}}) {
+        nodes {
+          frontmatter {
+            czas
+            data
+            gospodarze
+            logoEnemy
+            miejsce
+            pftGoals
+            przeciwnik
+            thumbnail
+            godzina
+            pftGoals
+            BramkiPFT {
+              Zawodnicy
+              minuta
+            }
+            Zmiany {
+              ZmianaNa
+              ZmianaZ
+              minuta
+            }
+            Zawodnicy {
+              Zawodnicy
+              minuty
+            }
+            Sztab {
+              zespolSenior
+            }
+            Kartki {
+              Zawodnicy
+              kartka
+              minuta
+            }
+          }
+        }
+      }
+    }
+  `)
+  let minuts = 0;
+  let playedMatches = 0;
+  let goals = 0;
+  let yellowCards = 0;
+  let redCards = 0;
+  let sortedArrayWhichMatch = []
+  let test;
+
+  // data.allMarkdownRemark.nodes.forEach((el) => console.log(el))
   
-  let chuj = [];
-  matchWhoWhenScored.forEach((el) =>
-  chuj.push((el?.filter(filterNames))?.length) 
-  );
-  const filtredCHuj =  chuj.filter(filter)
+  const playerData = data.allMarkdownRemark.nodes.filter(el => el.frontmatter.Zawodnicy.some(el => el != undefined && el.Zawodnicy === slug.name))
+
+  // played minuts
+   playerData.forEach(el => minuts += (el.frontmatter.Zawodnicy.find(el => el.Zawodnicy === slug.name).minuty))
+   // played matches
+   playedMatches = playerData.length;
+    // goals
+    const goalsArray = []
+    playerData.forEach(el => goalsArray.push(el.frontmatter.BramkiPFT.find((el) => el.Zawodnicy === slug.name)?.minuta))
+    const filterArrayGoals = goalsArray.filter(el => el != undefined)
+    goals = filterArrayGoals.length;
+ //function which check how many yellow cars player has 
+  const yellowCardsArray = []
+  playerData.forEach(el => yellowCardsArray.push(el.frontmatter.Kartki.find((el) => el.Zawodnicy === slug.name && el.kartka === "Żółta")))
+   console.log(yellowCardsArray)
   
-  let sum = 0;
-  
-  for (let i = 0; i < filtredCHuj.length; i++) {
-      sum += filtredCHuj[i];
-  }
-  
-  //filtruje elementy które są undefined
-  
-  // zagrane mecze
-  const playedMatchesArray = data.sezon.find(
-    (el) => el.sezon === "2021/2022"
-  ).mecz;
-  const objectToArray = [];
-  playedMatchesArray.forEach((el) =>
-    el.Zawodnicy ? objectToArray.push([el]) : []
-  );
-
-  const playedMatechNotFilter = [];
-  objectToArray.forEach((el) =>
-    playedMatechNotFilter.push(
-      el.find((result) =>
-        result.Zawodnicy?.find((player) => player.Zawodnicy === slug.name)
-      )
-    )
-  );
-  const sortedArrayWhichMatch = playedMatechNotFilter.filter(filter);
-
-  //stała filtrująca tablice matchWhenPlayersScored
-  const sortedArrayWhenScored = matchWhenPlayersScored.filter(filter);
-    
-
-  //ile meczy zagrał zawodnik
-  const playedMatchesAllPlayers = [];
-  data.sezon.forEach((el) =>
-    el?.mecz.forEach((el) => playedMatchesAllPlayers.push(el.Zawodnicy))
-  );
-
-  const sortedplayedMatchesAllPlayers = playedMatchesAllPlayers.filter(filter);
-  const howManyMatchesPlayed = [];
-  sortedplayedMatchesAllPlayers.forEach((el) =>
-    howManyMatchesPlayed.push(el.find((el) => el.Zawodnicy === slug.name))
-  );
-  const filterArray = howManyMatchesPlayed.filter(filter);
-    
-  // Kartki
-  const cards = [];
-  data.sezon.forEach((el) =>
-    el?.mecz.forEach((el) =>
-      el?.Statystyki?.forEach((el) => cards.push(el?.Kartki))
-    )
-  );
-
-  //żółte kartki
-  const yellowCardsArray = [];
-  yellowCardsArray.filter(filter);
-  cards.forEach((el) =>
-    yellowCardsArray.push(el?.find((el) => el.kartka === "żółta"))
-  );
-  const sortedYellowCards = yellowCardsArray.filter(filter);
-  // czerowne kartki
-  const redCardsArray = [];
-
-  cards.forEach((el) =>
-    redCardsArray.push(el?.find((el) => el.kartka === "żółta"))
-  );
-  const sortedRedCards = redCardsArray.filter(filter);
-  //Naprowione czerowne kartki
-  const repairRedCars = [];
-  cards.forEach((el) =>
-    repairRedCars.push(
-      el != undefined ? Object.values(el).find(
-        (el) => el.Zawodnicy === slug.name && el.kartka === "czerowna"
-      ) : console.log()
-    )
-  );
-  const filterRepairRedCards = repairRedCars.filter(filter);
-  //Naprawione zolte kartkii
-  const repairYellowCars = [];
-  cards.forEach((el) =>
-    repairYellowCars.push(
-      el != undefined ? Object.values(el).find(
-        (el) => el.Zawodnicy === slug.name && el.kartka === "żółta"
-      ) : console.log()
-    )
-  );
-
-  const filterRepairYellowCards = repairYellowCars.filter(filter);
-  //data z zawodnicy.json
-  const playerData = players.team.find((el) => el.name === slug.name);
-  const playerGoals = playerData.bramki;
-  
-  //minuty
-  let minuty = 0;
-  filterArray.forEach((el) => (minuty += el.minuty));
-  //
-
-  // const goals =  scoredGoals.length;
-  const goals =  sum;
-  const playedMatches =  sortedArrayWhichMatch.length;
-  const yellowCards =  filterRepairYellowCards.length;
-  const redCards =  + filterRepairRedCards.length;
-  const minuts = minuty;
   return (
     <Layout>
       <Box>
@@ -226,15 +164,15 @@ function Player({ pageContext }) {
               </Grid>
             </SezonBox>
             <SezonBox style={{ height: "70%" }}>
-              {/* <span
+              <span
                 style={{ color: "white", fontSize: "clamp(15px, 5vw, 30px)" }}
               >
                 Rozegrane mecze w sezonie: {data.AktualnySezon}
-              </span> */}
-              <AccordionEl data={sortedArrayWhichMatch} slugName={slug} />
+              </span> 
+               <AccordionEl data={sortedArrayWhichMatch} slugName={slug} />
             </SezonBox>
-          </Right>
-        </Cointainer>
+          </Right> 
+         </Cointainer> 
       </Box>
     </Layout>
   );

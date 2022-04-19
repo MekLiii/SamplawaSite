@@ -1,4 +1,4 @@
-import React, { useState }from "react";
+import React, { useState } from "react";
 import MatchElIndex from "./MatchElIndex";
 import styled from "styled-components";
 import mecz from "../../../../content/mecz.json";
@@ -31,68 +31,26 @@ function MatchIndex() {
       }
     }
   `);
-  const [lastMatchData] = useState(lastMatch.allMarkdownRemark.nodes)
-  lastMatchData.sort((a,b) => new Date(a.frontmatter.data) - new Date(b.frontmatter.data));
-  const resultLatMatch = lastMatchData[lastMatchData.length - 1].frontmatter
 
-  console.log(lastMatch)
+  // last match
+  const [lastMatchData] = useState(lastMatch.allMarkdownRemark.nodes);
+  lastMatchData.sort(
+    (a, b) => new Date(a.frontmatter.data) - new Date(b.frontmatter.data)
+  );
+  const filteredLastMatchData = lastMatchData.filter(
+    (el) => new Date(el.frontmatter.data) < new Date()
+  );
+  const resultLatMatch =
+    filteredLastMatchData[filteredLastMatchData.length - 1].frontmatter;
 
-  const nextmatchChuj = lastMatchData.reverse().find((el)=> new Date(el.frontmatter.data) > new Date())
-  console.log(nextmatchChuj)
+  // find the next match in the future
+  const nextMatch = lastMatchData.find(
+    (el) => new Date(el.frontmatter.data) > new Date()
+  ).frontmatter;
+  console.log(nextMatch);
+  const nextMatchHour = parseInt(nextMatch.godzina / 60);
+  const nextMatchMinutes = nextMatch.godzina % 60 > 9 ? nextMatch.godzina % 60 : `0${nextMatch.godzina % 60}`;
 
-
-  function nextMatch() {
-    const match = mecz.sezon;
-    const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
-    const matchArray = [];
-
-    const today = new Date();
-
-    const currentDay =
-      today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
-    const currentMonth =
-      today.getMonth() + 1 > "9"
-        ? today.getMonth() + 1
-        : "0" + (today.getMonth() + 1);
-
-    const currentDate =
-      currentMonth + "/" + currentDay + "/" + today.getFullYear();
-    matchArray.push(currentDate);
-
-    data.map((el) => matchArray.push(el.data));
-
-    //Sortowanie daty, od najstarszej do najnowszej
-    const newSortedArray = [];
-    matchArray.forEach((el) => newSortedArray.push(new Date(el)));
-    newSortedArray.sort((a, b) => b - a);
-    newSortedArray.reverse();
-    const newArray = [];
-    newSortedArray.forEach((el) =>
-      newArray.push(
-        el.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-        })
-      )
-    );
-
-    const indexOfCurrentDay = newArray.indexOf(currentDate);
-    const compareDate = newArray[indexOfCurrentDay + 1];
-
-    const result = data.find(({ data }) => data == compareDate);
-    const stats = [result?.Statystyki];
-
-    if (result?.Statystyki == undefined) {
-      stats.unshift("0");
-    }
-
-    const resultNextMatch = data.find(({ data }) => data == compareDate);
-
-    return resultNextMatch;
-  }
-
-  const resultNextMatch = nextMatch();
   function convertData(x) {
     const newData = new Date(x);
     return newData.toLocaleDateString("Pl", {
@@ -118,19 +76,18 @@ function MatchIndex() {
             whatNext="Zobacz statystyki"
             link={`/mecze/${resultLatMatch?.gospodarze}-${resultLatMatch?.przeciwnik}-${resultLatMatch?.data}`}
             sign="-"
-            
           />
         </Bounce>
-        {resultNextMatch !== undefined ? (
+        {nextMatch !== undefined ? (
           <Bounce bottom>
             <MatchElIndex
               title="Następny mecz"
-              data={convertData(resultNextMatch?.data)}
+              data={convertData(nextMatch?.data)}
               letters="PFT"
-              name={resultNextMatch?.gospodarze}
-              lettersEnemy={resultNextMatch?.przeciwnik.slice(0, 3)}
-              nameEnemy={resultNextMatch?.przeciwnik}
-              whatNext={`${resultNextMatch?.godzina} ${resultNextMatch?.miejsce}`}
+              name={nextMatch?.gospodarze}
+              lettersEnemy={nextMatch?.przeciwnik.slice(0, 3)}
+              nameEnemy={nextMatch?.przeciwnik}
+              whatNext={`${nextMatchHour}:${nextMatchMinutes} ${nextMatch?.miejsce}`}
               sign="VS"
               color="black"
             />

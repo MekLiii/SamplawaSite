@@ -4,8 +4,53 @@ import styled from "styled-components";
 import data from "../../content/klub100.json";
 import klub from "../../content/assets/klub100.webp";
 import wzor from "../../content/assets/szablon.webp";
+import { graphql, useStaticQuery } from "gatsby";
 
 function Klub100() {
+  const result = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: {fileAbsolutePath: {regex: "/content/mecze/"}, frontmatter: {}}
+      ) {
+        nodes {
+          frontmatter {
+            czas
+            data
+            gospodarze
+            logoEnemy
+            miejsce
+            pftGoals
+            przeciwnik
+            thumbnail
+            godzina
+            pftGoals
+            BramkiPFT {
+              Zawodnicy
+              minuta
+            }
+            Zmiany {
+              ZmianaNa
+              ZmianaZ
+              minuta
+            }
+            Zawodnicy {
+              Zawodnicy
+              minuty
+            }
+            Sztab {
+              zespolSenior
+            }
+            Kartki {
+              Zawodnicy
+              kartka
+              minuta
+            }
+          }
+        }
+      }
+    }
+  `)
+  console.log(result)
   return (
     <Layout currectSiteProp="klub100">
       <StyledDiv>
@@ -72,7 +117,9 @@ function Klub100() {
             >
               <P>{data.Pozostale.title}</P>
               {/* <P>{data.Pozostale.Link}</P> */}
-              <P><a href="#">Formularz pobierzesz tutaj</a></P>
+              <P>
+                <a href="#">Formularz pobierzesz tutaj</a>
+              </P>
             </StyledSection>
             <StyledSection
               style={{
@@ -102,7 +149,7 @@ const StyledDiv = styled.div`
   margin-bottom: 20px;
 `;
 const StyledBox = styled.div`
-  width:60%;
+  width: 60%;
   min-height: 150vh;
   display: flex;
   justify-content: center;

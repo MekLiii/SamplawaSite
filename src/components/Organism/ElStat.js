@@ -21,7 +21,7 @@ function ElStat({ pageContext }) {
   };
 
   const sztab = slug.Sztab;
-  console.log(team.zespolSenior)
+  
 
   const useStyles = makeStyles({
     root: {
@@ -102,7 +102,7 @@ function ElStat({ pageContext }) {
       <PlayersBox>
         <PlayersHolder>
           <Title>Skład wyjściowy</Title>
-          {whichMecz.Zawodnicy?.filter((el ,idx) => idx <= 11).map((el) => (
+          {whichMecz.Zawodnicy?.filter((el, idx) => idx <= 11).map((el) => (
             <PlayerSec
               link={`/kadra/${el.Zawodnicy}`}
               name={el.Zawodnicy}
@@ -117,7 +117,7 @@ function ElStat({ pageContext }) {
             />
           ))}
           <Title>Skład rezerwowy</Title>
-          {whichMecz.Zawodnicy?.filter((el ,idx) => idx > 11).map((el) => (
+          {whichMecz.Zawodnicy?.filter((el, idx) => idx > 11).map((el) => (
             <PlayerSec
               link={`/kadra/${el.Zawodnicy}`}
               name={el.Zawodnicy}
@@ -193,14 +193,18 @@ function ElStat({ pageContext }) {
               name={el.zespolSenior}
               key={el.zespolSenior}
               // StyleIcon={{ display: "none" }}
-              styleMinuts={{display: "none" }}
-               src={
-                 team.zespolSenior?.find((element) => element.name === el.zespolSenior)
-                   ?.zdjecia
-               }
+              styleMinuts={{ display: "none" }}
+              src={
+                team.zespolSenior?.find(
+                  (element) => element.name === el.zespolSenior
+                )?.zdjecia
+              }
               StyleArrow={{ display: "none" }}
-              rola={team.zespolSenior?.find((element) => element.name === el.zespolSenior)
-                   ?.rola}
+              rola={
+                team.zespolSenior?.find(
+                  (element) => element.name === el.zespolSenior
+                )?.rola
+              }
             />
           ))}
         </PlayersHolder>
@@ -210,10 +214,10 @@ function ElStat({ pageContext }) {
 
   return (
     <Layout>
-      <Cointainer>
+      <Cointainer style={{marginTop:"50px"}}>
         <Box>
           <SidebarTop>
-            <FormControl
+            {/* <FormControl
               sx={{ margin: "30px", width: "90%" }}
               className={classes.root}
             >
@@ -242,7 +246,7 @@ function ElStat({ pageContext }) {
                   </MenuItem>
                 ))}
               </Select>
-            </FormControl>
+            </FormControl> */}
           </SidebarTop>
           <SidebarBottom>
             <WhoMother>
@@ -367,7 +371,6 @@ const WhoPlayBox = styled.div`
   background-color: black;
 
   border: 1px solid #ffe600;
-  @media (min-width: 900px);
 `;
 
 const WhoScoredBox = styled.div`
