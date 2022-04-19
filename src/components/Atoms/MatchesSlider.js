@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
@@ -9,23 +9,44 @@ import "./app.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
-// import Swiper core and required modules
-
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-
+import { useStaticQuery, graphql } from "gatsby";
 // install Swiper modules
 
 SwiperCore.use([Autoplay, Navigation]);
 
 export default function MatchesSlider() {
-  const match = mecz.sezon;
-  const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/content/mecze/" } }
+      ) {
+        nodes {
+          frontmatter {
+            czas
+            data
+            gospodarze
+            logoEnemy
+            pftGoals
+            miejsce
+            pftGoals
+            przeciwnik
+            thumbnail
+            godzina
+          }
+        }
+      }
+    }
+  `);
+  const [matchesData, setMatchesData] = useState(data.allMarkdownRemark.nodes);
 
-  const sortedArrayDates = [];
-  data.forEach((el) =>
-    el.Zawodnicy?.length > 0 ? "" : sortedArrayDates.push(el)
-  );
+  // const match = mecz.sezon;
+  // const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
+
+  // const sortedArrayDates = [];
+  // data.forEach((el) =>
+  //   el.Zawodnicy?.length > 0 ? "" : sortedArrayDates.push(el)
+  // );
   function convertData(x) {
     const newData = new Date(x);
     return newData.toLocaleDateString("Pl", {
@@ -33,6 +54,7 @@ export default function MatchesSlider() {
       month: "2-digit",
       day: "2-digit",
     });
+    
   }
   return (
     <Swiper
@@ -68,24 +90,25 @@ export default function MatchesSlider() {
         alignItems: "center",
       }}
     >
-      {sortedArrayDates.map((el) => (
+      {matchesData.map(({frontmatter}) => (
+
         <SwiperSlide
           style={{
             height: "200px",
             boderRadius: "50%",
             backgroundColor: "inherit",
           }}
-          key={el.data}
+          key={frontmatter.data}
         >
           <SliderElement
-            date={convertData(el.data)}
+            date={convertData(frontmatter.data)}
             srcPFT={logo}
-            srcEnemy={el.logoEnemy}
+            srcEnemy={frontmatter.logoEnemy}
             style={{ backgroundColor: "#ffe600" }}
-            name={el.gospodarze}
-            nameEnemy={el.przeciwnik}
-            time={el.godzina}
-            place={el.miejsce}
+            name={frontmatter.gospodarze}
+            nameEnemy={frontmatter.przeciwnik}
+            // time={frontmatter.godzina}
+            place={frontmatter.miejsce}
           />
         </SwiperSlide>
       ))}
@@ -158,7 +181,6 @@ const SliderElement = ({
         </div>
       </Mid>
       <Bot>
-        <P>{time}</P>
         <P>Boisko: {place}</P>
         <P>{date}</P>
       </Bot>

@@ -3,64 +3,35 @@ import MatchElIndex from "./MatchElIndex";
 import styled from "styled-components";
 import mecz from "../../../../content/mecz.json";
 import Bounce from "react-reveal/Zoom";
+import { useStaticQuery, graphql } from "gatsby"
 
 function MatchIndex() {
-  function lasMatch() {
-    const match = mecz.sezon;
-    const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
-    const matchArray = [];
-
-    const today = new Date();
-
-    const currentDay =
-      today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
-    const currentMonth =
-      today.getMonth() + 1 > "9"
-        ? today.getMonth() + 1
-        : "0" + (today.getMonth() + 1);
-
-    const currentDate =
-      currentMonth + "/" + currentDay + "/" + today.getFullYear();
-    matchArray.push(currentDate);
-
-    data.map((el) => matchArray.push(el.data));
-
-    //Sortowanie daty, od najstarszej do najnowszej
-    const newSortedArray = [];
-    matchArray.forEach((el) => newSortedArray.push(new Date(el)));
-    newSortedArray.sort((a, b) => b - a);
-    newSortedArray.reverse();
-    const newArray = [];
-    newSortedArray.forEach((el) =>
-      newArray.push(
-        el.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-        })
-      )
-    );
-
-    const indexOfCurrentDay = newArray.indexOf(currentDate);
-    const compareDate = newArray[indexOfCurrentDay - 1];
-
-    const result = data.find(({ data }) => data == compareDate);
-
-    const stats = [result.Statystyki];
-
-    if (result.Statystyki == undefined) {
-      stats.unshift("0");
+  const lastMatch = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: {fileAbsolutePath: {regex: "/content/mecze/"}}
+        sort: {fields: frontmatter___data, order: DESC}
+        limit: 1
+      ) {
+        nodes {
+          frontmatter {
+            czas
+            data
+            gospodarze
+            logoEnemy
+            miejsce
+            pftGoals
+            przeciwnik
+            thumbnail
+            godzina
+            pftGoals
+          }
+        }
+      }
     }
+  `)
+  const lastMatchData = lastMatch.allMarkdownRemark.nodes[0].frontmatter;
 
-    const bramkiPFT =
-      stats[0].BramkiPFT === undefined ? "0" : stats[0].BramkiPFT.length;
-    const bramkiPrzeciwnika =
-      stats[0].BramkiPrzeciwnika === undefined
-        ? "0"
-        : stats[0].BramkiPrzeciwnika.length;
-
-    return { result, bramkiPrzeciwnika, bramkiPFT };
-  }
   function nextMatch() {
     const match = mecz.sezon;
     const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
@@ -111,7 +82,7 @@ function MatchIndex() {
 
     return resultNextMatch;
   }
-  const { result, bramkiPrzeciwnika, bramkiPFT } = lasMatch();
+
   const resultNextMatch = nextMatch();
   function convertData(x) {
     const newData = new Date(x);
@@ -121,22 +92,21 @@ function MatchIndex() {
       day: "2-digit",
     });
   }
-  console.log(resultNextMatch);
   return (
     <Cointainer>
       <StyledDiv>
         <Bounce bottom>
           <MatchElIndex
             title="Ostatni mecz"
-            data={convertData(result?.data)}
-            letters={result?.gospodarze.slice(0, 3)}
-            name={result?.gospodarze}
-            score={result?.pftGoals}
-            lettersEnemy={result?.przeciwnik.slice(0, 3)}
-            nameEnemy={result?.przeciwnik}
-            scoreEnemy={result?.enemyGoals}
+            data={convertData(lastMatchData?.data)}
+            letters={lastMatchData?.gospodarze.slice(0, 3)}
+            name={lastMatchData?.gospodarze}
+            score={lastMatchData?.pftGoals}
+            lettersEnemy={lastMatchData?.przeciwnik.slice(0, 3)}
+            nameEnemy={lastMatchData?.przeciwnik}
+            scoreEnemy={lastMatchData?.enemyGoals}
             whatNext="Zobacz statystyki"
-            link={`/mecze/${result?.gospodarze}-${result?.przeciwnik}-${result?.data}`}
+            link={`/mecze/${lastMatchData?.gospodarze}-${lastMatchData?.przeciwnik}-${lastMatchData?.data}`}
             sign="-"
           />
         </Bounce>

@@ -64,7 +64,7 @@ function CoutingDown() {
       </Box>
     );
   }
-  console.log(resultNextMatch);
+
   return (
     <div>
       {resultNextMatch != undefined && (
