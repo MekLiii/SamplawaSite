@@ -35,7 +35,7 @@ function MatchIndex() {
   lastMatchData.sort((a,b) => new Date(a.frontmatter.data) - new Date(b.frontmatter.data));
   const resultLatMatch = lastMatchData[lastMatchData.length - 1].frontmatter
 
-  
+  console.log(lastMatch)
 
   const nextmatchChuj = lastMatchData.reverse().find((el)=> new Date(el.frontmatter.data) > new Date())
   console.log(nextmatchChuj)
