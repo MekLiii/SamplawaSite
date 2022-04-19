@@ -1,6 +1,6 @@
 ---
 przeciwnik: test
-data: 04/19/2022
+data: 04/28/2022
 gospodarze: PFT Drewneks Sampława
 godzina: 15:00
 miejsce: test
