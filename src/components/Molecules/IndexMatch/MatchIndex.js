@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useState }from "react";
 import MatchElIndex from "./MatchElIndex";
 import styled from "styled-components";
 import mecz from "../../../../content/mecz.json";
 import Bounce from "react-reveal/Zoom";
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
 
 function MatchIndex() {
   const lastMatch = useStaticQuery(graphql`
     {
       allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/content/mecze/"}}
-        sort: {fields: frontmatter___data, order: DESC}
-        limit: 1
+        filter: {
+          fileAbsolutePath: { regex: "/content/mecze/" }
+          frontmatter: { data: { ne: null } }
+        }
+        sort: { order: DESC, fields: frontmatter___data }
       ) {
         nodes {
           frontmatter {
-            czas
             data
             gospodarze
             logoEnemy
@@ -29,8 +30,16 @@ function MatchIndex() {
         }
       }
     }
-  `)
-  const lastMatchData = lastMatch.allMarkdownRemark.nodes[0].frontmatter;
+  `);
+  const [lastMatchData] = useState(lastMatch.allMarkdownRemark.nodes)
+  lastMatchData.sort((a,b) => new Date(a.frontmatter.data) - new Date(b.frontmatter.data));
+  const resultLatMatch = lastMatchData[lastMatchData.length - 1].frontmatter
+
+  
+
+  const nextmatchChuj = lastMatchData.reverse().find((el)=> new Date(el.frontmatter.data) > new Date())
+  console.log(nextmatchChuj)
+
 
   function nextMatch() {
     const match = mecz.sezon;
@@ -92,22 +101,24 @@ function MatchIndex() {
       day: "2-digit",
     });
   }
+
   return (
     <Cointainer>
       <StyledDiv>
         <Bounce bottom>
           <MatchElIndex
             title="Ostatni mecz"
-            data={convertData(lastMatchData?.data)}
-            letters={lastMatchData?.gospodarze.slice(0, 3)}
-            name={lastMatchData?.gospodarze}
-            score={lastMatchData?.pftGoals}
-            lettersEnemy={lastMatchData?.przeciwnik.slice(0, 3)}
-            nameEnemy={lastMatchData?.przeciwnik}
-            scoreEnemy={lastMatchData?.enemyGoals}
+            data={convertData(resultLatMatch?.data)}
+            letters={resultLatMatch?.gospodarze.slice(0, 3)}
+            name={resultLatMatch?.gospodarze}
+            score={resultLatMatch?.pftGoals}
+            lettersEnemy={resultLatMatch?.przeciwnik.slice(0, 3)}
+            nameEnemy={resultLatMatch?.przeciwnik}
+            scoreEnemy={resultLatMatch?.enemyGoals}
             whatNext="Zobacz statystyki"
-            link={`/mecze/${lastMatchData?.gospodarze}-${lastMatchData?.przeciwnik}-${lastMatchData?.data}`}
+            link={`/mecze/${resultLatMatch?.gospodarze}-${resultLatMatch?.przeciwnik}-${resultLatMatch?.data}`}
             sign="-"
+            
           />
         </Bounce>
         {resultNextMatch !== undefined ? (
@@ -121,6 +132,7 @@ function MatchIndex() {
               nameEnemy={resultNextMatch?.przeciwnik}
               whatNext={`${resultNextMatch?.godzina} ${resultNextMatch?.miejsce}`}
               sign="VS"
+              color="black"
             />
           </Bounce>
         ) : (

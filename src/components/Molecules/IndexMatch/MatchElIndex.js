@@ -8,13 +8,14 @@ function MatchElIndex({
   data,
   letters,
   name,
-  score,
+  score = 0,
   lettersEnemy,
   nameEnemy,
-  scoreEnemy,
+  scoreEnemy = 0,
   whatNext,
   link,
   sign,
+  color
 }) {
   return (
     <Box>
@@ -33,7 +34,7 @@ function MatchElIndex({
             {data}
           </p>
           <StatHolders>
-            <AtomMatchEl letters={letters} name={name} score={score} />
+            <AtomMatchEl letters={letters} name={name} score={score} color={color} />
             {sign != "" && (
               <p
                 style={
@@ -53,6 +54,7 @@ function MatchElIndex({
               letters={lettersEnemy}
               name={nameEnemy}
               score={scoreEnemy}
+              color={color}
               style={{ flexDirection: "row-reverse" }}
             />
           </StatHolders>
