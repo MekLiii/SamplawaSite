@@ -30,6 +30,7 @@ import Shotters from "../components/Atoms/Shotters";
 import teamData from "../../content/druzyna.json";
 
 SwiperCore.use([Autoplay, Navigation]);
+
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
@@ -52,6 +53,7 @@ const IndexPage = () => {
       }
     }
   `);
+
   //filtry
 
   function filterNull(value) {
@@ -111,7 +113,7 @@ const IndexPage = () => {
       items: 1,
     },
   };
-  console.log(sponData)
+
   return (
     <Layout currectSiteProp="main">
       <StyledSlider style={{ flexDirection: "column" }}>
@@ -176,10 +178,10 @@ const IndexPage = () => {
             name={sorted[sorted.length - 1][0]}
             goals={sorted[sorted.length - 1][1]}
             src={
-//               teamData.team.find(
-//                 (el) => el.name === sorted[sorted.length - 1][0]
-//               )?.zdjeciaBetter[0]
-'https://www.pftsamplawa.com/players/img/b3e25238c1035389c97c1f0add9c9176d4b6d8.png'
+              //               teamData.team.find(
+              //                 (el) => el.name === sorted[sorted.length - 1][0]
+              //               )?.zdjeciaBetter[0]
+              "https://www.pftsamplawa.com/players/img/b3e25238c1035389c97c1f0add9c9176d4b6d8.png"
             }
           />
           <Shotters
@@ -220,7 +222,7 @@ const IndexPage = () => {
               loop={true}
               pagination={{
                 clickable: true,
-                color:"black"
+                color: "black",
               }}
               breakpoints={{
                 640: {
@@ -262,7 +264,7 @@ const IndexPage = () => {
               {sponData.sponsBrown.map((el) => (
                 <SwiperSlide style={{ background: "none" }}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
-                </SwiperSlide> 
+                </SwiperSlide>
               ))}
               {sponData.sponsMed.map((el) => (
                 <SwiperSlide style={{ background: "none" }}>

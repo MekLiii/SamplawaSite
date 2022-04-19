@@ -136,7 +136,7 @@ function MatchIndex() {
             nameEnemy={result?.przeciwnik}
             scoreEnemy={result?.enemyGoals}
             whatNext="Zobacz statystyki"
-            link={`/mecze/${result?.gospodarze}-${result?.przeciwnik}`}
+            link={`/mecze/${result?.gospodarze}-${result?.przeciwnik}-${result?.data}`}
             sign="-"
           />
         </Bounce>

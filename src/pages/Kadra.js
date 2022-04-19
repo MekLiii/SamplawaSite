@@ -9,6 +9,7 @@ import { makeStyles } from "@material-ui/core";
 import data from "../../content/druzyna.json";
 import zdjecie from "../../content/assets/seniorzy.jpg";
 import styled from "styled-components";
+import { useStaticQuery, graphql, Link } from "gatsby";
 
 const useStyles = makeStyles({
   root: {
@@ -45,6 +46,55 @@ const useStyles = makeStyles({
 });
 
 function Druzyna() {
+  const newData = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/mecze/"}}) {
+        nodes {
+          frontmatter {
+            Zawodnicy {
+              Zawodnicy
+              minuty
+            }
+            czas
+            data
+            enemyGoals
+            godzina
+            gospodarze
+            logoEnemy
+            pftGoals
+            miejsce
+            opis
+            pftGoals
+            price
+            przeciwnik
+            thumbnail
+            Zmiany {
+              ZmianaNa
+              ZmianaZ
+              minuta
+            }
+            Sztab {
+              zespolSenior
+            }
+            Kartki {
+              Zawodnicy
+              minuta
+              kartka
+            }
+            BramkiPrzeciwnika {
+              name
+              minuta
+            }
+            BramkiPFT {
+              Zawodnicy
+              minuta
+            }
+          }
+        }
+      }
+    }
+  `)
+  console.log(newData)
   const [kadra, setKadra] = useState(data.team);
   const [zespol, setZespol] = useState(data.zespolSenior);
   const [age, setAge] = useState("");
