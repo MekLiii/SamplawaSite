@@ -221,6 +221,11 @@ const Left = styled.div`
     max-height: 170vh;
     min-height: 77vh;
   }
+  @media(max-height: 900px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `;
 const Right = styled.div`
   width: 70%;
@@ -297,6 +302,11 @@ const ChartContainer = styled.div`
     flex-direction: column;
     margin-top: 0;
     margin: 50px;
+    
+  }
+  @media(max-height: 900px) {
+    width: auto;
+    
   }
 `;
 export default Player;
