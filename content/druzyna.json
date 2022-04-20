@@ -346,6 +346,11 @@
       "zdjecia": "/players/test.jpg",
       "name": "Jakub Lendzionowski",
       "pozycja": "napastnik"
+    },
+    {
+      "zdjecia": "/players/test.jpg",
+      "name": "Maciej Seweryn",
+      "pozycja": "pomocnik"
     }
   ],
   "mlodzik": [
