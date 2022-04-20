@@ -37,6 +37,12 @@ Zawodnicy:
     Zawodnicy: Marek Laskowski
   - minuty: 40
     Zawodnicy: Arkadiusz Wietecha
+  - minuty: 40
+    Zawodnicy: Maciej Seweryn
+  - minuty: 18
+    Zawodnicy: Tomasz Sławiński
+  - minuty: 18
+    Zawodnicy: Sylwester Rynkowski
 Sztab:
   - zespolSenior: Mariusz Ruczyński
   - zespolSenior: Sławomir Sarlej
@@ -50,6 +56,9 @@ BramkiPFT:
     Zawodnicy: Jakub Lendzionowski
   - minuta: 78
     Zawodnicy: Jakub Lendzionowski
+BramkiPrzeciwnika:
+  - name: Nieznany Zawodnik
+    minuta: 60
 Kartki:
   - Zawodnicy: Lucjan Szwarc
     kartka: żółta
@@ -73,4 +82,13 @@ Zmiany:
   - ZmianaZ: Szymon Łątkowski
     minuta: 60
     ZmianaNa: Arkadiusz Wietecha
+  - ZmianaZ: Dawid Mederski
+    minuta: 60
+    ZmianaNa: Maciej Seweryn
+  - ZmianaZ: Szymon Lasikowski
+    minuta: 72
+    ZmianaNa: Tomasz Sławiński
+  - ZmianaZ: Wojciech Banacki
+    minuta: 72
+    ZmianaNa: Sylwester Rynkowski
 ---
