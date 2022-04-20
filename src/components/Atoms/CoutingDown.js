@@ -1,65 +1,61 @@
-import React from "react";
+import React,{ useState} from "react";
 
 import styled from "styled-components";
 import "./app.css";
 import loadable from "@loadable/component";
-import mecz from "../../../content/mecz.json";
+import { useStaticQuery, graphql } from "gatsby";
 
 const OtherComponent = loadable(() => import("./CoutingDownEl"));
 
 function CoutingDown() {
-  const match = mecz.sezon;
-  const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
-  const matchArray = [];
-
-  const today = new Date();
-
-  const currentDay =
-    today.getDate() > "9" ? today.getDate() : "0" + today.getDate();
-  const currentMonth =
-    today.getMonth() + 1 > "9"
-      ? today.getMonth() + 1
-      : "0" + (today.getMonth() + 1);
-
-  const currentDate =
-    currentMonth + "/" + currentDay + "/" + today.getFullYear();
-  matchArray.push(currentDate);
-
-  data.map((el) => matchArray.push(el.data));
-
-  //Sortowanie daty, od najstarszej do najnowszej
-  const newSortedArray = [];
-  matchArray.forEach((el) => newSortedArray.push(new Date(el)));
-  newSortedArray.sort((a, b) => b - a);
-  newSortedArray.reverse();
-  const newArray = [];
-  newSortedArray.forEach((el) =>
-    newArray.push(
-      el.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-      })
-    )
-  );
-
-  const indexOfCurrentDay = newArray.indexOf(currentDate);
-  const compareDate = newArray[indexOfCurrentDay + 1];
-
-  const result = data.find(({ data }) => data == compareDate);
-  const stats = [result?.Statystyki];
-
-  if (result?.Statystyki == undefined) {
-    stats.unshift("0");
+  
+  const lastMatch = useStaticQuery(graphql`
+  {
+    allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/content/mecze/" }
+        frontmatter: { data: { ne: null } }
+      }
+      sort: { order: DESC, fields: frontmatter___data }
+    ) {
+      nodes {
+        frontmatter {
+          data
+          gospodarze
+          logoEnemy
+          miejsce
+          pftGoals
+          przeciwnik
+          thumbnail
+          godzina
+          pftGoals
+        }
+      }
+    }
   }
+`);
 
-  const resultNextMatch = data?.find(({ data }) => data == compareDate);
-  if (resultNextMatch?.data === currentDate) {
+  const [lastMatchData] = useState(lastMatch.allMarkdownRemark.nodes);
+  lastMatchData.sort(
+    (a, b) => new Date(a.frontmatter.data) - new Date(b.frontmatter.data)
+  );
+  const nextMatch = lastMatchData.find(
+    (el) => new Date(el.frontmatter.data) > new Date()
+  )?.frontmatter === undefined ? undefined : lastMatchData.find(
+    (el) => new Date(el.frontmatter.data) > new Date()
+  )?.frontmatter;
+
+  const nextMatchHour = parseInt(nextMatch?.godzina / 60);
+  const nextMatchMinutes = nextMatch?.godzina % 60 > 9 ? nextMatch?.godzina % 60 : `0${nextMatch?.godzina % 60}`;
+
+
+  
+  if (nextMatch?.data === new Date()) {
     return (
       <Box>
         <P>
-          Mecz odbędzie się dziś, {resultNextMatch.godzina}{" "}
-          {resultNextMatch.miejsce}
+          Mecz odbędzie się dziś, {nextMatch.godzina}{" "}
+          {nextMatch.miejsce}
         </P>
       </Box>
     );
@@ -67,10 +63,10 @@ function CoutingDown() {
 
   return (
     <div style={{width: '100%'}}>
-      {resultNextMatch != undefined && (
+      {nextMatch != undefined && (
         <Box>
           <P>Na boisku widzimy się za:</P>
-          <OtherComponent dateTo={resultNextMatch?.data} />
+          <OtherComponent dateTo={nextMatch?.data} />
         </Box>
       )}
     </div>

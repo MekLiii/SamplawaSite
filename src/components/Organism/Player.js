@@ -69,22 +69,22 @@ function Player({ pageContext }) {
   const playerData = data.allMarkdownRemark.nodes.filter(el => el.frontmatter.Zawodnicy.some(el => el != undefined && el.Zawodnicy === slug.name))
 
   // played minuts
-   playerData.forEach(el => minuts += (el.frontmatter.Zawodnicy.find(el => el.Zawodnicy === slug.name).minuty))
+   playerData.forEach(el => minuts += (el.frontmatter.Zawodnicy?.find(el => el.Zawodnicy === slug.name).minuty))
    // played matches
    playedMatches = playerData.length;
     // goals
     const goalsArray = []
-    playerData.forEach(el => goalsArray.push(el.frontmatter.BramkiPFT.find((el) => el.Zawodnicy === slug.name)?.minuta))
+    playerData.forEach(el => goalsArray.push(el.frontmatter.BramkiPFT?.find((el) => el.Zawodnicy === slug.name)?.minuta))
     const filterArrayGoals = goalsArray.filter(el => el != undefined)
     goals = filterArrayGoals.length;
  //function which check how many yellow cars player has 
   const yellowCardsArray = []
-  playerData.forEach(el => yellowCardsArray.push(el.frontmatter.Kartki.find((el) => el.Zawodnicy === slug.name && el.kartka === "Żółta")))
+  playerData.forEach(el => yellowCardsArray.push(el.frontmatter.Kartki?.find((el) => el.Zawodnicy === slug.name && el.kartka === "Żółta")))
   const filterArrayYellowCards = yellowCardsArray.filter(el => el != undefined)
   yellowCards = filterArrayYellowCards.length;
    //function which check how many red cards player has 
   const redCardsArray = []
-  playerData.forEach(el => redCardsArray.push(el.frontmatter.Kartki.find((el) => el.Zawodnicy === slug.name && el.kartka === "czerwona")))
+  playerData.forEach(el => redCardsArray.push(el.frontmatter.Kartki?.find((el) => el.Zawodnicy === slug.name && el.kartka === "czerwona")))
   const filterArrayRedCards = redCardsArray.filter(el => el != undefined)
   redCards = filterArrayRedCards.length;
   // white matches player played
