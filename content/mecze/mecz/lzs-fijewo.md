@@ -29,4 +29,39 @@ Zawodnicy:
     Zawodnicy: Michał Raciborski
   - minuty: 65
     Zawodnicy: Adam Dybich
+  - minuty: 44
+    Zawodnicy: Przemysław Cabaj
+  - minuty: 25
+    Zawodnicy: Marek Laskowski
+  - minuty: 32
+    Zawodnicy: Radosław Buczkowski
+  - minuty: 25
+    Zawodnicy: Szymon Lasikowski
+  - minuty: 15
+    Zawodnicy: Sylwester Bukowski
+Sztab:
+  - zespolSenior: " Łukasz Wietecha"
+BramkiPFT:
+  - minuta: 71
+    Zawodnicy: Henryk Świątkowski
+Kartki:
+  - Zawodnicy: Henryk Świątkowski
+    kartka: żółta
+    minuta: 70
+Zmiany:
+  - ZmianaZ: Tomasz Sławiński
+    ZmianaNa: Szymon Lasikowski
+    minuta: 65
+  - ZmianaZ: Michał Łukaszewski
+    minuta: 58
+    ZmianaNa: Radosław Buczkowski
+  - ZmianaZ: Patryk Mówiński
+    minuta: 74
+    ZmianaNa: Sylwester Bukowski
+  - ZmianaZ: Cezary Chorzelewski
+    minuta: 46
+    ZmianaNa: Przemysław Cabaj
+  - ZmianaZ: Adam Dybich
+    minuta: 65
+    ZmianaNa: Marek Laskowski
 ---
