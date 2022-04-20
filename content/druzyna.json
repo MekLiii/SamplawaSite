@@ -341,6 +341,11 @@
       "zdjecia": "/players/test.jpg",
       "name": "Łukasz Wietecha",
       "pozycja": "pomocnik"
+    },
+    {
+      "zdjecia": "/players/test.jpg",
+      "name": "Jakub Lendzionowski",
+      "pozycja": "napastnik"
     }
   ],
   "mlodzik": [
