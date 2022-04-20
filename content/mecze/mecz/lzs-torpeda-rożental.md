@@ -7,7 +7,7 @@ miejsce: Sampława
 pftGoals: 0
 enemyGoals: 3
 logoEnemy:
-  - https://ucarecdn.com/e1ffafd6-f87e-4952-9bc7-7df7b92c628e/
+  - https://ucarecdn.com/41656e7e-63c3-4070-a227-10e22e4d87d2/
 Zawodnicy:
   - minuty: 90
     Zawodnicy: Łukasz Ochlak
