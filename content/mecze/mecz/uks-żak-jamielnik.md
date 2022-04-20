@@ -29,6 +29,14 @@ Zawodnicy:
     Zawodnicy: Michał Łukaszewski
   - minuty: 80
     Zawodnicy: Michał Raciborski
+  - minuty: 80
+    Zawodnicy: Jakub Lendzionowski
+  - minuty: 10
+    Zawodnicy: Przemysław Cabaj
+  - minuty: 10
+    Zawodnicy: Marek Laskowski
+  - minuty: 40
+    Zawodnicy: Arkadiusz Wietecha
 Sztab:
   - zespolSenior: Mariusz Ruczyński
   - zespolSenior: Sławomir Sarlej
@@ -36,5 +44,33 @@ Sztab:
 BramkiPFT:
   - minuta: 42
     Zawodnicy: Michał Łukaszewski
-Kartki: []
+  - minuta: 43
+    Zawodnicy: Jakub Lendzionowski
+  - minuta: 60
+    Zawodnicy: Jakub Lendzionowski
+  - minuta: 78
+    Zawodnicy: Jakub Lendzionowski
+Kartki:
+  - Zawodnicy: Lucjan Szwarc
+    kartka: żółta
+    minuta: 20
+  - kartka: żółta
+    Zawodnicy: Dawid Mederski
+    minuta: 42
+  - Zawodnicy: Szymon Łątkowski
+    minuta: 62
+    kartka: żółta
+  - Zawodnicy: Przemysław Cabaj
+    kartka: żółta
+    minuta: 85
+Zmiany:
+  - ZmianaZ: Jakub Lendzionowski
+    minuta: 80
+    ZmianaNa: Przemysław Cabaj
+  - ZmianaZ: Michał Raciborski
+    ZmianaNa: Marek Laskowski
+    minuta: 80
+  - ZmianaZ: Szymon Łątkowski
+    minuta: 60
+    ZmianaNa: Arkadiusz Wietecha
 ---
