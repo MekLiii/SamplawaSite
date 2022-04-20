@@ -104,7 +104,7 @@ function Player({ pageContext }) {
               key={slug.name}
               img={`${imgageOfPlayer}`}
             />
-            <ChartContainer>
+            <ChartContainer >
               <Chart
                 allMiuts={minuts}
                 coutMatches={playedMatches * 90 - minuts}
@@ -296,6 +296,7 @@ const ChartContainer = styled.div`
   @media (max-width: 900px) {
     flex-direction: column;
     margin-top: 0;
+    margin: 50px;
   }
 `;
 export default Player;
