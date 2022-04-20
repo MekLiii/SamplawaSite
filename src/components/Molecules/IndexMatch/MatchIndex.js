@@ -46,12 +46,16 @@ function MatchIndex() {
   // find the next match in the future
   const nextMatch = lastMatchData.find(
     (el) => new Date(el.frontmatter.data) > new Date()
-  ).frontmatter;
+  )?.frontmatter === undefined ? undefined : lastMatchData.find(
+    (el) => new Date(el.frontmatter.data) > new Date()
+  )?.frontmatter;
+
   console.log(nextMatch);
-  const nextMatchHour = parseInt(nextMatch.godzina / 60);
-  const nextMatchMinutes = nextMatch.godzina % 60 > 9 ? nextMatch.godzina % 60 : `0${nextMatch.godzina % 60}`;
+  const nextMatchHour = parseInt(nextMatch?.godzina / 60);
+  const nextMatchMinutes = nextMatch?.godzina % 60 > 9 ? nextMatch?.godzina % 60 : `0${nextMatch?.godzina % 60}`;
 
   function convertData(x) {
+    
     const newData = new Date(x);
     return newData.toLocaleDateString("Pl", {
       year: "numeric",
@@ -82,19 +86,19 @@ function MatchIndex() {
           <Bounce bottom>
             <MatchElIndex
               title="Następny mecz"
-              data={convertData(nextMatch?.data)}
+              data={convertData(nextMatch?.data) === "Invalid date" ? "" : convertData(nextMatch?.data)}
               letters="PFT"
               name={nextMatch?.gospodarze}
               lettersEnemy={nextMatch?.przeciwnik.slice(0, 3)}
               nameEnemy={nextMatch?.przeciwnik}
-              whatNext={`${nextMatchHour}:${nextMatchMinutes} ${nextMatch?.miejsce}`}
+              whatNext={`${nextMatchHour === 0 ? "" : nextMatchHour}${nextMatchHour === 0 ? "" : ":"} ${nextMatchMinutes === 0 || "00" ? "" : nextMatchMinutes} ${nextMatch?.miejsce}`}
               sign="VS"
               color="black"
             />
           </Bounce>
         ) : (
           <Bounce bottom>
-            <MatchElIndex sign="Brak następnych meczy" />
+            <MatchElIndex sign="Brak następnych meczy" color="black" title="Następny mecz"/>
           </Bounce>
         )}
       </StyledDiv>
