@@ -1,6 +1,6 @@
 ---
 przeciwnik: Olimpia Kisielice
-data: 09/09/2021
+data: 09/04/2021
 gospodarze: PFT Drewneks Sampława
 godzina: 17:00
 miejsce: Sampława
