@@ -29,6 +29,7 @@ function Player({ pageContext }) {
             thumbnail
             godzina
             pftGoals
+            enemyGoals
             BramkiPFT {
               Zawodnicy
               minuta
@@ -79,7 +80,15 @@ function Player({ pageContext }) {
  //function which check how many yellow cars player has 
   const yellowCardsArray = []
   playerData.forEach(el => yellowCardsArray.push(el.frontmatter.Kartki.find((el) => el.Zawodnicy === slug.name && el.kartka === "Żółta")))
-   console.log(yellowCardsArray)
+  const filterArrayYellowCards = yellowCardsArray.filter(el => el != undefined)
+  yellowCards = filterArrayYellowCards.length;
+   //function which check how many red cards player has 
+  const redCardsArray = []
+  playerData.forEach(el => redCardsArray.push(el.frontmatter.Kartki.find((el) => el.Zawodnicy === slug.name && el.kartka === "czerwona")))
+  const filterArrayRedCards = redCardsArray.filter(el => el != undefined)
+  redCards = filterArrayRedCards.length;
+  // white matches player played
+  sortedArrayWhichMatch = playerData
   
   return (
     <Layout>

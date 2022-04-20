@@ -5,12 +5,18 @@ import { IoIosArrowDown } from "react-icons/io";
 
 function AccordionEl({ data, slugName }) {
   // rozegrane minuty
-  function howMuchMinutes(index) {
-    const playerObject = data[index].Zawodnicy.find(
-      (el) => el.Zawodnicy === slugName.name
-    );
-    return playerObject.minuty;
-  }
+  console.log(slugName);
+  const howMuchMinutes = (data) => {
+    let minutes = 0;
+
+    const newData = data.filter((el) => el.Zawodnicy === slugName.name);
+
+    newData.forEach((match) => {
+      minutes += match.minuty;
+      console.log(match);
+    });
+    return minutes;
+  };
   const [toogleIcon, setToogleIcon] = useState(true);
   function convertData(x) {
     const newData = new Date(x);
@@ -43,9 +49,9 @@ function AccordionEl({ data, slugName }) {
     if (data.length != 0) {
       return (
         <div>
-          {data.map((el) => (
-            <Card key={el.przeciwnik}>
-              <CustomToggle eventKey={data.indexOf(el)}>
+          {data.map(({ frontmatter },index) => (
+            <Card key={index}>
+              <CustomToggle eventKey={index}>
                 <Teams>
                   <TeamsElement>
                     <img
@@ -57,22 +63,26 @@ function AccordionEl({ data, slugName }) {
                   </TeamsElement>
                   <P style={{ width: "10%" }}>-</P>
                   <TeamsElement>
-                    <P>{el.przeciwnik}</P>
+                    <P>{frontmatter.przeciwnik}</P>
                     <img
-                      src={el.logoEnemy}
-                      alt={el.logoEnemy}
+                      src={frontmatter.logoEnemy}
+                      alt={frontmatter.logoEnemy}
                       style={{ width: "50%", maxWidth: "30px", height: "auto" }}
                     />
                   </TeamsElement>
                 </Teams>
                 <div
-                  style={toogleIcon === data.indexOf(el) ? styleRotate.rotate : styleRotate.unRotate}
+                  style={
+                    toogleIcon === data.indexOf(frontmatter)
+                      ? styleRotate.rotate
+                      : styleRotate.unRotate
+                  }
                 >
                   <IoIosArrowDown />
                 </div>
               </CustomToggle>
 
-              <Accordion.Collapse eventKey={data.indexOf(el)}>
+              <Accordion.Collapse eventKey={index}>
                 <Card.Body
                   style={{
                     color: "white",
@@ -80,12 +90,12 @@ function AccordionEl({ data, slugName }) {
                   }}
                 >
                   <Body>
-                    <P style={{}}>{convertData(el.data)}</P>
+                    <P style={{}}>{convertData(frontmatter.data)}</P>
                     <P style={{}}>
-                      wynik: {el.pftGoals}-{el.enemyGoals}
+                      wynik: {frontmatter.pftGoals}-{frontmatter.enemyGoals}
                     </P>
                     <P style={{}}>
-                      Rozegrane minuty: {howMuchMinutes(data.indexOf(el))}'
+                      Rozegrane minuty: {howMuchMinutes(frontmatter.Zawodnicy)}'
                     </P>
                   </Body>
                 </Card.Body>
@@ -119,7 +129,7 @@ const Box = styled.div`
 export default AccordionEl;
 const AccorrdionButton = styled.div`
   width: 100%;
-  borderradius: 0;
+  border-radius: 0;
   background-color: black;
   color: white;
   display: flex;

@@ -66,7 +66,7 @@ function CoutingDown() {
   }
 
   return (
-    <div>
+    <div style={{width: '100%'}}>
       {resultNextMatch != undefined && (
         <Box>
           <P>Na boisku widzimy się za:</P>
