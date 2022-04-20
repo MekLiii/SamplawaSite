@@ -2,7 +2,7 @@
 przeciwnik: UKS ŻAK JAMIELNIK
 data: 08/29/2021
 gospodarze: PFT Drewneks Sampława
-godzina: 14:00
+godzina: 17:00
 miejsce: Sampława
 pftGoals: 4
 enemyGoals: 1
@@ -37,8 +37,6 @@ Zawodnicy:
     Zawodnicy: Marek Laskowski
   - minuty: 40
     Zawodnicy: Arkadiusz Wietecha
-  - minuty: 40
-    Zawodnicy: Maciej Seweryn
   - minuty: 18
     Zawodnicy: Tomasz Sławiński
   - minuty: 18
