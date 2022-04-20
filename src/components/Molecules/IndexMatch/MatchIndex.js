@@ -50,7 +50,6 @@ function MatchIndex() {
     (el) => new Date(el.frontmatter.data) > new Date()
   )?.frontmatter;
 
-  console.log(nextMatch);
   const nextMatchHour = parseInt(nextMatch?.godzina / 60);
   const nextMatchMinutes = nextMatch?.godzina % 60 > 9 ? nextMatch?.godzina % 60 : `0${nextMatch?.godzina % 60}`;
 

@@ -19,10 +19,8 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
     "Grudzień",
   ];
 
-  let array = data.split("-");
-  const element = parseInt(array[1]);
-  const newElement = months[element - 1];
-  array[1] = newElement;
+  let arrayData = data.split("-");
+  const month = months[parseInt(arrayData[1]) - 1];
 
   return (
     <StyledBox onClick={onClick} style={{cursor: "pointer"}}>
@@ -50,7 +48,7 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
               fontSize: 'clamp(13px,3vw,15px)'
             }}
           >
-            {array[0]}
+            {arrayData[0]}
           </p>
           <p
             style={{
@@ -60,7 +58,7 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
               fontSize: 'clamp(11px,3vw,15px)'
             }}
           >
-            {array[1]}
+            {month}
           </p>
           <p
             style={{
@@ -70,7 +68,7 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
               fontSize: 'clamp(13px,3vw,15px)'
             }}
           >
-            {array[2]}
+            {arrayData[2]}
           </p>
         </div>
         <div
@@ -107,6 +105,7 @@ function AktuEl({ img, heading, whatNext, data, onClick }) {
 const StyledBox = styled.div`
   min-height: 100%;
   min-width: 190px;
+  
   ${"" /* max-width: 350px; */}
   display: flex;
   justify-content: center;

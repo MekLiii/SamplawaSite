@@ -43,18 +43,4 @@ Zawodnicy:
     Zawodnicy: Szymon Lasikowski
 Sztab:
   - zespolSenior: " Łukasz Wietecha"
-BramkiPFT:
-  - minuta: 1
-    Zawodnicy: Łukasz Ochlak
-BramkiPrzeciwnika:
-  - name: test
-    minuta: 15
-Kartki:
-  - Zawodnicy: Łukasz Ochlak
-    kartka: czerwona
-    minuta: 5
-Zmiany:
-  - ZmianaZ: Tomasz Sławiński
-    minuta: 50
-    ZmianaNa: Szymon Lasikowski
 ---

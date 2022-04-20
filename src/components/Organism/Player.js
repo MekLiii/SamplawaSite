@@ -89,6 +89,8 @@ function Player({ pageContext }) {
   redCards = filterArrayRedCards.length;
   // white matches player played
   sortedArrayWhichMatch = playerData
+  const imgageOfPlayer  = players.team.find((el) => el.name === slug.name).zdjecia[0]
+  console.log(imgageOfPlayer)
   
   return (
     <Layout>
@@ -100,7 +102,7 @@ function Player({ pageContext }) {
               rola={slug.rola}
               name={slug.name}
               key={slug.name}
-              img={`${playerData.zdjecia}`}
+              img={`${imgageOfPlayer}`}
             />
             <ChartContainer>
               <Chart

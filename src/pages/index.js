@@ -237,33 +237,33 @@ const IndexPage = () => {
                 alignItems: "center",
               }}
             >
-              {sponData.sponsTitle.map((el) => (
-                <SwiperSlide style={{ background: "none" }}>
+              {sponData.sponsTitle.map((el, index) => (
+                <SwiperSlide style={{ background: "none" }} key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
-              {sponData.sponsStrategy.map((el) => (
-                <SwiperSlide style={{ background: "none" }}>
+              {sponData.sponsStrategy.map((el,index) => (
+                <SwiperSlide style={{ background: "none" }}  key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
-              {sponData.sponsSilver.map((el) => (
-                <SwiperSlide style={{ background: "none" }}>
+              {sponData.sponsSilver.map((el,index) => (
+                <SwiperSlide style={{ background: "none" }}  key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
-              {sponData.sponsBrown.map((el) => (
-                <SwiperSlide style={{ background: "none" }}>
+              {sponData.sponsBrown.map((el,index) => (
+                <SwiperSlide style={{ background: "none" }}  key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
-              {sponData.sponsMed.map((el) => (
-                <SwiperSlide style={{ background: "none" }}>
+              {sponData.sponsMed.map((el,index) => (
+                <SwiperSlide style={{ background: "none" }}  key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
-              {sponData.sponsGold.map((el) => (
-                <SwiperSlide style={{ background: "none" }}>
+              {sponData.sponsGold.map((el,index) => (
+                <SwiperSlide style={{ background: "none" }}  key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
