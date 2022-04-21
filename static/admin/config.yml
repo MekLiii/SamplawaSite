@@ -189,7 +189,9 @@ collections:
     folder: 'content/mecze/mecz'
     create: true
     slug: '{{przeciwnik}}-{{data}}-{{sezon}}'
-    path: '{{przeciwnik}}'
+    path: '{{przeciwnik}}-{{data}}-{{sezon}}'
+    # identifier_field: 'przeciwnik'
+    summary: '{{przeciwnik}} - {{data}}  {{sezon}}'
     editor:
       preview: false
     fields:
