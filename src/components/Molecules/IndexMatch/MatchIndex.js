@@ -44,20 +44,17 @@ function MatchIndex() {
     filteredLastMatchData[filteredLastMatchData.length - 1].frontmatter;
 
   // find the next match in the future
-  const nextMatch =
-    lastMatchData.find((el) => new Date(el.frontmatter.data) > new Date())
-      ?.frontmatter === undefined
-      ? undefined
-      : lastMatchData.find((el) => new Date(el.frontmatter.data) > new Date())
-          ?.frontmatter;
+  const nextMatch = lastMatchData.find(
+    (el) => new Date(el.frontmatter.data) > new Date()
+  )?.frontmatter === undefined ? undefined : lastMatchData.find(
+    (el) => new Date(el.frontmatter.data) > new Date()
+  )?.frontmatter;
 
   const nextMatchHour = parseInt(nextMatch?.godzina / 60);
-  const nextMatchMinutes =
-    nextMatch?.godzina % 60 > 9
-      ? nextMatch?.godzina % 60
-      : `0${nextMatch?.godzina % 60}`;
+  const nextMatchMinutes = nextMatch?.godzina % 60 > 9 ? nextMatch?.godzina % 60 : `0${nextMatch?.godzina % 60}`;
 
   function convertData(x) {
+    
     const newData = new Date(x);
     return newData.toLocaleDateString("Pl", {
       year: "numeric",
@@ -65,7 +62,7 @@ function MatchIndex() {
       day: "2-digit",
     });
   }
-
+  console.log( typeof nextMatchMinutes)
   return (
     <Cointainer>
       <StyledDiv>
@@ -88,33 +85,19 @@ function MatchIndex() {
           <Bounce bottom>
             <MatchElIndex
               title="Następny mecz"
-              data={
-                convertData(nextMatch?.data) === "Invalid date"
-                  ? ""
-                  : convertData(nextMatch?.data)
-              }
+              data={convertData(nextMatch?.data) === "Invalid date" ? "" : convertData(nextMatch?.data)}
               letters="PFT"
               name={nextMatch?.gospodarze}
               lettersEnemy={nextMatch?.przeciwnik.slice(0, 3)}
               nameEnemy={nextMatch?.przeciwnik}
-              whatNext={`${nextMatchHour === 0 ? "" : nextMatchHour}${
-                nextMatchHour === 0 ? "" : ":"
-              } ${
-                nextMatchMinutes === 0 || "00"
-                  ? ""
-                  : (nextMatchMinutes = "0" || 0 ? "0" : nextMatchMinutes)
-              } ${nextMatch?.miejsce}`}
+              whatNext={`${nextMatchHour === 0 ? "" : nextMatchHour}${nextMatchHour === 0 ? "" : ":"}${nextMatchMinutes === 0 || "00" ? nextMatchMinutes  : nextMatchMinutes} ${nextMatch?.miejsce}`}
               sign="VS"
               color="black"
             />
           </Bounce>
         ) : (
           <Bounce bottom>
-            <MatchElIndex
-              sign="Brak następnych meczy"
-              color="black"
-              title="Następny mecz"
-            />
+            <MatchElIndex sign="Brak następnych meczy" color="black" title="Następny mecz"/>
           </Bounce>
         )}
       </StyledDiv>

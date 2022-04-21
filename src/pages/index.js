@@ -33,68 +33,68 @@ SwiperCore.use([Autoplay, Navigation]);
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    {
-      allContentJson(
-        filter: { sezon: { elemMatch: { sezon: { ne: "null" } } } }
-      ) {
-        nodes {
-          sezon {
-            mecz {
-              Statystyki {
-                BramkiPFT {
-                  Zawodnicy
-                  minuta
-                }
-              }
-            }
-            sezon
+  {
+    allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/content/mecze/" }
+        frontmatter: {}
+      }
+    ) {
+      nodes {
+        frontmatter {
+          BramkiPFT {
+            Zawodnicy
+            minuta
           }
+          
+          
+        
         }
       }
     }
-  `);
+  }
+  `).allMarkdownRemark.nodes;
+  const dataWitoutNull =  data.filter((el) => el.frontmatter.BramkiPFT !== null);
+  const copyData = dataWitoutNull.map((el) => el.frontmatter.BramkiPFT);
+  const arrayOfPlayerWhosScored = []
+  copyData.forEach((el) => el.forEach((el2) => arrayOfPlayerWhosScored.push(el2.Zawodnicy)));
+  // new array that include player object if he scored and how goals he scored  and inclue in teamdata.team
+  const arrayOfPlayerWhosScoredWithGoals = []
+  copyData.forEach((el) => el.forEach((el2) => arrayOfPlayerWhosScoredWithGoals.push({
+    Zawodnicy: el2.Zawodnicy,
+    minuta: el2.minuta,
+  })));
+  const whoScored = []
+   arrayOfPlayerWhosScoredWithGoals.forEach((el, index) => 
+    teamData.team.some((el2) => el2.name === el.Zawodnicy) ? whoScored.push(el) : null
+  )
+  const onlyNames = [];
+  whoScored.map((el) => onlyNames.push(el.Zawodnicy))
+  // arrray which include how many Zawodnik is repiting
+  const arrayOfPlayerWhosScoredWithGoalsCount = []
+  onlyNames.forEach((el) => arrayOfPlayerWhosScoredWithGoalsCount.push({
+    Zawodnicy: el,
+    count: onlyNames.filter((el2) => el2 === el).length,
+
+  }))
+  // filter arrayOfPlayerWhosScoredWithGoalsCount by unique value Zawodnik
+  
+  const uniqueArrayOfPlayerWhosScoredWithGoalsCount = arrayOfPlayerWhosScoredWithGoalsCount.filter((el, index, self) =>{
+    return index === self.findIndex((t) => (
+      t.Zawodnicy === el.Zawodnicy
+    ))
+  })
+
+ 
+  // sort arrayOfPlayerWhosScoredWithGoalsCount by count
+  const sortedArrayOfPlayerWhosScoredWithGoalsCount = uniqueArrayOfPlayerWhosScoredWithGoalsCount.sort((a, b) => b.count - a.count)
+  
+  console.log(sortedArrayOfPlayerWhosScoredWithGoalsCount  )
 
   //filtry
 
-  function filterNull(value) {
-    return value.sezon != null;
-  }
-  function filterNullStats(value) {
-    return value.Statystyki != null;
-  }
-  function filterNullStatsArray(value) {
-    return value.Statystyki.length > 0;
-  }
-  function filterNullStatsArrayBramki(value) {
-    return value.BramkiPFT.length > 0;
-  }
-
-  // filtrowanie danych zawodników, wyciąganie strzelców
-  const actualSezon = mecze.AktualnySezon;
-  const playerData = [];
-  const playerDataEl = [];
-
-  data.allContentJson.nodes
-    .filter(filterNull)
-    .forEach((el) =>
-      playerData.push(el.sezon.find((el) => el.sezon === actualSezon))
-    );
-  playerData[0].mecz
-    .filter(filterNullStats)
-    .filter(filterNullStatsArray)
-    .forEach((el) =>
-      el.Statystyki.filter(filterNullStatsArrayBramki).forEach((el) =>
-        el.BramkiPFT.forEach((el) => playerDataEl.push(el.Zawodnicy))
-      )
-    );
-  //zwraca obiekt
-  const counts = {};
-  playerDataEl.forEach((x) => {
-    counts[x] = (counts[x] || 0) + 1;
-  });
+  
   //sortuje obiekt
-  let entries = Object.entries(counts);
-  let sorted = entries.sort((a, b) => a[1] - b[1]);
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 2000, min: 2000 },
@@ -113,7 +113,7 @@ const IndexPage = () => {
       items: 1,
     },
   };
-
+  console.log(teamData.team)
   return (
     <Layout currectSiteProp="main">
       <StyledSlider style={{ flexDirection: "column" }}>
@@ -157,30 +157,30 @@ const IndexPage = () => {
         <SponsorsTitle>Strzelcy PFT Sampława</SponsorsTitle>
         <ShootersBox>
           <Shotters
-            name={sorted[sorted.length - 2][0]}
-            goals={sorted[sorted.length - 2][1]}
+            name={sortedArrayOfPlayerWhosScoredWithGoalsCount[2].Zawodnicy}
+            goals={sortedArrayOfPlayerWhosScoredWithGoalsCount[2].count}
             src={
               teamData.team.find(
-                (el) => el.name === sorted[sorted.length - 2][0]
+                (el) => el.name === sortedArrayOfPlayerWhosScoredWithGoalsCount[2].Zawodnicy
               ).zdjeciaBetter[0]
             }
           />
           <Shotters
-            name={sorted[sorted.length - 1][0]}
-            goals={sorted[sorted.length - 1][1]}
+            name={sortedArrayOfPlayerWhosScoredWithGoalsCount[0].Zawodnicy}
+            goals={sortedArrayOfPlayerWhosScoredWithGoalsCount[0].count}
             src={
-              //               teamData.team.find(
-              //                 (el) => el.name === sorted[sorted.length - 1][0]
-              //               )?.zdjeciaBetter[0]
-              "https://www.pftsamplawa.com/players/img/b3e25238c1035389c97c1f0add9c9176d4b6d8.png"
+                            teamData.team.find(
+                              (el) => el.name ===sortedArrayOfPlayerWhosScoredWithGoalsCount[0].Zawodnicy
+                            )?.zdjeciaBetter[0]
+              
             }
           />
           <Shotters
-            name={sorted[sorted.length - 3][0]}
-            goals={sorted[sorted.length - 3][1]}
+            name={sortedArrayOfPlayerWhosScoredWithGoalsCount[1].Zawodnicy}
+            goals={sortedArrayOfPlayerWhosScoredWithGoalsCount[1].count}
             src={
               teamData.team.find(
-                (el) => el.name === sorted[sorted.length - 3][0]
+                (el) => el.name === sortedArrayOfPlayerWhosScoredWithGoalsCount[1].Zawodnicy
               )?.zdjeciaBetter[0]
             }
           />

@@ -63,8 +63,6 @@ function Aktu() {
   const [slicer, setSlicer] = useState(0);
   const [slicerTwo, setSlicerTwo] = useState(4);
   const [page, setPage] = useState(1);
-  console.log(slicer, slicerTwo, page)
-  console.log(aktu)
 
   const handleChange = (e,p) => {
     setPage(p);
