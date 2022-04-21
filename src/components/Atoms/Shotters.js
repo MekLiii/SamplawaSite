@@ -26,7 +26,7 @@ function Shotters({ src, goals, name, height }) {
 
         <Hopper>
           <P>{name}</P>
-          <P style={{fontSize:"15px"}}>Strzelone bramki w sezonie {mecz.AktualnySezon}</P>
+          <P style={{fontSize:"15px"}}>Strzelone bramki </P>
           <P>{goals}</P>
         </Hopper>
       </Box>
@@ -51,7 +51,7 @@ function Shotters({ src, goals, name, height }) {
 
         <Hopper >
           <P>{name}</P>
-          <P style={{fontSize:"15px"}}>Strzelone bramki w sezonie {mecz.AktualnySezon}</P>
+          <P style={{fontSize:"15px"}}>Strzelone bramki </P>
           <P>{goals}</P>
         </Hopper>
       </Box>
