@@ -1,5 +1,6 @@
 ---
 przeciwnik: GKS LZS Szymbark
+sezon: 2021/2022
 data: 10/16/2021
 gospodarze: PFT Drewneks Sampława
 godzina: 16:00
