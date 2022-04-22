@@ -1,9 +1,10 @@
 ---
 przeciwnik: Olimpia Kisielice
+sezon: 2021/2022
 data: 04/30/2022
 gospodarze: PFT Drewneks Sampława
 godzina: 17:00
-miejsce: Sampława
+miejsce: Kisielice
 pftGoals: 0
 enemyGoals: 0
 logoEnemy:
