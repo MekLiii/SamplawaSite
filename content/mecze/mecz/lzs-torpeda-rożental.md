@@ -1,5 +1,6 @@
 ---
 przeciwnik: LZS TORPEDA Rożental
+sezon: 2021/2022
 data: 10/23/2021
 gospodarze: PFT Drewneks Sampława
 godzina: 16:00
@@ -43,4 +44,23 @@ Zawodnicy:
     Zawodnicy: Szymon Lasikowski
 Sztab:
   - zespolSenior: " Łukasz Wietecha"
+BramkiPFT:
+  - minuta: 10
+    Zawodnicy: Sylwester Bukowski
+  - minuta: 34
+    Zawodnicy: Sylwester Bukowski
+  - minuta: 11
+    Zawodnicy: Szymon Łątkowski
+  - minuta: 74
+    Zawodnicy: Szymon Łątkowski
+  - minuta: 66
+    Zawodnicy: Szymon Łątkowski
+  - Zawodnicy: Michał Raciborski
+    minuta: 7
+  - Zawodnicy: Michał Raciborski
+    minuta: 45
+  - minuta: 80
+    Zawodnicy: Patryk Mówiński
+  - minuta: 82
+    Zawodnicy: Adam Dybich
 ---
