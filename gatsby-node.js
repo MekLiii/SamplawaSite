@@ -20,6 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
             miejsce
             pftGoals
             przeciwnik
+            enemyGoals
             thumbnail
             godzina
             pftGoals

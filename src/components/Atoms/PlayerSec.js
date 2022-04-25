@@ -7,10 +7,15 @@ import bgPattern from '../../../content/assets/bg-pattran.png'
 
 
 function PlayerSec({ minuts, src, name,color,StyleIcon, colorArrow,StyleArrow,link,styleMinuts,rola,styleRola}) {
+  if(name === "Łukasz Wietecha"){
+    console.log(src)
+  }
   return (
     <PlayersHolder>
       <Bottom>
-        <Img src={src} alt={src} />
+        {src != "/players/test.jpg" && (
+          <Img src={src} alt={src} />
+        )}
         <Link to={link} style={{color:"black"}}><span>{name}</span></Link>
         <span style={styleMinuts}>
           {minuts}' 
@@ -59,7 +64,7 @@ const Bottom = styled.div`
   }
 `;
 const Img = styled.img`
-  width: 75px;
+  width: auto;
   height: 75px;
   border-radius: 50%;
 `;

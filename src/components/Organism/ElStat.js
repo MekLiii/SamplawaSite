@@ -15,13 +15,13 @@ import PlayerSec from "../Atoms/PlayerSec";
 function ElStat({ pageContext }) {
   const { slug } = pageContext;
   const [age, setAge] = useState("");
-  const [whichMecz, setWhichMecz] = useState(slug);
+  const [whichMecz, setWhichMecz] = useState(slug.frontmatter);
   const handleChange = (event) => {
     setAge(event.target.value);
   };
 
   const sztab = slug.Sztab;
-  console.log(slug)
+  console.log(whichMecz)
 
   const useStyles = makeStyles({
     root: {
@@ -57,19 +57,12 @@ function ElStat({ pageContext }) {
     },
   });
 
-  const classes = useStyles();
 
-  const stats = [whichMecz.Statystyki];
-
-  if (whichMecz.Statystyki == undefined) {
-    stats.unshift("0");
-  }
-
-  const ActualSeson = data.AktualnySezon;
-  const matches = data.sezon.find((el) => el.sezon === ActualSeson).mecz;
 
   const sortedArray = [];
-  matches.forEach((el) => (el.Zawodnicy ? sortedArray.push(el) : ""));
+
+  // matches?.forEach((el) => (el.Zawodnicy ? sortedArray.push(el) : ""));
+
 
   const whoScored = whichMecz.Statystyki;
   const today = new Date();
@@ -97,7 +90,7 @@ function ElStat({ pageContext }) {
         </p>
       );
     }
-
+    console.log(whichMecz.Zawodnicy)
     return (
       <PlayersBox>
         <PlayersHolder>
@@ -134,8 +127,8 @@ function ElStat({ pageContext }) {
         </PlayersHolder>
         <PlayersHolder>
           <Title>Zmiany</Title>
-          {whichMecz.Statystyki?.map((el) =>
-            el.Zmiany?.map((el) => (
+          {whichMecz.Zmiany?.map((el) =>
+            
               <div style={{ width: "100%" }} key={el.ZmianaNa}>
                 <PlayerSec
                   link={`/kadra/${el.ZmianaNa}`}
@@ -161,14 +154,14 @@ function ElStat({ pageContext }) {
                   colorArrow="red"
                 />
               </div>
-            ))
+           
           )}
         </PlayersHolder>
         <PlayersHolder>
           <Title>Kary</Title>
 
-          {whichMecz.Statystyki?.map((el) =>
-            el.Kartki?.map((el) => (
+          {whichMecz.Kartki?.map((el) =>
+            
               <PlayerSec
                 link={`/kadra/${el.Zawodnicy}`}
                 name={el.Zawodnicy}
@@ -181,13 +174,13 @@ function ElStat({ pageContext }) {
                 color={el.kartka === "czerwona" ? "red" : "yellow"}
                 StyleArrow={{ display: "none" }}
               />
-            ))
+            
           )}
         </PlayersHolder>
         <PlayersHolder>
           <Title>Sztab szkoleniowy</Title>
 
-          {sztab?.map((el) => (
+          {whichMecz.Sztab?.map((el) => (
             <PlayerSec
               link={`#`}
               name={el.zespolSenior}

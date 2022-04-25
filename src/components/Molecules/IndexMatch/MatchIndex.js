@@ -26,6 +26,7 @@ function MatchIndex() {
             thumbnail
             godzina
             pftGoals
+            enemyGoals
           }
         }
       }
@@ -62,7 +63,7 @@ function MatchIndex() {
       day: "2-digit",
     });
   }
-  console.log( typeof nextMatchMinutes)
+  console.log(resultLatMatch)
   return (
     <Cointainer>
       <StyledDiv>

@@ -89,7 +89,7 @@ const IndexPage = () => {
   // sort arrayOfPlayerWhosScoredWithGoalsCount by count
   const sortedArrayOfPlayerWhosScoredWithGoalsCount = uniqueArrayOfPlayerWhosScoredWithGoalsCount.sort((a, b) => b.count - a.count)
   
-  console.log(sortedArrayOfPlayerWhosScoredWithGoalsCount  )
+  
 
   //filtry
 
