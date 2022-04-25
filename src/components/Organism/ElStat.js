@@ -21,7 +21,7 @@ function ElStat({ pageContext }) {
   };
 
   const sztab = slug.Sztab;
-  
+  console.log(slug)
 
   const useStyles = makeStyles({
     root: {
