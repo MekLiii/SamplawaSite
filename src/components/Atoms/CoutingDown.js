@@ -48,7 +48,7 @@ function CoutingDown() {
   const nextMatchHour = parseInt(nextMatch?.godzina / 60);
   const nextMatchMinutes = nextMatch?.godzina % 60 > 9 ? nextMatch?.godzina % 60 : `0${nextMatch?.godzina % 60}`;
 
-
+    
   
   if (nextMatch?.data === new Date()) {
     return (
@@ -60,13 +60,18 @@ function CoutingDown() {
       </Box>
     );
   }
-
+  console.log(nextMatch.data)
+  console.log(nextMatchHour + ":" + nextMatchMinutes)
+  const dateHourMinut = nextMatchHour + ":" + nextMatchMinutes;
+  const dataWithHours = new Date(`${dateHourMinut} ${nextMatch.data}`);
+  console.log(dataWithHours)
+  
   return (
     <div style={{width: '100%'}}>
       {nextMatch != undefined && (
         <Box>
           <P>Na boisku widzimy się za:</P>
-          <OtherComponent dateTo={nextMatch?.data} />
+          <OtherComponent dateTo={dataWithHours} />
         </Box>
       )}
     </div>

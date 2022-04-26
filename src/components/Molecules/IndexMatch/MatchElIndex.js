@@ -17,7 +17,7 @@ function MatchElIndex({
   sign,
   color
 }) {
-  console.log(scoreEnemy)
+  
   return (
     <Box>
       <Divider style={{ height: "30%" }}>

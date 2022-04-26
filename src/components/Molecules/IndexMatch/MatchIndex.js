@@ -63,7 +63,7 @@ function MatchIndex() {
       day: "2-digit",
     });
   }
-  console.log(resultLatMatch)
+  
   return (
     <Cointainer>
       <StyledDiv>

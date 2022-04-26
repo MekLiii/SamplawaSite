@@ -113,7 +113,7 @@ const IndexPage = () => {
       items: 1,
     },
   };
-  console.log(teamData.team)
+  
   return (
     <Layout currectSiteProp="main">
       <StyledSlider style={{ flexDirection: "column" }}>
