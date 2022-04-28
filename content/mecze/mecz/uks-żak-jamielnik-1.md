@@ -32,7 +32,7 @@ Zawodnicy:
     Zawodnicy: Patryk Mówiński
   - minuty: 90
     Zawodnicy: Radosław Buczkowski
-  - minuty: 90
+  - minuty: 0
     Zawodnicy: Tomasz Sławiński
   - minuty: 25
     Zawodnicy: Cezary Chorzelewski
@@ -40,7 +40,7 @@ Zawodnicy:
     Zawodnicy: Przemysław Cabaj
   - minuty: 9
     Zawodnicy: Marek Nastachowski
-  - minuty: 90
+  - minuty: 0
     Zawodnicy: Wojciech Banacki
   - minuty: 35
     Zawodnicy: Henryk Świątkowski
