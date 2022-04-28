@@ -60,11 +60,10 @@ function CoutingDown() {
       </Box>
     );
   }
-  console.log(nextMatch.data)
-  console.log(nextMatchHour + ":" + nextMatchMinutes)
+  
   const dateHourMinut = nextMatchHour + ":" + nextMatchMinutes;
   const dataWithHours = new Date(`${dateHourMinut} ${nextMatch.data}`);
-  console.log(dataWithHours)
+
   
   return (
     <div style={{width: '100%'}}>

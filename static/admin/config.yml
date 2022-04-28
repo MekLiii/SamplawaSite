@@ -300,6 +300,8 @@ collections:
 
   - label: "Tabela"
     name: "tabela"
+    editor:
+      preview: false
     files:
       - label: "tabela senior"
         name: "tabela"

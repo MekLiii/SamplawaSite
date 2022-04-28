@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
@@ -40,13 +40,14 @@ export default function MatchesSlider() {
   `);
   const [matchesData, setMatchesData] = useState(data.allMarkdownRemark.nodes);
 
-  // const match = mecz.sezon;
-  // const data = match.find((el) => el.sezon == mecz.AktualnySezon).mecz;
+  const today = new Date();
+ 
+  // filter match data with newer dates
+  const filteredMatches = matchesData.filter((el) => new Date(el.frontmatter.data) > today);
+  console.log(filteredMatches)
+  
 
-  // const sortedArrayDates = [];
-  // data.forEach((el) =>
-  //   el.Zawodnicy?.length > 0 ? "" : sortedArrayDates.push(el)
-  // );
+
   function convertData(x) {
     const newData = new Date(x);
     return newData.toLocaleDateString("Pl", {
@@ -56,6 +57,7 @@ export default function MatchesSlider() {
     });
     
   }
+  console.log(matchesData);
   return (
     <Swiper
       slidesPerView={1}
@@ -90,7 +92,7 @@ export default function MatchesSlider() {
         alignItems: "center",
       }}
     >
-      {matchesData.map(({frontmatter}) => (
+      {filteredMatches.map(({frontmatter}) => (
 
         <SwiperSlide
           style={{

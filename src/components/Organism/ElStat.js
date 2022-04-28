@@ -21,7 +21,7 @@ function ElStat({ pageContext }) {
   };
 
   const sztab = slug.Sztab;
-  console.log(whichMecz)
+  console.log(whichMecz);
 
   const useStyles = makeStyles({
     root: {
@@ -57,12 +57,9 @@ function ElStat({ pageContext }) {
     },
   });
 
-
-
   const sortedArray = [];
 
   // matches?.forEach((el) => (el.Zawodnicy ? sortedArray.push(el) : ""));
-
 
   const whoScored = whichMecz.Statystyki;
   const today = new Date();
@@ -90,7 +87,7 @@ function ElStat({ pageContext }) {
         </p>
       );
     }
-    console.log(whichMecz.Zawodnicy)
+    // console.log(whichMecz)
     return (
       <PlayersBox>
         <PlayersHolder>
@@ -107,6 +104,9 @@ function ElStat({ pageContext }) {
               minuts={el.minuty}
               StyleIcon={{ display: "none" }}
               StyleArrow={{ display: "none" }}
+              scored={whichMecz.BramkiPFT.some((name) => {
+                return name.Zawodnicy === el.Zawodnicy;
+              })}
             />
           ))}
           <Title>Skład rezerwowy</Title>
@@ -122,60 +122,65 @@ function ElStat({ pageContext }) {
               minuts={el.minuty}
               StyleIcon={{ display: "none" }}
               StyleArrow={{ display: "none" }}
+              scored={whichMecz.BramkiPFT.some((name) => {
+                return name.Zawodnicy === el.Zawodnicy;
+              })}
             />
           ))}
         </PlayersHolder>
         <PlayersHolder>
           <Title>Zmiany</Title>
-          {whichMecz.Zmiany?.map((el) =>
-            
-              <div style={{ width: "100%" }} key={el.ZmianaNa}>
-                <PlayerSec
-                  link={`/kadra/${el.ZmianaNa}`}
-                  name={el.ZmianaNa}
-                  src={
-                    team.team?.find((element) => element.name === el.ZmianaNa)
-                      ?.zdjecia
-                  }
-                  minuts={el.minuta}
-                  StyleIcon={{ display: "none" }}
-                  colorArrow="green"
-                />
-                <PlayerSec
-                  link={`/kadra/${el.ZmianaZ}`}
-                  name={el.ZmianaZ}
-                  src={
-                    team.team?.find((element) => element.name === el.ZmianaZ)
-                      ?.zdjecia
-                  }
-                  minuts={el.minuta}
-                  StyleIcon={{ display: "none" }}
-                  StyleArrow={{ transform: "rotate(180deg)" }}
-                  colorArrow="red"
-                />
-              </div>
-           
-          )}
+          {whichMecz.Zmiany?.map((el) => (
+            <div style={{ width: "100%" }} key={el.ZmianaNa}>
+              <PlayerSec
+                link={`/kadra/${el.ZmianaNa}`}
+                name={el.ZmianaNa}
+                src={
+                  team.team?.find((element) => element.name === el.ZmianaNa)
+                    ?.zdjecia
+                }
+                minuts={el.minuta}
+                StyleIcon={{ display: "none" }}
+                colorArrow="green"
+                scored={whichMecz.BramkiPFT.some((name) => {
+                  return name.Zawodnicy === el.Zawodnicy;
+                })}
+              />
+              <PlayerSec
+                link={`/kadra/${el.ZmianaZ}`}
+                name={el.ZmianaZ}
+                src={
+                  team.team?.find((element) => element.name === el.ZmianaZ)
+                    ?.zdjecia
+                }
+                minuts={el.minuta}
+                StyleIcon={{ display: "none" }}
+                StyleArrow={{ transform: "rotate(180deg)" }}
+                colorArrow="red"
+                scored={whichMecz.BramkiPFT.some((name) => {
+                  return name.Zawodnicy === el.Zawodnicy;
+                })}
+              />
+            </div>
+          ))}
         </PlayersHolder>
         <PlayersHolder>
           <Title>Kary</Title>
 
-          {whichMecz.Kartki?.map((el) =>
-            
-              <PlayerSec
-                link={`/kadra/${el.Zawodnicy}`}
-                name={el.Zawodnicy}
-                key={el.ZmianaNa}
-                src={
-                  team.team?.find((element) => element.name === el.Zawodnicy)
-                    ?.zdjecia
-                }
-                minuts={el.minuta}
-                color={el.kartka === "czerwona" ? "red" : "yellow"}
-                StyleArrow={{ display: "none" }}
-              />
-            
-          )}
+          {whichMecz.Kartki?.map((el) => (
+            <PlayerSec
+              link={`/kadra/${el.Zawodnicy}`}
+              name={el.Zawodnicy}
+              key={el.ZmianaNa}
+              src={
+                team.team?.find((element) => element.name === el.Zawodnicy)
+                  ?.zdjecia
+              }
+              minuts={el.minuta}
+              color={el.kartka === "czerwona" ? "red" : "yellow"}
+              StyleArrow={{ display: "none" }}
+            />
+          ))}
         </PlayersHolder>
         <PlayersHolder>
           <Title>Sztab szkoleniowy</Title>
@@ -207,7 +212,7 @@ function ElStat({ pageContext }) {
 
   return (
     <Layout>
-      <Cointainer style={{marginTop:"50px"}}>
+      <Cointainer style={{ marginTop: "50px" }}>
         <Box>
           <SidebarTop>
             {/* <FormControl

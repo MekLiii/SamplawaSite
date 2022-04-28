@@ -16,6 +16,11 @@ export default function DenseTable() {
     return a.punkty - b.punkty;
   });
   const dataEl = dataAtom.reverse();
+  
+  const gainedPoints = (wins, draws) => {
+    
+    return wins * 3 + draws * 1;
+  }
   return (
     <Box>
       <TableContainer
@@ -138,7 +143,7 @@ export default function DenseTable() {
                     border: "1px solid rgba(255, 255, 255, 0.2)",
                   }}
                 >
-                  {el.punkty}
+                  {gainedPoints(el.zwyciestwa, el.remisy)}
                 </TableCell>
                 <TableCell
                   align="center"
@@ -198,7 +203,7 @@ const P = styled.p`
 `;
 const IconItem = styled.div`
   width: 40px;
-  height: 40px
+  height: 40px;
   background-color:black;
   border-radius:50%;
   display: flex;

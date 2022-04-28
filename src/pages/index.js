@@ -33,67 +33,71 @@ SwiperCore.use([Autoplay, Navigation]);
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-  {
-    allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "/content/mecze/" }
-        frontmatter: {}
-      }
-    ) {
-      nodes {
-        frontmatter {
-          BramkiPFT {
-            Zawodnicy
-            minuta
+    {
+      allMarkdownRemark(
+        filter: {
+          fileAbsolutePath: { regex: "/content/mecze/" }
+          frontmatter: {}
+        }
+      ) {
+        nodes {
+          frontmatter {
+            BramkiPFT {
+              Zawodnicy
+              minuta
+            }
           }
-          
-          
-        
         }
       }
     }
-  }
   `).allMarkdownRemark.nodes;
-  const dataWitoutNull =  data.filter((el) => el.frontmatter.BramkiPFT !== null);
+  const dataWitoutNull = data.filter((el) => el.frontmatter.BramkiPFT !== null);
   const copyData = dataWitoutNull.map((el) => el.frontmatter.BramkiPFT);
-  const arrayOfPlayerWhosScored = []
-  copyData.forEach((el) => el.forEach((el2) => arrayOfPlayerWhosScored.push(el2.Zawodnicy)));
+  const arrayOfPlayerWhosScored = [];
+  copyData.forEach((el) =>
+    el.forEach((el2) => arrayOfPlayerWhosScored.push(el2.Zawodnicy))
+  );
   // new array that include player object if he scored and how goals he scored  and inclue in teamdata.team
-  const arrayOfPlayerWhosScoredWithGoals = []
-  copyData.forEach((el) => el.forEach((el2) => arrayOfPlayerWhosScoredWithGoals.push({
-    Zawodnicy: el2.Zawodnicy,
-    minuta: el2.minuta,
-  })));
-  const whoScored = []
-   arrayOfPlayerWhosScoredWithGoals.forEach((el, index) => 
-    teamData.team.some((el2) => el2.name === el.Zawodnicy) ? whoScored.push(el) : null
-  )
+  const arrayOfPlayerWhosScoredWithGoals = [];
+  copyData.forEach((el) =>
+    el.forEach((el2) =>
+      arrayOfPlayerWhosScoredWithGoals.push({
+        Zawodnicy: el2.Zawodnicy,
+        minuta: el2.minuta,
+      })
+    )
+  );
+  const whoScored = [];
+  arrayOfPlayerWhosScoredWithGoals.forEach((el, index) =>
+    teamData.team.some((el2) => el2.name === el.Zawodnicy)
+      ? whoScored.push(el)
+      : null
+  );
   const onlyNames = [];
-  whoScored.map((el) => onlyNames.push(el.Zawodnicy))
+  whoScored.map((el) => onlyNames.push(el.Zawodnicy));
   // arrray which include how many Zawodnik is repiting
-  const arrayOfPlayerWhosScoredWithGoalsCount = []
-  onlyNames.forEach((el) => arrayOfPlayerWhosScoredWithGoalsCount.push({
-    Zawodnicy: el,
-    count: onlyNames.filter((el2) => el2 === el).length,
-
-  }))
+  const arrayOfPlayerWhosScoredWithGoalsCount = [];
+  onlyNames.forEach((el) =>
+    arrayOfPlayerWhosScoredWithGoalsCount.push({
+      Zawodnicy: el,
+      count: onlyNames.filter((el2) => el2 === el).length,
+    })
+  );
   // filter arrayOfPlayerWhosScoredWithGoalsCount by unique value Zawodnik
-  
-  const uniqueArrayOfPlayerWhosScoredWithGoalsCount = arrayOfPlayerWhosScoredWithGoalsCount.filter((el, index, self) =>{
-    return index === self.findIndex((t) => (
-      t.Zawodnicy === el.Zawodnicy
-    ))
-  })
 
- 
+  const uniqueArrayOfPlayerWhosScoredWithGoalsCount =
+    arrayOfPlayerWhosScoredWithGoalsCount.filter((el, index, self) => {
+      return index === self.findIndex((t) => t.Zawodnicy === el.Zawodnicy);
+    });
+
   // sort arrayOfPlayerWhosScoredWithGoalsCount by count
-  const sortedArrayOfPlayerWhosScoredWithGoalsCount = uniqueArrayOfPlayerWhosScoredWithGoalsCount.sort((a, b) => b.count - a.count)
-  
-  
+  const sortedArrayOfPlayerWhosScoredWithGoalsCount =
+    uniqueArrayOfPlayerWhosScoredWithGoalsCount.sort(
+      (a, b) => b.count - a.count
+    );
 
   //filtry
 
-  
   //sortuje obiekt
   const responsive = {
     superLargeDesktop: {
@@ -113,7 +117,7 @@ const IndexPage = () => {
       items: 1,
     },
   };
-  
+
   return (
     <Layout currectSiteProp="main">
       <StyledSlider style={{ flexDirection: "column" }}>
@@ -131,7 +135,6 @@ const IndexPage = () => {
           alignItems: "center",
         }}
       >
-        
         <MatchesSlider />
       </StyledDiv>
       <StyledAktu style={{ marginTop: 0, minHeight: "40vh" }}>
@@ -161,7 +164,9 @@ const IndexPage = () => {
             goals={sortedArrayOfPlayerWhosScoredWithGoalsCount[2].count}
             src={
               teamData.team.find(
-                (el) => el.name === sortedArrayOfPlayerWhosScoredWithGoalsCount[2].Zawodnicy
+                (el) =>
+                  el.name ===
+                  sortedArrayOfPlayerWhosScoredWithGoalsCount[2].Zawodnicy
               ).zdjeciaBetter[0]
             }
           />
@@ -169,10 +174,11 @@ const IndexPage = () => {
             name={sortedArrayOfPlayerWhosScoredWithGoalsCount[0].Zawodnicy}
             goals={sortedArrayOfPlayerWhosScoredWithGoalsCount[0].count}
             src={
-                            teamData.team.find(
-                              (el) => el.name ===sortedArrayOfPlayerWhosScoredWithGoalsCount[0].Zawodnicy
-                            )?.zdjeciaBetter[0]
-              
+              teamData.team.find(
+                (el) =>
+                  el.name ===
+                  sortedArrayOfPlayerWhosScoredWithGoalsCount[0].Zawodnicy
+              )?.zdjeciaBetter[0]
             }
           />
           <Shotters
@@ -180,7 +186,9 @@ const IndexPage = () => {
             goals={sortedArrayOfPlayerWhosScoredWithGoalsCount[1].count}
             src={
               teamData.team.find(
-                (el) => el.name === sortedArrayOfPlayerWhosScoredWithGoalsCount[1].Zawodnicy
+                (el) =>
+                  el.name ===
+                  sortedArrayOfPlayerWhosScoredWithGoalsCount[1].Zawodnicy
               )?.zdjeciaBetter[0]
             }
           />
@@ -242,28 +250,28 @@ const IndexPage = () => {
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
-              {sponData.sponsStrategy.map((el,index) => (
-                <SwiperSlide style={{ background: "none" }}  key={index}>
+              {sponData.sponsStrategy.map((el, index) => (
+                <SwiperSlide style={{ background: "none" }} key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
-              {sponData.sponsSilver.map((el,index) => (
-                <SwiperSlide style={{ background: "none" }}  key={index}>
+              {sponData.sponsSilver.map((el, index) => (
+                <SwiperSlide style={{ background: "none" }} key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
-              {sponData.sponsBrown.map((el,index) => (
-                <SwiperSlide style={{ background: "none" }}  key={index}>
+              {sponData.sponsBrown.map((el, index) => (
+                <SwiperSlide style={{ background: "none" }} key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
-              {sponData.sponsMed.map((el,index) => (
-                <SwiperSlide style={{ background: "none" }}  key={index}>
+              {sponData.sponsMed.map((el, index) => (
+                <SwiperSlide style={{ background: "none" }} key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
-              {sponData.sponsGold.map((el,index) => (
-                <SwiperSlide style={{ background: "none" }}  key={index}>
+              {sponData.sponsGold.map((el, index) => (
+                <SwiperSlide style={{ background: "none" }} key={index}>
                   <SponsorEl img={el.logo} key={el.name + el.logo} />
                 </SwiperSlide>
               ))}
