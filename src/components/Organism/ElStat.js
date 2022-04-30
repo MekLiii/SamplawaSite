@@ -104,7 +104,7 @@ function ElStat({ pageContext }) {
               minuts={el.minuty}
               StyleIcon={{ display: "none" }}
               StyleArrow={{ display: "none" }}
-              scored={whichMecz.BramkiPFT.some((name) => {
+              scored={whichMecz.BramkiPFT?.some((name) => {
                 return name.Zawodnicy === el.Zawodnicy;
               })}
             />
@@ -122,7 +122,7 @@ function ElStat({ pageContext }) {
               minuts={el.minuty}
               StyleIcon={{ display: "none" }}
               StyleArrow={{ display: "none" }}
-              scored={whichMecz.BramkiPFT.some((name) => {
+              scored={whichMecz.BramkiPFT?.some((name) => {
                 return name.Zawodnicy === el.Zawodnicy;
               })}
             />
@@ -142,7 +142,7 @@ function ElStat({ pageContext }) {
                 minuts={el.minuta}
                 StyleIcon={{ display: "none" }}
                 colorArrow="green"
-                scored={whichMecz.BramkiPFT.some((name) => {
+                scored={whichMecz.BramkiPFT?.some((name) => {
                   return name.Zawodnicy === el.Zawodnicy;
                 })}
               />
@@ -157,7 +157,7 @@ function ElStat({ pageContext }) {
                 StyleIcon={{ display: "none" }}
                 StyleArrow={{ transform: "rotate(180deg)" }}
                 colorArrow="red"
-                scored={whichMecz.BramkiPFT.some((name) => {
+                scored={whichMecz.BramkiPFT?.some((name) => {
                   return name.Zawodnicy === el.Zawodnicy;
                 })}
               />

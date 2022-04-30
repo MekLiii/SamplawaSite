@@ -51,7 +51,6 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
   const templatePath = path.resolve(`src/components/Organism/ElStat.js`);
-  console.log(result);
   result.data.allMarkdownRemark.nodes.forEach((node) => {
     createPage({
       path: `/mecze/${node.frontmatter.gospodarze}-${node.frontmatter.przeciwnik}-${node.frontmatter.data}`,
