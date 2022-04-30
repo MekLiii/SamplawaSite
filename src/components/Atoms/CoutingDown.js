@@ -45,23 +45,24 @@ function CoutingDown() {
     (el) => new Date(el.frontmatter.data).setHours(0,0,0,0) >= new Date().setHours(0,0,0,0)
   )?.frontmatter;
   const nextMatchHour = parseInt(nextMatch?.godzina / 60);
+  // const nextMatchMinutes = parseInt(nextMatch?.godzina % 60)
   const nextMatchMinutes = nextMatch?.godzina % 60 > 9 ? nextMatch?.godzina % 60 : `0${nextMatch?.godzina % 60}`;
-    
+  const dateHourMinut = nextMatchHour + ":" + nextMatchMinutes;
+  const dataWithHours = new Date(`${dateHourMinut} ${nextMatch.data}`);
     
   
-  if (nextMatch?.data === new Date()) {
+  if (new Date(nextMatch?.data).setHours(0,0,0,0) === new Date().setHours(0,0,0,0)) {
     return (
       <Box>
         <P>
-          Mecz odbędzie się dziś, {nextMatch.godzina}{" "}
+          Mecz odbędzie się dziś, {dateHourMinut}{" "}
           {nextMatch.miejsce}
         </P>
       </Box>
     );
   }
   
-  const dateHourMinut = nextMatchHour + ":" + nextMatchMinutes;
-  const dataWithHours = new Date(`${dateHourMinut} ${nextMatch.data}`);
+  
 
   
   return (
