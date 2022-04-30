@@ -40,14 +40,13 @@ function CoutingDown() {
     (a, b) => new Date(a.frontmatter.data) - new Date(b.frontmatter.data)
   );
   const nextMatch = lastMatchData.find(
-    (el) => new Date(el.frontmatter.data) > new Date()
+    (el) => new Date(el.frontmatter.data).setHours(0, 0, 0, 0) >= new Date().setHours(0, 0, 0, 0)
   )?.frontmatter === undefined ? undefined : lastMatchData.find(
-    (el) => new Date(el.frontmatter.data) > new Date()
+    (el) => new Date(el.frontmatter.data).setHours(0,0,0,0) >= new Date().setHours(0,0,0,0)
   )?.frontmatter;
-
   const nextMatchHour = parseInt(nextMatch?.godzina / 60);
   const nextMatchMinutes = nextMatch?.godzina % 60 > 9 ? nextMatch?.godzina % 60 : `0${nextMatch?.godzina % 60}`;
-
+    
     
   
   if (nextMatch?.data === new Date()) {

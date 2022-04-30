@@ -46,9 +46,9 @@ function MatchIndex() {
 
   // find the next match in the future
   const nextMatch = lastMatchData.find(
-    (el) => new Date(el.frontmatter.data) > new Date()
+    (el) => new Date(el.frontmatter.data).setHours(0,0,0,0) >= new Date().setHours(0,0,0,0)
   )?.frontmatter === undefined ? undefined : lastMatchData.find(
-    (el) => new Date(el.frontmatter.data) > new Date()
+    (el) => new Date(el.frontmatter.data).setHours(0,0,0,0) >= new Date().setHours(0,0,0,0)
   )?.frontmatter;
 
   const nextMatchHour = parseInt(nextMatch?.godzina / 60);
