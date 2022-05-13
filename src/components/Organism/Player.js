@@ -10,13 +10,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Chart from "../Atoms/Chart";
 import bgPattern from "../../../content/assets/bg-pattran.png";
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
 
 function Player({ pageContext }) {
   const { slug } = pageContext;
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/mecze/"}}) {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/content/mecze/" } }
+      ) {
         nodes {
           frontmatter {
             czas
@@ -55,43 +57,79 @@ function Player({ pageContext }) {
         }
       }
     }
-  `)
+  `);
   let minuts = 0;
   let playedMatches = 0;
   let goals = 0;
   let yellowCards = 0;
   let redCards = 0;
-  let sortedArrayWhichMatch = []
+  let sortedArrayWhichMatch = [];
   let test;
 
-  // data.allMarkdownRemark.nodes.forEach((el) => console.log(el))
-  
-  const playerData = data.allMarkdownRemark.nodes.filter(el => el.frontmatter.Zawodnicy.some(el => el != undefined && el.Zawodnicy === slug.name))
+  const playerData = data.allMarkdownRemark.nodes.filter((el) =>
+    el.frontmatter.Zawodnicy.some(
+      (el) => el != undefined && el.Zawodnicy === slug.name
+    )
+  );
 
   // played minuts
-   playerData.forEach(el => minuts += (el.frontmatter.Zawodnicy?.find(el => el.Zawodnicy === slug.name).minuty))
-   // played matches
-   playedMatches = playerData.length;
-    // goals
-    const goalsArray = []
-    playerData.forEach(el => goalsArray.push(el.frontmatter.BramkiPFT?.find((el) => el.Zawodnicy === slug.name)?.minuta))
-    const filterArrayGoals = goalsArray.filter(el => el != undefined)
-    goals = filterArrayGoals.length;
- //function which check how many yellow cars player has 
-  const yellowCardsArray = []
-  playerData.forEach(el => yellowCardsArray.push(el.frontmatter.Kartki?.find((el) => el.Zawodnicy === slug.name && el.kartka === "Żółta")))
-  const filterArrayYellowCards = yellowCardsArray.filter(el => el != undefined)
+  playerData.forEach(
+    (el) =>
+      (minuts += el.frontmatter.Zawodnicy?.find(
+        (el) => el.Zawodnicy === slug.name
+      ).minuty)
+  );
+  // played matches
+  playedMatches = playerData.length;
+  // goals
+  const goalsArray = [];
+  playerData.forEach((el) =>
+    goalsArray.push(
+      el.frontmatter.BramkiPFT?.find((el) => el.Zawodnicy === slug.name)?.minuta
+    )
+  );
+  const chuj = [];
+  const testChuj = playerData
+    .map((el) => el.frontmatter.BramkiPFT)
+    .filter((el) => el != null)
+    .map((el) => el.filter((el) => el.Zawodnicy === slug.name))
+    .filter((el) => el.length > 0)
+    .map(el => el.forEach(el => chuj.push(el)))
+  console.log(testChuj);
+  console.log(chuj);
+
+  const filterArrayGoals = goalsArray.filter((el) => el != undefined);
+
+  goals = chuj.length;
+  //function which check how many yellow cars player has
+  const yellowCardsArray = [];
+  playerData.forEach((el) =>
+    yellowCardsArray.push(
+      el.frontmatter.Kartki?.find(
+        (el) => el.Zawodnicy === slug.name && el.kartka === "Żółta"
+      )
+    )
+  );
+  const filterArrayYellowCards = yellowCardsArray.filter(
+    (el) => el != undefined
+  );
   yellowCards = filterArrayYellowCards.length;
-   //function which check how many red cards player has 
-  const redCardsArray = []
-  playerData.forEach(el => redCardsArray.push(el.frontmatter.Kartki?.find((el) => el.Zawodnicy === slug.name && el.kartka === "czerwona")))
-  const filterArrayRedCards = redCardsArray.filter(el => el != undefined)
+  //function which check how many red cards player has
+  const redCardsArray = [];
+  playerData.forEach((el) =>
+    redCardsArray.push(
+      el.frontmatter.Kartki?.find(
+        (el) => el.Zawodnicy === slug.name && el.kartka === "czerwona"
+      )
+    )
+  );
+  const filterArrayRedCards = redCardsArray.filter((el) => el != undefined);
   redCards = filterArrayRedCards.length;
   // white matches player played
-  sortedArrayWhichMatch = playerData
-  const imgageOfPlayer  = players.team.find((el) => el.name === slug.name).zdjecia[0]
-  console.log(imgageOfPlayer)
-  
+  sortedArrayWhichMatch = playerData;
+  const imgageOfPlayer = players.team.find((el) => el.name === slug.name)
+    .zdjecia[0];
+
   return (
     <Layout>
       <Box>
@@ -104,7 +142,7 @@ function Player({ pageContext }) {
               key={slug.name}
               img={`${imgageOfPlayer}`}
             />
-            <ChartContainer >
+            <ChartContainer>
               <Chart
                 allMiuts={minuts}
                 coutMatches={playedMatches * 90 - minuts}
@@ -179,11 +217,11 @@ function Player({ pageContext }) {
                 style={{ color: "white", fontSize: "clamp(15px, 5vw, 30px)" }}
               >
                 Rozegrane mecze w sezonie: {data.AktualnySezon}
-              </span> 
-               <AccordionEl data={sortedArrayWhichMatch} slugName={slug} />
+              </span>
+              <AccordionEl data={sortedArrayWhichMatch} slugName={slug} />
             </SezonBox>
-          </Right> 
-         </Cointainer> 
+          </Right>
+        </Cointainer>
       </Box>
     </Layout>
   );
@@ -221,7 +259,7 @@ const Left = styled.div`
     max-height: 170vh;
     min-height: 77vh;
   }
-  @media(max-height: 900px) {
+  @media (max-height: 900px) {
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
@@ -229,7 +267,7 @@ const Left = styled.div`
 `;
 const Right = styled.div`
   width: 70%;
-  max-height: 70vh;
+  /* max-height: 70vh; */
   min-height: 77vh;
   display: flex;
 
@@ -239,31 +277,30 @@ const Right = styled.div`
     width: 100%;
     min-height: 70vh;
     max-height: 100vh;
-    
   }
   @media (max-width: 800px) {
-   
     flex-direction: column-reverse;
   }
 `;
 const SezonBox = styled.div`
-    width: 70%;
-    min-height: 200px;
-    background-color:black;
-    background-image: url(${bgPattern});
-    border: 1px solid #ffe600;
-    display: flex;
-    flex-direction: column;
-    
+  width: 70%;
+  min-height: 200px;
+  height: auto;
+  background-color: black;
+  background-image: url(${bgPattern});
+  border: 1px solid #ffe600;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin-top: 5vh;
+  @media (max-width: 900px) {
+    width: 95%;
+    justify-content: flex-start;
     align-items: center;
-    margin-top:5vh;
-    @media (max-width: 900px) {
-      width:95%;
-      justify-content:flex-start;
-      align-items:center;
-      border-radius:5px;
-      min-height:30vh;
-    }
+    border-radius: 5px;
+    min-height: 30vh;
+  }
 `;
 const Grid = styled.div`
   display: flex;
@@ -302,11 +339,9 @@ const ChartContainer = styled.div`
     flex-direction: column;
     margin-top: 0;
     margin: 50px;
-    
   }
-  @media(max-height: 900px) {
+  @media (max-height: 900px) {
     width: auto;
-    
   }
 `;
 export default Player;

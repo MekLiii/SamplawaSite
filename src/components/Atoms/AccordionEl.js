@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 function AccordionEl({ data, slugName }) {
   // rozegrane minuty
-  console.log(slugName);
+
   const howMuchMinutes = (data) => {
     let minutes = 0;
 
@@ -13,7 +13,6 @@ function AccordionEl({ data, slugName }) {
 
     newData.forEach((match) => {
       minutes += match.minuty;
-      console.log(match);
     });
     return minutes;
   };
@@ -49,7 +48,7 @@ function AccordionEl({ data, slugName }) {
     if (data.length != 0) {
       return (
         <div>
-          {data.map(({ frontmatter },index) => (
+          {data.map(({ frontmatter }, index) => (
             <Card key={index}>
               <CustomToggle eventKey={index}>
                 <Teams>
