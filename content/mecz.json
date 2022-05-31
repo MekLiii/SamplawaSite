@@ -1420,8 +1420,8 @@
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
+          "pftGoals": 1,
+          "enemyGoals": 1,
           "data": "04/23/2022",
           "logoEnemy": [
             "https://ucarecdn.com/f1f0d28b-bd3d-4bb1-b664-c2cf516d7dbf/"
@@ -1432,8 +1432,8 @@
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
+          "pftGoals": 4,
+          "enemyGoals": 6,
           "data": "04/30/2022",
           "logoEnemy": [
             "https://ucarecdn.com/9e75a5ab-14a6-410f-8530-c0476d29304f/"
@@ -1444,8 +1444,8 @@
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
+          "pftGoals": 4,
+          "enemyGoals": 1,
           "data": "05/14/2022",
           "logoEnemy": [
             "https://ucarecdn.com/ba245a25-ef8d-475d-aafd-c3a9f7508fc7/"
@@ -1456,8 +1456,8 @@
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
+          "pftGoals": 3,
+          "enemyGoals": 2,
           "data": "05/21/2022",
           "przeciwnik": "Huragan Byszwałd",
           "godzina": "17:00",
@@ -1468,8 +1468,8 @@
         },
         {
           "gospodarze": "PFT Drewneks Sampława",
-          "pftGoals": 0,
-          "enemyGoals": 0,
+          "pftGoals": 1,
+          "enemyGoals": 7,
           "data": "05/28/2022",
           "przeciwnik": "Mały Jeziorak Iława",
           "godzina": "17:00",
