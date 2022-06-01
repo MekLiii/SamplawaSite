@@ -32,6 +32,9 @@ Zawodnicy:
     Zawodnicy: Michał Raciborski
   - minuty: 90
     Zawodnicy: Michał Łukaszewski
+Sztab:
+  - zespolSenior: Sławomir Sarlej
+  - zespolSenior: " Łukasz Wietecha"
 BramkiPFT:
   - Zawodnicy: Sylwester Bukowski
     minuta: 55
@@ -40,4 +43,16 @@ Zmiany:
   - ZmianaZ: Cezary Chorzelewski
     minuta: 55
     ZmianaNa: Szymon Lasikowski
+  - ZmianaZ: Michał Raciborski
+    minuta: 75
+    ZmianaNa: Fabian Kozłowski
+  - ZmianaZ: Marek Nastachowski
+    minuta: 80
+    ZmianaNa: Przemysław Cabaj
+  - ZmianaZ: Sylwester Bukowski
+    minuta: 55
+    ZmianaNa: Patryk Mówiński
+  - ZmianaZ: Nikodem Sobolewski
+    minuta: 68
+    ZmianaNa: Krystian Kozłowski
 ---
