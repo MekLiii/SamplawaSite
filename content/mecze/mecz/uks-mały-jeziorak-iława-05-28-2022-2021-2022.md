@@ -13,11 +13,11 @@ Zawodnicy:
   - minuty: 90
     Zawodnicy: Remigiusz Gamański
   - minuty: 90
-    Zawodnicy: Mateusz Wasielewski
+    Zawodnicy: Radosław Buczkowski
   - minuty: 90
     Zawodnicy: Adam Dybich
   - minuty: 90
-    Zawodnicy: Radosław Buczkowski
+    Zawodnicy: Mateusz Wasielewski
   - minuty: 55
     Zawodnicy: Cezary Chorzelewski
   - minuty: 80
@@ -35,4 +35,9 @@ Zawodnicy:
 BramkiPFT:
   - Zawodnicy: Sylwester Bukowski
     minuta: 55
+BramkiPrzeciwnika: []
+Zmiany:
+  - ZmianaZ: Cezary Chorzelewski
+    minuta: 55
+    ZmianaNa: Szymon Lasikowski
 ---
