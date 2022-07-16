@@ -49,7 +49,7 @@ function CoutingDown() {
   // const nextMatchMinutes = parseInt(nextMatch?.godzina % 60)
   const nextMatchMinutes = nextMatch?.godzina % 60 > 9 ? nextMatch?.godzina % 60 : `0${nextMatch?.godzina % 60}`;
   const dateHourMinut = nextMatchHour + ":" + nextMatchMinutes;
-  const dataWithHours = new Date(`${dateHourMinut} ${nextMatch.data}`);
+  const dataWithHours = new Date(`${dateHourMinut} ${nextMatch?.data}`);
     
   
   if (new Date(nextMatch?.data).setHours(0,0,0,0) === new Date().setHours(0,0,0,0)) {
